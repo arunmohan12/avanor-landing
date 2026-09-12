@@ -19,11 +19,11 @@
 
     <div class="avanor-lead-form-header">
 
-        <div class="section-eyebrow">
+        <div class="landing-about-v2-eyebrow">
             PROPERTY ENQUIRY
         </div>
 
-        <h3>
+        <h3 class="title">
             {{ $heading }}
         </h3>
 
@@ -132,7 +132,7 @@
 
         <div class="avanor-lead-field">
 
-            <label for="{{ $formId }}-name">
+            <label for="{{ $formId }}-name" >
                 Full Name
             </label>
 
@@ -168,7 +168,7 @@
                 id="{{ $formId }}-phone"
                 name="phone"
                 value="{{ old('phone') }}"
-                placeholder=""
+                placeholder=" Mobile Number"
                 autocomplete="tel"
                 required
             >
