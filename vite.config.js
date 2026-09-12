@@ -14,7 +14,6 @@ export default defineConfig({
                 'resources/css/landing/palm-jebel-ali.css',
                 'resources/js/landing/palm-jebel-ali.js',
                 'resources/js/map.js',
-
                 'resources/css/landing/the-heightsv2.css',
                 'resources/css/landing/privacy-policy.css',
                 'resources/css/landing/terms-conditions.css',
