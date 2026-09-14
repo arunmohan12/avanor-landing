@@ -207,7 +207,7 @@ strip_tags($property->description ?? ''),
         </div>
     </header>
 
-    <main>
+   
         <div class="landing-content-with-form">
 
             <div class="landing-main-content">
@@ -309,15 +309,7 @@ strip_tags($property->description ?? ''),
                                 {{-- CTA BUTTONS --}}
                                 <div class="landing-hero-offer-actions">
 
-                                    <a
-                                        href="https://wa.me/971589798257"
-                                        class="landing-hero-offer-btn whatsapp-track">
 
-                                        <span>WHATSAPP</span>
-
-                                        <x-landing-icon name="whatsapp" />
-
-                                    </a>
 
 
                                     <a
@@ -365,11 +357,7 @@ strip_tags($property->description ?? ''),
 
                 <div class="landing-property-actions">
 
-                    <a
-                        href="#"
-                        class="landing-property-btn landing-property-btn-outline" data-lead-popup-open  data-button-text="DOWNLOAD BROCHURE">
-                        DOWNLOAD BROCHURE
-                    </a>
+
 
                     <a
                         href="#"
@@ -1952,7 +1940,16 @@ strip_tags($property->description ?? ''),
 
                 <div class="landing-gallery-container ">
 
-                    <div class="landing-image-form-box">
+                    <div
+                        class="landing-image-form-box"
+                        style="background-image:
+        linear-gradient(
+            90deg,
+            rgba(20, 42, 58, 0.35) 0%,
+            rgba(20, 42, 58, 0.10) 100%
+        ),
+        url('{{ asset('assets/img/landing/bannercontact.webp') }}');"
+                    >
 
                         <div class="landing-image-form-left">
 
@@ -1974,26 +1971,26 @@ strip_tags($property->description ?? ''),
 
 
 
-            <aside class="landing-side-form">
+            <div
+                class="landing-right-section"
+                style="background-image: url('{{ asset('assets/img/landing/the-heights/side-bg.webp') }}');"
+            >
 
-                <div class="landing-side-form-inner">
+                <aside class="landing-side-form">
 
+                    <div class="landing-side-form-inner">
 
+                        @include('partials.lead-form-v2', [
+                            'formId' => 'landing-about-form',
+                            'heading' => 'GET EARLY ACCESS',
+                            'buttonText' => 'SUBMIT',
+                        ])
 
+                    </div>
 
-                    @include('partials.lead-form', [
-                   'formId' => 'landing-about-form',
-                   'heading' => 'GET EARLY ACCESS',
-                   'buttonText' => 'SUBMIT',
-               ])
+                </aside>
 
-
-
-                </div>
-
-
-
-            </aside>
+            </div>
         </div>
 
         <div
@@ -2135,43 +2132,54 @@ strip_tags($property->description ?? ''),
 
 
 
-                <div class="landing-footer-disclaimer">
 
-                    <strong>
-                        DISCLAIMER
-                    </strong>
+            </div>
 
-                    <p>
-                        This page is operated by Avanor Capital L.L.C, a licensed Dubai real estate brokerage, and is not the official website of the developer. Project names and trademarks belong to their respective owners.
-                    </p>
 
-                </div>
 
-                <div class="landing-footer-bottom">
+
+
+
+        </section>
+
+
+    <section class="landing-developer-community landing-about-v2 footer-section" id="about-dev">
+
+        <div class="landing-gallery-container">
+
+
+        <div class="landing-footer-disclaimer">
+
+            <strong>
+                DISCLAIMER
+            </strong>
+
+            <p>
+                This page is operated by Avanor Capital L.L.C, a licensed Dubai real estate brokerage, and is not the official website of the developer. Project names and trademarks belong to their respective owners.
+            </p>
+
+        </div>
+
+        <div class="landing-footer-bottom">
 
                 <span>
                  © {{ date('Y') }} Avanor Capital. All Rights Reserved.
                 </span>
 
-                    <div>
-                        <a href="{{ route('landing.privacy-policy') }}">
-                            Privacy Policy
-                        </a>
+            <div>
+                <a href="{{ route('landing.privacy-policy') }}">
+                    Privacy Policy
+                </a>
 
-                        <a href="{{ route('landing.terms-and-conditions') }}">
-                            Terms &amp; Conditions
-                        </a>
-                    </div>
-
-                </div>
-
-
+                <a href="{{ route('landing.terms-and-conditions') }}">
+                    Terms &amp; Conditions
+                </a>
             </div>
 
-        </section>
+        </div>
+    </div>
 
-
-
+</section>
         {{-- =====================================================
             MAIN FOOTER
         ===================================================== --}}

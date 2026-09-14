@@ -3001,7 +3001,7 @@ slider-area {
 }
 
 .landing-property-bar-inner {
-    width: min(1300px, calc(100% - 80px));
+    width: min(1400px, calc(100% - 80px));
     min-height: 80px;
 
     margin-inline: auto;
@@ -3083,8 +3083,8 @@ slider-area {
 
 .landing-property-btn-primary {
     color: #ffffff;
-    background: #0b1c36;
-    border: 1px solid #0b1c36;
+    background: var(--brand-dark);
+    border: 1px solid var(--brand-dark);
 }
 
 
@@ -3234,7 +3234,7 @@ slider-area {
     min-height: 46px;
     padding: 0 24px;
 
-    background: #0b1c36;
+    background: var(--brand-dark);
     color: #ffffff;
 
     font-size: 11px;
@@ -3915,7 +3915,15 @@ body.landing-popup-open {
 
     /*border: 1px solid rgba(3, 9, 32, 0.10);*/
 }
+.avanor-lead-form-v2 {
+    width: 100%;
 
+    padding: 20px;
+
+    background: #ffffffc4;
+
+
+}
 .avanor-lead-form-header {
     margin-bottom: 28px;
 }
@@ -3940,6 +3948,18 @@ body.landing-popup-open {
     color: var(--brand-dark);
 
     font-size: var(--font-6xl);
+    font-weight: 400;
+    font-family: var(--font-optima);
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.avanor-lead-form-header-v2 h3 {
+    margin-bottom: var(--space-xs);
+
+    color: var(--brand-dark);
+
+    font-size: var(--font-3xl);
     font-weight: 400;
     font-family: var(--font-optima);
     line-height: 1.2;
@@ -4008,7 +4028,7 @@ body.landing-popup-open {
 
 .avanor-lead-submit {
     width: 100%;
-    min-height: 54px;
+    min-height: 40px;
 
     display: flex;
     align-items: center;
@@ -4018,7 +4038,7 @@ body.landing-popup-open {
 
     margin-top: 8px;
 
-    padding: 12px 20px;
+    padding: 12px 12px;
 
     border: 0;
 
@@ -4091,6 +4111,10 @@ body.landing-popup-open {
     }
 
     .avanor-lead-form-header h3 {
+        font-size: var(--font-xl);
+    }
+
+    .avanor-lead-form-header-v2 h3 {
         font-size: var(--font-xl);
     }
 }
@@ -4391,7 +4415,9 @@ body.landing-popup-open {
     .avanor-lead-form-header h3 {
         font-size: var(--font-xl);
     }
-
+    .avanor-lead-form-header-v2 h3 {
+        font-size: var(--font-xl);
+    }
     .avanor-lead-form-header p {
         font-size: 14px;
     }
@@ -6076,7 +6102,7 @@ body.landing-gallery-lightbox-open {
 ===================================================== */
 
 .landing-hero-offer-card {
-    width: min(720px, 100%);
+    width: min(720px, 80%);
     min-width: 0;
 
     margin-top: 30px;
@@ -6114,7 +6140,7 @@ body.landing-gallery-lightbox-open {
     align-items: center;
     justify-content: space-between;
 
-    gap: 120px;
+    gap: 80px;
 }
 
 
@@ -6144,7 +6170,7 @@ body.landing-gallery-lightbox-open {
 .landing-hero-offer-price strong {
     color: var(--brand-light);
 
-    font-size: 31px;
+    font-size: 24px;
     font-weight: 700;
 
     line-height: 1.15;
@@ -6176,7 +6202,7 @@ body.landing-gallery-lightbox-open {
 
     color: #fff;
 
-    font-size: 34px;
+    font-size: 24px;
     font-weight: 700;
 
     line-height: 1;
@@ -6200,18 +6226,14 @@ body.landing-gallery-lightbox-open {
 /* =====================================================
    BUTTONS
 ===================================================== */
-
 .landing-hero-offer-actions {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 8px;
-
+    display: flex;
+    justify-content: center;
     margin-top: 28px;
 }
 
 .landing-hero-offer-btn {
-    min-height: 64px;
+    min-height: 50px;
 
     display: flex;
     align-items: center;
@@ -6235,6 +6257,7 @@ body.landing-gallery-lightbox-open {
     transition:
         background-color 0.25s ease,
         color 0.25s ease;
+    width: 250px;
 }
 
 .landing-hero-offer-btn svg {
@@ -6450,12 +6473,10 @@ body.landing-gallery-lightbox-open {
     ===================================================== */
 
     .landing-hero-offer-actions {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
 
-        gap: 8px;
-
-        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: 28px;
     }
 
     .landing-hero-offer-btn {
@@ -8432,7 +8453,7 @@ body.landing-gallery-lightbox-open {
 ===================================================== */
 
 .landing-footer-disclaimer {
-    margin-top: var(--space-lg);
+    /*margin-top: var(--space-lg);*/
 
 
     border-top: 1px solid rgba(255,255,255,.25);
@@ -8456,7 +8477,7 @@ body.landing-gallery-lightbox-open {
 
     margin: 0;
 
-    color: var(--brand-dark);
+    color: #cccccc61;
 
     font-size: 10px;
     line-height: 1.65;
@@ -8476,7 +8497,7 @@ body.landing-gallery-lightbox-open {
 
     border-top: 1px solid rgba(255,255,255,.12);
 
-    color: var(--brand-dark);
+    color: #cccccc61;
 
     font-size: 10px;
 }
@@ -8488,7 +8509,7 @@ body.landing-gallery-lightbox-open {
 }
 
 .landing-footer-bottom a {
-    color: var(--brand-dark);
+    color: #cccccc61;
     text-decoration: none;
 }
 
@@ -9981,7 +10002,7 @@ li {
 
 .landing-content-with-form {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 380px;
+    grid-template-columns: minmax(0, 1fr) 320px;
     align-items: stretch;
 }
 
@@ -9992,39 +10013,53 @@ li {
     min-width: 0;
 }
 
-
-/* Right form area */
-
-.landing-side-form {
-    position: relative;
-    width: 380px;
-
-}
-
-
-/* Sticky form */
-
-.landing-side-form-inner {
+.landing-right-section {
     position: sticky;
     top: 70px;
 
     width: 100%;
-    box-sizing: border-box;
+    height: 100vh;
+    align-self: flex-start;
 
-    z-index: 10;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
 }
 
+/* Blur + gradient overlay */
+.landing-right-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
 
-/* =========================================================
-   DESKTOP — FORM OVER HERO
-   ========================================================= */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.50) 0%,
+        rgba(0, 0, 0, 0.60) 45%,
+        rgba(0, 0, 0, 0.50) 75%,
+        transparent 100%
+    );
+
+    z-index: 0;
+}
+
+/* Form stays sharp above overlay */
+.landing-side-form {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    top: 10%
+}
 .landing-side-form-inner {
-   padding: 20px 20px 20px 20px;
-    border: 1px solid #d9dadd;
+    padding: 20px;
+    box-sizing: border-box;
 }
-
-
 /* =========================================================
    MOBILE / TABLET
    ========================================================= */
@@ -10138,13 +10173,7 @@ li {
     position: relative;
     min-height: 650px;
 
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(20, 42, 58, 0.35) 0%,
-            rgba(20, 42, 58, 0.10) 100%
-        ),
-        url('/assets/img/landing/bannercontact.webp');
+
 
     background-size: cover;
     background-position: center;
@@ -10265,4 +10294,7 @@ li {
     }
 
 
+}
+.footer-section{
+    background: var(--brand-dark);
 }

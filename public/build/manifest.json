@@ -1,0 +1,207 @@
+{
+  "_fonts-C9MNnjVw.css": {
+    "file": "assets/fonts-C9MNnjVw.css",
+    "src": "_fonts-C9MNnjVw.css"
+  },
+  "_instrument-sans-400-normal-D1W7dsQl.woff": {
+    "file": "assets/instrument-sans-400-normal-D1W7dsQl.woff",
+    "src": "_instrument-sans-400-normal-D1W7dsQl.woff"
+  },
+  "_instrument-sans-400-normal-DRC__1Mx.woff2": {
+    "file": "assets/instrument-sans-400-normal-DRC__1Mx.woff2",
+    "src": "_instrument-sans-400-normal-DRC__1Mx.woff2"
+  },
+  "_instrument-sans-500-normal-Dk9ku72i.woff2": {
+    "file": "assets/instrument-sans-500-normal-Dk9ku72i.woff2",
+    "src": "_instrument-sans-500-normal-Dk9ku72i.woff2"
+  },
+  "_instrument-sans-500-normal-Z6ESRlEs.woff": {
+    "file": "assets/instrument-sans-500-normal-Z6ESRlEs.woff",
+    "src": "_instrument-sans-500-normal-Z6ESRlEs.woff"
+  },
+  "_instrument-sans-600-normal-B7fBEWYG.woff2": {
+    "file": "assets/instrument-sans-600-normal-B7fBEWYG.woff2",
+    "src": "_instrument-sans-600-normal-B7fBEWYG.woff2"
+  },
+  "_instrument-sans-600-normal-B9e8oLYv.woff": {
+    "file": "assets/instrument-sans-600-normal-B9e8oLYv.woff",
+    "src": "_instrument-sans-600-normal-B9e8oLYv.woff"
+  },
+  "_intlTelInput-DmSsuaRf.css": {
+    "file": "assets/intlTelInput-DmSsuaRf.css",
+    "src": "_intlTelInput-DmSsuaRf.css"
+  },
+  "_intlTelInput-jRFmtbbD.js": {
+    "file": "assets/intlTelInput-jRFmtbbD.js",
+    "name": "intlTelInput",
+    "css": [
+      "assets/intlTelInput-DmSsuaRf.css"
+    ],
+    "assets": [
+      "assets/flags-DjVgN9ag.webp",
+      "assets/flags@2x-QBzdwbZ8.webp"
+    ]
+  },
+  "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff": {
+    "file": "assets/lato-latin-400-normal-B11PyLys.woff",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff"
+  },
+  "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff2": {
+    "file": "assets/lato-latin-400-normal-BEhtfm5r.woff2",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff2"
+  },
+  "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff": {
+    "file": "assets/lato-latin-700-normal-DAdL7O4w.woff",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff"
+  },
+  "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff2": {
+    "file": "assets/lato-latin-700-normal-BUGMgin4.woff2",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff2"
+  },
+  "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff": {
+    "file": "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff"
+  },
+  "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff2": {
+    "file": "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff2"
+  },
+  "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff": {
+    "file": "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff"
+  },
+  "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff2": {
+    "file": "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff2"
+  },
+  "node_modules/intl-tel-input/dist/img/flags.webp": {
+    "file": "assets/flags-DjVgN9ag.webp",
+    "src": "node_modules/intl-tel-input/dist/img/flags.webp"
+  },
+  "node_modules/intl-tel-input/dist/img/flags@2x.webp": {
+    "file": "assets/flags@2x-QBzdwbZ8.webp",
+    "src": "node_modules/intl-tel-input/dist/img/flags@2x.webp"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-DGtEI_Tb.css",
+    "name": "app",
+    "names": [
+      "app.css"
+    ],
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/landing/fonts/Nakheel-TextBold.woff": {
+    "file": "assets/Nakheel-TextBold-B90GRwVF.woff",
+    "src": "resources/css/landing/fonts/Nakheel-TextBold.woff"
+  },
+  "resources/css/landing/fonts/Nakheel-TextRegular.woff": {
+    "file": "assets/Nakheel-TextRegular-C7GDnss0.woff",
+    "src": "resources/css/landing/fonts/Nakheel-TextRegular.woff"
+  },
+  "resources/css/landing/palm-jebel-ali.css": {
+    "file": "assets/palm-jebel-ali-B1vhqJdd.css",
+    "name": "palm-jebel-ali",
+    "names": [
+      "palm-jebel-ali.css"
+    ],
+    "src": "resources/css/landing/palm-jebel-ali.css",
+    "isEntry": true,
+    "assets": [
+      "assets/Nakheel-TextRegular-C7GDnss0.woff",
+      "assets/Nakheel-TextBold-B90GRwVF.woff"
+    ]
+  },
+  "resources/css/landing/privacy-policy.css": {
+    "file": "assets/privacy-policy-CA2ga8Lq.css",
+    "name": "privacy-policy",
+    "names": [
+      "privacy-policy.css"
+    ],
+    "src": "resources/css/landing/privacy-policy.css",
+    "isEntry": true
+  },
+  "resources/css/landing/terms-conditions.css": {
+    "file": "assets/terms-conditions-PH4QC-Dp.css",
+    "name": "terms-conditions",
+    "names": [
+      "terms-conditions.css"
+    ],
+    "src": "resources/css/landing/terms-conditions.css",
+    "isEntry": true
+  },
+  "resources/css/landing/the-heightsv2.css": {
+    "file": "assets/the-heightsv2-CYGWt5Za.css",
+    "name": "the-heightsv2",
+    "names": [
+      "the-heightsv2.css"
+    ],
+    "src": "resources/css/landing/the-heightsv2.css",
+    "isEntry": true,
+    "assets": [
+      "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
+      "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
+      "assets/lato-latin-400-normal-BEhtfm5r.woff2",
+      "assets/lato-latin-400-normal-B11PyLys.woff",
+      "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
+      "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
+      "assets/lato-latin-700-normal-BUGMgin4.woff2",
+      "assets/lato-latin-700-normal-DAdL7O4w.woff",
+      "assets/optima_lt_pro_n4-CR_umPCx.woff2",
+      "assets/optima_lt_pro_n7-DjMDkqcH.woff2",
+      "assets/optima_lt_pro_i4-DPP4vEV9.woff2",
+      "assets/optima_lt_pro_i7-PDqk5eIp.woff2",
+      "assets/aed-Regular-lH271UDw.otf"
+    ]
+  },
+  "resources/fonts/aed-Regular.otf": {
+    "file": "assets/aed-Regular-lH271UDw.otf",
+    "src": "resources/fonts/aed-Regular.otf"
+  },
+  "resources/fonts/optima_lt_pro_i4.woff2": {
+    "file": "assets/optima_lt_pro_i4-DPP4vEV9.woff2",
+    "src": "resources/fonts/optima_lt_pro_i4.woff2"
+  },
+  "resources/fonts/optima_lt_pro_i7.woff2": {
+    "file": "assets/optima_lt_pro_i7-PDqk5eIp.woff2",
+    "src": "resources/fonts/optima_lt_pro_i7.woff2"
+  },
+  "resources/fonts/optima_lt_pro_n4.woff2": {
+    "file": "assets/optima_lt_pro_n4-CR_umPCx.woff2",
+    "src": "resources/fonts/optima_lt_pro_n4.woff2"
+  },
+  "resources/fonts/optima_lt_pro_n7.woff2": {
+    "file": "assets/optima_lt_pro_n7-DjMDkqcH.woff2",
+    "src": "resources/fonts/optima_lt_pro_n7.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-BvRk9kiK.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/landing/palm-jebel-ali.js": {
+    "file": "assets/palm-jebel-ali-Cg-tEvQR.js",
+    "name": "palm-jebel-ali",
+    "src": "resources/js/landing/palm-jebel-ali.js",
+    "isEntry": true,
+    "imports": [
+      "_intlTelInput-jRFmtbbD.js"
+    ]
+  },
+  "resources/js/landing/the-heights.js": {
+    "file": "assets/the-heights-DSoVCYHf.js",
+    "name": "the-heights",
+    "src": "resources/js/landing/the-heights.js",
+    "isEntry": true,
+    "imports": [
+      "_intlTelInput-jRFmtbbD.js"
+    ]
+  },
+  "resources/js/map.js": {
+    "file": "assets/map-CSRvC6rt.js",
+    "name": "map",
+    "src": "resources/js/map.js",
+    "isEntry": true
+  }
+}
