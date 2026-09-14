@@ -3001,7 +3001,7 @@ slider-area {
 }
 
 .landing-property-bar-inner {
-    width: min(1400px, calc(100% - 80px));
+    width: min(1300px, calc(100% - 80px));
     min-height: 80px;
 
     margin-inline: auto;
@@ -6290,7 +6290,7 @@ body.landing-gallery-lightbox-open {
         position: absolute;
         z-index: 2;
 
-        top: 82px;
+        top: 18px;
         left: 18px;
         right: 18px;
         bottom: auto;
@@ -6320,7 +6320,7 @@ body.landing-gallery-lightbox-open {
     .avanor-property-slide-title {
         margin-bottom: 10px;
 
-        font-size: 36px;
+        font-size: 28px;
         line-height: 1.15;
     }
 
@@ -6389,7 +6389,7 @@ body.landing-gallery-lightbox-open {
             minmax(95px, 0.8fr);
 
         align-items: center;
-        gap: 78px;
+        gap: 45px;
     }
 
 
@@ -8462,7 +8462,6 @@ body.landing-gallery-lightbox-open {
 .landing-footer-disclaimer strong {
     display: block;
 
-    margin-bottom: var(--space-xs);
 
     color: #c99445;
 
@@ -8491,7 +8490,6 @@ body.landing-gallery-lightbox-open {
 .landing-footer-bottom {
     display: flex;
 
-    margin-top: var(--space-lg);
     justify-content: space-between;
     align-items: center;
 
@@ -10069,7 +10067,9 @@ li {
     .landing-side-form {
         display: none;
     }
-
+.landing-right-section{
+    display: none;
+}
     .landing-content-with-form {
         display: block;
     }
@@ -10077,7 +10077,9 @@ li {
     .landing-main-content {
         width: 100%;
     }
-
+    .landing-side-form-inner {
+        padding: 0px;
+    }
 }
 
 
@@ -10297,4 +10299,8 @@ li {
 }
 .footer-section{
     background: var(--brand-dark);
+}
+.keywords{
+    color: var(--brand-dark);
+    font-size:4px ;
 }

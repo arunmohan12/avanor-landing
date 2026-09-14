@@ -204,10 +204,9 @@ strip_tags($property->description ?? ''),
 
         </div>
 
-        </div>
     </header>
 
-   
+<main>
         <div class="landing-content-with-form">
 
             <div class="landing-main-content">
@@ -356,8 +355,11 @@ strip_tags($property->description ?? ''),
                 </div>
 
                 <div class="landing-property-actions">
-
-
+                    <a
+                    href="#"
+                    class="landing-property-btn landing-property-btn-outline" data-lead-popup-open  data-button-text="DOWNLOAD BROCHURE">
+                    DOWNLOAD BROCHURE
+                    </a>
 
                     <a
                         href="#"
@@ -2157,7 +2159,8 @@ strip_tags($property->description ?? ''),
             <p>
                 This page is operated by Avanor Capital L.L.C, a licensed Dubai real estate brokerage, and is not the official website of the developer. Project names and trademarks belong to their respective owners.
             </p>
-
+<span class="keywords">emaar heights, emaar luxury villas, salva by emaar, serro by emaar, the heights country club, serro the heights, the heights country club and wellness, the heights emaar, the heights country club and wellness by emaar, salva the heights, serro the heights, the heights by emaar
+</span>
         </div>
 
         <div class="landing-footer-bottom">
