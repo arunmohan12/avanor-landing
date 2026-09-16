@@ -224,9 +224,7 @@
         </button>
         <p class="avanor-lead-consent">
 
-            By submitting this form, you agree to be contacted by
-            Avanor Capital regarding this property and related real
-            estate opportunities.
+            By submitting this form, you agree to be contacted about this property and other relevant real estate opportunities.
 
         </p>
 
