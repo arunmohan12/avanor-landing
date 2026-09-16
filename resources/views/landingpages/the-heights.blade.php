@@ -1266,12 +1266,12 @@ strip_tags($property->description ?? ''),
                 <div class="landing-payment-summary">
 
                 <span>
-                    <strong>9</strong>
-                    Structured Milestones
+                    <strong>10%</strong>
+                    For Booking
                 </span>
 
                     <span>
-                    <strong>80%</strong>
+                    <strong>70%</strong>
                     During Construction
                 </span>
 
@@ -1938,108 +1938,9 @@ strip_tags($property->description ?? ''),
         </section>
 
 
-            <section class=" landing-about-v2 landing-image-form-section">
+            <section class="landing-developer-community landing-about-v2 " id="about-dev">
 
-                <div class="landing-gallery-container ">
-
-                    <div
-                        class="landing-image-form-box"
-                        style="background-image:
-        linear-gradient(
-            90deg,
-            rgba(20, 42, 58, 0.35) 0%,
-            rgba(20, 42, 58, 0.10) 100%
-        ),
-        url('{{ asset('assets/img/landing/bannercontact.webp') }}');"
-                    >
-
-                        <div class="landing-image-form-left">
-
-                            @include('partials.lead-form', [
-                                'formId' => 'landing-image-form',
-                                'heading' => 'GET EARLY ACCESS',
-                            ])
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            </div>
-
-
-
-            <div
-                class="landing-right-section"
-                style="background-image: url('{{ asset('assets/img/landing/the-heights/side-bg.webp') }}');"
-            >
-
-                <aside class="landing-side-form">
-
-                    <div class="landing-side-form-inner">
-
-                        @include('partials.lead-form-v2', [
-                            'formId' => 'landing-about-form',
-                            'heading' => 'GET EARLY ACCESS',
-                            'buttonText' => 'SUBMIT',
-                        ])
-
-                    </div>
-
-                </aside>
-
-            </div>
-        </div>
-
-        <div
-            class="landing-lead-popup"
-            id="landingLeadPopup"
-            aria-hidden="true">
-
-            <div
-                class="landing-lead-popup-backdrop"
-                data-lead-popup-close>
-            </div>
-
-            <div
-                class="landing-lead-popup-dialog"
-                role="dialog"
-                aria-modal="true"
-                aria-label="Register Your Interest">
-
-                <button
-                    type="button"
-                    class="landing-lead-popup-close"
-                    data-lead-popup-close
-                    aria-label="Close">
-                    ×
-                </button>
-
-                @include('partials.lead-form', [
-                'formId' => 'landing-popup-form',
-                'heading' => 'GET PROJECT DETAILS',
-                'buttonText' => 'SUBMIT',
-                'source' => 'the_heights_popup',
-                'propertyId' => $property->id,
-                'developerId' => $property->developer_id,
-                'action' => route('landing.leads.store'),
-                ])
-
-            </div>
-
-        </div>
-
-
-        {{-- =====================================================
-    DEVELOPER + COMMUNITY
-===================================================== --}}
-        <section class="landing-developer-community landing-about-v2 landing-enquiry-footer" id="about-dev">
-
-            <div class="landing-gallery-container">
+                <div class="landing-gallery-container">
 
 
 
@@ -2135,14 +2036,116 @@ strip_tags($property->description ?? ''),
 
 
 
+                </div>
+
+
+
+
+
+
+            </section>
+
+
             </div>
 
 
 
+            <div
+                class="landing-right-section"
+                style="background-image: url('{{ asset('assets/img/landing/the-heights/side-bg.webp') }}');"
+            >
+
+                <aside class="landing-side-form">
+
+                    <div class="landing-side-form-inner">
+
+                        @include('partials.lead-form-v2', [
+                            'formId' => 'landing-about-form',
+                            'heading' => 'GET EARLY ACCESS',
+                            'buttonText' => 'SUBMIT',
+                        ])
+
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+
+        <div
+            class="landing-lead-popup"
+            id="landingLeadPopup"
+            aria-hidden="true">
+
+            <div
+                class="landing-lead-popup-backdrop"
+                data-lead-popup-close>
+            </div>
+
+            <div
+                class="landing-lead-popup-dialog"
+                role="dialog"
+                aria-modal="true"
+                aria-label="Register Your Interest">
+
+                <button
+                    type="button"
+                    class="landing-lead-popup-close"
+                    data-lead-popup-close
+                    aria-label="Close">
+                    ×
+                </button>
+
+                @include('partials.lead-form', [
+                'formId' => 'landing-popup-form',
+                'heading' => 'GET PROJECT DETAILS',
+                'buttonText' => 'SUBMIT',
+                'source' => 'the_heights_popup',
+                'propertyId' => $property->id,
+                'developerId' => $property->developer_id,
+                'action' => route('landing.leads.store'),
+                ])
+
+            </div>
+
+        </div>
 
 
+        {{-- =====================================================
+    DEVELOPER + COMMUNITY
+===================================================== --}}
 
-        </section>
+    <section class=" landing-about-v2 landing-image-form-section landing-enquiry-footer">
+
+        <div class="landing-gallery-container ">
+
+            <div
+                class="landing-image-form-box"
+                style="background-image:
+    linear-gradient(
+        90deg,
+        rgba(20, 42, 58, 0.35) 0%,
+        rgba(20, 42, 58, 0.10) 100%
+    ),
+    url('{{ asset('assets/img/landing/bannercontact.webp') }}');"
+            >
+
+                <div class="landing-image-form-left">
+
+                    @include('partials.lead-form', [
+                        'formId' => 'landing-image-form',
+                        'heading' => 'GET EARLY ACCESS',
+                    ])
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
 
 
     <section class="landing-developer-community landing-about-v2 footer-section" id="about-dev">
