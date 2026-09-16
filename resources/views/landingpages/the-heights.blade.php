@@ -2190,8 +2190,9 @@ strip_tags($property->description ?? ''),
             MAIN FOOTER
         ===================================================== --}}
 
+
         <a
-            href="https://wa.me/971589798257"
+            href="https://wa.me/971589798257?text=Hi%2C%20I%E2%80%99m%20interested%20to%20know%20more%20about%20this%20project.%20Please%20share%20all%20relevant%20details.%0AThank%20you."
             class="landing-whatsapp-float whatsapp-track"
             target="_blank"
             rel="noopener noreferrer"
