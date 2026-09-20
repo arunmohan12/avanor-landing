@@ -154,6 +154,77 @@
       "assets/aed-Regular-lH271UDw.otf"
     ]
   },
+  "resources/css/landing/wadeem.css": {
+    "file": "assets/wadeem-C1Y_IFs0.css",
+    "name": "yas-riva",
+    "names": [
+      "wadeem.css",
+      "yas-riva.css"
+    ],
+    "src": "resources/css/landing/wadeem.css",
+    "isEntry": true,
+    "assets": [
+      "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
+      "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
+      "assets/lato-latin-400-normal-BEhtfm5r.woff2",
+      "assets/lato-latin-400-normal-B11PyLys.woff",
+      "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
+      "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
+      "assets/lato-latin-700-normal-BUGMgin4.woff2",
+      "assets/lato-latin-700-normal-DAdL7O4w.woff",
+      "assets/CormorantGaramond-Light-BE5xuUei.woff",
+      "assets/CormorantGaramond-LightItalic-B9mD87km.woff",
+      "assets/CormorantGaramond-Regular-CiAV_ro-.woff",
+      "assets/CormorantGaramond-Italic-CgqzdayI.woff",
+      "assets/CormorantGaramond-Medium-a81lqqsF.woff",
+      "assets/CormorantGaramond-MediumItalic-DLxFICkJ.woff",
+      "assets/CormorantGaramond-SemiBold-DFvMWUQ8.woff",
+      "assets/CormorantGaramond-SemiBoldItalic-CzUKSUAX.woff",
+      "assets/CormorantGaramond-Bold-CYsBYQCd.woff",
+      "assets/CormorantGaramond-BoldItalic-Bk1l1XVg.woff",
+      "assets/OutfitVariableFont_wght1-EwbcG2E8.woff"
+    ]
+  },
+  "resources/css/landing/wadeemv2.css": {
+    "file": "assets/wadeemv2-DNfFAXP5.css",
+    "name": "wadeemv2",
+    "names": [
+      "wadeemv2.css"
+    ],
+    "src": "resources/css/landing/wadeemv2.css",
+    "isEntry": true
+  },
+  "resources/css/landing/yas-riva.css": {
+    "file": "assets/wadeem-C1Y_IFs0.css",
+    "name": "yas-riva",
+    "names": [
+      "wadeem.css",
+      "yas-riva.css"
+    ],
+    "src": "resources/css/landing/wadeem.css",
+    "isEntry": true,
+    "assets": [
+      "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
+      "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
+      "assets/lato-latin-400-normal-BEhtfm5r.woff2",
+      "assets/lato-latin-400-normal-B11PyLys.woff",
+      "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
+      "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
+      "assets/lato-latin-700-normal-BUGMgin4.woff2",
+      "assets/lato-latin-700-normal-DAdL7O4w.woff",
+      "assets/CormorantGaramond-Light-BE5xuUei.woff",
+      "assets/CormorantGaramond-LightItalic-B9mD87km.woff",
+      "assets/CormorantGaramond-Regular-CiAV_ro-.woff",
+      "assets/CormorantGaramond-Italic-CgqzdayI.woff",
+      "assets/CormorantGaramond-Medium-a81lqqsF.woff",
+      "assets/CormorantGaramond-MediumItalic-DLxFICkJ.woff",
+      "assets/CormorantGaramond-SemiBold-DFvMWUQ8.woff",
+      "assets/CormorantGaramond-SemiBoldItalic-CzUKSUAX.woff",
+      "assets/CormorantGaramond-Bold-CYsBYQCd.woff",
+      "assets/CormorantGaramond-BoldItalic-Bk1l1XVg.woff",
+      "assets/OutfitVariableFont_wght1-EwbcG2E8.woff"
+    ]
+  },
   "resources/fonts/aed-Regular.otf": {
     "file": "assets/aed-Regular-lH271UDw.otf",
     "src": "resources/fonts/aed-Regular.otf"
@@ -174,6 +245,50 @@
     "file": "assets/optima_lt_pro_n7-DjMDkqcH.woff2",
     "src": "resources/fonts/optima_lt_pro_n7.woff2"
   },
+  "resources/fonts/wadeem/CormorantGaramond-Bold.woff": {
+    "file": "assets/CormorantGaramond-Bold-CYsBYQCd.woff",
+    "src": "resources/fonts/wadeem/CormorantGaramond-Bold.woff"
+  },
+  "resources/fonts/wadeem/CormorantGaramond-BoldItalic.woff": {
+    "file": "assets/CormorantGaramond-BoldItalic-Bk1l1XVg.woff",
+    "src": "resources/fonts/wadeem/CormorantGaramond-BoldItalic.woff"
+  },
+  "resources/fonts/wadeem/CormorantGaramond-Italic.woff": {
+    "file": "assets/CormorantGaramond-Italic-CgqzdayI.woff",
+    "src": "resources/fonts/wadeem/CormorantGaramond-Italic.woff"
+  },
+  "resources/fonts/wadeem/CormorantGaramond-Light.woff": {
+    "file": "assets/CormorantGaramond-Light-BE5xuUei.woff",
+    "src": "resources/fonts/wadeem/CormorantGaramond-Light.woff"
+  },
+  "resources/fonts/wadeem/CormorantGaramond-LightItalic.woff": {
+    "file": "assets/CormorantGaramond-LightItalic-B9mD87km.woff",
+    "src": "resources/fonts/wadeem/CormorantGaramond-LightItalic.woff"
+  },
+  "resources/fonts/wadeem/CormorantGaramond-Medium.woff": {
+    "file": "assets/CormorantGaramond-Medium-a81lqqsF.woff",
+    "src": "resources/fonts/wadeem/CormorantGaramond-Medium.woff"
+  },
+  "resources/fonts/wadeem/CormorantGaramond-MediumItalic.woff": {
+    "file": "assets/CormorantGaramond-MediumItalic-DLxFICkJ.woff",
+    "src": "resources/fonts/wadeem/CormorantGaramond-MediumItalic.woff"
+  },
+  "resources/fonts/wadeem/CormorantGaramond-Regular.woff": {
+    "file": "assets/CormorantGaramond-Regular-CiAV_ro-.woff",
+    "src": "resources/fonts/wadeem/CormorantGaramond-Regular.woff"
+  },
+  "resources/fonts/wadeem/CormorantGaramond-SemiBold.woff": {
+    "file": "assets/CormorantGaramond-SemiBold-DFvMWUQ8.woff",
+    "src": "resources/fonts/wadeem/CormorantGaramond-SemiBold.woff"
+  },
+  "resources/fonts/wadeem/CormorantGaramond-SemiBoldItalic.woff": {
+    "file": "assets/CormorantGaramond-SemiBoldItalic-CzUKSUAX.woff",
+    "src": "resources/fonts/wadeem/CormorantGaramond-SemiBoldItalic.woff"
+  },
+  "resources/fonts/wadeem/OutfitVariableFont_wght1.woff": {
+    "file": "assets/OutfitVariableFont_wght1-EwbcG2E8.woff",
+    "src": "resources/fonts/wadeem/OutfitVariableFont_wght1.woff"
+  },
   "resources/js/app.js": {
     "file": "assets/app-BvRk9kiK.js",
     "name": "app",
@@ -193,6 +308,24 @@
     "file": "assets/the-heights-HZjxEpO9.js",
     "name": "the-heights",
     "src": "resources/js/landing/the-heights.js",
+    "isEntry": true,
+    "imports": [
+      "_intlTelInput-jRFmtbbD.js"
+    ]
+  },
+  "resources/js/landing/wadeem.js": {
+    "file": "assets/wadeem-DHtWF8iH.js",
+    "name": "wadeem",
+    "src": "resources/js/landing/wadeem.js",
+    "isEntry": true,
+    "imports": [
+      "_intlTelInput-jRFmtbbD.js"
+    ]
+  },
+  "resources/js/landing/yas-riva.js": {
+    "file": "assets/yas-riva-DHtWF8iH.js",
+    "name": "yas-riva",
+    "src": "resources/js/landing/yas-riva.js",
     "isEntry": true,
     "imports": [
       "_intlTelInput-jRFmtbbD.js"

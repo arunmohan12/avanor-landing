@@ -23,8 +23,6 @@ Route::post(
     [LeadController::class, 'storeLanding']
 )->name('landing.leads.store');
 
-Route::get('/the-heights-by-emaar', [LandingPageController::class, 'showTheheights']);
-
 
 Route::get('/thank-you', function () {
     return view('thank-you');
@@ -37,3 +35,13 @@ Route::get('/privacy-policies', function () {
 Route::get('/terms-and-condition', function () {
     return view('termsandconditions');
 })->name('landing.terms-and-conditions');
+
+
+
+//Pages
+Route::get('/the-heights-by-emaar', [LandingPageController::class, 'showTheheights']);
+Route::get('/wadeem-gardens-by-modon', [LandingPageController::class, 'showWadeemByModon']);
+Route::get('/yas-riva-by-aldar', [LandingPageController::class, 'showYasRivaByAldar']);
+
+Route::view('/wadeem', 'landingpages.demowadeem')
+    ->name('landing.wadeem');

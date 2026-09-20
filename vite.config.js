@@ -12,12 +12,20 @@ export default defineConfig({
 
 
                 'resources/css/landing/palm-jebel-ali.css',
+
                 'resources/js/landing/palm-jebel-ali.js',
                 'resources/js/map.js',
+
                 'resources/css/landing/the-heightsv2.css',
                 'resources/css/landing/privacy-policy.css',
                 'resources/css/landing/terms-conditions.css',
+                'resources/css/landing/wadeem.css',
+                'resources/css/landing/yas-riva.css',
+                'resources/css/landing/wadeemv2.css',
+
                 'resources/js/landing/the-heights.js',
+                'resources/js/landing/wadeem.js',
+                'resources/js/landing/yas-riva.js',
             ],
             refresh: true,
             fonts: [

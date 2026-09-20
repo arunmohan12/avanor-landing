@@ -174,7 +174,6 @@ class ToolSearch
             id: "execute-tools:{$index}",
             method: 'tools/call',
             params: $params,
-            sessionId: $parentRequest->sessionId(),
         );
 
         $container = Container::getInstance();

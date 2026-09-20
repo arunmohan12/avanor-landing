@@ -1,0 +1,808 @@
+:root {
+    --wadeem-white: #ffffff;
+    --wadeem-black: #111111;
+    --wadeem-dark: #171717;
+    --wadeem-muted: rgba(255, 255, 255, 0.72);
+
+    --wadeem-container: min(1400px, calc(100% - 100px));
+    --wadeem-transition: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+.wadeem-page {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: var(--wadeem-white);
+    color: var(--wadeem-black);
+}
+
+.wadeem-page *,
+.wadeem-page *::before,
+.wadeem-page *::after {
+    box-sizing: border-box;
+}
+
+.wadeem-page a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wadeem-page button {
+    font: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.wadeem-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 1000;
+
+    width: 100%;
+    height: 82px;
+
+    color: var(--wadeem-white);
+
+    transition:
+        background-color var(--wadeem-transition),
+        backdrop-filter var(--wadeem-transition),
+        box-shadow var(--wadeem-transition),
+        color var(--wadeem-transition);
+}
+
+.wadeem-header.scrolled {
+    background: rgba(17, 17, 17, 0.94);
+
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.wadeem-header-inner {
+    width: var(--wadeem-container);
+    height: 100%;
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.wadeem-logo {
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+}
+
+
+/* =========================================================
+   DESKTOP NAV
+   ========================================================= */
+
+.wadeem-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(24px, 3vw, 52px);
+
+    margin-left: auto;
+}
+
+.wadeem-nav a {
+    position: relative;
+
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    opacity: 0.9;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.wadeem-nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: currentColor;
+
+    transition: width 0.35s ease;
+}
+
+.wadeem-nav a:hover {
+    opacity: 1;
+}
+
+.wadeem-nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   HEADER CTA
+   ========================================================= */
+
+.wadeem-header-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    min-height: 44px;
+    padding: 0 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.wadeem-header-cta:hover {
+    background: var(--wadeem-white);
+    border-color: var(--wadeem-white);
+    color: var(--wadeem-black);
+}
+
+.wadeem-arrow {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.wadeem-menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+.wadeem-menu-toggle span {
+    position: absolute;
+    left: 7px;
+
+    width: 28px;
+    height: 1px;
+
+    background: currentColor;
+
+    transition:
+        transform 0.4s ease,
+        top 0.4s ease;
+}
+
+.wadeem-menu-toggle span:first-child {
+    top: 17px;
+}
+
+.wadeem-menu-toggle span:last-child {
+    top: 25px;
+}
+
+.wadeem-menu-toggle.active span:first-child {
+    top: 21px;
+    transform: rotate(45deg);
+}
+
+.wadeem-menu-toggle.active span:last-child {
+    top: 21px;
+    transform: rotate(-45deg);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.wadeem-mobile-menu {
+    position: fixed;
+    inset: 0;
+
+    z-index: 999;
+
+    display: none;
+
+    background: var(--wadeem-dark);
+    color: var(--wadeem-white);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-20px);
+
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease,
+        transform 0.4s ease;
+}
+
+.wadeem-mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.wadeem-mobile-menu-inner {
+    height: 100%;
+    padding: 120px 30px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wadeem-mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.wadeem-mobile-menu nav a {
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    font-size: clamp(28px, 8vw, 48px);
+    line-height: 1.1;
+}
+
+.wadeem-mobile-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 17px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.wadeem-hero {
+    position: relative;
+
+    width: 100%;
+    height: 100svh;
+    min-height: 680px;
+
+    color: var(--wadeem-white);
+
+    overflow: hidden;
+
+    background: var(--wadeem-dark);
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
+.wadeem-hero-media {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+}
+
+.wadeem-hero-media img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1.03);
+
+    animation: wadeemHeroImage 1.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+@keyframes wadeemHeroImage {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+}
+
+
+/* =========================================================
+   HERO OVERLAY
+   ========================================================= */
+
+.wadeem-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.46) 0%,
+            rgba(0, 0, 0, 0.08) 42%,
+            rgba(0, 0, 0, 0.48) 100%
+        );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.wadeem-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: var(--wadeem-container);
+    height: 100%;
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 82px;
+}
+
+.wadeem-eyebrow {
+    margin: 0 0 22px;
+
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+
+    opacity: 0;
+
+    animation: wadeemFadeUp 0.9s
+    0.25s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+.wadeem-hero h1 {
+    margin: 0;
+
+    font-size: clamp(70px, 11vw, 190px);
+    font-weight: 300;
+    line-height: 0.82;
+    letter-spacing: -0.045em;
+
+    opacity: 0;
+    transform: translateY(35px);
+
+    animation: wadeemFadeUp 1s
+    0.4s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+.wadeem-hero-description {
+    width: min(440px, 100%);
+
+    margin: 38px 0 30px;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    animation: wadeemFadeUp 0.9s
+    0.65s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.wadeem-primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+
+    min-height: 52px;
+    padding: 0 23px;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: wadeemFadeUp 0.9s
+    0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.wadeem-primary-btn:hover {
+    background: var(--wadeem-white);
+    color: var(--wadeem-black);
+    border-color: var(--wadeem-white);
+}
+
+.wadeem-btn-arrow {
+    font-size: 17px;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+}
+
+.wadeem-primary-btn:hover .wadeem-btn-arrow {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+   ========================================================= */
+
+.wadeem-hero-bottom {
+    position: absolute;
+    z-index: 2;
+
+    left: 50%;
+    bottom: 35px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    white-space: nowrap;
+}
+
+.wadeem-scroll-label {
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    opacity: 0.75;
+}
+
+.wadeem-scroll-line {
+    width: 70px;
+    height: 1px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.wadeem-scroll-line::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: var(--wadeem-white);
+
+    transform: translateX(-100%);
+
+    animation: wadeemScrollLine 2s
+    ease-in-out
+    infinite;
+}
+
+@keyframes wadeemScrollLine {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50%,
+    70% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes wadeemFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.wadeem-placeholder-section {
+    min-height: 600px;
+
+    padding: 120px max(30px, calc((100% - 1400px) / 2));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #f5f3ef;
+}
+
+.wadeem-placeholder-section span {
+    margin-bottom: 20px;
+
+    font-size: 11px;
+    letter-spacing: 0.2em;
+}
+
+.wadeem-placeholder-section h2 {
+    margin: 0;
+
+    font-size: clamp(45px, 7vw, 100px);
+    font-weight: 300;
+    line-height: 0.95;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    :root {
+        --wadeem-container: min(100% - 60px, 1000px);
+    }
+
+    .wadeem-nav {
+        gap: 22px;
+    }
+
+    .wadeem-nav a {
+        font-size: 10px;
+    }
+
+    .wadeem-header-cta {
+        padding-inline: 15px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    :root {
+        --wadeem-container: calc(100% - 40px);
+    }
+
+    .wadeem-header {
+        height: 70px;
+    }
+
+    .wadeem-nav,
+    .wadeem-header-cta {
+        display: none;
+    }
+
+    .wadeem-menu-toggle {
+        display: block;
+    }
+
+    .wadeem-mobile-menu {
+        display: block;
+    }
+
+    .wadeem-hero {
+        min-height: 620px;
+        height: 100svh;
+    }
+
+    .wadeem-hero-content {
+        padding-top: 70px;
+        justify-content: center;
+    }
+
+    .wadeem-eyebrow {
+        margin-bottom: 18px;
+    }
+
+    .wadeem-hero h1 {
+        font-size: clamp(58px, 18vw, 105px);
+        line-height: 0.86;
+    }
+
+    .wadeem-hero-description {
+        width: min(330px, 100%);
+
+        margin-top: 28px;
+
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .wadeem-primary-btn {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .wadeem-hero-bottom {
+        bottom: 25px;
+    }
+
+    .wadeem-scroll-label {
+        font-size: 8px;
+    }
+
+    .wadeem-scroll-line {
+        width: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    :root {
+        --wadeem-container: calc(100% - 30px);
+    }
+
+    .wadeem-mobile-menu-inner {
+        padding-inline: 20px;
+    }
+
+    .wadeem-mobile-menu nav a {
+        padding: 15px 0;
+
+        font-size: 30px;
+    }
+
+    .wadeem-hero h1 {
+        font-size: 19vw;
+    }
+
+    .wadeem-hero-description {
+        margin-top: 24px;
+    }
+
+    .wadeem-primary-btn {
+        max-width: 230px;
+    }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) and (orientation: landscape) {
+
+    .wadeem-hero {
+        min-height: 520px;
+    }
+
+    .wadeem-hero-content {
+        padding-top: 90px;
+    }
+
+    .wadeem-hero h1 {
+        font-size: clamp(55px, 11vw, 100px);
+    }
+
+    .wadeem-hero-description {
+        margin-block: 20px;
+    }
+
+    .wadeem-hero-bottom {
+        bottom: 15px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .wadeem-hero-media img,
+    .wadeem-eyebrow,
+    .wadeem-hero h1,
+    .wadeem-hero-description,
+    .wadeem-primary-btn,
+    .wadeem-scroll-line::after {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
