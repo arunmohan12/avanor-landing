@@ -272,33 +272,33 @@ document
         });
     });
 
-// setTimeout(() => {
-//
-//     if (leadPopupOpened) {
-//         return;
-//     }
-//
-//     const popupTrigger = document.querySelector(
-//         '[data-lead-popup-open]'
-//     );
-//
-//     if (!popupTrigger) {
-//         return;
-//     }
-//
-//     // First popup - 10 seconds
-//     leadPopupOpened = true;
-//     popupTrigger.click();
-//
-//
-//     // Second popup - 25 seconds after first popup
-//     setTimeout(() => {
-//
-//         popupTrigger.click();
-//
-//     }, 25000);
-//
-// }, 10000);
+setTimeout(() => {
+
+    if (leadPopupOpened) {
+        return;
+    }
+
+    const popupTrigger = document.querySelector(
+        '[data-lead-popup-open]'
+    );
+
+    if (!popupTrigger) {
+        return;
+    }
+
+    // First popup - 10 seconds
+    leadPopupOpened = true;
+    popupTrigger.click();
+
+
+    // Second popup - 25 seconds after first popup
+    setTimeout(() => {
+
+        popupTrigger.click();
+
+    }, 25000);
+
+}, 10000);
 
 
 const header = document.querySelector('.landing-header');
