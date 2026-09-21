@@ -257,7 +257,7 @@ class LeadController extends Controller
                 'X-Internal-Secret' => config('services.internal.secret'),
             ])->post(
                 rtrim(config('services.avanor_api_url'), '/')
-                . "/api/internal/leads/{$lead->id}/notify"
+                . "/internal/leads/{$lead->id}/notify"
             )->throw();
         } catch (\Throwable $exception) {
             Log::error('Failed to trigger lead notification.', [
