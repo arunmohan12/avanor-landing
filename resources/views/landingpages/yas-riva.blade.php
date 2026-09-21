@@ -1799,7 +1799,7 @@ strip_tags($property->description ?? ''),
                                     {{-- Replace iframe src with your actual Google Maps Embed API / Custom Silver Map URL --}}
                                     <iframe
                                         class="map-iframe"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14519.82498263539!2d54.5986872!3d24.4883584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e45a278d6b8ad%3A0x8849b28f7311100!2sYas%20Island%2C%20Abu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58095.81727413508!2d54.6029783!3d24.485852549999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e457d9c174315%3A0xbea25f33cf37e48e!2sYas%20Island!5e0!3m2!1sen!2sin!4v1789981533106!5m2!1sen!2sin"
                                         width="100%"
                                         height="100%"
                                         style="border:0;"
@@ -1937,7 +1937,7 @@ strip_tags($property->description ?? ''),
 
             <div
                 class="landing-right-section"
-                style="background-image: url('{{ asset('assets/img/landing/wadeem-modon/side-bg.webp') }}');"
+                style="background-image: url('{{ asset('assets/img/landing/yas-riva/side-bg.webp') }}');"
             >
 
                 <aside class="landing-side-form">
