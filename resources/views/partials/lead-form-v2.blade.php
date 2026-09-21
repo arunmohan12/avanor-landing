@@ -253,7 +253,50 @@
 
         </div>
 
+        <div class="avanor-lead-field">
 
+            <label for="{{ $formId }}-bedroom-type">
+                Villa Type
+            </label>
+
+            <select
+                id="{{ $formId }}-bedroom-type"
+                name="bedroom_type"
+                required
+            >
+                <option value="" disabled {{ old('bedroom_type') ? '' : 'selected' }}>
+                    Select villa type
+                </option>
+
+                <option
+                    value="4 Bedroom Villa"
+                    {{ old('bedroom_type') === '4 Bedroom Villa' ? 'selected' : '' }}
+                >
+                    4 Bedroom Villa
+                </option>
+
+                <option
+                    value="5 Bedroom Villa"
+                    {{ old('bedroom_type') === '5 Bedroom Villa' ? 'selected' : '' }}
+                >
+                    5 Bedroom Villa
+                </option>
+
+                <option
+                    value="6 Bedroom Villa"
+                    {{ old('bedroom_type') === '6 Bedroom Villa' ? 'selected' : '' }}
+                >
+                    6 Bedroom Villa
+                </option>
+            </select>
+
+            @error('bedroom_type')
+            <span class="avanor-lead-error">
+                    {{ $message }}
+                </span>
+            @enderror
+
+        </div>
 
 
         <button

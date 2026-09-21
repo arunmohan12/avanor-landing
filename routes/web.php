@@ -44,5 +44,6 @@ Route::get('/wadeem-gardens-by-modon', [LandingPageController::class, 'showWadee
 Route::domain('aldaryasriva.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showYasRivaByAldar']);
 });
+
 Route::view('/wadeem', 'landingpages.demowadeem')
     ->name('landing.wadeem');
