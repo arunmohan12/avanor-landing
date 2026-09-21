@@ -3270,7 +3270,7 @@ slider-area {
     width: 100%;
     height: 1px;
 
-    background: var(--champagne);
+    background: var(--brand-light);
 
     transform: scaleX(0);
     transform-origin: left;
