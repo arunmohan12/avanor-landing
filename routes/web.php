@@ -20,7 +20,7 @@ Route::post('/enquiry', [LeadController::class, 'store'])
     ->name('leads.store');
 Route::post(
     '/landing-leads',
-    [LeadController::class, 'storeLanding']
+    [LeadController::class, 'storeLandingV2']
 )->name('landing.leads.store');
 
 

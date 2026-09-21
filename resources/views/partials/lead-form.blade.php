@@ -45,7 +45,7 @@
         id="{{ $formId }}"
         method="POST"
         action="{{ $action ?? route('leads.store') }}"
-                class="avanor-lead-form-element"
+        class="avanor-lead-form-element"
     >
 
         @csrf
@@ -132,7 +132,7 @@
 
         <div class="avanor-lead-field">
 
-            <label for="{{ $formId }}-name" >
+            <label for="{{ $formId }}-name">
                 Full Name
             </label>
 
@@ -147,14 +147,57 @@
             >
 
             @error('name')
-                <span class="avanor-lead-error">
+            <span class="avanor-lead-error">
                     {{ $message }}
                 </span>
             @enderror
 
         </div>
 
+        <div class="avanor-lead-field">
 
+            <label for="{{ $formId }}-bedroom-type">
+                Villa Type
+            </label>
+
+            <select
+                id="{{ $formId }}-bedroom-type"
+                name="bedroom_type"
+                required
+            >
+                <option value="" disabled {{ old('bedroom_type') ? '' : 'selected' }}>
+                    Select villa type
+                </option>
+
+                <option
+                    value="4 Bedroom Villa"
+                    {{ old('bedroom_type') === '4 Bedroom Villa' ? 'selected' : '' }}
+                >
+                    4 Bedroom Villa
+                </option>
+
+                <option
+                    value="5 Bedroom Villa"
+                    {{ old('bedroom_type') === '5 Bedroom Villa' ? 'selected' : '' }}
+                >
+                    5 Bedroom Villa
+                </option>
+
+                <option
+                    value="6 Bedroom Villa"
+                    {{ old('bedroom_type') === '6 Bedroom Villa' ? 'selected' : '' }}
+                >
+                    6 Bedroom Villa
+                </option>
+            </select>
+
+            @error('bedroom_type')
+            <span class="avanor-lead-error">
+                    {{ $message }}
+                </span>
+            @enderror
+
+        </div>
         {{-- Phone --}}
 
         <div class="avanor-lead-field">
@@ -168,17 +211,15 @@
                 id="{{ $formId }}-phone"
                 name="phone"
                 value="{{ old('phone') }}"
-                placeholder=" Mobile Number"
+                placeholder="Mobile Number"
                 autocomplete="tel"
                 required
             >
 
-
-
             @error('phone')
             <span class="avanor-lead-error">
-            {{ $message }}
-        </span>
+                    {{ $message }}
+                </span>
             @enderror
 
         </div>
@@ -202,7 +243,7 @@
             >
 
             @error('email')
-                <span class="avanor-lead-error">
+            <span class="avanor-lead-error">
                     {{ $message }}
                 </span>
             @enderror
@@ -210,18 +251,27 @@
         </div>
 
 
+        {{-- Villa Type --}}
 
+
+
+
+        {{-- Submit --}}
 
         <button
             type="submit"
             id="{{ $formId }}-submit"
             data-lead-popup-submit
-            class="avanor-lead-submit">
+            class="avanor-lead-submit"
+        >
 
             {{ strtoupper($buttonText) }}
 
             <x-landing-icon name="arrow-right" />
+
         </button>
+
+
         <p class="avanor-lead-consent">
 
             By submitting this form, you agree to be contacted about this property and other relevant real estate opportunities.

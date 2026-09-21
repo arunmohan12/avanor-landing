@@ -1,85 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--GTM -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NCXCP87F');</script>
+    <!-- End Google Tag Manager -->
 
 
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        (function (w, d, s, l, i) {
 
-            let loaded = false;
-
-            const events = [
-                'pointerdown',
-                'touchstart',
-                'keydown',
-                'scroll'
-            ];
-
-            function loadGTM() {
-
-                if (loaded) {
-                    return;
-                }
-
-                loaded = true;
-
-                events.forEach(function (event) {
-                    w.removeEventListener(event, loadGTM);
-                });
-
-                w[l].push({
-                    'gtm.start': new Date().getTime(),
-                    event: 'gtm.js'
-                });
-
-                const script = d.createElement(s);
-
-                script.async = true;
-
-                script.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' +
-                    i +
-                    (l !== 'dataLayer' ? '&l=' + l : '');
-
-                d.head.appendChild(script);
-            }
-
-            /*
-             * Load immediately when the visitor interacts.
-             */
-            events.forEach(function (event) {
-                w.addEventListener(
-                    event,
-                    loadGTM,
-                    {
-                        once: true,
-                        passive: true
-                    }
-                );
-            });
-
-            /*
-             * Otherwise load after the page has finished loading.
-             */
-            w.addEventListener('load', function () {
-
-                setTimeout(loadGTM, 4000);
-
-            }, { once: true });
-
-        })(
-            window,
-            document,
-            'script',
-            'dataLayer',
-            'GTM-NCXCP87F'
-        );
-    </script>
-
-    <!--GTM End -->
 
     <meta charset="UTF-8">
 
@@ -147,6 +80,7 @@
 </head>
 
 <body>
+
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCXCP87F"

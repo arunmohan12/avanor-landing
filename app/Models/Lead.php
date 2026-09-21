@@ -25,6 +25,7 @@ class Lead extends Model
         'budget',
         'message',
         'status',
+        'bedroom_type',
     ];
 
     public function property()

@@ -4014,11 +4014,11 @@ body.landing-popup-open {
 }
 
 
-/* Fields */
+       /* Fields */
 
-.avanor-lead-field {
-    margin-bottom: 18px;
-}
+   .avanor-lead-field {
+       margin-bottom: 18px;
+   }
 
 .avanor-lead-field label {
     display: block;
@@ -4030,8 +4030,12 @@ body.landing-popup-open {
     font-size: 12px;
     font-weight: 600;
     letter-spacing: .3px;
+
     display: none;
 }
+
+
+/* Text / Phone / Email Inputs */
 
 .avanor-lead-field input {
     width: 100%;
@@ -4059,6 +4063,93 @@ body.landing-popup-open {
     border-color: var(--brand-dark);
 
     box-shadow: 0 0 0 2px rgba(3, 9, 32, .05);
+}
+
+
+/* =========================================================
+   Villa Type Dropdown
+========================================================= */
+
+.avanor-lead-field select {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 42px 0 15px;
+
+    border: 1px solid rgba(3, 9, 32, .16);
+    border-radius: 0;
+
+    background-color: #fff;
+
+    color: var(--brand-dark);
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+
+    outline: none;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+/* Custom dropdown arrow */
+
+.avanor-lead-field:has(select) {
+    position: relative;
+}
+
+.avanor-lead-field:has(select)::after {
+    content: "";
+
+    position: absolute;
+
+    right: 17px;
+    bottom: 20px;
+
+    width: 7px;
+    height: 7px;
+
+    border-right: 1px solid var(--brand-dark);
+    border-bottom: 1px solid var(--brand-dark);
+
+    transform: rotate(45deg);
+
+    pointer-events: none;
+
+    transition: transform .25s ease;
+}
+
+
+/* Focus */
+
+.avanor-lead-field select:focus {
+    border-color: var(--brand-dark);
+
+    box-shadow: 0 0 0 2px rgba(3, 9, 32, .05);
+}
+
+
+/* Placeholder */
+
+.avanor-lead-field select:invalid {
+    color: #8a919b;
+}
+
+
+/* Dropdown options */
+
+.avanor-lead-field select option {
+    background: #fff;
+    color: var(--brand-dark);
 }
 
 
@@ -4155,21 +4246,12 @@ body.landing-popup-open {
     .avanor-lead-form-header-v2 h3 {
         font-size: var(--font-xl);
     }
-}
-/* =========================================================
-   MASTER PLAN SECTION
-========================================================= */
 
-.landing-plan-section {
-    padding: 95px 0;
-    background: #f8f8f6;
-}
+    .avanor-lead-field select {
+        height: 52px;
+    }
 
-.landing-plan-container {
-    width: min(1400px, calc(100% - 48px));
-    margin-inline: auto;
 }
-
 
 /* Heading */
 
@@ -4756,7 +4838,7 @@ body.landing-popup-open {
     color: #fff;
 
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.15;
 }
 
@@ -4829,13 +4911,7 @@ body.landing-popup-open {
     position: absolute;
     inset: 0;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(22, 34, 30, 0.82) 0%,
-            rgba(22, 34, 30, 0.45) 40%,
-            rgba(22, 34, 30, 0) 100%
-        );
+    background: linear-gradient(90deg, rgb(22 34 30 / 83%) 0%, rgb(22 34 30 / 71%) 40%, rgba(22, 34, 30, 0) 100%);
 
     z-index: 1;
 }
@@ -10243,15 +10319,14 @@ li {
 
 .landing-whatsapp-float {
     position: fixed !important;
-    right: 100px !important;
-    bottom: 25px !important;
+    right: 20px !important;
+    bottom: 30px !important;
 
     width: 44px !important;
     height: 44px !important;
 
     display: flex !important;
-    align-items: center;
-    justify-content: center;
+
 
     z-index: 999999 !important;
 
