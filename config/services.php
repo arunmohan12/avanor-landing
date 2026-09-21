@@ -39,4 +39,9 @@ return [
         'maps_key' => env('GOOGLE_MAPS_API_KEY'),
     ],
 
+    'avanor_api_url' => env('AVANOR_API_URL'),
+    'internal' => [
+        'secret' => env('INTERNAL_API_SECRET'),
+    ],
+
 ];

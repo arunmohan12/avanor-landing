@@ -7,7 +7,8 @@ namespace App\Http\Controllers;
 use App\Http\Resources\LeadResource;
 use App\Models\Lead;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 class LeadController extends Controller
 {
     public function show(Lead $lead): LeadResource
@@ -247,7 +248,23 @@ class LeadController extends Controller
             'email.unique' => 'This email address has already been registered with us.',
         ]);
 
-        Lead::create($validated);
+
+
+        $lead = Lead::create($validated);
+
+        try {
+            Http::withHeaders([
+                'X-Internal-Secret' => config('services.internal.secret'),
+            ])->post(
+                rtrim(config('services.avanor_api_url'), '/')
+                . "/api/internal/leads/{$lead->id}/notify"
+            )->throw();
+        } catch (\Throwable $exception) {
+            Log::error('Failed to trigger lead notification.', [
+                'lead_id' => $lead->id,
+                'error' => $exception->getMessage(),
+            ]);
+        }
 
         return redirect()
             ->route('landing.thank-you');
