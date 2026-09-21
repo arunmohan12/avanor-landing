@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitcda2add6397422fb1a2eb5b9207f1575
+class ComposerStaticInitda2400bd6f9ed7d83df29e2d6c940d9e
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -436,8 +436,8 @@ class ComposerStaticInitcda2add6397422fb1a2eb5b9207f1575
         ),
         'Nette\\' => 
         array (
-            0 => __DIR__ . '/..' . '/nette/schema/src',
-            1 => __DIR__ . '/..' . '/nette/utils/src',
+            0 => __DIR__ . '/..' . '/nette/utils/src',
+            1 => __DIR__ . '/..' . '/nette/schema/src',
         ),
         'Monolog\\' => 
         array (
@@ -449,8 +449,8 @@ class ComposerStaticInitcda2add6397422fb1a2eb5b9207f1575
         ),
         'League\\Uri\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/uri',
-            1 => __DIR__ . '/..' . '/league/uri-interfaces',
+            0 => __DIR__ . '/..' . '/league/uri-interfaces',
+            1 => __DIR__ . '/..' . '/league/uri',
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -9379,9 +9379,9 @@ class ComposerStaticInitcda2add6397422fb1a2eb5b9207f1575
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitcda2add6397422fb1a2eb5b9207f1575::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitcda2add6397422fb1a2eb5b9207f1575::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitcda2add6397422fb1a2eb5b9207f1575::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitda2400bd6f9ed7d83df29e2d6c940d9e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitda2400bd6f9ed7d83df29e2d6c940d9e::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitda2400bd6f9ed7d83df29e2d6c940d9e::$classMap;
 
         }, null, ClassLoader::class);
     }

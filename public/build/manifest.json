@@ -156,10 +156,9 @@
   },
   "resources/css/landing/wadeem.css": {
     "file": "assets/wadeem-C1Y_IFs0.css",
-    "name": "yas-riva",
+    "name": "wadeem",
     "names": [
-      "wadeem.css",
-      "yas-riva.css"
+      "wadeem.css"
     ],
     "src": "resources/css/landing/wadeem.css",
     "isEntry": true,
@@ -195,13 +194,12 @@
     "isEntry": true
   },
   "resources/css/landing/yas-riva.css": {
-    "file": "assets/wadeem-C1Y_IFs0.css",
+    "file": "assets/yas-riva-D3bjuS0o.css",
     "name": "yas-riva",
     "names": [
-      "wadeem.css",
       "yas-riva.css"
     ],
-    "src": "resources/css/landing/wadeem.css",
+    "src": "resources/css/landing/yas-riva.css",
     "isEntry": true,
     "assets": [
       "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
@@ -323,7 +321,7 @@
     ]
   },
   "resources/js/landing/yas-riva.js": {
-    "file": "assets/yas-riva-DHtWF8iH.js",
+    "file": "assets/yas-riva-r4k8Dg6H.js",
     "name": "yas-riva",
     "src": "resources/js/landing/yas-riva.js",
     "isEntry": true,
