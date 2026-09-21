@@ -1,6 +1,6 @@
-@extends('landingpages.layouts.mavera-landing')
+@extends('layouts.landing')
 @push('styles')
-    @vite('resources/css/landingpages/privacy-policy.css')
+    @vite('resources/css/landing/privacy-policy.css')
 @endpush
 @section('title', 'Privacy Policy | Avanor Capital')
 
@@ -456,7 +456,7 @@
                             </p>
 
                             <a
-                                href="{{ url('/') }}"
+                                href="https://avanorcap.com/contact"
                                 class="avanor-privacy-contact-btn">
 
                                 CONTACT AVANOR CAPITAL

@@ -1,7 +1,7 @@
-@extends('landingpages.layouts.mavera-landing')
+@extends('layouts.landing')
 
 @push('styles')
-    @vite('resources/css/landingpages/terms-conditions.css')
+    @vite('resources/css/landing/terms-conditions.css')
 @endpush
 
 @section('title', 'Terms & Conditions | Avanor Capital')
@@ -531,7 +531,7 @@
                         </p>
 
                         <a
-                            href="/"
+                            href="https://avanorcap.com/contact"
                             class="avanor-terms-contact-btn">
                             CONTACT AVANOR CAPITAL
                         </a>

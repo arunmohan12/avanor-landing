@@ -1,4 +1,4 @@
-@extends('landingpages.layouts.landing')
+@extends('layouts.landing')
 
 @section('title', 'Thank You | Avanor')
 
@@ -32,7 +32,7 @@
             </a>
 
             <a
-                href="https://wa.me/+971589798257"
+                href="https://wa.me/+971555342535"
                 class="landing-thankyou-whatsapp"
                 target="_blank"
                 rel="noopener">

@@ -7,3 +7,149 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+
+/* =====================================================
+   THANK YOU PAGE
+===================================================== */
+
+.landing-thankyou {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 24px;
+
+    background: #000;
+
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.landing-thankyou-content {
+    position: relative;
+    z-index: 1;
+}
+.landing-thankyou-content {
+    width: 100%;
+    max-width: 650px;
+}
+
+.landing-thankyou-eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #c8a96c;
+
+    font-size: var(--font-xs);
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.landing-thankyou h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(48px, 6vw, 76px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.landing-thankyou-line {
+    width: 60px;
+    height: 1px;
+
+    margin: 28px auto;
+
+    background: #c8a96c;
+}
+
+.landing-thankyou p {
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.landing-thankyou-actions {
+    margin-top: 38px;
+
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.landing-thankyou-btn,
+.landing-thankyou-whatsapp {
+    min-height: 52px;
+
+    padding: 0 24px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+
+    text-decoration: none;
+}
+
+.landing-thankyou-btn {
+    background: #c8a96c;
+    border: 1px solid #c8a96c;
+
+    color: #081628;
+}
+
+.landing-thankyou-btn:hover{
+    background: transparent;
+    border: 1px solid var(--brand-light);
+
+    color:var(--brand-light);
+}
+.landing-thankyou-whatsapp {
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    color: #ffffff;
+}
+
+.landing-thankyou-whatsapp img {
+    width: 17px;
+    height: 17px;
+
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 575px) {
+
+    .landing-thankyou {
+        padding: 60px 20px;
+    }
+
+    .landing-thankyou-actions {
+        flex-direction: column;
+    }
+
+    .landing-thankyou-btn,
+    .landing-thankyou-whatsapp {
+        width: 100%;
+    }
+
+}
