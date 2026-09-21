@@ -622,150 +622,7 @@ strip_tags($property->description ?? ''),
 
 
 
-                    <section class=" landing-about-v2" id="downloads" >
 
-                        <div class="landing-gallery-container">
-
-                            <div class="landing-plan-heading" >
-
-                    <span class="landing-about-v2-eyebrow">
-                        PLANS
-                    </span>
-
-                                <h2 class="landing-about-v2-title">
-                                    Floor Plans
-                                </h2>
-
-                                <p class="landing-about-v2-description mb-lg">
-                                    Request detailed project layouts and unit plans for
-                                    {{ $property->title }}.
-                                </p>
-
-                            </div>
-
-
-                            <div class="landing-plan-grid-br">
-
-                                {{-- MASTER PLAN --}}
-                                <article class="landing-plan-card">
-
-                                    <button
-                                        type="button"
-                                        class="landing-plan-image-wrap"
-                                        data-lead-popup-open
-                                        data-request-type="master_plan">
-
-                                        <img
-                                            src="{{ asset('assets/img/landing/br-plans.webp') }}"
-                                            alt=" {{ $property->project?->name ?? $property->title }}"
-                                            class="landing-plan-image">
-
-                                        <span class="landing-plan-overlay"></span>
-
-                                        <span class="landing-plan-overlay-text">
-                                SHOW 4 BR FlOOR PLAN
-                            </span>
-
-                                    </button>
-
-                                    <div class="landing-plan-card-footer">
-
-                                        <h3>
-                                            4 Bedroom Villa
-                                        </h3>
-
-                                        <p>
-                                            BUA: 437 Sq.M | Plot: 711 Sq.M
-
-                                        </p>
-
-
-
-                                    </div>
-
-                                </article>
-
-
-                                {{-- UNIT PLAN --}}
-                                <article class="landing-plan-card">
-
-                                    <button
-                                        type="button"
-                                        class="landing-plan-image-wrap"
-                                        data-lead-popup-open
-                                        data-request-type="unit_plan">
-
-                                        <img
-                                            src="{{ asset('assets/img/landing/br-plans.webp') }}"
-                                            alt=" {{ $property->project?->name ?? $property->title }}"
-                                            class="landing-plan-image">
-
-                                        <span class="landing-plan-overlay"></span>
-
-                                        <span class="landing-plan-overlay-text">
-                                SHOW 5 BR VILLA FlOOR PLAN
-                            </span>
-
-                                    </button>
-
-                                    <div class="landing-plan-card-footer">
-
-                                        <h3>
-                                            5 Bedroom Villa
-                                        </h3>
-
-                                        <p>
-                                            BUA: 482 Sq.M | Plot: 828 Sq.M
-
-                                        </p>
-
-
-
-                                    </div>
-
-                                </article>
-
-                                <article class="landing-plan-card">
-
-                                    <button
-                                        type="button"
-                                        class="landing-plan-image-wrap"
-                                        data-lead-popup-open
-                                        data-request-type="unit_plan">
-
-                                        <img
-                                            src="{{ asset('assets/img/landing/br-plans.webp') }}"
-                                            alt=" {{ $property->project?->name ?? $property->title }}"
-                                            class="landing-plan-image">
-
-                                        <span class="landing-plan-overlay"></span>
-
-                                        <span class="landing-plan-overlay-text">
-                                SHOW 6 BR VILLA FlOOR PLAN
-                            </span>
-
-                                    </button>
-
-                                    <div class="landing-plan-card-footer">
-
-                                        <h3>
-                                            6 Bedroom Villa
-                                        </h3>
-
-                                        <p>
-                                            BUA: 538 Sq.M | Plot: 936 Sq.M
-
-                                        </p>
-
-
-
-                                    </div>
-
-                                </article>
-                            </div>
-
-                        </div>
-                    </section>
 
 
                 <section class="landing-about-v2" >
@@ -1110,7 +967,150 @@ strip_tags($property->description ?? ''),
                     </div>
 
                 </section>
+                    <section class=" landing-about-v2" id="downloads" >
 
+                        <div class="landing-gallery-container">
+
+                            <div class="landing-plan-heading" >
+
+                            <span class="landing-about-v2-eyebrow">
+                             PLANS
+                            </span>
+
+                                <h2 class="landing-about-v2-title">
+                                    Floor Plans
+                                </h2>
+
+                                <p class="landing-about-v2-description mb-lg">
+                                    Request detailed project layouts and unit plans for
+                                    {{ $property->title }}.
+                                </p>
+
+                            </div>
+
+
+                            <div class="landing-plan-grid-br">
+
+                                {{-- MASTER PLAN --}}
+                                <article class="landing-plan-card">
+
+                                    <button
+                                        type="button"
+                                        class="landing-plan-image-wrap"
+                                        data-lead-popup-open
+                                        data-request-type="master_plan">
+
+                                        <img
+                                            src="{{ asset('assets/img/landing/br-plans.webp') }}"
+                                            alt=" {{ $property->project?->name ?? $property->title }}"
+                                            class="landing-plan-image">
+
+                                        <span class="landing-plan-overlay"></span>
+
+                                        <span class="landing-plan-overlay-text">
+                                SHOW 4 BR FlOOR PLAN
+                            </span>
+
+                                    </button>
+
+                                    <div class="landing-plan-card-footer">
+
+                                        <h3>
+                                            4 Bedroom Villa
+                                        </h3>
+
+                                        <p>
+                                            BUA: 437 Sq.M | Plot: 711 Sq.M
+
+                                        </p>
+
+
+
+                                    </div>
+
+                                </article>
+
+
+                                {{-- UNIT PLAN --}}
+                                <article class="landing-plan-card">
+
+                                    <button
+                                        type="button"
+                                        class="landing-plan-image-wrap"
+                                        data-lead-popup-open
+                                        data-request-type="unit_plan">
+
+                                        <img
+                                            src="{{ asset('assets/img/landing/br-plans.webp') }}"
+                                            alt=" {{ $property->project?->name ?? $property->title }}"
+                                            class="landing-plan-image">
+
+                                        <span class="landing-plan-overlay"></span>
+
+                                        <span class="landing-plan-overlay-text">
+                                SHOW 5 BR VILLA FlOOR PLAN
+                            </span>
+
+                                    </button>
+
+                                    <div class="landing-plan-card-footer">
+
+                                        <h3>
+                                            5 Bedroom Villa
+                                        </h3>
+
+                                        <p>
+                                            BUA: 482 Sq.M | Plot: 828 Sq.M
+
+                                        </p>
+
+
+
+                                    </div>
+
+                                </article>
+
+                                <article class="landing-plan-card">
+
+                                    <button
+                                        type="button"
+                                        class="landing-plan-image-wrap"
+                                        data-lead-popup-open
+                                        data-request-type="unit_plan">
+
+                                        <img
+                                            src="{{ asset('assets/img/landing/br-plans.webp') }}"
+                                            alt=" {{ $property->project?->name ?? $property->title }}"
+                                            class="landing-plan-image">
+
+                                        <span class="landing-plan-overlay"></span>
+
+                                        <span class="landing-plan-overlay-text">
+                                SHOW 6 BR VILLA FlOOR PLAN
+                            </span>
+
+                                    </button>
+
+                                    <div class="landing-plan-card-footer">
+
+                                        <h3>
+                                            6 Bedroom Villa
+                                        </h3>
+
+                                        <p>
+                                            BUA: 538 Sq.M | Plot: 936 Sq.M
+
+                                        </p>
+
+
+
+                                    </div>
+
+                                </article>
+                            </div>
+
+                        </div>
+                    </section>
 
                     <section class="section-villas-showcase landing-about-v2" id="properties">
                         <div class="landing-gallery-container">
