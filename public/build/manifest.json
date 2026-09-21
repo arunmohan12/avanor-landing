@@ -83,7 +83,7 @@
     "src": "node_modules/intl-tel-input/dist/img/flags@2x.webp"
   },
   "resources/css/app.css": {
-    "file": "assets/app-DLOsyaRq.css",
+    "file": "assets/app-BeEeyrTj.css",
     "name": "app",
     "names": [
       "app.css"
@@ -321,7 +321,7 @@
     ]
   },
   "resources/js/landing/yas-riva.js": {
-    "file": "assets/yas-riva-r4k8Dg6H.js",
+    "file": "assets/yas-riva-CAPi_RST.js",
     "name": "yas-riva",
     "src": "resources/js/landing/yas-riva.js",
     "isEntry": true,
