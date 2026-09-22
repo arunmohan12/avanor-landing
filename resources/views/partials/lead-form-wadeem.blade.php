@@ -20,7 +20,7 @@
 
         <input type="hidden" name="gclid">
         <input type="hidden" name="fbclid">
-
+        <input type="hidden" name="country_code" class="country-code-input">
         <div class="sticky-fields">
             <div class="field">
                 <label for="sticky-Name">Full Name*</label>
@@ -44,9 +44,10 @@
                             <div class="phone-code-list" data-phone-code-list role="listbox"></div>
                         </div>
                     </div>
-                    <input id="sticky-Phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" maxlength="40" placeholder="50 123 4567" required>
+                    <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" maxlength="40" placeholder="50 123 4567" required>
                 </div>
                 <input type="hidden" name="phone_country_code" value="+971">
+
             </div>
             <div class="field">
                 <label for="sticky-Interest">I'm Interested In*</label>

@@ -509,61 +509,183 @@
         $$("[data-phone-code]").forEach((wrap) => {
             if (wrap.dataset.filled === "1") return;
             wrap.dataset.filled = "1";
+
             const trigger = $("[data-phone-code-trigger]", wrap);
             const flagEl = $("[data-phone-code-flag]", wrap);
             const dialEl = $("[data-phone-code-dial]", wrap);
             const panel = $("[data-phone-code-panel]", wrap);
             const search = $("[data-phone-code-search]", wrap);
             const list = $("[data-phone-code-list]", wrap);
-            const hidden = wrap.closest("form")?.querySelector('input[name="Phone-country-code"]');
-            flagEl.dataset.cc = "AE";
-            if (hidden) hidden.value = dialEl.textContent;
 
-            const renderList = (filter = "") => {
-                const q = filter.trim().toLowerCase();
-                list.innerHTML = "";
-                dialCodes
-                    .filter(({ name, dial, cc }) =>
-                        !q || name.toLowerCase().includes(q) || dial.includes(q) || cc.toLowerCase().includes(q))
-                    .forEach(({ name, cc, dial }) => {
-                        const row = document.createElement("button");
-                        row.type = "button";
-                        row.className = "phone-code-option";
-                        if (flagEl.dataset.cc === cc) row.classList.add("is-selected");
-                        row.innerHTML = `<span class="pco-flag">${flagEmoji(cc)}</span><span class="pco-name">${name}</span><span class="pco-dial">${dial}</span>`;
-                        row.addEventListener("click", () => select(cc, dial));
-                        list.appendChild(row);
-                    });
-            };
-            const select = (cc, dial) => {
-                flagEl.textContent = flagEmoji(cc);
-                flagEl.dataset.cc = cc;
-                dialEl.textContent = dial;
-                if (hidden) hidden.value = dial;
-                close();
-            };
+            const form = wrap.closest("form");
+            const phoneInput = form?.querySelector('input[name="phone"]');
+
+            if (
+                !trigger ||
+                !flagEl ||
+                !dialEl ||
+                !panel ||
+                !search ||
+                !list ||
+                !form ||
+                !phoneInput
+            ) {
+                return;
+            }
+
+            let selectedDial = dialEl.textContent.trim() || "+971";
+            let previousDial = selectedDial;
+
+            flagEl.dataset.cc = "AE";
+
             const open = () => {
                 panel.hidden = false;
                 trigger.setAttribute("aria-expanded", "true");
+
                 search.value = "";
                 renderList();
+
                 search.focus();
             };
+
             const close = () => {
                 panel.hidden = true;
                 trigger.setAttribute("aria-expanded", "false");
             };
+
+            const renderList = (filter = "") => {
+                const q = filter.trim().toLowerCase();
+
+                list.innerHTML = "";
+
+                dialCodes
+                    .filter(({ name, dial, cc }) =>
+                        !q ||
+                        name.toLowerCase().includes(q) ||
+                        dial.includes(q) ||
+                        cc.toLowerCase().includes(q)
+                    )
+                    .forEach(({ name, cc, dial }) => {
+                        const row = document.createElement("button");
+
+                        row.type = "button";
+                        row.className = "phone-code-option";
+
+                        if (flagEl.dataset.cc === cc) {
+                            row.classList.add("is-selected");
+                        }
+
+                        row.innerHTML = `
+                        <span class="pco-flag">${flagEmoji(cc)}</span>
+                        <span class="pco-name">${name}</span>
+                        <span class="pco-dial">${dial}</span>
+                    `;
+
+                        row.addEventListener("click", () => {
+                            /*
+                             * Remove the previously selected country code
+                             * if it was already placed in the input.
+                             */
+                            let number = phoneInput.value.trim();
+
+                            if (previousDial && number.startsWith(previousDial)) {
+                                number = number.substring(previousDial.length);
+                            }
+
+                            number = number.trim();
+
+                            /*
+                             * Keep only the local number in the input
+                             * while the user is filling the form.
+                             */
+                            number = number.replace(/^0+/, "");
+
+                            selectedDial = dial;
+                            previousDial = dial;
+
+                            flagEl.textContent = flagEmoji(cc);
+                            flagEl.dataset.cc = cc;
+                            dialEl.textContent = dial;
+
+                            phoneInput.value = number;
+
+                            close();
+                        });
+
+                        list.appendChild(row);
+                    });
+            };
+
+            /*
+             * IMPORTANT:
+             * Add the country code immediately before the native
+             * Laravel form submission.
+             */
+            if (form.dataset.phoneCodeSubmitBound !== "1") {
+                form.dataset.phoneCodeSubmitBound = "1";
+
+                form.addEventListener("submit", () => {
+                    let number = phoneInput.value.trim();
+
+                    /*
+                     * If the input already contains the selected
+                     * country code, don't add it twice.
+                     */
+                    if (number.startsWith(selectedDial)) {
+                        return;
+                    }
+
+                    /*
+                     * Remove leading zero from local numbers.
+                     *
+                     * Example:
+                     * 0501234567 → 501234567
+                     */
+                    number = number.replace(/^0+/, "");
+
+                    /*
+                     * This is the value Laravel receives:
+                     *
+                     * +971501234567
+                     */
+                    phoneInput.value = `${selectedDial}${number}`;
+                });
+            }
+
             trigger.addEventListener("click", (e) => {
                 e.stopPropagation();
-                panel.hidden ? open() : close();
+
+                if (panel.hidden) {
+                    open();
+                } else {
+                    close();
+                }
             });
-            search.addEventListener("input", () => renderList(search.value));
-            search.addEventListener("click", (e) => e.stopPropagation());
-            document.addEventListener("click", (e) => { if (!wrap.contains(e.target)) close(); });
-            document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+
+            search.addEventListener("input", () => {
+                renderList(search.value);
+            });
+
+            search.addEventListener("click", (e) => {
+                e.stopPropagation();
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!wrap.contains(e.target)) {
+                    close();
+                }
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") {
+                    close();
+                }
+            });
         });
     };
+
     initPhoneCodePickers();
+
 
 
 

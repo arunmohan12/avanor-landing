@@ -43,7 +43,7 @@ Route::get('/terms-and-condition', function () {
 
 //Pages
 Route::get('/the-heights-by-emaar', [LandingPageController::class, 'showTheheights']);
-//Route::get('/wadeem-gardens-by-modon', [LandingPageController::class, 'showWadeemByModon']);
+Route::get('/wadeem-gardens-by-modon', [LandingPageController::class, 'showWadeemByModon']);
 Route::domain('aldaryasriva.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showYasRivaByAldar']);
 });

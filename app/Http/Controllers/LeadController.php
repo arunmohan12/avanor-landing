@@ -194,14 +194,14 @@ class LeadController extends Controller
                 'required',
                 'string',
                 'max:30',
-                'unique:leads,phone',
+
             ],
 
             'email' => [
                 'nullable',
                 'email',
                 'max:255',
-                'unique:leads,email',
+
             ],
 
             'bedroom_type' => [
