@@ -155,7 +155,7 @@
     ]
   },
   "resources/css/landing/wadeem.css": {
-    "file": "assets/wadeem-CsvBi2fy.css",
+    "file": "assets/wadeem-Bw2acdaw.css",
     "name": "wadeem",
     "names": [
       "wadeem.css"
@@ -173,7 +173,7 @@
     "isEntry": true
   },
   "resources/css/landing/yas-riva.css": {
-    "file": "assets/yas-riva-D9PoUyZA.css",
+    "file": "assets/yas-riva-TEILN9mb.css",
     "name": "yas-riva",
     "names": [
       "yas-riva.css"
@@ -291,16 +291,13 @@
     ]
   },
   "resources/js/landing/wadeem.js": {
-    "file": "assets/wadeem-CEAVNaPi.js",
+    "file": "assets/wadeem-CBJD5JSX.js",
     "name": "wadeem",
     "src": "resources/js/landing/wadeem.js",
-    "isEntry": true,
-    "imports": [
-      "_intlTelInput-jRFmtbbD.js"
-    ]
+    "isEntry": true
   },
   "resources/js/landing/yas-riva.js": {
-    "file": "assets/yas-riva-BLOKKz7v.js",
+    "file": "assets/yas-riva-CAPi_RST.js",
     "name": "yas-riva",
     "src": "resources/js/landing/yas-riva.js",
     "isEntry": true,
