@@ -986,7 +986,7 @@ strip_tags($property->description ?? ''),
 
 
 
-        <section class="section" id="gallery" >
+        <section class="section" id="gallery" data-gallery>
 
 
 
