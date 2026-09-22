@@ -509,7 +509,7 @@ strip_tags($property->description ?? ''),
                 </p>
 
                 <h2 class="title reveal reveal-d1">
-                    Yas Riva Villas by Aldar
+                    Wadeem Gardens Villas by Modon
                 </h2>
 
             </div>
@@ -527,9 +527,11 @@ strip_tags($property->description ?? ''),
                         class="about-lead"
                         style="text-align:left"
                     >
-                        Explore thoughtfully designed floor plans for Yas Riva Villas,
-                        offering spacious layouts across 4, 5, and 6-bedroom residences.
-                        Request the detailed floor plan for your preferred villa.
+                        Explore thoughtfully designed floor plans at Wadeem Gardens,
+                        offering spacious villas with refined layouts designed for
+                        contemporary family living. Discover the ideal residence for
+                        your lifestyle and request the detailed floor plan for your
+                        preferred villa.
                     </p>
 
                 </div>

@@ -51,7 +51,7 @@ Route::domain('Hudayriyatisland.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showWadeemByModon']);
 });
 //Route::get('/yas-riva-by-aldar', [LandingPageController::class, 'showYasRivaByAldar']);
-Route::get('/wadeem-gardens-by-modon', [LandingPageController::class, 'showWadeemByModon']);
+//Route::get('/wadeem-gardens-by-modon', [LandingPageController::class, 'showWadeemByModon']);
 
 Route::view('/wadeem', 'landingpages.demowadeem')
     ->name('landing.wadeem');

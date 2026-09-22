@@ -52,6 +52,7 @@
             <div class="field">
                 <label for="sticky-Interest">I'm Interested In*</label>
                 <select id="sticky-Interest" name="bedroom_type" required>
+                    <option value="" selected disabled>Select Villa Type</option>
                     <option value="4 Bedroom Villa">4-Bedroom Villa (from AED 8.7M)</option>
                     <option value="5 Bedroom Villa">5-Bedroom Villa (from AED 10.2M)</option>
                     <option value="6 Bedroom Villa">6-Bedroom Villa (from AED 11.6M)</option>
