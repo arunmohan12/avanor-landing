@@ -1720,9 +1720,9 @@ main#content {
 
     /* Glass Backdrop Effect */
     background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
 
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
     /* Border & Rounded Corners */
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
