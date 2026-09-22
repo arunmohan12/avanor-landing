@@ -3942,3 +3942,14 @@ body.enquiry-popup-open {
 input.is-invalid {
     border-color: #b33a32;
 }
+@media (max-width: 700px) {
+    .villas-island-fact {
+        text-align: center;
+    }
+
+    .villas-island-fact small {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

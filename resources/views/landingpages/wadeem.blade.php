@@ -473,19 +473,19 @@ strip_tags($property->description ?? ''),
                 <div class="villas-island-facts reveal reveal-d2">
 
                     <div class="villas-island-fact">
-                        <span>01</span>
+
                         <strong>4–6</strong>
                         <small>Bedrooms</small>
                     </div>
 
                     <div class="villas-island-fact">
-                        <span>02</span>
+
                         <strong>03</strong>
                         <small>Gated Clusters</small>
                     </div>
 
                     <div class="villas-island-fact">
-                        <span>03</span>
+
                         <strong>02</strong>
                         <small>Façade Styles</small>
                     </div>
@@ -892,7 +892,7 @@ strip_tags($property->description ?? ''),
             </div>
             <div class="wrap">
                 <div class="prose reveal reveal-d2" style="margin-top:1.4rem;max-width:760px;margin-inline:auto;text-align:center">
-                    <p class="about-lead" style="text-align:left">Wadeem Gardens follows Modon's official 25%/75% payment plan: staged 5% instalments through October 2030, and the remaining 75% due at the final Month 54 milestone.</p>
+                    <p class="about-lead" style="text-align:left">Wadeem Gardens follows Modon's official 25%/75% payment plan: staged 5% instalments through October 2030, and up to 75% bank mortgage subject to off plan mortgage approval.</p>
 
                 </div>
 
