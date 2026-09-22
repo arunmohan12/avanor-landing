@@ -48,7 +48,7 @@ class LeadController extends Controller
             ],
 
             'email' => [
-                'nullable',
+                'required',
                 'email',
                 'max:255',
                 'unique:leads,email',
@@ -194,14 +194,13 @@ class LeadController extends Controller
                 'required',
                 'string',
                 'max:30',
-
+                'regex:/^\+\d{6,29}$/',
             ],
 
             'email' => [
-                'nullable',
+                'required',
                 'email',
                 'max:255',
-
             ],
 
             'bedroom_type' => [
@@ -228,14 +227,47 @@ class LeadController extends Controller
                 'max:2000',
             ],
 
-            'utm_source' => ['nullable', 'string', 'max:255'],
-            'utm_medium' => ['nullable', 'string', 'max:255'],
-            'utm_campaign' => ['nullable', 'string', 'max:255'],
-            'utm_content' => ['nullable', 'string', 'max:255'],
-            'utm_term' => ['nullable', 'string', 'max:255'],
+            'utm_source' => [
+                'nullable',
+                'string',
+                'max:255',
+            ],
 
-            'gclid' => ['nullable', 'string', 'max:255'],
-            'fbclid' => ['nullable', 'string', 'max:255'],
+            'utm_medium' => [
+                'nullable',
+                'string',
+                'max:255',
+            ],
+
+            'utm_campaign' => [
+                'nullable',
+                'string',
+                'max:255',
+            ],
+
+            'utm_content' => [
+                'nullable',
+                'string',
+                'max:255',
+            ],
+
+            'utm_term' => [
+                'nullable',
+                'string',
+                'max:255',
+            ],
+
+            'gclid' => [
+                'nullable',
+                'string',
+                'max:255',
+            ],
+
+            'fbclid' => [
+                'nullable',
+                'string',
+                'max:255',
+            ],
 
             'page_url' => [
                 'nullable',
@@ -243,9 +275,10 @@ class LeadController extends Controller
                 'max:1000',
             ],
         ], [
-            'phone.unique' => 'This mobile number has already been registered with us.',
-
-            'email.unique' => 'This email address has already been registered with us.',
+            'phone.required' => 'Please enter your mobile number.',
+            'phone.regex' => 'Please enter a valid mobile number.',
+            'email.required' => 'Please enter your email address.',
+            'email.email' => 'Please enter a valid email address.',
         ]);
 
 

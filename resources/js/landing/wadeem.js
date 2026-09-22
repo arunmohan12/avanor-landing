@@ -519,6 +519,7 @@
 
             const form = wrap.closest("form");
             const phoneInput = form?.querySelector('input[name="phone"]');
+            const emailInput = form?.querySelector('input[name="email"]');
 
             if (
                 !trigger ||
@@ -538,21 +539,88 @@
 
             flagEl.dataset.cc = "AE";
 
-            const open = () => {
-                panel.hidden = false;
-                trigger.setAttribute("aria-expanded", "true");
+            /*
+             * PHONE ERROR
+             */
+            const showPhoneError = (message) => {
+                let error = form.querySelector("[data-phone-error]");
 
-                search.value = "";
-                renderList();
+                if (!error) {
+                    error = document.createElement("div");
+                    error.dataset.phoneError = "";
+                    error.className = "form-field-error";
 
-                search.focus();
+                    phoneInput.parentElement.appendChild(error);
+                }
+
+                error.textContent = message;
+                error.hidden = false;
+
+                phoneInput.classList.add("is-invalid");
             };
 
-            const close = () => {
-                panel.hidden = true;
-                trigger.setAttribute("aria-expanded", "false");
+            const clearPhoneError = () => {
+                const error = form.querySelector("[data-phone-error]");
+
+                if (error) {
+                    error.hidden = true;
+                    error.textContent = "";
+                }
+
+                phoneInput.classList.remove("is-invalid");
             };
 
+            /*
+             * EMAIL ERROR
+             */
+            const showEmailError = (message) => {
+                if (!emailInput) return;
+
+                let error = form.querySelector("[data-email-error]");
+
+                if (!error) {
+                    error = document.createElement("div");
+                    error.dataset.emailError = "";
+                    error.className = "form-field-error";
+
+                    emailInput.parentElement.appendChild(error);
+                }
+
+                error.textContent = message;
+                error.hidden = false;
+
+                emailInput.classList.add("is-invalid");
+            };
+
+            const clearEmailError = () => {
+                if (!emailInput) return;
+
+                const error = form.querySelector("[data-email-error]");
+
+                if (error) {
+                    error.hidden = true;
+                    error.textContent = "";
+                }
+
+                emailInput.classList.remove("is-invalid");
+            };
+
+            /*
+             * Clear errors while typing
+             */
+            phoneInput.addEventListener("input", () => {
+                clearPhoneError();
+            });
+
+            if (emailInput) {
+                emailInput.addEventListener("input", () => {
+                    clearEmailError();
+                });
+            }
+
+            /*
+             * COUNTRY LIST
+             */
             const renderList = (filter = "") => {
                 const q = filter.trim().toLowerCase();
 
@@ -582,23 +650,20 @@
                     `;
 
                         row.addEventListener("click", () => {
-                            /*
-                             * Remove the previously selected country code
-                             * if it was already placed in the input.
-                             */
                             let number = phoneInput.value.trim();
 
-                            if (previousDial && number.startsWith(previousDial)) {
-                                number = number.substring(previousDial.length);
-                            }
-
-                            number = number.trim();
-
                             /*
-                             * Keep only the local number in the input
-                             * while the user is filling the form.
+                             * Remove previously selected country code
+                             * if it exists in the input.
                              */
-                            number = number.replace(/^0+/, "");
+                            if (
+                                previousDial &&
+                                number.startsWith(previousDial)
+                            ) {
+                                number = number
+                                    .substring(previousDial.length)
+                                    .trim();
+                            }
 
                             selectedDial = dial;
                             previousDial = dial;
@@ -607,8 +672,12 @@
                             flagEl.dataset.cc = cc;
                             dialEl.textContent = dial;
 
+                            /*
+                             * Keep ONLY the local number in the input.
+                             */
                             phoneInput.value = number;
 
+                            clearPhoneError();
                             close();
                         });
 
@@ -616,41 +685,20 @@
                     });
             };
 
-            /*
-             * IMPORTANT:
-             * Add the country code immediately before the native
-             * Laravel form submission.
-             */
-            if (form.dataset.phoneCodeSubmitBound !== "1") {
-                form.dataset.phoneCodeSubmitBound = "1";
+            const open = () => {
+                panel.hidden = false;
+                trigger.setAttribute("aria-expanded", "true");
 
-                form.addEventListener("submit", () => {
-                    let number = phoneInput.value.trim();
+                search.value = "";
+                renderList();
 
-                    /*
-                     * If the input already contains the selected
-                     * country code, don't add it twice.
-                     */
-                    if (number.startsWith(selectedDial)) {
-                        return;
-                    }
+                search.focus();
+            };
 
-                    /*
-                     * Remove leading zero from local numbers.
-                     *
-                     * Example:
-                     * 0501234567 → 501234567
-                     */
-                    number = number.replace(/^0+/, "");
-
-                    /*
-                     * This is the value Laravel receives:
-                     *
-                     * +971501234567
-                     */
-                    phoneInput.value = `${selectedDial}${number}`;
-                });
-            }
+            const close = () => {
+                panel.hidden = true;
+                trigger.setAttribute("aria-expanded", "false");
+            };
 
             trigger.addEventListener("click", (e) => {
                 e.stopPropagation();
@@ -681,6 +729,147 @@
                     close();
                 }
             });
+
+            /*
+             * ==========================================
+             * FORM VALIDATION
+             * ==========================================
+             */
+            if (form.dataset.phoneValidationBound !== "1") {
+                form.dataset.phoneValidationBound = "1";
+
+                form.addEventListener("submit", (e) => {
+                    let valid = true;
+
+                    clearPhoneError();
+                    clearEmailError();
+
+                    /*
+                     * PHONE
+                     */
+                    let phone = phoneInput.value.trim();
+
+                    /*
+                     * Remove country code if it somehow already exists.
+                     */
+                    if (
+                        previousDial &&
+                        phone.startsWith(previousDial)
+                    ) {
+                        phone = phone
+                            .substring(previousDial.length)
+                            .trim();
+                    }
+
+                    /*
+                     * Remove spaces, brackets and hyphens.
+                     */
+                    phone = phone.replace(/[\s\-()]/g, "");
+
+                    /*
+                     * Remove leading zeros.
+                     */
+                    phone = phone.replace(/^0+/, "");
+
+                    /*
+                     * EMPTY PHONE
+                     */
+                    if (!phone) {
+                        e.preventDefault();
+
+                        showPhoneError(
+                            "Please enter your mobile number."
+                        );
+
+                        phoneInput.focus();
+
+                        valid = false;
+                    }
+
+                    /*
+                     * PHONE MUST CONTAIN DIGITS
+                     */
+                    else if (!/^\d+$/.test(phone)) {
+                        e.preventDefault();
+
+                        showPhoneError(
+                            "Please enter a valid mobile number."
+                        );
+
+                        phoneInput.focus();
+
+                        valid = false;
+                    }
+
+                    /*
+                     * PHONE LENGTH
+                     */
+                    else if (phone.length < 6) {
+                        e.preventDefault();
+
+                        showPhoneError(
+                            "Please enter a valid mobile number."
+                        );
+
+                        phoneInput.focus();
+
+                        valid = false;
+                    }
+
+                    /*
+                     * EMAIL
+                     */
+                    if (emailInput) {
+                        const email = emailInput.value.trim();
+
+                        if (!email) {
+                            e.preventDefault();
+
+                            showEmailError(
+                                "Please enter your email address."
+                            );
+
+                            if (valid) {
+                                emailInput.focus();
+                            }
+
+                            valid = false;
+                        } else {
+                            const emailPattern =
+                                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                            if (!emailPattern.test(email)) {
+                                e.preventDefault();
+
+                                showEmailError(
+                                    "Please enter a valid email address."
+                                );
+
+                                if (valid) {
+                                    emailInput.focus();
+                                }
+
+                                valid = false;
+                            }
+                        }
+                    }
+
+                    /*
+                     * STOP HERE IF INVALID
+                     */
+                    if (!valid) {
+                        return;
+                    }
+
+                    /*
+                     * ==========================================
+                     * ONLY NOW ADD COUNTRY CODE
+                     * ==========================================
+                     */
+                    phoneInput.value =
+                        `${selectedDial}${phone}`;
+                });
+            }
         });
     };
 
