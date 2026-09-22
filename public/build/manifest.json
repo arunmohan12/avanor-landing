@@ -83,7 +83,7 @@
     "src": "node_modules/intl-tel-input/dist/img/flags@2x.webp"
   },
   "resources/css/app.css": {
-    "file": "assets/app-BeEeyrTj.css",
+    "file": "assets/app-CUjl9_21.css",
     "name": "app",
     "names": [
       "app.css"
@@ -155,34 +155,13 @@
     ]
   },
   "resources/css/landing/wadeem.css": {
-    "file": "assets/wadeem-C1Y_IFs0.css",
+    "file": "assets/wadeem-CsvBi2fy.css",
     "name": "wadeem",
     "names": [
       "wadeem.css"
     ],
     "src": "resources/css/landing/wadeem.css",
-    "isEntry": true,
-    "assets": [
-      "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
-      "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
-      "assets/lato-latin-400-normal-BEhtfm5r.woff2",
-      "assets/lato-latin-400-normal-B11PyLys.woff",
-      "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
-      "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
-      "assets/lato-latin-700-normal-BUGMgin4.woff2",
-      "assets/lato-latin-700-normal-DAdL7O4w.woff",
-      "assets/CormorantGaramond-Light-BE5xuUei.woff",
-      "assets/CormorantGaramond-LightItalic-B9mD87km.woff",
-      "assets/CormorantGaramond-Regular-CiAV_ro-.woff",
-      "assets/CormorantGaramond-Italic-CgqzdayI.woff",
-      "assets/CormorantGaramond-Medium-a81lqqsF.woff",
-      "assets/CormorantGaramond-MediumItalic-DLxFICkJ.woff",
-      "assets/CormorantGaramond-SemiBold-DFvMWUQ8.woff",
-      "assets/CormorantGaramond-SemiBoldItalic-CzUKSUAX.woff",
-      "assets/CormorantGaramond-Bold-CYsBYQCd.woff",
-      "assets/CormorantGaramond-BoldItalic-Bk1l1XVg.woff",
-      "assets/OutfitVariableFont_wght1-EwbcG2E8.woff"
-    ]
+    "isEntry": true
   },
   "resources/css/landing/wadeemv2.css": {
     "file": "assets/wadeemv2-DNfFAXP5.css",
@@ -194,7 +173,7 @@
     "isEntry": true
   },
   "resources/css/landing/yas-riva.css": {
-    "file": "assets/yas-riva-TEILN9mb.css",
+    "file": "assets/yas-riva-D9PoUyZA.css",
     "name": "yas-riva",
     "names": [
       "yas-riva.css"
@@ -312,7 +291,7 @@
     ]
   },
   "resources/js/landing/wadeem.js": {
-    "file": "assets/wadeem-DHtWF8iH.js",
+    "file": "assets/wadeem-CEAVNaPi.js",
     "name": "wadeem",
     "src": "resources/js/landing/wadeem.js",
     "isEntry": true,
@@ -321,7 +300,7 @@
     ]
   },
   "resources/js/landing/yas-riva.js": {
-    "file": "assets/yas-riva-CAPi_RST.js",
+    "file": "assets/yas-riva-BLOKKz7v.js",
     "name": "yas-riva",
     "src": "resources/js/landing/yas-riva.js",
     "isEntry": true,

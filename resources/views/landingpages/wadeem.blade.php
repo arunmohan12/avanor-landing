@@ -100,974 +100,939 @@ strip_tags($property->description ?? ''),
 
 @section('content')
 
-    <header class="landing-header">
-        <div class="landing-header-inner">
-
-
-
-             <a href="#home" class="landing-logo">
-             <img
-             src="{{ asset('assets/img/landing/wadeem-modon/logo-gardens.webp') }}"
-             alt="Avanor">
-             </a>
-            <nav class="landing-nav">
-
-
-                <a href="#about">
-                    About
-                </a>
-
-                <a href="#downloads">
-                    Villas
-                </a>
-
-                <a href="#gallery">
-                    Gallery
-                </a>
-                <a href="#gallery">
-                    Amenities
-                </a>
-                <a href="#location">
-                    Location
-                </a>
-                <a href="#" data-lead-popup-open >contact</a>
-
-                <a
-                    href="#"
-                    class="landing-header-btn btn-champagne btn-nav" data-lead-popup-open>
-                    GET LATEST PRICES
-                </a>
-
-
-
-            </nav>
-
-            <div class="landing-header-actions">
-
-
-                <button
-                    type="button"
-                    class="landing-menu-toggle"
-                    id="landingMenuToggle"
-                    aria-label="Open menu"
-                    aria-expanded="false">
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
+    <header class="header">
+        <div class="header-inner">
+            <a class="brand" href="#" aria-label="Wadeem Gardens by Modon">
+                <img src="{{ asset('assets/img/landing/wadeem-modon/logo-gardens.webp') }}" alt="Wadeem Gardens by Modon" width="2177" height="911" style="height:52px;width:auto">
+            </a>
+            <nav class="nav" aria-label="Primary">
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#properties">Villas</a>
+                    <a href="#paymentplan">Payment Plan</a>
+                    <a href="#amenities">Amenities</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#location">Location</a>
+                </div>
+                <a class="btn btn-champagne btn-nav" href="#contact" data-open-enquiry>Register Interest</a>
+                <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+                    <span></span><span></span><span></span>
                 </button>
-
-            </div>
-
-        </div>
-
-        <div
-            class="landing-mobile-menu"
-            id="landingMobileMenu">
-
-            <nav class="landing-mobile-nav">
-
-                <a href="#home">Home</a>
-
-                <a href="#about">
-                    Property Details
-                </a>
-
-
-
-
-
-                <a href="#location">Location</a>
-
-                <a href="#downloads">
-                    Downloads
-                </a>
-
-                <a href="#gallery">
-                    Gallery
-                </a>
-
-                <a href="#" data-lead-popup-open >contact</a>
-
-                <a
-                    href="#"
-                    class="landing-mobile-contact " data-lead-popup-open>
-                    GET LATEST PRICES
-
-
-                </a>
-
             </nav>
-
         </div>
-
     </header>
 
-<main>
-        <div class="landing-content-with-form">
+    <div class="mobile-nav" id="mobile-nav">
+        <nav aria-label="Mobile">
+            <a href="#about">About</a>
+            <a href="#properties">Villas</a>
+            <a href="#paymentplan">Payment Plan</a>
+            <a href="#amenities">Amenities</a>
+            <a href="#location">Location</a>
+            <a class="btn btn-champagne" href="#contact" data-open-enquiry>Register Your Interest</a>
+        </nav>
+    </div>
 
-            <div class="landing-main-content">
-        @if ($coverMedia)
+<main id="content">
 
-            <section class="avanor-property-hero" id="home">
+    <section class="hero" aria-label="Hero">
+        <div class="hero-media" aria-hidden="true">
 
-                <div class="avanor-property-hero-single">
-
-                    <img
-                        src="{{ \App\Support\MediaUrl::fromMedia(
+            <img
+                src="{{ \App\Support\MediaUrl::fromMedia(
                 $coverMedia,
                 'cover_avif'
             ) }}"
 
-                        srcset="
+                srcset="
                 {{ \App\Support\MediaUrl::fromMedia($coverMedia, 'cover_mobile_avif') }} 768w,
                 {{ \App\Support\MediaUrl::fromMedia($coverMedia, 'cover_tablet_avif') }} 1280w,
                 {{ \App\Support\MediaUrl::fromMedia($coverMedia, 'cover_avif') }} 1920w
             "
 
-                        sizes="100vw"
 
-                        alt="{{ $property->project?->name ?? $property->title }}"
+                width="1912" height="1080"
+                alt="{{ $property->project?->name ?? $property->title }}"
 
-                        class="avanor-property-hero-image"
+                class="avanor-property-hero-image"
 
-                        fetchpriority="high"
-                        decoding="async">
+                fetchpriority="high"
+                decoding="async">
 
-                    {{-- DARK OVERLAY --}}
-                    <div class="avanor-property-hero-overlay"></div>
+        </div>
+        <div class="hero-veil" aria-hidden="true"></div>
+        <div class="hero-content">
+            <h1> {{ $property->title }} </h1>
+            <p class="hero-description reveal"><strong>4–6 Bedroom Villas on Hudayriyat Island</strong></p>
+            <p class="hero-copy">Discover Wadeem Gardens by Modon, a collection of 4, 5 and 6-bedroom villas located on
+                Hudayriyat Island, Abu Dhabi.
+                Choose from contemporary villa designs across three gated villa clusters, with a range of
+                layouts designed around modern family living.</p>
 
+            <div class="hero-highlights bg-white/5 border border-white/10 rounded-xl p-4 sm:p-5
+            grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center text-center reveal">
 
-                    {{-- HERO CONTENT --}}
-                    <div class="avanor-property-slide-content-landing">
+                <!-- Price -->
+                <div class="px-2 sm:px-4">
+        <span class="block text-[11px] uppercase tracking-wider text-slate-400 mb-1">
+            From
+        </span>
+                    <span class="font-serif text-base sm:text-xl font-bold text-champagne-400">
+            AED 8.7M
+        </span>
+                </div>
 
-                <span class="avanor-property-slide-eyebrow">
-                    EMAAR PROPERTIES
-                </span>
+                <!-- Divider -->
+                <div class="h-10 sm:h-12 w-px bg-white/10 mx-2 sm:mx-3"></div>
 
-                        <h1 class="avanor-property-slide-title">
-                            {{ $property->title }} - New Launch Villas for Sale in Dubai
-                        </h1>
+                <!-- Payment Plan -->
+                <div class="px-2 sm:px-4">
+        <span class="block text-[11px] uppercase tracking-wider text-slate-400 mb-1">
+            Payment Plan
+        </span>
+                    <span class="font-serif text-base sm:text-xl font-bold text-white">
+            25/75
+        </span>
+                </div>
 
-                        <p class="avanor-property-slide-description">
-                            Luxury <span class="ext-bold">3, 4 & 5 Bedroom Villas </span>at The Heights Country Club & Wellness by Emaar. Explore latest prices, payment plans, floor plans and available units.
+                <!-- Divider -->
+                <div class="h-10 sm:h-12 w-px bg-white/10 mx-2 sm:mx-3"></div>
 
-                        </p>
+                <!-- Down Payment -->
+                <div class="px-2 sm:px-4">
+        <span class="block text-[11px] uppercase tracking-wider text-slate-400 mb-1">
+            Down Payment
+        </span>
+                    <span class="font-serif text-base sm:text-xl font-bold text-champagne-400">
+            5%
+        </span>
+                </div>
 
+            </div>
+            <div class="hero-actions">
+                <a class="btn btn-champagne" href="#contact" data-open-enquiry>Enquire now</a>
+            </div>
+        </div>
+        <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><span class="line"></span></div>
+    </section>
 
-                        @if ($property->project?->starting_price)
-
-                            <fieldset class="landing-hero-offer-card">
-
-                                <legend class="landing-hero-offer-label">
-                                    3, 4 &amp; 5 BED STANDALONE VILLAS
-                                </legend>
-
-
-                                <div class="landing-hero-offer-details">
-
-                                    {{-- Starting Price --}}
-                                    <div class="landing-hero-offer-price">
-
-                            <span>
-                                STARTING FROM
-                            </span>
-
-                                        <strong>
-                                            {{ \App\Support\PriceFormatter::aed(
-                                                                        $property->project->starting_price
-                                                                    ) }}
-                                        </strong>
-
-                                    </div>
-
-
-                                    {{-- Separator --}}
-                                    <span class="landing-hero-offer-divider"></span>
-
-
-                                    {{-- Payment Plan --}}
-                                    <div class="landing-hero-offer-payment">
-                            <span>
-                                PAYMENT PLAN
-                            </span>
-                                        <strong>
-                                            80/20
-                                        </strong>
+    <div class="content-stream">
 
 
+        <section class="section mobile-enquiry-section" id="mobile-register">
 
-                                    </div>
-
-                                </div>
-
-
-                                {{-- CTA BUTTONS --}}
-                                <div class="landing-hero-offer-actions">
+            <div class="mobile-enquiry-inner">
 
 
 
 
-                                    <a
-                                        href="tel:+971589798257"
-                                        class="landing-hero-offer-btn call-track">
 
-                                        <span>CALL</span>
 
-                                        <x-landing-icon name="phone" />
+                    {{-- Your reusable form --}}
+                @include('partials.lead-form-wadeem')
 
-                                    </a>
 
-                                </div>
 
-                            </fieldset>
+            </div>
 
-                        @endif
+        </section>
+        <section class="section about-section" id="about">
+
+
+            <div class="wrap">
+
+                <!-- Header -->
+                <div class="about-header">
+
+                    <p class="eyebrow-flanked reveal">
+                        <span class="eyebrow-line"></span>
+                        ABOUT WADEEM
+                        <span class="eyebrow-line"></span>
+                    </p>
+
+                    <h2 class="title reveal reveal-d1">
+                        Wadeem Gardens by Modon
+                    </h2>
+
+                    <p class="about-location reveal reveal-d2">
+                        Hudayriyat Island · Abu Dhabi
+                    </p>
+
+                    <p class="about-intro reveal reveal-d2">
+                        Where architecture, nature and community come together
+                        to create a distinctive way of living.
+                    </p>
+
+                </div>
+
+
+                <!-- Feature Grid -->
+                <div class="about-grid">
+
+                    <!-- Card 01 -->
+                    <article class="about-card reveal reveal-d1">
+
+
+                        <div class="about-card-body">
+                            <div class="about-card-heading">
+                                <h3>
+                                    Three Gated<br>
+                                    Villa Clusters
+                                </h3>
+
+                                <span class="about-card-icon">✦</span>
+                            </div>
+                            <p>
+                                Wadeem Gardens comprises three distinctive
+                                gated villa clusters designed around privacy,
+                                connection and everyday living.
+                            </p>
+
+                        </div>
+
+                        <span class="about-card-line"></span>
+
+                    </article>
+
+
+                    <!-- Card 02 -->
+                    <article class="about-card reveal reveal-d2">
+
+
+
+                        <div class="about-card-body">
+                            <div class="about-card-heading">
+                            <h3>
+                                Turnkey<br>
+                                Villas
+                            </h3>
+                                <span class="about-card-icon">◇</span>
+
+                            </div>
+                            <p>
+                                Fully designed turnkey homes by Modon, offering
+                                a choice of Contemporary Arabic and Modernist
+                                façades with varied layouts.
+                            </p>
+
+                        </div>
+
+                        <span class="about-card-line"></span>
+
+                    </article>
+
+
+                    <!-- Card 03 -->
+                    <article class="about-card reveal reveal-d3">
+
+
+
+                        <div class="about-card-body">
+                            <div class="about-card-heading">
+
+                            <h3>
+                                Freehold<br>
+                                Ownership
+                            </h3>
+                                <span class="about-card-icon">◎</span>
+
+                            </div>
+                            <p>
+                                Every villa carries full freehold title,
+                                offering permanent ownership to buyers
+                                of any nationality.
+                            </p>
+
+                        </div>
+
+                        <span class="about-card-line"></span>
+
+                    </article>
+
+
+                    <!-- Card 04 -->
+                    <article class="about-card reveal reveal-d4">
+
+
+                        <div class="about-card-body">
+                            <div class="about-card-heading">
+                            <h3>
+                                Hudayriyat<br>
+                                Island Living
+                            </h3>
+                                <span class="about-card-icon">⌂</span>
+
+                            </div>
+                            <p>
+                                An exceptional island setting where nature,
+                                culture and modern living meet within one
+                                connected destination.
+                            </p>
+
+                        </div>
+
+                        <span class="about-card-line"></span>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Project Highlights -->
+
+                <div class="wrap about-highlights">
+
+                    <!-- Highlight 01 -->
+                    <div class="about-highlight reveal reveal-d1">
+
+                        <div class="about-highlight-icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                                <path d="M8 21.5 24 10l16 11.5" />
+                                <path d="M11 20.5V38h26V20.5" />
+                                <path d="M18 38V26h12v12" />
+                                <path d="M8 38h32" />
+                            </svg>
+                        </div>
+
+                        <h3>Gated Communities</h3>
+
+                    </div>
+
+
+                    <!-- Highlight 02 -->
+                    <div class="about-highlight reveal reveal-d2">
+
+                        <div class="about-highlight-icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                                <path d="M8 38h32" />
+                                <path d="M12 38V18l12-8 12 8v20" />
+                                <path d="M17 38V25h14v13" />
+                                <path d="M18 20h12" />
+                                <path d="M24 10v8" />
+                            </svg>
+                        </div>
+
+                        <h3>Contemporary Architecture</h3>
+
+                    </div>
+
+
+                    <!-- Highlight 03 -->
+                    <div class="about-highlight reveal reveal-d3">
+
+                        <div class="about-highlight-icon">
+                            <svg viewBox="0 0 48 48" aria-hidden="true">
+                                <path d="M8 34c4-3 7-3 11 0s7 3 11 0 7-3 10 0" />
+                                <path d="M8 39c4-3 7-3 11 0s7 3 11 0 7-3 10 0" />
+                                <path d="M24 29V12" />
+                                <path d="M24 12c-5 1-8 4-10 8 4-1 7-1 10 1" />
+                                <path d="M24 17c5-1 8 1 10 4-4 0-7 1-10 3" />
+                            </svg>
+                        </div>
+
+                        <h3>Hudayriyat Island Living</h3>
 
                     </div>
 
                 </div>
 
-            </section>
 
-        @endif
-
-
-        <div
-            class="landing-property-bar"
-            id="landingPropertyBar">
-
-            <div class="landing-property-bar-inner">
-
-                <div class="landing-property-info">
+            </div>
 
 
+        </section>
 
+        <section class="section villas-island-section" id="villas-hudayriyat">
 
+            <div class="wrap">
+
+                <div class="villas-island-header reveal">
+
+                    <p class="eyebrow-flanked">
+                        <span class="eyebrow-line"></span>
+                        Looking for a  Hudayriyat Island villa?
+                        <span class="eyebrow-line"></span>
+                    </p>
+
+                    <h2>
+
+                         Villas On Hudayriyat Island
+                    </h2>
+
+                    <p class="villas-island-intro">
+                        Wadeem Gardens offers spacious
+                        <strong>4–6 bedroom villas</strong> on Hudayriyat Island,
+                        with a choice of Contemporary Arabic and Modernist façades
+                        and varied layouts. The community comprises
+                        <strong>three gated villa clusters.</strong>
+                    </p>
 
                 </div>
 
-                <div class="landing-property-actions">
 
+                <div class="villas-island-facts reveal reveal-d2">
 
-                    <a
-                        href="#"
-                        class="btn btn-champagne" data-lead-popup-open>
-                        DOWNLOAD BROCHURE
-                    </a>
+                    <div class="villas-island-fact">
+                        <span>01</span>
+                        <strong>4–6</strong>
+                        <small>Bedrooms</small>
+                    </div>
+
+                    <div class="villas-island-fact">
+                        <span>02</span>
+                        <strong>03</strong>
+                        <small>Gated Clusters</small>
+                    </div>
+
+                    <div class="villas-island-fact">
+                        <span>03</span>
+                        <strong>02</strong>
+                        <small>Façade Styles</small>
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-            <section class="landing-mobile-form-section landing-about-v2">
+        <section class="section" id="properties">
 
-                <div class="landing-gallery-container">
+            {{-- Section Heading --}}
+            <div class="wrap" style="max-width:900px;">
 
-                    <div class="landing-side-form-inner">
+                <p class="eyebrow-flanked reveal">
+                    <span class="eyebrow-line"></span>
+                    Floor Plans
+                    <span class="eyebrow-line"></span>
+                </p>
+
+                <h2 class="title reveal reveal-d1">
+                    Yas Riva Villas by Aldar
+                </h2>
+
+            </div>
 
 
+            {{-- Section Description --}}
+            <div class="wrap">
 
+                <div
+                    class="prose reveal reveal-d2"
+                    style="margin-top:1.4rem;max-width:760px;margin-inline:auto;text-align:center"
+                >
 
-                        @include('partials.lead-form', [
-                       'formId' => 'landing-about-form',
-                       'heading' => 'GET EARLY ACCESS',
-                       'buttonText' => 'SUBMIT',
-                   ])
-
-
-
-                    </div>
+                    <p
+                        class="about-lead"
+                        style="text-align:left"
+                    >
+                        Explore thoughtfully designed floor plans for Yas Riva Villas,
+                        offering spacious layouts across 4, 5, and 6-bedroom residences.
+                        Request the detailed floor plan for your preferred villa.
+                    </p>
 
                 </div>
-            </section>
 
-            <section class="landing-about-v2" id="about">
-
-                <div class="landing-gallery-container">
-
-                    <div >
+            </div>
 
 
-                        {{-- =====================================================
-                        ABOUT CONTENT
-                        ===================================================== --}}
+            {{-- Floor Plan Cards --}}
+            <div class="wrap-wide">
 
-                        <div class="landing-about-v2-content">
-
-                <span class="landing-about-v2-eyebrow">
-                    DISCOVER THE COMMUNITY
-                </span>
-
-                            <h2 class="landing-about-v2-title">
-                                About {{ $property->title }}
-                            </h2>
-
-                            <span class="landing-about-v2-line"></span>
+                <div class="residence-cards reveal reveal-d3">
 
 
+                    {{-- =====================================================
+                         4 BEDROOM VILLA
+                         ===================================================== --}}
+                    <article class="residence-card">
+
+                        <button
+                            type="button"
+                            class="residence-card-media residence-floorplan-trigger"
+                            data-open-enquiry
+                            data-request-type="4_bedroom_villa"
+                            data-bedroom-type="4 Bedroom Villa"
+                            aria-label="Get 4 Bedroom Villa floor plan"
+                        >
+
+                            <img
+                                src="{{ asset('assets/img/landing/br-plans.webp') }}"
+                                alt="4 Bedroom Villa floor plan - {{ $property->title }}"
+                                class="landing-plan-image"
+                            >
+
+                            <span class="residence-floorplan-overlay"></span>
+
+                            <span class="residence-floorplan-cta">
+                        Get 4 BR Villa Floor Plan
+                    </span>
+
+                        </button>
 
 
+                        <div class="residence-card-body">
 
+                            <div class="residence-card-heading">
 
-                            @if (filled($property->description))
-                                <p class="landing-about-v2-description">
-                                    {!! $property->description !!}
-                                </p>
-                            @endif
+                        <span class="residence-card-number">
+                            01
+                        </span>
 
-                            {{-- PRICE + HANDOVER --}}
-                            <div class="landing-about-v2-property-info">
-
-                                <div class="landing-about-v2-info-card">
-
-                                    <div class="landing-about-v2-info-icon">
-
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-
-                                            <path d="M3 7h15a2 2 0 0 1 2 2v10H5a2 2 0 0 1-2-2V7Z" />
-                                            <path d="M3 7l3-3h11" />
-                                            <path d="M16 12h6v4h-6a2 2 0 0 1 0-4Z" />
-
-                                        </svg>
-
-                                    </div>
-
-                                    <div>
-
-                            <span>
-                                PROPERTY PRICE
-                            </span>
-
-                                        <strong>
-                                            {{ \App\Support\PriceFormatter::aed(
-                                            $property->project->starting_price
-                                            ) }}
-                                        </strong>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="landing-about-v2-info-card">
-
-                                    <div class="landing-about-v2-info-icon">
-
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-
-                                            <rect x="3" y="5" width="18" height="16" rx="1" />
-                                            <path d="M7 3v4M17 3v4M3 10h18" />
-                                            <path d="M8 14h2M14 14h2M8 18h2M14 18h2" />
-
-                                        </svg>
-
-                                    </div>
-
-                                    <div>
-
-                            <span>
-                                HANDOVER DATE
-                            </span>
-
-                                        <strong>
-                                            Q3 2029
-                                        </strong>
-
-                                    </div>
-
-                                </div>
+                                <h3>
+                                    4-Bedroom Villa
+                                </h3>
 
                             </div>
 
-                            {{-- =====================================================
-                            PRIME CONNECTIVITY / PROJECT HIGHLIGHTS
-                            ===================================================== --}}
+                            <span class="residence-card-line"></span>
 
-                            <div class="landing-reach">
+                            <div class="residence-card-specs">
 
-                                {{-- Heading --}}
-                                <div class="landing-reach__heading">
-
-                        <span class="landing-reach__eyebrow">
-                            WHY THE HEIGHTS
+                        <span>
+                            430 sqm Unit
                         </span>
 
-                                    <h3 class="landing-reach__title">
-                                        A Community Designed Around You
-                                    </h3>
-
-                                </div>
-
-
-                                {{-- =====================================================
-                                6 PROJECT HIGHLIGHTS
-                                ===================================================== --}}
-
-                                <div class="landing-reach__features">
-
-
-                                    {{-- 1 --}}
-                                    <div class="landing-reach__feature">
-
-                                        <div class="landing-reach__feature-icon">
-                                            <x-landing-icon name="masterplan" />
-                                        </div>
-
-                                        <h4>
-                                            AED 55 Billion Masterplan
-                                        </h4>
-
-                                        <p>
-                                            A landmark 81 million sq. ft. Emaar community shaped
-                                            around wellness, nature and refined living.
-                                        </p>
-
-                                    </div>
-
-
-                                    {{-- 2 --}}
-                                    <div class="landing-reach__feature">
-
-                                        <div class="landing-reach__feature-icon">
-                                            <x-landing-icon name="beach" />
-                                        </div>
-
-                                        <h4>
-                                            Private Beach &amp; Country Club Lifestyle
-                                        </h4>
-
-                                        <p>
-                                            Exclusive wellness, leisure, fitness and social
-                                            amenities within the community.
-                                        </p>
-
-                                    </div>
-
-
-                                    {{-- 3 --}}
-                                    <div class="landing-reach__feature">
-
-                                        <div class="landing-reach__feature-icon">
-                                            <x-landing-icon name="home" />
-                                        </div>
-
-                                        <h4>
-                                            3, 4, &amp; 5 Bedroom Luxury Villas
-                                        </h4>
-
-                                        <p>
-                                            Large plot sizes and contemporary independent villas
-                                            designed for premium family living.
-                                        </p>
-
-                                    </div>
-
-
-                                    {{-- 4 --}}
-                                    <div class="landing-reach__feature">
-
-                                        <div class="landing-reach__feature-icon">
-                                            <x-landing-icon name="garden" />
-                                        </div>
-
-                                        <h4>
-                                            Nature-First Community
-                                        </h4>
-
-                                        <p>
-                                            14 million sq. ft. of open space featuring extensive
-                                            parks, a beachside clubhouse, landscaped greenways,
-                                            lakes, cycling and jogging tracks.
-                                        </p>
-
-                                    </div>
-
-
-                                    {{-- 5 --}}
-                                    <div class="landing-reach__feature">
-
-                                        <div class="landing-reach__feature-icon">
-                                            <x-landing-icon name="location" />
-                                        </div>
-
-                                        <h4>
-                                            Prime Dubai Location
-                                        </h4>
-
-                                        <p>
-                                            Direct access to Al Maktoum International Airport,
-                                            Expo City and key destinations across Dubai.
-                                        </p>
-
-                                    </div>
-
-
-                                    {{-- 6 --}}
-                                    <div class="landing-reach__feature">
-
-                                        <div class="landing-reach__feature-icon">
-                                            <x-landing-icon name="diamond" />
-                                        </div>
-
-                                        <h4>
-                                            Attractive Price per Sq. Ft.
-                                        </h4>
-
-                                        <p>
-                                            A highly attractive entry point into a premium
-                                            Emaar villa community.
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-
-                                {{-- =====================================================
-                                LOCATION BOXES
-                                ===================================================== --}}
-
-                                <div class="landing-reach__locations">
-
-
-                                    {{-- Expo --}}
-                                    <div class="landing-reach__location">
-
-                                        <div class="landing-reach__location-time">
-                                            <strong>10</strong>
-                                            <span>MINS</span>
-                                        </div>
-
-                                        <div class="landing-reach__location-place">
-
-
-                                            <strong>
-                                                Expo City Dubai
-                                            </strong>
-
-                                        </div>
-
-                                    </div>
-
-
-                                    {{-- Airport --}}
-                                    <div class="landing-reach__location">
-
-                                        <div class="landing-reach__location-time">
-                                            <strong>10</strong>
-                                            <span>MINS</span>
-                                        </div>
-
-                                        <div class="landing-reach__location-place">
-
-
-                                            <strong>
-                                                Al Maktoum Int’l Airport
-                                            </strong>
-
-                                        </div>
-
-                                    </div>
-
-
-                                    {{-- Dubai Hills --}}
-                                    <div class="landing-reach__location">
-
-                                        <div class="landing-reach__location-time">
-                                            <strong>20</strong>
-                                            <span>MINS</span>
-                                        </div>
-
-                                        <div class="landing-reach__location-place">
-
-
-
-                                            <strong>
-                                                Dubai Hills Estate
-                                            </strong>
-
-                                        </div>
-
-                                    </div>
-
-
-                                    {{-- Downtown --}}
-                                    <div class="landing-reach__location">
-
-                                        <div class="landing-reach__location-time">
-                                            <strong>30</strong>
-                                            <span>MINS</span>
-                                        </div>
-
-                                        <div class="landing-reach__location-place">
-
-
-                                            <strong>
-                                                Downtown Dubai
-                                            </strong>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
+                                <span class="residence-card-dot"></span>
+
+                                <span>
+                            532 sqm Plot
+                        </span>
 
                             </div>
 
                         </div>
 
-
-
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-
-
-
-
-        <section class="landing-about-v2">
-
-            <div class="landing-gallery-container">
-
-                <div class="landing-plan-heading " >
-
-                                                             <span class=" landing-about-v2-eyebrow">
-                                                                   THE COLLECTION
-                                                                         </span>
-
-                    <h2 class="area-hardcoded landing-about-v2-title">
-                        Discover Three Elegant Villa Clusters
-                    </h2>
-                    <span class="landing-about-v2-line"></span>
-                    <p class="landing-about-v2-description">
-
-                    <h3 class="fs-4" >
-                        A visionary master community inspired by holistic luxury living, where nature, wellness and thoughtful design come together in perfect harmony at The Heights Country Club & Wellness.
-                    </h3>
-
-
-                </div>
-
-                <div class="row gx-30">
-
-
-                    @if (
-                    $activeSections->isNotEmpty() ||
-                    $hasProjectDescription ||
-                    $galleryImages->isNotEmpty() ||
-                    $amenities->isNotEmpty() ||
-                    filled($property->map_url)
-                    )
-
-                        <div class="col-xxl-12">
-
-                            <div class="overflow-hidden" id="about-sec">
-
-
-
-                                <div class="about-page-wrap">
-
-                                    <div class="row gy-40 property-detail-row justify-content-between align-items-center landing-collection-desktop">
-
-                                        @foreach ($activeSections as $section)
-
-                                            @php
-                                                $sectionImage = $section->getFirstMedia('section_image');
-
-                                                $sectionImageUrl = $sectionImage
-                                                    ? \App\Support\MediaUrl::fromMedia(
-                                                        $sectionImage,
-                                                        'section_image_avif'
-                                                    )
-                                                    : null;
-                                            @endphp
-
-
-                                            {{-- IMAGE LEFT / TEXT RIGHT --}}
-                                            @if ($section->layout === 'image_left')
-
-                                                @if ($sectionImageUrl)
-
-                                                    <div class="col-lg-6">
-
-                                                        <div class="img-box3">
-
-                                                            <div class="img1">
-
-                                                                <img
-                                                                    src="{{ $sectionImageUrl }}"
-                                                                    alt="{{ $property->project?->name ?? $property->title }}"
-                                                                    loading="lazy"
-                                                                    decoding="async">
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                @endif
-
-
-                                                @if (filled($section->title) || filled($section->content))
-
-                                                    <div class="{{ $sectionImageUrl ? 'col-lg-6' : 'col-lg-12' }}">
-
-                                                        <div class="title-area mb-0">
-
-                                                            @if (filled($section->title))
-
-                                                                <div>
-                                <span class="sub-title-dark">
-                                    {{ $section->title }}
-                                </span>
-                                                                </div>
-
-                                                            @endif
-
-
-                                                            @if (filled($section->content))
-
-                                                                <div class="text-theme">
-                                                                    {!! $section->content !!}
-                                                                </div>
-
-                                                            @endif
-
-                                                        </div>
-
-
-                                                        <div class="landing-section-cta cta-browse-project">
-
-                                                            <button
-                                                                type="button"
-                                                                class="landing-plan-button"
-                                                                data-lead-popup-open
-                                                                data-request-type="location-details">
-
-                                                                GET EARLY ACCESS
-
-                                                            </button>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                @endif
-
-
-                                                {{-- TEXT LEFT / IMAGE RIGHT --}}
-                                            @elseif ($section->layout === 'image_right')
-
-                                                @if (filled($section->title) || filled($section->content))
-
-                                                    <div class="{{ $sectionImageUrl ? 'col-lg-6' : 'col-lg-12' }}">
-
-                                                        <div class="title-area mb-0">
-
-                                                            @if (filled($section->title))
-
-                                                                <div>
-                                <span class="sub-title-dark">
-                                    {{ $section->title }}
-                                </span>
-                                                                </div>
-
-                                                            @endif
-
-
-                                                            @if (filled($section->content))
-
-                                                                <div class="text-theme">
-                                                                    {!! $section->content !!}
-                                                                </div>
-
-                                                            @endif
-
-                                                        </div>
-
-
-                                                        <div class="landing-section-cta cta-browse-project">
-
-                                                            <button
-                                                                type="button"
-                                                                class="landing-plan-button"
-                                                                data-lead-popup-open
-                                                                data-request-type="location-details">
-
-                                                                GET EARLY ACCESS
-
-                                                            </button>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                @endif
-
-
-                                                @if ($sectionImageUrl)
-
-                                                    <div class="col-lg-6">
-
-                                                        <div class="img-box3">
-
-                                                            <div class="img1">
-
-                                                                <img
-                                                                    src="{{ $sectionImageUrl }}"
-                                                                    alt="{{ $property->project?->name ?? $property->title }}"
-                                                                    loading="lazy"
-                                                                    decoding="async">
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                @endif
-
-
-                                                {{-- FULL WIDTH --}}
-                                            @elseif ($section->layout === 'full_width')
-
-                                                @if (filled($section->title) || filled($section->content))
-
-                                                    <div class="col-lg-12">
-
-                                                        <div class="title-area mb-0">
-
-                                                            @if (filled($section->title))
-
-                                                                <div>
-                                <span class="sub-title-dark project-about-heading">
-                                    {{ $section->title }}
-                                </span>
-                                                                </div>
-
-                                                            @endif
-
-
-                                                            @if (filled($section->content))
-
-                                                                <div class="text-theme">
-                                                                    {!! $section->content !!}
-                                                                </div>
-
-                                                            @endif
-
-                                                        </div>
-
-                                                    </div>
-
-                                                @endif
-
-                                            @endif
-
-                                        @endforeach
-
-                                    </div>
-
-
-
-                                    <div class="landing-collection-mobile">
-
-                                        @foreach ($activeSections as $section)
-
-                                            @php
-                                                $sectionImage = $section->getFirstMedia('section_image');
-
-                                                $sectionImageUrl = $sectionImage
-                                                    ? \App\Support\MediaUrl::fromMedia(
-                                                        $sectionImage,
-                                                        'section_image_avif'
-                                                    )
-                                                    : null;
-                                            @endphp
-
-                                            <div class="landing-mobile-collection-item">
-
-                                                {{-- IMAGE --}}
-                                                @if ($sectionImageUrl)
-
-                                                    <div class="landing-mobile-collection-image">
-
-                                                        <img
-                                                            src="{{ $sectionImageUrl }}"
-                                                            alt="{{ $property->project?->name ?? $property->title }}"
-                                                            loading="lazy"
-                                                            decoding="async">
-
-                                                    </div>
-
-                                                @endif
-
-
-                                                {{-- HEADING --}}
-                                                @if (filled($section->title))
-
-                                                    <div class="landing-mobile-collection-heading">
-
-                    <span class="sub-title-dark">
-                        {{ $section->title }}
+                    </article>
+
+
+                    {{-- =====================================================
+                         5 BEDROOM VILLA
+                         ===================================================== --}}
+                    <article class="residence-card">
+
+                        <button
+                            type="button"
+                            class="residence-card-media residence-floorplan-trigger"
+                            data-open-enquiry
+                            data-request-type="5_bedroom_villa"
+                            data-bedroom-type="5 Bedroom Villa"
+                            aria-label="Get 5 Bedroom Villa floor plan"
+                        >
+
+                            <img
+                                src="{{ asset('assets/img/landing/br-plans.webp') }}"
+                                alt="5 Bedroom Villa floor plan - {{ $property->title }}"
+                                class="landing-plan-image"
+                            >
+
+                            <span class="residence-floorplan-overlay"></span>
+
+                            <span class="residence-floorplan-cta">
+                        Get 5 BR Villa Floor Plan
                     </span>
 
-                                                    </div>
-
-                                                @endif
+                        </button>
 
 
-                                                {{-- CONTENT --}}
-                                                @if (filled($section->content))
+                        <div class="residence-card-body">
 
-                                                    <div class="landing-mobile-collection-content">
-                                                        {!! $section->content !!}
-                                                    </div>
+                            <div class="residence-card-heading">
 
-                                                @endif
+                        <span class="residence-card-number">
+                            02
+                        </span>
 
-
-                                                {{-- BUTTON --}}
-                                                @if ($section->layout !== 'full_width')
-
-                                                    <div class="landing-mobile-collection-cta">
-
-                                                        <button
-                                                            type="button"
-                                                            class="landing-plan-button"
-                                                            data-lead-popup-open
-                                                            data-request-type="location-details">
-
-                                                            GET EARLY ACCESS
-
-                                                        </button>
-
-                                                    </div>
-
-                                                @endif
-
-                                            </div>
-
-                                        @endforeach
-
-                                    </div>
-
-                                </div>
-
-
+                                <h3>
+                                    5-Bedroom Villa
+                                </h3>
 
                             </div>
+
+                            <span class="residence-card-line"></span>
+
+                            <div class="residence-card-specs">
+
+                        <span>
+                            510 sqm Unit
+                        </span>
+
+                                <span class="residence-card-dot"></span>
+
+                                <span>
+                            630 sqm Plot
+                        </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    {{-- =====================================================
+                         6 BEDROOM VILLA
+                         ===================================================== --}}
+                    <article class="residence-card">
+
+                        <button
+                            type="button"
+                            class="residence-card-media residence-floorplan-trigger"
+                            data-open-enquiry
+                            data-request-type="6_bedroom_villa"
+                            data-bedroom-type="6 Bedroom Villa"
+                            aria-label="Get 6 Bedroom Villa floor plan"
+                        >
+
+                            <img
+                                src="{{ asset('assets/img/landing/br-plans.webp') }}"
+                                alt="6 Bedroom Villa floor plan - {{ $property->title }}"
+                                class="landing-plan-image"
+                            >
+
+                            <span class="residence-floorplan-overlay"></span>
+
+                            <span class="residence-floorplan-cta">
+                        Get 6 BR Villa Floor Plan
+                    </span>
+
+                        </button>
+
+
+                        <div class="residence-card-body">
+
+                            <div class="residence-card-heading">
+
+                        <span class="residence-card-number">
+                            03
+                        </span>
+
+                                <h3>
+                                    6-Bedroom Villa
+                                </h3>
+
+                            </div>
+
+                            <span class="residence-card-line"></span>
+
+                            <div class="residence-card-specs">
+
+                        <span>
+                            591 sqm Unit
+                        </span>
+
+                                <span class="residence-card-dot"></span>
+
+                                <span>
+                            720 sqm Plot
+                        </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                {{-- Bottom CTA --}}
+
+
+            </div>
+
+        </section>
+
+        <section class="section" id="properties" >
+            <div class="wrap" style="max-width:900px;">
+                <p class="eyebrow-flanked reveal"><span class="eyebrow-line"></span>Villas<span class="eyebrow-line"></span></p>
+                <h2 class="title reveal reveal-d1">Hudayriyat Islands Villas by Modon</h2>
+            </div>
+            <div class="wrap">
+                <div class="prose reveal reveal-d2" style="margin-top:1.4rem;max-width:760px;margin-inline:auto;text-align:center">
+                    <p class="about-lead" style="text-align:left">Wadeem Gardens comprises three gated villa clusters, offering a choice of Contemporary Arabic and Modernist façades, with varied layouts that allow each home to reflect its residents' individual taste.For buyers searching for Hudayriyat Islands villas, Wadeem Gardens offers a choice of:</p>
+
+                </div>
+
+            </div>
+            <div class="wrap-wide">
+
+                <div class="residence-cards reveal reveal-d3">
+
+                    <!-- Residence 01 -->
+                    <article class="residence-card">
+
+                        <div class="residence-card-media">
+                            <img
+                                src="{{ asset('assets/img/landing/wadeem-modon/m6.jpg') }}"
+                                alt="4-bedroom villa at Wadeem Gardens, official Modon render"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="residence-card-body">
+
+                            <div class="residence-card-heading">
+                                <span class="residence-card-number">01</span>
+
+                                <h3>4-Bedroom Villa</h3>
+                            </div>
+
+                            <span class="residence-card-line"></span>
+
+                            <div class="residence-card-specs">
+                                <span>430 sqm Unit</span>
+                                <span class="residence-card-dot"></span>
+                                <span>532 sqm Plot</span>
+                            </div>
+
+                            <div class="residence-card-price">
+                                <span>Starting From</span>
+                                <strong>AED 8.7M</strong>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Residence 02 -->
+                    <article class="residence-card">
+
+                        <div class="residence-card-media">
+                            <img
+                                src="{{ asset('assets/img/landing/wadeem-modon/m10.jpg') }}"
+                                alt="5-bedroom villa at Wadeem Gardens, official Modon render"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="residence-card-body">
+
+                            <div class="residence-card-heading">
+                                <span class="residence-card-number">02</span>
+
+                                <h3>5-Bedroom Villa</h3>
+                            </div>
+
+                            <span class="residence-card-line"></span>
+
+                            <div class="residence-card-specs">
+                                <span>510 sqm Unit</span>
+                                <span class="residence-card-dot"></span>
+                                <span>630 sqm Plot</span>
+                            </div>
+
+                            <div class="residence-card-price">
+                                <span>Starting From</span>
+                                <strong>AED 10.2M</strong>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Residence 03 -->
+                    <article class="residence-card">
+
+                        <div class="residence-card-media">
+                            <img
+                                src="{{ asset('assets/img/landing/wadeem-modon/m11.jpg') }}"
+                                alt="6-bedroom villa at Wadeem Gardens, official Modon render"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="residence-card-body">
+
+                            <div class="residence-card-heading">
+                                <span class="residence-card-number">03</span>
+
+                                <h3>6-Bedroom Villa</h3>
+                            </div>
+
+                            <span class="residence-card-line"></span>
+
+                            <div class="residence-card-specs">
+                                <span>591 sqm Unit</span>
+                                <span class="residence-card-dot"></span>
+                                <span>720 sqm Plot</span>
+                            </div>
+
+                            <div class="residence-card-price">
+                                <span>Starting From</span>
+                                <strong>AED 11.6M</strong>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="residence-cta reveal reveal-d4">
+                    <a class="btn btn-champagne" href="#contact" data-open-enquiry=""> View Available Villas</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section" id="paymentplan" style="background:#fff" id="paymentplan">
+
+            <div class="wrap" style="max-width:900px;">
+                <p class="eyebrow-flanked reveal"><span class="eyebrow-line"></span>Payment Plan<span class="eyebrow-line"></span></p>
+                <h2 class="title reveal reveal-d1">Official 25/75 Payment Plan</h2>
+            </div>
+            <div class="wrap">
+                <div class="prose reveal reveal-d2" style="margin-top:1.4rem;max-width:760px;margin-inline:auto;text-align:center">
+                    <p class="about-lead" style="text-align:left">Wadeem Gardens follows Modon's official 25%/75% payment plan: staged 5% instalments through October 2030, and the remaining 75% due at the final Month 54 milestone.</p>
+
+                </div>
+
+            </div>
+
+            <div class="wrap" style="max-width:1000px;text-align:center ;   padding-right: 2.5rem;">
+
+                <div class="pp-cards">
+                    <div class="pp-card reveal reveal-d1">
+                        <div class="pp-pct">5<sup>%</sup></div>
+                        <h3>On Reservation</h3>
+                        <p>Down payment </p>
+                        <span class="pp-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </div>
+                    <div class="pp-card reveal reveal-d2">
+                        <div class="pp-pct">20<sup>%</sup></div>
+                        <h3>Staged Instalments</h3>
+                        <p>5% at Month 8 (Jun 2027), 5% at Month 14 (Dec 2027), 5% at Month 20 (Jun 2028), 5% at Month 48 (Oct 2030).</p>
+                        <span class="pp-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </div>
+                    <div class="pp-card reveal reveal-d3">
+                        <div class="pp-pct">75<sup>%</sup></div>
+                        <h3>Month 54 (Apr 2031)</h3>
+                        <p>Final balance due, subject to off-plan mortgage approval.</p>
+                    </div>
+                </div>
+
+                <div class="residence-cta reveal reveal-d4">
+                    <a class="btn btn-champagne" href="#contact" data-open-enquiry=""> Get Detailed Payment Plan</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="amenities" style="background-image:linear-gradient(to top, rgba(245,237,223,1), rgba(245,237,223,0)), linear-gradient(rgba(245,237,223,1), rgba(245,237,223,0) 50%), linear-gradient(rgba(245,237,223,0.9), rgba(245,237,223,0.9)), url('assets/img/jali-pattern-bg.webp'); background-size:auto,auto,auto,cover; background-position:0 0,0 0,0 0,center; background-repeat:no-repeat;" id="amenities">
+
+
+            <div class="wrap" style="max-width:900px;">
+                <p class="eyebrow-flanked reveal"><span class="eyebrow-line"></span>WADEEM GARDENS AMENITIES<span class="eyebrow-line"></span></p>
+                <h2 class="title reveal reveal-d1">Wadeem Gardens Amenities on Hudayriyat Island</h2>
+            </div>
+            <div class="wrap">
+                <div class="prose reveal reveal-d2" style="margin-top:1.4rem;max-width:760px;margin-inline:auto;text-align:center">
+                    <p class="about-lead" style="text-align:left">Discover the amenities at Wadeem Gardens on Hudayriyat Island, Abu Dhabi, featuring thoughtfully designed spaces for recreation, wellness, leisure and everyday community living.</p>
+
+                </div>
+
+            </div>
+            <div class="wrap" style="max-width:820px;text-align:center">
+
+                <div class="amenity-icons reveal reveal-d1">
+                    <div class="amenity-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M18.5 5.5l-1.4 1.4M20.5 12h-2M5.5 5.5l1.4 1.4M3.5 12h2"/><path d="M4 20c2-6 6-9 8-9s6 3 8 9"/><path d="M12 11v9M9 20h6"/></svg>
+                        <span>2.3km Central Spine</span>
+                    </div>
+                    <div class="amenity-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v14M6 17a2 2 0 0 0 4 0v-3H6M17 6h3v6h-3z"/><path d="M2 21c1.4-1.2 2.8-1.2 4.2 0 1.4 1.2 2.8 1.2 4.2 0 1.4-1.2 2.8-1.2 4.2 0 1.4 1.2 2.8 1.2 4.2 0"/></svg>
+                        <span>6 Clubhouses</span>
+                    </div>
+                    <div class="amenity-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+                        <span>Office Park</span>
+                    </div>
+                    <div class="amenity-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v13.5"/><path d="M4 19.5h13M7 8h6M7 11h6"/></svg>
+                        <span>Healthcare Centres</span>
+                    </div>
+                    <div class="amenity-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="1"/><path d="M12 6v12M3 12h18"/></svg>
+                        <span>Arena</span>
+                    </div>
+                    <div class="amenity-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+                        <span>Retail &amp; Dining</span>
+                    </div>
+                    <div class="amenity-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v13.5"/><path d="M4 19.5h13M7 8h6M7 11h6"/></svg>
+                        <span>2 International Schools</span>
+                    </div>
+                    <div class="amenity-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="2.5"/><circle cx="18.5" cy="17.5" r="2.5"/><path d="M5.5 17.5 10 8l4 6h3M10 8h3l2 4"/></svg>
+                        <span>Waterfront Promenade</span>
+                    </div>
+                    <div class="amenity-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3"/><path d="M12 11v9M8 15l4-2 4 2M8 19l4-2 4 2"/></svg>
+                        <span>Cinemas</span>
+                    </div>
+                </div>
+                <div class="residence-cta reveal reveal-d4">
+                    <a class="btn btn-champagne" href="#contact" data-open-enquiry=""> Get All Amenities</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="section" id="gallery" >
+
+
+
+
+
+            <div class="wrap-wide">
+
+                <div class="gallery-head">
+
+
+
+                    <div class="wrap" style="max-width:900px;">
+                        <p class="eyebrow-flanked reveal"><span class="eyebrow-line"></span>WADEEM GARDENS GALLERY<span class="eyebrow-line"></span></p>
+                        <h2 class="title reveal reveal-d1">A Glimpse of Island Living</h2>
+                    </div>
+
+                    <div class="prose reveal reveal-d2" style="max-width:760px;margin-inline:auto;text-align:center">
+                        <p class="about-lead" style="text-align:left">Discover the architecture, landscapes and lifestyle envisioned for Wadeem Gardens on Hudayriyat Island, through official Modon renders showcasing its villas, amenities and carefully planned community spaces.</p>
+
+                    </div>
+                    @if ($galleryImages->isNotEmpty())
+
+                        <div
+                            class="gallery-tabs reveal"
+                            role="tablist"
+                            aria-label="Gallery categories">
+
+                            <button
+                                type="button"
+                                role="tab"
+                                data-gallery-tab="exterior"
+                                aria-selected="true">
+
+                                Villas
+
+                            </button>
+
+                            <button
+                                type="button"
+                                role="tab"
+                                data-gallery-tab="interior"
+                                aria-selected="false">
+
+                                Island Life
+
+                            </button>
 
                         </div>
 
@@ -1075,1059 +1040,489 @@ strip_tags($property->description ?? ''),
 
                 </div>
 
-            </div>
-
-        </section>
-
-
-        <section class="landing-payment-plan landing-about-v2" id="downloads" >
-
-            <div class="landing-gallery-container">
-
-                <div class="landing-plan-heading" >
-
-                    <span class="landing-reach__eyebrow">
-                        PLANS
-                    </span>
-
-                    <h2 class="landing-about-v2-title">
-                        FLOOR PLANS
-                    </h2>
-                    <span class="landing-about-v2-line"></span>
-                    <p class="landing-about-v2-description mb-lg">
-                        Request detailed project layouts and unit plans for
-                        {{ $property->title }}.
-                    </p>
-
-                </div>
-
-
-                <div class="landing-plan-grid-br">
-
-                    {{-- MASTER PLAN --}}
-                    <article class="landing-plan-card">
-
-                        <button
-                            type="button"
-                            class="landing-plan-image-wrap"
-                            data-lead-popup-open
-                            data-request-type="master_plan">
-
-                            <img
-                                src="{{ asset('assets/img/landing/br-plans.webp') }}"
-                                alt=" {{ $property->project?->name ?? $property->title }}"
-                                class="landing-plan-image">
-
-                            <span class="landing-plan-overlay"></span>
-
-                            <span class="landing-plan-overlay-text">
-                                SHOW 3BR FlOOR PLAN
-                            </span>
-
-                        </button>
-
-                        <div class="landing-plan-card-footer">
-
-                            <h3>
-                                3 Bedroom Villa
-                            </h3>
-
-                            <p>
-                                BUA: 3463.07 Sq.ft | Plot: 4,500 Sq.ft
-
-                            </p>
-
-
-
-                        </div>
-
-                    </article>
-
-
-                    {{-- UNIT PLAN --}}
-                    <article class="landing-plan-card">
-
-                        <button
-                            type="button"
-                            class="landing-plan-image-wrap"
-                            data-lead-popup-open
-                            data-request-type="unit_plan">
-
-                            <img
-                                src="{{ asset('assets/img/landing/br-plans.webp') }}"
-                                alt=" {{ $property->project?->name ?? $property->title }}"
-                                class="landing-plan-image">
-
-                            <span class="landing-plan-overlay"></span>
-
-                            <span class="landing-plan-overlay-text">
-                                SHOW 4BR VILLA FlOOR PLAN
-                            </span>
-
-                        </button>
-
-                        <div class="landing-plan-card-footer">
-
-                            <h3>
-                                4 Bedroom Villa
-                            </h3>
-
-                            <p>
-                                BUA: 4,312.45 Sq.ft | Plot: 4,500 Sq.ft
-
-                            </p>
-
-
-
-                        </div>
-
-                    </article>
-
-                    <article class="landing-plan-card">
-
-                        <button
-                            type="button"
-                            class="landing-plan-image-wrap"
-                            data-lead-popup-open
-                            data-request-type="unit_plan">
-
-                            <img
-                                src="{{ asset('assets/img/landing/br-plans.webp') }}"
-                                alt=" {{ $property->project?->name ?? $property->title }}"
-                                class="landing-plan-image">
-
-                            <span class="landing-plan-overlay"></span>
-
-                            <span class="landing-plan-overlay-text">
-                                SHOW 5 BR VILLA FlOOR PLAN
-                            </span>
-
-                        </button>
-
-                        <div class="landing-plan-card-footer">
-
-                            <h3>
-                                5 Bedroom Villa
-                            </h3>
-
-                            <p>
-                                BUA: 5,884.30 Sq.ft | Plot: 5,500 Sq.ft
-
-                            </p>
-
-
-
-                        </div>
-
-                    </article>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="landing-payment-plan landing-about-v2" id="payment-plan">
-
-            <div class="landing-gallery-container">
-
-                <div class="landing-payment-heading">
-
-                <span class=" landing-about-v2-eyebrow">
-                    PAYMENT PLAN
-                </span>
-
-
-
-                    <h2 class=" landing-about-v2-title">
-                        Flexible Payment Plan
-                    </h2>
-                    <span class="landing-about-v2-line"></span>
-
-                    <p class="landing-about-v2-description mb-lg">
-                        Seamless payment plan for a smooth investment journey.
-                    </p>
-
-                </div>
-
-
-
-
-
-                {{-- SUMMARY --}}
-                <div class="landing-payment-summary">
-
-                <span>
-                    <strong>10%</strong>
-                    For Booking
-                </span>
-
-                    <span>
-                    <strong>70%</strong>
-                    During Construction
-                </span>
-
-                    <span>
-                    <strong>20%</strong>
-                    On Handover
-                </span>
-
-                </div>
-
-
-                {{-- CTA --}}
-                <div class="landing-payment-actions">
-
-                    <button
-                        type="button"
-                        class="landing-payment-btn landing-payment-btn-outline"
-                        data-lead-popup-open
-                        data-request-type="payment-plan">
-
-                        GET PAYMENT PLAN
-
-                    </button>
-
-
-
-                </div>
-
-            </div>
-
-        </section>
-        <section class="landing-amenities-v2 landing-about-v2" id="amenities">
-
-            <div class="landing-gallery-container">
-
-                {{-- Heading --}}
-                <div class="landing-amenities-v2-heading">
-
-                <span class="  landing-about-v2-eyebrow">
-                    AMENITIES
-                </span>
-
-
-
-                    <h2 class=" landing-about-v2-title">
-                        Designed for a life of well-being
-                    </h2>
-                    <span class="landing-about-v2-line"></span>
-
-                    <p class="landing-about-v2-description mb-lg">
-                        From active living to family time, every amenity enhances comfort and convenience.
-                    </p>
-
-                </div>
-
-
-                {{-- Amenities Grid --}}
-                <div class="landing-amenities-v2-grid">
-
-
-                    <div class="landing-amenities-v2-card">
-
-                        <div class="landing-amenities-v2-icon">
-                            <x-landing-icon name="beach" />
-                        </div>
-
-                        <h3>Beach Clubhouse</h3>
-
-                        <span class="landing-amenities-v2-card-line"></span>
-
-                        <p>
-                            An exclusive beachfront clubhouse designed for leisure,
-                            relaxation and social experiences.
-                        </p>
-
-                    </div>
-
-
-                    <div class="landing-amenities-v2-card">
-
-                        <div class="landing-amenities-v2-icon">
-                            <x-landing-icon name="farm-cafe" />
-                        </div>
-
-                        <h3>Farm-to-Table Café</h3>
-
-                        <span class="landing-amenities-v2-card-line"></span>
-
-                        <p>
-                            Fresh dining experiences inspired by locally sourced
-                            ingredients and healthy living.
-                        </p>
-
-                    </div>
-
-
-                    <div class="landing-amenities-v2-card">
-
-                        <div class="landing-amenities-v2-icon">
-                            <x-landing-icon name="hospital" />
-                        </div>
-
-                        <h3>Hospital and Clinics</h3>
-
-                        <span class="landing-amenities-v2-card-line"></span>
-
-                        <p>
-                            Convenient access to healthcare facilities within
-                            the community.
-                        </p>
-
-                    </div>
-
-
-                    <div class="landing-amenities-v2-card">
-
-                        <div class="landing-amenities-v2-icon">
-                            <x-landing-icon name="retail" />
-                        </div>
-
-                        <h3>Shopping Malls</h3>
-
-                        <span class="landing-amenities-v2-card-line"></span>
-
-                        <p>
-                            Everyday shopping and lifestyle conveniences
-                            located close to home.
-                        </p>
-
-                    </div>
-
-
-                    <div class="landing-amenities-v2-card">
-
-                        <div class="landing-amenities-v2-icon">
-                            <x-landing-icon name="sports-court" />
-                        </div>
-
-                        <h3>Sports Courts</h3>
-
-                        <span class="landing-amenities-v2-card-line"></span>
-
-                        <p>
-                            Dedicated courts for recreational activities,
-                            fitness and active community living.
-                        </p>
-
-                    </div>
-
-
-                    <div class="landing-amenities-v2-card">
-
-                        <div class="landing-amenities-v2-icon">
-                            <x-landing-icon name="garden" />
-                        </div>
-
-                        <h3>Landscaped Gardens</h3>
-
-                        <span class="landing-amenities-v2-card-line"></span>
-
-                        <p>
-                            Beautifully landscaped green spaces for relaxation,
-                            walking and outdoor moments.
-                        </p>
-
-                    </div>
-
-
-                    <div class="landing-amenities-v2-card">
-
-                        <div class="landing-amenities-v2-icon">
-                            <x-landing-icon name="cycling" />
-                        </div>
-
-                        <h3>Cycling Tracks</h3>
-
-                        <span class="landing-amenities-v2-card-line"></span>
-
-                        <p>
-                            Dedicated cycling routes designed for an active
-                            and healthy lifestyle.
-                        </p>
-
-                    </div>
-
-
-                    <div class="landing-amenities-v2-card">
-
-                        <div class="landing-amenities-v2-icon">
-                            <x-landing-icon name="water" />
-                        </div>
-
-                        <h3>Lakes &amp; Water Features</h3>
-
-                        <span class="landing-amenities-v2-card-line"></span>
-
-                        <p>
-                            Scenic lakes and water features creating a calm
-                            and refreshing community environment.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                {{-- Bottom Highlights --}}
-                <div class="landing-amenities-v2-highlights">
-
-
-                    <div class="landing-amenities-v2-highlight">
-
-                        <div class="landing-amenities-v2-highlight-icon">
-                            <x-landing-icon name="shield" />
-                        </div>
-
-                        <div>
-                            <strong>SAFE &amp; SECURE</strong>
-
-                            <span>
-                            Gated community living
-                        </span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="landing-amenities-v2-highlight">
-
-                        <div class="landing-amenities-v2-highlight-icon">
-                            <x-landing-icon name="leaf" />
-                        </div>
-
-                        <div>
-                            <strong>SUSTAINABLE LIVING</strong>
-
-                            <span>
-                            Green spaces &amp; wellness
-                        </span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="landing-amenities-v2-highlight">
-
-                        <div class="landing-amenities-v2-highlight-icon">
-                            <x-landing-icon name="users" />
-                        </div>
-
-                        <div>
-                            <strong>COMMUNITY LIVING</strong>
-
-                            <span>
-                            Spaces that bring people together
-                        </span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="landing-amenities-v2-highlight">
-
-                        <div class="landing-amenities-v2-highlight-icon">
-                            <x-landing-icon name="star" />
-                        </div>
-
-                        <div>
-                            <strong>PREMIUM LIFESTYLE</strong>
-
-                            <span>
-                            World-class community amenities
-                        </span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="landing-gallery-section landing-about-v2" id="gallery">
-
-            <div class="landing-gallery-container">
-
-
 
                 @if ($galleryImages->isNotEmpty())
 
-                    <section class="landing-project-gallery " id="gallery">
+                    <div
+                        class="gallery-stage reveal"
+                        role="region"
+                        aria-label="Wadeem Gardens gallery">
 
-                        <div class="landing-project-gallery-heading">
+                        @foreach ($galleryImages as $image)
 
-                    <span class="landing-project-gallery-eyebrow">
-                        COMMUNITY RENDERS
-                    </span>
+                            @php
 
-                            <h2 class="landing-about-v2-title">
-                                Project Gallery
-                            </h2>
+                                /*
+                                 * First 6 images = Villas
+                                 * Remaining images = Island Life
+                                 */
+                                $category = $loop->index < 6
+                                    ? 'exterior'
+                                    : 'interior';
 
-                            <span class="landing-project-gallery-line"></span>
-
-                        </div>
-
-
-                        <div
-                            class="landing-project-gallery-grid"
-                            id="landingProjectGallery">
-
-                            @foreach ($galleryImages as $image)
-
-                                @php
-                                    $thumbnailUrl = \App\Support\MediaUrl::fromMedia(
+                                $thumbnailUrl = \App\Support\MediaUrl::fromMedia(
                                     $image,
                                     'gallery_tablet_avif'
-                                    );
+                                );
 
-                                    $fullImageUrl = \App\Support\MediaUrl::fromMedia(
+                                $mobileUrl = \App\Support\MediaUrl::fromMedia(
+                                    $image,
+                                    'gallery_mobile_avif'
+                                );
+
+                                $fullImageUrl = \App\Support\MediaUrl::fromMedia(
                                     $image,
                                     'gallery_avif'
-                                    );
-                                @endphp
+                                );
 
-                                <button
-                                    type="button"
-                                    class="landing-project-gallery-item"
-                                    data-gallery-index="{{ $loop->index }}"
-                                    data-gallery-src="{{ $fullImageUrl }}"
-                                    aria-label="Open gallery image {{ $loop->iteration }}">
+                            @endphp
 
-                                    <img
-                                        src="{{ $thumbnailUrl }}"
-                                        srcset="
-                            {{ \App\Support\MediaUrl::fromMedia($image, 'gallery_mobile_avif') }} 768w,
-                            {{ \App\Support\MediaUrl::fromMedia($image, 'gallery_tablet_avif') }} 1280w
-                        "
-                                        sizes="
-                            (max-width: 767px) 100vw,
-                            (max-width: 991px) 50vw,
-                            33vw
-                        "
-                                        alt="{{ $property->project?->name ?? $property->title }} - Gallery image {{ $loop->iteration }}"
-                                        loading="lazy"
-                                        decoding="async">
-
-                                    <span class="landing-project-gallery-overlay"></span>
-
-                                </button>
-
-                            @endforeach
-
-                        </div>
-
-                    </section>
-
-
-                    {{-- =====================================================
-                                        GALLERY LIGHTBOX
-                                    ===================================================== --}}
-
-                    <div
-                        class="landing-gallery-lightbox"
-                        id="landingGalleryLightbox"
-                        role="dialog"
-                        aria-modal="true"
-                        aria-label="Project gallery"
-                        aria-hidden="true">
-
-                        <button
-                            type="button"
-                            class="landing-gallery-lightbox-close"
-                            id="landingGalleryLightboxClose"
-                            aria-label="Close gallery">
-                            ×
-                        </button>
-
-
-                        @if ($galleryImages->count() > 1)
-
-                            <button
-                                type="button"
-                                class="landing-gallery-lightbox-arrow landing-gallery-lightbox-prev"
-                                id="landingGalleryLightboxPrev"
-                                aria-label="Previous image">
-
-                                <x-landing-icon name="chevron-left" />
-
-                            </button>
-
-                        @endif
-
-
-                        <div class="landing-gallery-lightbox-content">
 
                             <img
-                                src=""
-                                alt=""
-                                id="landingGalleryLightboxImage">
+                                src="{{ $thumbnailUrl }}"
 
-                            <div
-                                class="landing-gallery-lightbox-counter"
-                                id="landingGalleryLightboxCounter">
-                            </div>
+                                srcset="
+                            {{ $mobileUrl }} 768w,
+                            {{ $thumbnailUrl }} 1280w
+                        "
 
+                                sizes="
+                            (max-width: 767px) 100vw,
+                            (max-width: 991px) 100vw,
+                            100vw
+                        "
+
+                                alt="{{ $property->project?->name ?? $property->title }} - Gallery image {{ $loop->iteration }}"
+
+                                loading="{{ $loop->first ? 'eager' : 'lazy' }}"
+                                decoding="async"
+
+                                data-category="{{ $category }}"
+                                data-full-src="{{ $fullImageUrl }}"
+
+                                class="{{ $loop->first ? 'is-active' : '' }}">
+
+                        @endforeach
+
+                    </div>
+
+
+                    <div class="gallery-controls">
+
+                        <div
+                            class="gallery-counter"
+                            data-gallery-counter>
+                            01 / 06
                         </div>
 
 
-                        @if ($galleryImages->count() > 1)
+                        <div class="gallery-nav">
 
                             <button
+                                class="icon-btn"
                                 type="button"
-                                class="landing-gallery-lightbox-arrow landing-gallery-lightbox-next"
-                                id="landingGalleryLightboxNext"
-                                aria-label="Next image">
+                                data-gallery-prev
+                                aria-label="Previous">
 
-                                <x-landing-icon name="chevron-right" />
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    aria-hidden="true">
+
+                                    <path d="M15 5l-7 7 7 7"/>
+
+                                </svg>
 
                             </button>
 
-                        @endif
 
+                            <button
+                                class="icon-btn"
+                                type="button"
+                                data-gallery-next
+                                aria-label="Next">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    aria-hidden="true">
+
+                                    <path d="M9 5l7 7-7 7"/>
+
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                @else
+
+                    <div class="gallery-empty">
+                        Gallery images are currently unavailable.
                     </div>
 
                 @endif
+                <div class="residence-cta reveal reveal-d4">
+                    <a class="btn btn-champagne" href="#contact" data-open-enquiry=""> Get Brochure</a>
+                </div>
+            </div>
+
+        </section>
 
 
-                <div class="landing-payment-actions">
+        <section class="section " id="location">
 
-                    <button
-                        type="button"
-                        class="landing-payment-btn landing-payment-btn-outline"
-                        data-lead-popup-open
-                        data-request-type="payment-plan">
-
-                        DOWNLOAD GALLERY
-
-                    </button>
-
-
+            <div class="wrap" style="max-width:900px;">
+                <p class="eyebrow-flanked reveal"><span class="eyebrow-line"></span> LOCATION & CONNECTIVITY<span class="eyebrow-line"></span></p>
+                <h2 class="title reveal reveal-d1"> Wadeem Gardens on Hudayriyat Island</h2>
+            </div>
+            <div class="wrap">
+                <div class="prose reveal reveal-d2" style="margin-top:1.4rem;max-width:760px;margin-inline:auto;text-align:center">
+                    <p class="about-lead" style="text-align:left">   Located on Hudayriyat Island, Wadeem Gardens is designed around a range of lifestyle and
+                        everyday amenities, including clubhouses, retail and dining, healthcare centres, international
+                        schools, cinemas and a waterfront promenade.</p>
 
                 </div>
 
             </div>
+
+            <div class="wrap-wide">
+
+                @php
+                    $masterplanUrl = asset(
+                        'assets/img/landing/wadeem-modon/wadeem-gardens-masterplan.svg'
+                    );
+                @endphp
+
+
+                <div class="location-map-wrap reveal reveal-d2">
+
+                    <div class="location-map">
+
+                        <img
+                            src="{{ $masterplanUrl }}"
+                            alt="Wadeem Gardens masterplan and location map on Hudayriyat Island, Abu Dhabi"
+                            loading="lazy"
+                            decoding="async"
+                            data-location-map-image>
+
+
+                        <button
+                            type="button"
+                            class="location-map-enlarge"
+                            data-location-map-open
+                            aria-label="Enlarge Wadeem Gardens masterplan">
+
+                    <span class="location-map-lens">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.35"
+                            aria-hidden="true">
+
+                            <circle cx="10.8" cy="10.8" r="5.7"/>
+                            <path d="M15.1 15.1 20 20"/>
+
+                        </svg>
+
+                    </span>
+
+                            <span class="location-map-enlarge-text">
+                        Enlarge
+                    </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="location-map-caption">
+
+                        <span class="location-caption-line"></span>
+
+                        <p>
+                            Location masterplan by Modon. Drive times are the
+                            developer's own published figures and exclude traffic.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="wrap-wide" style="margin-top:3rem">
+
+                    <div class="drive-grid reveal reveal-d1" style="margin-top:2.5rem">
+                        <div class="drive-card">
+                            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8l1.5 5"/><rect x="2.5" y="13" width="19" height="5" rx="1.5"/><circle cx="7" cy="18.5" r="1.3"/><circle cx="17" cy="18.5" r="1.3"/></svg></div>
+                            <div><h3>Zayed International Airport</h3><span>~15 min</span></div>
+                        </div>
+                        <div class="drive-card">
+                            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8l1.5 5"/><rect x="2.5" y="13" width="19" height="5" rx="1.5"/><circle cx="7" cy="18.5" r="1.3"/><circle cx="17" cy="18.5" r="1.3"/></svg></div>
+                            <div><h3>Abu Dhabi Global Market (ADGM)</h3><span>~20 min</span></div>
+                        </div>
+                        <div class="drive-card">
+                            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8l1.5 5"/><rect x="2.5" y="13" width="19" height="5" rx="1.5"/><circle cx="7" cy="18.5" r="1.3"/><circle cx="17" cy="18.5" r="1.3"/></svg></div>
+                            <div><h3>Louvre Museum</h3><span>~23 min</span></div>
+                        </div>
+                        <div class="drive-card">
+                            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8l1.5 5"/><rect x="2.5" y="13" width="19" height="5" rx="1.5"/><circle cx="7" cy="18.5" r="1.3"/><circle cx="17" cy="18.5" r="1.3"/></svg></div>
+                            <div><h3>Disneyland (Yas Island)</h3><span>~25 min</span></div>
+                        </div>
+                        <div class="drive-card">
+                            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8l1.5 5"/><rect x="2.5" y="13" width="19" height="5" rx="1.5"/><circle cx="7" cy="18.5" r="1.3"/><circle cx="17" cy="18.5" r="1.3"/></svg></div>
+                            <div><h3>Sheikh Zayed Grand Mosque</h3><span>~23 min</span></div>
+                        </div>
+                        <div class="drive-card">
+                            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8l1.5 5"/><rect x="2.5" y="13" width="19" height="5" rx="1.5"/><circle cx="7" cy="18.5" r="1.3"/><circle cx="17" cy="18.5" r="1.3"/></svg></div>
+                            <div><h3>Al Bateen</h3><span>Directly opposite</span></div>
+                        </div>
+                    </div>
+                    <div class="residence-cta reveal reveal-d4">
+                        <a class="btn btn-champagne" href="#contact" data-open-enquiry=""> Get Location & Brochure</a>
+                    </div>
+                </div>
+
+            </div>
+
         </section>
 
 
+        <section class="section developer-section" id="developer">
+            <div class="wrap" style="max-width:900px;">
+                <p class="eyebrow-flanked reveal"><span class="eyebrow-line"></span>  THE DEVELOPER<span class="eyebrow-line"></span></p>
+                <h2 class="title reveal reveal-d1">   A Vision Shaping
+                    Abu Dhabi's Future</h2>
+            </div>
+            <div class="wrap">
+                <div class="prose reveal reveal-d2" style="margin-top:1.4rem;max-width:760px;margin-inline:auto;text-align:center">
+                    <p class="about-lead c-white" style="text-align:left">    Modon is developing a portfolio of destinations across Abu Dhabi,
+                        bringing together residential communities, leisure, sport and
+                        waterfront experiences as part of the emirate's evolving
+                        urban landscape.</p>
+
+                </div>
+
+            </div>
+
+            <div class="wrap-wide">
+
+                {{-- Header --}}
+
+
+
+                {{-- Features --}}
+                <div class="developer-features">
+
+                    {{-- 01 --}}
+                    <article class="developer-feature reveal reveal-d1">
+
+                        <div class="developer-feature-top">
+
+                    <span class="developer-feature-number">
+                        01
+                    </span>
+
+                            <span class="developer-feature-line"></span>
+
+                        </div>
+
+                        <h3>
+                            Government-Backed
+                        </h3>
+
+                        <p>
+                            Listed on the Abu Dhabi Securities Exchange and supported
+                            by ADQ, Modon operates within Abu Dhabi's wider long-term
+                            development vision.
+                        </p>
+
+                    </article>
+
+
+                    {{-- 02 --}}
+                    <article class="developer-feature reveal reveal-d2">
+
+                        <div class="developer-feature-top">
+
+                    <span class="developer-feature-number">
+                        02
+                    </span>
+
+                            <span class="developer-feature-line"></span>
+
+                        </div>
+
+                        <h3>
+                            Hudayriyat Portfolio
+                        </h3>
+
+                        <p>
+                            Modon's Hudayriyat Island portfolio includes destinations
+                            such as Bashayer, Nawayef, Al Naseem and Hudayriyat Golf
+                            Estates, contributing to the island's growing residential
+                            offering.
+                        </p>
+
+                    </article>
+
+
+                    {{-- 03 --}}
+                    <article class="developer-feature reveal reveal-d3">
+
+                        <div class="developer-feature-top">
+
+                    <span class="developer-feature-number">
+                        03
+                    </span>
+
+                            <span class="developer-feature-line"></span>
+
+                        </div>
+
+                        <h3>
+                            Strong Market Response
+                        </h3>
+
+                        <p>
+                            The initial Wadeem Gardens release attracted significant
+                            buyer demand, with the launch reported to have generated
+                            AED 5.5 billion in sales within its first 72 hours in
+                            July 2025.
+                        </p>
+
+                    </article>
+
+
+                    {{-- 04 --}}
+                    <article class="developer-feature reveal reveal-d4">
+
+                        <div class="developer-feature-top">
+
+                    <span class="developer-feature-number">
+                        04
+                    </span>
+
+                            <span class="developer-feature-line"></span>
+
+                        </div>
+
+                        <h3>
+                            A Complete Island Destination
+                        </h3>
+
+                        <p>
+                            From expansive parks and sporting facilities to beaches,
+                            leisure destinations and residential communities, Modon's
+                            vision extends across the wider Hudayriyat Island
+                            masterplan.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
 
         {{-- =====================================================
-                    FAQ SECTION
-                ===================================================== --}}
-
-        <section class="landing-faq-section landing-about-v2" id="location">
-
-            <div class="landing-gallery-container">
-
-                <div class="row g-5 align-items-stretch">
-
-                    {{-- =====================================================
-                        LEFT — FAQ
-                    ===================================================== --}}
-
-                    <div class="col-lg-6 d-flex">
-
-                        <div class="landing-faq-intro">
-
-                    <span class="   landing-about-v2-title">
-                        FAQ
-                    </span>
-                            <span class="landing-about-v2-line mb-lg"></span>
-
-                            <details class="landing-faq-item">
-
-                                <summary>
-                            <span>
-                                What is The Heights by Emaar?
-                            </span>
-
-                                    <span
-                                        class="landing-faq-toggle"
-                                        aria-hidden="true">
-                            </span>
-                                </summary>
-
-                                <div class="landing-faq-answer">
-
-                                    <p>
-                                        The Heights by Emaar is a premium villa
-                                        community focused on wellness, nature, and
-                                        family living, offering spacious 3, 4 and
-                                        5-bedroom villas with world-class amenities.
-                                    </p>
-
-                                </div>
-
-                            </details>
-
-
-                            <details class="landing-faq-item">
-
-                                <summary>
-                            <span>
-                                What is the payment plan for The Heights by Emaar?
-                            </span>
-
-                                    <span
-                                        class="landing-faq-toggle"
-                                        aria-hidden="true">
-                            </span>
-                                </summary>
-
-                                <div class="landing-faq-answer">
-
-                                    <p>
-                                        The Heights offers an 80/20 payment plan,
-                                        with payments structured throughout
-                                        construction and the remaining 20% due
-                                        upon handover.
-                                    </p>
-
-                                </div>
-
-                            </details>
-
-
-                            <details class="landing-faq-item">
-
-                                <summary>
-                            <span>
-                                How large is the Emaar Heights community?
-                            </span>
-
-                                    <span
-                                        class="landing-faq-toggle"
-                                        aria-hidden="true">
-                            </span>
-                                </summary>
-
-                                <div class="landing-faq-answer">
-
-                                    <p>
-                                        The Heights spans approximately 81 million
-                                        sq. ft., featuring expansive green spaces,
-                                        parks, wellness facilities, and community
-                                        amenities.
-                                    </p>
-
-                                </div>
-
-                            </details>
-
-
-                            <details class="landing-faq-item">
-
-                                <summary>
-                            <span>
-                                Is The Heights by Emaar a good investment?
-                            </span>
-
-                                    <span
-                                        class="landing-faq-toggle"
-                                        aria-hidden="true">
-                            </span>
-                                </summary>
-
-                                <div class="landing-faq-answer">
-
-                                    <p>
-                                        The Heights offers strong long-term potential
-                                        due to its Emaar brand, strategic location,
-                                        premium villas, and wellness-focused community
-                                        concept.
-                                    </p>
-
-                                </div>
-
-                            </details>
-
-
-                            <details class="landing-faq-item">
-
-                                <summary>
-                            <span>
-                                When is The Heights expected to be handed over?
-                            </span>
-
-                                    <span
-                                        class="landing-faq-toggle"
-                                        aria-hidden="true">
-                            </span>
-                                </summary>
-
-                                <div class="landing-faq-answer">
-
-                                    <p>
-                                        The Heights by Emaar is currently an off-plan
-                                        project, with expected handover in 2030.
-                                    </p>
-
-                                </div>
-
-                            </details>
-
-                        </div>
-
-                    </div>
-
-
-                    {{-- =====================================================
-                        RIGHT — LOCATION
-                    ===================================================== --}}
-
-                    <div class="col-lg-6 d-flex">
-
-                        <div class="landing-location-map-column">
-
-                    <span class="landing-about-v2-title">
-                        LOCATION
-                    </span>
-                            <span class="landing-about-v2-line mb-lg"></span>
-
-
-                            <div class="location-map">
-
-                                <div class="contact-map">
-
-                                    <iframe
-                                        src="{{ $property->map_url }}"
-                                        title="Map showing The Heights location in Dubai South"
-                                        allowfullscreen
-                                        loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade">
-                                    </iframe>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="landing-location-map-footer">
-
-                                <button
-                                    type="button"
-                                    class="landing-plan-button"
-                                    data-lead-popup-open
-                                    data-request-type="location-details">
-
-                                    GET LOCATION DETAILS
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-            <section class="landing-developer-community landing-about-v2 " id="about-dev">
-
-                <div class="landing-gallery-container">
-
-
-
-                    <div class="landing-developer-panel">
-
-                        <span class="  landing-about-v2-eyebrow">
-                    ABOUT THE DEVELOPER
-                         </span>
-
-                        <h2 class=" landing-about-v2-title">
-                            Emaar Properties
-                        </h2>
-                        <span class="landing-about-v2-line"></span>
-                        <div class="landing-developer-copy">
-
-                            <p>
-                                Emaar Properties is one of Dubai’s leading real estate
-                                developers, known for creating master-planned communities,
-                                premium residences and landmark destinations across the UAE.
-
-                                The Heights Country Club &amp; Wellness is an Emaar
-                                development in Dubai focused on wellness-led living,
-                                luxury villas, landscaped green spaces and an exclusive
-                                country club lifestyle.
-                            </p>
-
-                        </div>
-
-
-                        {{-- Developer Highlights --}}
-                        <div class="landing-developer-highlights">
-
-                            <div class="landing-developer-highlight">
-
-                                <div class="landing-developer-highlight-icon">
-                                    <x-landing-icon name="home" />
-                                </div>
-
-                                <strong>Global Leader</strong>
-
-                                <span>in Real Estate</span>
-
-                            </div>
-
-
-                            <div class="landing-developer-highlight">
-
-                                <div class="landing-developer-highlight-icon">
-                                    <x-landing-icon name="shield" />
-                                </div>
-
-                                <strong>Proven</strong>
-
-                                <span>Track Record</span>
-
-                            </div>
-
-
-                            <div class="landing-developer-highlight">
-
-                                <div class="landing-developer-highlight-icon">
-                                    <x-landing-icon name="users" />
-                                </div>
-
-                                <strong>Premium</strong>
-
-                                <span>Communities</span>
-
-                            </div>
-
-
-                            <div class="landing-developer-highlight">
-
-                                <div class="landing-developer-highlight-icon">
-                                    <x-landing-icon name="calendar" />
-                                </div>
-
-                                <strong>40+ Years</strong>
-
-                                <span>of Excellence</span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    {{-- =====================================================
-                        RIGHT — COMMUNITY
-                    ===================================================== --}}
-
-
-
-
-                </div>
-
-
-
-
-
-
-            </section>
-
-
-            </div>
-
-
-
-            <div
-                class="landing-right-section"
-                style="background-image: url('{{ asset('assets/img/landing/wadeem-modon/side-bg.webp') }}');"
-            >
-
-                <aside class="landing-side-form">
-
-                    <div class="landing-side-form-inner">
-
-                        @include('partials.lead-form-v2', [
-                            'formId' => 'landing-about-form',
-                            'heading' => 'GET EARLY ACCESS',
-                            'buttonText' => 'SUBMIT',
-                        ])
-
-                    </div>
-
-                </aside>
-
-            </div>
-        </div>
+             LOCATION MASTERPLAN LIGHTBOX
+        ===================================================== --}}
 
         <div
-            class="landing-lead-popup"
-            id="landingLeadPopup"
+            class="location-lightbox"
+            data-location-map-lightbox
             aria-hidden="true">
 
             <div
-                class="landing-lead-popup-backdrop"
-                data-lead-popup-close>
+                class="location-lightbox-backdrop"
+                data-location-map-close>
             </div>
 
+
             <div
-                class="landing-lead-popup-dialog"
+                class="location-lightbox-inner"
                 role="dialog"
                 aria-modal="true"
-                aria-label="Register Your Interest">
+                aria-label="Wadeem Gardens masterplan">
 
                 <button
                     type="button"
-                    class="landing-lead-popup-close"
-                    data-lead-popup-close
-                    aria-label="Close">
-                    ×
+                    class="location-lightbox-close"
+                    data-location-map-close
+                    aria-label="Close masterplan">
+
+                    <span></span>
+                    <span></span>
+
                 </button>
 
-                @include('partials.lead-form', [
-                'formId' => 'landing-popup-form',
-                'heading' => 'GET PROJECT DETAILS',
-                'buttonText' => 'SUBMIT',
-                'source' => 'the_heights_popup',
-                'propertyId' => $property->id,
-                'developerId' => $property->developer_id,
-                'action' => route('landing.leads.store'),
-                ])
+
+                <div class="location-lightbox-image">
+
+                    <img
+                        src="{{ $masterplanUrl }}"
+                        alt="Wadeem Gardens masterplan and location map"
+                        data-location-map-full>
+
+                </div>
 
             </div>
 
         </div>
 
+    </div>
 
-        {{-- =====================================================
-    DEVELOPER + COMMUNITY
-===================================================== --}}
 
-    <section class=" landing-about-v2 landing-image-form-section landing-enquiry-footer">
 
-        <div class="landing-gallery-container ">
 
-            <div
-                class="landing-image-form-box"
-                style="background-image:
-    linear-gradient(
-        90deg,
-        rgba(20, 42, 58, 0.35) 0%,
-        rgba(20, 42, 58, 0.10) 100%
-    ),
-    url('{{ asset('assets/img/landing/bannercontact.webp') }}');"
-            >
 
-                <div class="landing-image-form-left">
 
-                    @include('partials.lead-form', [
-                        'formId' => 'landing-image-form',
-                        'heading' => 'GET EARLY ACCESS',
-                    ])
 
+
+    <section class="section villa-enquiry-section" id="register">
+
+        <div class="wrap-wide">
+
+            <div class="villa-enquiry-layout">
+
+                {{-- Left --}}
+                <div class="villa-enquiry-content reveal">
+
+                    <p class="eyebrow-flanked reveal">
+                        <span class="eyebrow-line"></span>
+                        FIND YOUR VILLA
+                    </p>
+
+                    <h2 class="villa-enquiry-title">
+                        Find Your Villa on<br>
+                        <em>Hudayriyat Island</em>
+                    </h2>
+
+                    <p class="villa-enquiry-description">
+                        Explore available Hudayriyat Island villas at Wadeem Gardens
+                        and receive current pricing, floor plans, available units
+                        and payment-plan details.
+                    </p>
+                    <div class="footer-cta reveal reveal-d4">
+                        <a class="btn btn-champagne" href="#contact" data-open-enquiry=""> Enquire About Wadeem Gardens</a>
+                    </div>
                 </div>
+
+
+                {{-- Right --}}
+                @include('partials.lead-form-wadeem')
 
             </div>
 
@@ -2138,9 +1533,11 @@ strip_tags($property->description ?? ''),
 
 
 
-    <section class="landing-developer-community landing-about-v2 footer-section" id="about-dev">
 
-        <div class="landing-gallery-container">
+
+    <section class="section footer-section" >
+
+        <div style="width:1350px;">
 
 
         <div class="landing-footer-disclaimer">
@@ -2152,8 +1549,7 @@ strip_tags($property->description ?? ''),
             <p>
                 This page is operated by Avanor Capital L.L.C, a licensed Dubai real estate brokerage, and is not the official website of the developer. Project names and trademarks belong to their respective owners.
             </p>
-<span class="keywords">emaar heights, emaar luxury villas, salva by emaar, serro by emaar, the heights country club, serro the heights, the heights country club and wellness, the heights emaar, the heights country club and wellness by emaar, salva the heights, serro the heights, the heights by emaar
-</span>
+
         </div>
 
         <div class="landing-footer-bottom">
@@ -2176,10 +1572,9 @@ strip_tags($property->description ?? ''),
     </div>
 
 </section>
-        {{-- =====================================================
-            MAIN FOOTER
-        ===================================================== --}}
-
+    <aside class="sticky-sidebar" aria-label="Registration Sidebar" id="side-form-lp">
+        @include('partials.lead-form-wadeem')
+    </aside>
 
         <a
             href="https://wa.me/971589798257?text=Hi%2C%20I%E2%80%99m%20interested%20to%20know%20more%20about%20this%20project.%20Please%20share%20all%20relevant%20details.%0AThank%20you."
@@ -2190,6 +1585,49 @@ strip_tags($property->description ?? ''),
         >
             <svg width="44px" height="44px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z" fill="#BFC8D0"></path> <path d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z" fill="url(#paint0_linear_87_7264)"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z" fill="white"></path> <path d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z" fill="white"></path> <defs> <linearGradient id="paint0_linear_87_7264" x1="26.5" y1="7" x2="4" y2="28" gradientUnits="userSpaceOnUse"> <stop stop-color="#5BD066"></stop> <stop offset="1" stop-color="#27B43E"></stop> </linearGradient> </defs> </g></svg>
         </a>
+
+
+
+
+
+    <div class="enquiry-popup" data-enquiry-popup aria-hidden="true">
+
+        <div class="enquiry-popup-backdrop" data-close-enquiry></div>
+
+        <div
+            class="enquiry-popup-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="enquiry-popup-title">
+
+            <button
+                type="button"
+                class="enquiry-popup-close"
+                data-close-enquiry
+                aria-label="Close enquiry form">
+
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+{{--            <div class="enquiry-popup-content">--}}
+
+
+
+
+{{--                <div class="enquiry-popup-form enquiry-popup-dialog">--}}
+
+                    @include('partials.lead-form-wadeem')
+
+{{--                </div>--}}
+
+{{--            </div>--}}
+
+        </div>
+
+    </div>
 
 </main>
 
