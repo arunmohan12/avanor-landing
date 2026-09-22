@@ -3628,8 +3628,9 @@ main#content {
 
     background: rgba(30, 27, 24, .78);
 
-    backdrop-filter: blur(8px);
+
     -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 
