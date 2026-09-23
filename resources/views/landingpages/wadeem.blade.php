@@ -1002,7 +1002,7 @@ strip_tags($property->description ?? ''),
 
                     <div class="wrap" style="max-width:900px;">
                         <p class="eyebrow-flanked reveal"><span class="eyebrow-line"></span>WADEEM GARDENS GALLERY<span class="eyebrow-line"></span></p>
-                        <h2 class="title reveal reveal-d1">A Glimpse of Island Living</h2>
+                        <h2 class="title reveal reveal-d1 gallery-head">A Glimpse of Island Living</h2>
                     </div>
 
                     <div class="prose reveal reveal-d2" style="max-width:760px;margin-inline:auto;text-align:center">

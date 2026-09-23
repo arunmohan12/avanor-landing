@@ -618,7 +618,7 @@ ul { list-style: none; }
 /* Gallery */
 .gallery-head {
     display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between;
-    gap: 1.25rem; margin-bottom: 2rem;
+     margin-bottom: 2rem;
 }
 .gallery-tabs {
     display: inline-flex; gap: 0; border: 1px solid var(--line-d); background: #fff; margin-left: auto;
@@ -3952,4 +3952,7 @@ input.is-invalid {
         width: 100%;
         text-align: center;
     }
+}
+.gallery-head{
+    margin-bottom: 1.25rem;
 }
