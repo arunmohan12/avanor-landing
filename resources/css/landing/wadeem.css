@@ -1769,7 +1769,7 @@ main#content {
 @media (max-width: 520px) {
     .hero-highlights {
         align-items: flex-start;
-        gap: 1rem;
+
         padding: 0.8rem;
     }
 
@@ -3809,7 +3809,7 @@ body.enquiry-popup-open {
         width: 100%;
         max-height: 94vh;
 
-        top: -23%;
+
     }
 
 
