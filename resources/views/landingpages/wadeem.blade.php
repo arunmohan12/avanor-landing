@@ -174,7 +174,7 @@ strip_tags($property->description ?? ''),
 
                 <!-- Price -->
                 <div class="px-2 sm:px-4">
-        <span class="block text-[11px] uppercase tracking-wider text-slate-400 mb-1">
+        <span class="block text-[11px] uppercase tracking-wider text-white mb-1">
             From
         </span>
                     <span class="font-serif text-base sm:text-xl font-bold text-champagne-400">
@@ -187,7 +187,7 @@ strip_tags($property->description ?? ''),
 
                 <!-- Payment Plan -->
                 <div class="px-2 sm:px-4">
-        <span class="block text-[11px] uppercase tracking-wider text-slate-400 mb-1">
+        <span class="block text-[11px] uppercase tracking-wider text-white mb-1">
             Payment Plan
         </span>
                     <span class="font-serif text-base sm:text-xl font-bold text-white">
@@ -200,7 +200,7 @@ strip_tags($property->description ?? ''),
 
                 <!-- Down Payment -->
                 <div class="px-2 sm:px-4">
-        <span class="block text-[11px] uppercase tracking-wider text-slate-400 mb-1">
+        <span class="block text-[11px] uppercase tracking-wider text-white mb-1">
             Down Payment
         </span>
                     <span class="font-serif text-base sm:text-xl font-bold text-champagne-400">
@@ -1173,9 +1173,7 @@ strip_tags($property->description ?? ''),
                     </div>
 
                 @endif
-                <div class="residence-cta reveal reveal-d4">
-                    <a class="btn btn-champagne" href="#contact" data-open-enquiry=""> Get Brochure</a>
-                </div>
+
             </div>
 
         </section>
@@ -1299,19 +1297,121 @@ strip_tags($property->description ?? ''),
 
         </section>
 
+        <section class="section" id="faq" style="background-image:linear-gradient(to top, rgba(245,237,223,1), rgba(245,237,223,0)), linear-gradient(rgba(245,237,223,1), rgba(245,237,223,0) 50%), linear-gradient(rgba(245,237,223,0.9), rgba(245,237,223,0.9)), url('assets/img/jali-pattern-bg.webp'); background-size:auto,auto,auto,cover; background-position:0 0,0 0,0 0,center; background-repeat:no-repeat;" data-faq>
+            <div class="wrap" style="max-width:1080px">
+                <div class="reveal" >
+                    <p class="eyebrow-flanked reveal"><span class="eyebrow-line"></span> FAQ<span class="eyebrow-line"></span></p>
+                    <h2 class="title">Frequently Asked Questions</h2>
+                </div>
 
+                <div class="faq-columns reveal reveal-d1">
+
+                    <div class="faq-list">
+
+                        <div class="faq-item">
+                            <button type="button" aria-expanded="false" aria-controls="faq-panel-1">
+                                <span class="faq-num">01</span>
+                                <h3>What is Hudayriyat Island?</h3>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq-panel" id="faq-panel-1" role="region">
+                                <div>
+                                    <p>
+                                        Hudayriyat Island is a premium coastal destination in Abu Dhabi by Modon Properties,
+                                        offering luxury villas, apartments, beachfront communities, world-class amenities,
+                                        and freehold ownership for all nationalities.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button type="button" aria-expanded="false" aria-controls="faq-panel-2">
+                                <span class="faq-num">02</span>
+                                <h3>Who is the developer of Hudayriyat Island?</h3>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq-panel" id="faq-panel-2" role="region">
+                                <div>
+                                    <p>
+                                        Hudayriyat Island is developed by Modon Properties, a leading Abu Dhabi developer
+                                        behind premium residential and lifestyle destinations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button type="button" aria-expanded="false" aria-controls="faq-panel-3">
+                                <span class="faq-num">03</span>
+                                <h3>What types of properties are available on Hudayriyat Island?</h3>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq-panel" id="faq-panel-3" role="region">
+                                <div>
+                                    <p>
+                                        Hudayriyat Island offers a range of luxury villas, mansions, and apartments,
+                                        with options to suit different lifestyles and budgets.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="faq-list">
+
+                        <div class="faq-item">
+                            <button type="button" aria-expanded="false" aria-controls="faq-panel-4">
+                                <span class="faq-num">04</span>
+                                <h3>How close is Hudayriyat Island to major Abu Dhabi landmarks?</h3>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq-panel" id="faq-panel-4" role="region">
+                                <div>
+                                    <p>
+                                        Hudayriyat Island offers convenient access to key destinations, including Yas Island,
+                                        Abu Dhabi International Airport, Corniche, WTC, and Al Bateen—all within approximately
+                                        10–20 minutes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button type="button" aria-expanded="false" aria-controls="faq-panel-5">
+                                <span class="faq-num">05</span>
+                                <h3>Is Hudayriyat Island suitable for investment?</h3>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq-panel" id="faq-panel-5" role="region">
+                                <div>
+                                    <p>
+                                        Yes. With its prime location, premium lifestyle offerings, and freehold ownership,
+                                        Hudayriyat Island presents strong long-term investment potential in Abu Dhabi.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
         <section class="section developer-section" id="developer">
             <div class="wrap" style="max-width:900px;">
-                <p class="eyebrow-flanked reveal"><span class="eyebrow-line"></span>  THE DEVELOPER<span class="eyebrow-line"></span></p>
+                <p class="eyebrow-flanked reveal"><span class="eyebrow-line"></span> ABOUT THE DEVELOPER<span class="eyebrow-line"></span></p>
                 <h2 class="title reveal reveal-d1">   A Vision Shaping
                     Abu Dhabi's Future</h2>
             </div>
             <div class="wrap">
                 <div class="prose reveal reveal-d2" style="margin-top:1.4rem;max-width:760px;margin-inline:auto;text-align:center">
-                    <p class="about-lead c-white" style="text-align:left">    Modon is developing a portfolio of destinations across Abu Dhabi,
-                        bringing together residential communities, leisure, sport and
-                        waterfront experiences as part of the emirate's evolving
-                        urban landscape.</p>
+                    <p class="about-lead c-white" style="text-align:left">    Modon is an Abu Dhabi-based developer creating vibrant communities, premium hospitality
+                        and lifestyle destinations, and world-class sports facilities. With a diverse portfolio across
+                        real estate, hospitality, investments, and entertainment, Modon is shaping the future of smart
+                        living. Hudayriyat Island is one of Modon’s flagship masterplans, providing Wadeem with an
+                        established and thoughtfully planned destination.</p>
 
                 </div>
 
