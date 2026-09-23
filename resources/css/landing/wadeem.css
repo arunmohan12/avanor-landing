@@ -3645,7 +3645,7 @@ main#content {
 
     overflow-y: auto;
 
-    background: var(--ivor);
+
 
     box-shadow:
         0 30px 80px rgba(20, 17, 14, .28);
@@ -3656,9 +3656,8 @@ main#content {
         transform .45s cubic-bezier(.2, .65, .25, 1);
 }
 
-.enquiry-popup.is-open .enquiry-popup-dialog {
-    transform: translateY(0) scale(1);
-}
+
+
 
 
 /* CONTENT */
@@ -3808,7 +3807,7 @@ body.enquiry-popup-open {
     .enquiry-popup-dialog {
         width: 100%;
         max-height: 94vh;
-
+        top: -10%;
 
     }
 
@@ -3956,3 +3955,5 @@ input.is-invalid {
 .gallery-head{
     margin-bottom: 1.25rem;
 }
+
+

@@ -1069,86 +1069,57 @@ const enquiryPopup = document.querySelector('[data-enquiry-popup]');
 const enquiryOpenButtons = document.querySelectorAll('[data-open-enquiry]');
 const enquiryCloseButtons = document.querySelectorAll('[data-close-enquiry]');
 
-if (enquiryPopup && enquiryOpenButtons.length) {
+if (enquiryPopup) {
 
     const openEnquiryPopup = () => {
-
         enquiryPopup.classList.add('is-open');
-
         enquiryPopup.setAttribute('aria-hidden', 'false');
 
+        // Disable background scrolling
         document.body.classList.add('enquiry-popup-open');
-
     };
-
 
     const closeEnquiryPopup = () => {
-
         enquiryPopup.classList.remove('is-open');
-
         enquiryPopup.setAttribute('aria-hidden', 'true');
 
+        // Enable background scrolling
         document.body.classList.remove('enquiry-popup-open');
-
     };
 
-
+    // Manual open buttons
     enquiryOpenButtons.forEach((button) => {
-
         button.addEventListener('click', (event) => {
-
             event.preventDefault();
-
             openEnquiryPopup();
-
         });
-
     });
 
-
+    // Close buttons
     enquiryCloseButtons.forEach((button) => {
-
         button.addEventListener('click', closeEnquiryPopup);
-
     });
 
-
+    // ESC key
     document.addEventListener('keydown', (event) => {
-
         if (
             event.key === 'Escape' &&
             enquiryPopup.classList.contains('is-open')
         ) {
             closeEnquiryPopup();
         }
-
     });
-
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    const popup = document.querySelector('[data-enquiry-popup]');
-
-    if (!popup) return;
-
-    const openPopup = () => {
-        popup.classList.add('is-open');
-        document.body.classList.add('popup-open');
-    };
 
     // First popup — after 10 seconds
     setTimeout(() => {
-        openPopup();
+        openEnquiryPopup();
     }, 10000);
-
 
     // Second popup — after 25 seconds
     setTimeout(() => {
-        openPopup();
+        openEnquiryPopup();
     }, 25000);
-
-});
+}
 
 
 
