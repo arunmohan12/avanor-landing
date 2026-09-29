@@ -9,6 +9,12 @@
     @section('og_image', $propertyImageUrl)
 @endif
 
+
+@push('favicon')
+    <link rel="icon" type="image/png"
+          href="{{ asset('assets/img/landing/wadeem-modon/favicon.png') }}">
+@endpush
+
 @section(
 'title',
 $property->meta_title ?: $property->title . ' | Avanor Capital'
@@ -27,7 +33,7 @@ strip_tags($property->description ?? ''),
     @section('meta_keywords', $property->meta_keywords)
 @endif
 
-@section('canonical', 'https://theheights.avanorcap.com')
+@section('canonical', 'https://hudayriyatisland.sales-centre.net')
 
 
 @section('robots', 'index,follow')
@@ -55,7 +61,7 @@ strip_tags($property->description ?? ''),
     155
     ),
 
-    'url' => 'https://theheights.avanorcap.com',
+    'url' => 'https://hudayriyatisland.sales-centre.net',
     ];
 
     if (!empty($propertyImageUrl)) {
@@ -77,21 +83,19 @@ strip_tags($property->description ?? ''),
     '@type' => 'Offer',
     'priceCurrency' => 'AED',
     'price' => $displayPrice,
-    'url' => 'https://theheights.avanorcap.com',
+    'url' => 'https://hudayriyatisland.sales-centre.net',
     ];
     }
 @endphp
 
 
 @push('structured-data')
-    <script type="application/ld+json">
-        {
-            !!json_encode(
-                $propertySchema,
-                JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
-            ) !!
-        }
-    </script>
+<script type="application/ld+json">
+{!! json_encode(
+    $propertySchema,
+    JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+) !!}
+</script>
 @endpush
 
 @push('styles')
