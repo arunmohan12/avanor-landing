@@ -1186,7 +1186,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
                     {{-- LEFT GLASS NAVIGATION --}}
                     <div class="pja-gallery-overlay">
 
-                        @foreach ($galleryImages->take(6) as $image)
+                        @foreach ($galleryImages as $image)
 
                             @php
 
