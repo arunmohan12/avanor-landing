@@ -95,12 +95,20 @@
     "file": "assets/Nakheel-TextBold-B90GRwVF.woff",
     "src": "resources/css/landing/fonts/Nakheel-TextBold.woff"
   },
+  "resources/css/landing/fonts/Nakheel-TextBold.woff2": {
+    "file": "assets/Nakheel-TextBold-nqtSceLM.woff2",
+    "src": "resources/css/landing/fonts/Nakheel-TextBold.woff2"
+  },
   "resources/css/landing/fonts/Nakheel-TextRegular.woff": {
     "file": "assets/Nakheel-TextRegular-C7GDnss0.woff",
     "src": "resources/css/landing/fonts/Nakheel-TextRegular.woff"
   },
+  "resources/css/landing/fonts/Nakheel-TextRegular.woff2": {
+    "file": "assets/Nakheel-TextRegular-Wz4d7xXZ.woff2",
+    "src": "resources/css/landing/fonts/Nakheel-TextRegular.woff2"
+  },
   "resources/css/landing/palm-jebel-ali.css": {
-    "file": "assets/palm-jebel-ali-BviRoInU.css",
+    "file": "assets/palm-jebel-ali-BSPwzcCq.css",
     "name": "palm-jebel-ali",
     "names": [
       "palm-jebel-ali.css"
@@ -108,7 +116,9 @@
     "src": "resources/css/landing/palm-jebel-ali.css",
     "isEntry": true,
     "assets": [
+      "assets/Nakheel-TextRegular-Wz4d7xXZ.woff2",
       "assets/Nakheel-TextRegular-C7GDnss0.woff",
+      "assets/Nakheel-TextBold-nqtSceLM.woff2",
       "assets/Nakheel-TextBold-B90GRwVF.woff"
     ]
   },
@@ -273,7 +283,7 @@
     "isEntry": true
   },
   "resources/js/landing/palm-jebel-ali.js": {
-    "file": "assets/palm-jebel-ali-hJ2_lbKG.js",
+    "file": "assets/palm-jebel-ali-ckeNucE6.js",
     "name": "palm-jebel-ali",
     "src": "resources/js/landing/palm-jebel-ali.js",
     "isEntry": true
