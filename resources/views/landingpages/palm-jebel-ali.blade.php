@@ -216,6 +216,20 @@ yours with just 20%.
 
 
 
+<section class="pja-project-info pja-section" id="show-mob-form">
+
+    <div class="main-container">
+
+       
+
+         @include('partials.lead-form-palm-central')
+
+             
+
+    </div>
+
+</section>
+
 <section class="pja-project-info pja-section" id="details">
 
     <div class="main-container">

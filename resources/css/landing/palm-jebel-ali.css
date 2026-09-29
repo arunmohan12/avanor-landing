@@ -4534,3 +4534,13 @@ body.enquiry-popup-open {
         margin-left: 15px;
     }
 }
+
+#show-mob-form {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    #show-mob-form {
+        display: block;
+    }
+}
