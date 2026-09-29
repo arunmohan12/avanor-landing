@@ -42,18 +42,18 @@ Route::get('/terms-and-condition', function () {
 //Pages
 
 //local
-// Route::get('/yas-riva-by-aldar', [LandingPageController::class, 'showYasRivaByAldar']);
-// Route::get('/wadeem-gardens-by-modon', [LandingPageController::class, 'showWadeemByModon']);
-// Route::get('/palm-central', [LandingPageController::class, 'showPalmCentral']);
-// Route::get('/the-heights-by-emaar', [LandingPageController::class, 'showTheheights']);
+Route::get('/yas-riva-by-aldar', [LandingPageController::class, 'showYasRivaByAldar']);
+Route::get('/wadeem-gardens-by-modon', [LandingPageController::class, 'showWadeemByModon']);
+Route::get('/palm-central', [LandingPageController::class, 'showPalmCentral']);
+Route::get('/the-heights-by-emaar', [LandingPageController::class, 'showTheheights']);
 
 //live
-Route::domain('aldaryasriva.sales-centre.net')->group(function () {
-    Route::get('/', [LandingPageController::class, 'showYasRivaByAldar']);
-});
-Route::domain('Hudayriyatisland.sales-centre.net')->group(function () {
-    Route::get('/', [LandingPageController::class, 'showWadeemByModon']);
-});
-Route::domain('palm-central.sales-centre.net')->group(function () {
-    Route::get('/', [LandingPageController::class, 'showPalmCentral']);
-});
+// Route::domain('aldaryasriva.sales-centre.net')->group(function () {
+//     Route::get('/', [LandingPageController::class, 'showYasRivaByAldar']);
+// });
+// Route::domain('Hudayriyatisland.sales-centre.net')->group(function () {
+//     Route::get('/', [LandingPageController::class, 'showWadeemByModon']);
+// });
+// Route::domain('palm-central.sales-centre.net')->group(function () {
+//     Route::get('/', [LandingPageController::class, 'showPalmCentral']);
+// });

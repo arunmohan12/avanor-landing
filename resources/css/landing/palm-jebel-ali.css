@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Nakheel Text";
     src:
-        url("/fonts/Nakheel-TextRegular.woff2") format("woff2"),
+        url("./fonts/Nakheel-TextRegular.woff2") format("woff2"),
         url("./fonts/Nakheel-TextRegular.woff") format("woff"),
         url("/fonts/Nakheel-TextRegular.eot?#iefix") format("embedded-opentype");
     font-weight: 400;
@@ -12,7 +12,7 @@
 @font-face {
     font-family: "Nakheel Text";
     src:
-        url("/fonts/Nakheel-TextBold.woff2") format("woff2"),
+        url("./fonts/Nakheel-TextBold.woff2") format("woff2"),
         url("./fonts/Nakheel-TextBold.woff") format("woff"),
         url("/fonts/Nakheel-TextBold.eot?#iefix") format("embedded-opentype");
     font-weight: 700;
