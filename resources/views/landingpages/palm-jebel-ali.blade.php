@@ -1148,10 +1148,10 @@ by beach, pool and wellness amenities, with the island's parks and community cen
                     'LIVING ROOM',
                     'LOBBY',
                     'GYM',
-                    'A',
-                    'B',
-                    'C',
-                    'D',
+                    'INFINITY POOL',
+                    'CLUBHOUSE',
+                    'BEDROOM',
+                    'BALCONY',
 
                     
                 ];
