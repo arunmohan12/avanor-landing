@@ -127,7 +127,7 @@ class LandingPageController extends Controller
 
     }
 
-    public function showPalmJebelAli()
+    public function showPalmCentral()
     {
 
         $property = Property::query()
@@ -140,7 +140,7 @@ class LandingPageController extends Controller
                 'amenities',
                 'sections',
             ])
-            ->where('id', 11)
+            ->where('id', 9)
             ->firstOrFail();
 
         /*

@@ -100,7 +100,7 @@
     "src": "resources/css/landing/fonts/Nakheel-TextRegular.woff"
   },
   "resources/css/landing/palm-jebel-ali.css": {
-    "file": "assets/palm-jebel-ali-B1vhqJdd.css",
+    "file": "assets/palm-jebel-ali-BviRoInU.css",
     "name": "palm-jebel-ali",
     "names": [
       "palm-jebel-ali.css"
@@ -273,13 +273,10 @@
     "isEntry": true
   },
   "resources/js/landing/palm-jebel-ali.js": {
-    "file": "assets/palm-jebel-ali-Cg-tEvQR.js",
+    "file": "assets/palm-jebel-ali-hJ2_lbKG.js",
     "name": "palm-jebel-ali",
     "src": "resources/js/landing/palm-jebel-ali.js",
-    "isEntry": true,
-    "imports": [
-      "_intlTelInput-jRFmtbbD.js"
-    ]
+    "isEntry": true
   },
   "resources/js/landing/the-heights.js": {
     "file": "assets/the-heights-HZjxEpO9.js",

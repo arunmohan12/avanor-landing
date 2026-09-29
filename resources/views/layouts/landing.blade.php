@@ -23,7 +23,7 @@
 
     <title>@yield('title', 'Avanor')</title>
 
-
+    @stack('favicon')
 
 
 
