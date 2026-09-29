@@ -1142,12 +1142,18 @@ by beach, pool and wellness amenities, with the island's parks and community cen
             @php
 
                 $galleryItems = [
-                    'VILLA EXTERIOR',
-                    'WATERFRONT',
-                    'LIVING SPACES',
-                    'BEACHFRONT',
-                    'PRIVATE POOL',
-                    'PALM JEBEL ALI',
+                    'LIVING ROOM, KITCHEN AND DINING AREA',
+                    'TERRACE',
+                    'PRIVATE BEACH',
+                    'LIVING ROOM',
+                    'LOBBY',
+                    'GYM',
+                    'A',
+                    'B',
+                    'C',
+                    'D',
+
+                    
                 ];
 
                 $firstImage = $galleryImages->first();
