@@ -58,3 +58,6 @@ Route::domain('Hudayriyatisland.sales-centre.net')->group(function () {
 Route::domain('palm-central.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showPalmCentral']);
 });
+Route::domain('bay-estate.sales-centre.net')->group(function () {
+    Route::get('/', [LandingPageController::class, 'showBayEstate']);
+});

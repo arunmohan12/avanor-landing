@@ -22,7 +22,7 @@ strip_tags($property->description ?? ''),
 155
 )
 )
-@section('canonical', 'https://palm-central.sales-centre.net')
+@section('canonical', 'https://bay-estate.sales-centre.net')
 @section('robots', 'index,follow')
 @php
     $displayPrice =
@@ -42,7 +42,7 @@ strip_tags($property->description ?? ''),
     155
     ),
 
-    'url' => 'https://palm-central.sales-centre.net',
+    'url' => 'https://bay-estate.sales-centre.net',
     ];
 
     if (!empty($propertyImageUrl)) {
@@ -64,7 +64,7 @@ strip_tags($property->description ?? ''),
     '@type' => 'Offer',
     'priceCurrency' => 'AED',
     'price' => $displayPrice,
-    'url' => 'https://palm-central.sales-centre.net',
+    'url' => 'https://bay-estate.sales-centre.net',
     ];
     }
 @endphp
@@ -79,7 +79,7 @@ strip_tags($property->description ?? ''),
 @endpush
 
 @push('styles')
-    @vite('resources/css/landing/palm-jebel-ali.css')
+    @vite('resources/css/landing/bay-estate.css')
 @endpush
 
 @section('content')
@@ -103,7 +103,7 @@ strip_tags($property->description ?? ''),
         {{-- Desktop Navigation --}}
         <nav class="pja-navigation">
             <a href="#about">About</a>
-            <a href="#properties">Properties</a>
+            <a href="#home-types">Properties</a>
             <a href="#payment-plan">Payment Plan</a>
             <a href="#gallery">Gallery</a>
             <a href="#location">Location</a>
@@ -126,7 +126,7 @@ strip_tags($property->description ?? ''),
     {{-- Mobile Navigation --}}
     <nav class="pja-mobile-navigation" id="pja-mobile-menu">
         <a href="#about">About</a>
-        <a href="#properties">Properties</a>
+        <a href="#home-types">Properties</a>
         <a href="#payment-plan">Payment Plan</a>
         <a href="#gallery">Gallery</a>
         <a href="#location">Location</a>
@@ -181,10 +181,7 @@ down.
 
 
 
-                    <div class="pja-hero-stat">
-                        <strong>3 & 4</strong>
-                        <span>BEDROOM TOWNHOUSES,VILLAS AND GARDEN VILLAS</span>
-                    </div>
+                  
 
                     <div class="pja-hero-stat">
                         <strong>10 YEAR</strong>
@@ -193,6 +190,10 @@ down.
                       <div class="pja-hero-stat">
                         <strong>PAY 40%</strong>
                         <span>ON HANDOVER IN 2031 </span>
+                    </div>
+                      <div class="pja-hero-stat">
+                        <strong>3 & 4</strong>
+                        <span>BEDROOM TOWNHOUSES,VILLAS AND GARDEN VILLAS</span>
                     </div>
 
                 </div>
@@ -222,7 +223,7 @@ down.
 
        
 
-         @include('partials.lead-form-palm-central')
+         @include('partials.lead-form-bay-estate')
 
              
 
@@ -237,15 +238,15 @@ down.
         <div class="pja-project-info-content">
 
             <div class="section-eyebrow">
-                Palm Central by Nakheel
+                Bay Estate by Nakheel
             </div>
 
             <h2 class="title">
-                Palm Central Price List, Floor Plans &amp; Availability
+                Bay Estate Price List, Floor Plans & Availability
             </h2>
 
             <p class="section-description">
-                Everything you need to choose your home. Request it and we'll send you:
+                Everything You Need to Choose Your Home
             </p>
 
         </div>
@@ -271,7 +272,7 @@ down.
                 <div class="pja-details-divider"></div>
 
                 <p class="pja-details-card-text">
-                    Prices for every bedroom type
+                    Prices for every unit type and plot
                 </p>
 
             </div>
@@ -296,7 +297,7 @@ down.
                 <div class="pja-details-divider"></div>
 
                 <p class="pja-details-card-text">
-                    Every instalment and date, for both plans
+                    Every instalment and date, from booking to handover
                 </p>
 
             </div>
@@ -321,7 +322,7 @@ down.
                 <div class="pja-details-divider"></div>
 
                 <p class="pja-details-card-text">
-                    Every layout, with room sizes
+                    All 5 layouts, with room-by-room dimensions
                 </p>
 
             </div>
@@ -340,13 +341,13 @@ down.
                 </div>
 
                 <h3 class="pja-details-card-title">
-                    Building and view guide
+                     Masterplan
                 </h3>
 
                 <div class="pja-details-divider"></div>
 
                 <p class="pja-details-card-text">
-                    Which building and which views suit you
+                    Where each townhouse, villa and plot sits
                 </p>
 
             </div>
@@ -371,7 +372,7 @@ down.
                 <div class="pja-details-divider"></div>
 
                 <p class="pja-details-card-text">
-                    Which units are still open
+                    Which units and positions are still open
                 </p>
 
             </div>
@@ -398,18 +399,18 @@ down.
             <div class="pja-project-info-content">
 
                 <div class="section-eyebrow">
-                    A Calm Called Home
+                    KNOW MORE ABOUT YOUR VILLA HOME
                 </div>
 
                 <h2 class="title">
-                    Palm Central: Nakheel's New Apartments on Palm Jebel Ali
+                    Bay Estate: Nakheel's New Villas & Townhouses on Dubai Islands
                 </h2>
 
                 <p class="section-description">
-                    Palm Central Private Residences is a limited collection of resort-style apartments across three
-buildings at the heart of Palm Jebel Ali. The stepped design opens every residence to views
-across the island. The homes have open-plan layouts and natural textures, and are surrounded
-by beach, pool and wellness amenities, with the island's parks and community centre close by.
+                    Bay Estate is Nakheel's newest community of villas and townhouses on Dubai Islands, set
+around landscaped green spaces and lined by waterfront and beach villa plots. Choose from 3
+and 4-bedroom townhouses, 4-bedroom attached villas and spacious 4-bedroom garden villas,
+with a payment plan that spreads 40% of the cost to handover.
                 </p>
 
 
@@ -427,7 +428,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                             <span>FROM</span>
 
-                            <strong>AED 2.7M</strong>
+                            <strong>AED 5.9M</strong>
 
                         </div>
 
@@ -443,9 +444,9 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                         <div class="pja-project-highlight-content">
 
-                            <span>BEDROOM APARTMENTS</span>
+                            <span>Villas & Townhouses</span>
 
-                            <strong>1-4</strong>
+                            <strong>3 & 4</strong>
 
                         </div>
 
@@ -465,63 +466,62 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
 
 
-    <section class="pja-collections pja-section" id="properties">
+    <section class="pja-collections pja-section" id="home-types">
 
     <div class="main-container">
 
         <div class="pja-collections-header">
 
             <div class="section-eyebrow">
-                EXPLORE THE VILLA COLLECTIONS
+                EXPLORE VILLA OPTIONS
             </div>
 
             <h2 class="title">
-                Palm Central Apartments
+                Bay Estate Townhouses & Villas
             </h2>
 
             <p class="section-description">
-                Five ways to live on Palm Jebel Ali
+                Explore the latest townhouses and villas available at Bay Estate.
             </p>
 
         </div>
 
-
         <div class="pja-collections-grid">
-
-            <!-- 1 BEDROOM -->
 
             <article class="pja-collection-card">
                 <a href="#" data-open-enquiry>
 
                     <div class="pja-collection-image">
-
                         <img
-                            src="{{ asset('assets/img/landing/palm-central/palm-central-1-BR.webp') }}"
-                            alt="1 Bedroom apartments at Palm Central"
+                            src="{{ asset('assets/img/landing/bay-estate/3-br-townhouse.webp') }}"
+                            alt="3 Bedroom Townhouse at Bay Estate"
                         >
-
                     </div>
 
                     <div class="pja-collection-content">
 
                         <div class="pja-collection-label">
-                            APARTMENTS
+                            TOWNHOUSE
                         </div>
 
                         <h3>
-                            1 BEDROOM
+                            3 BEDROOM<br>
+                            TOWNHOUSE
                         </h3>
 
                         <div class="pja-collection-meta">
+
+                            <div>
+                                <span>FLOORS &amp; SIZE</span>
+                                <strong>2 FLOORS · 3,000+ SQ FT</strong>
+                            </div>
 
                             <div>
                                 <span>FROM</span>
-                                <strong>AED 2.7M</strong>
+                                <strong>AED 5.9M</strong>
                             </div>
 
                         </div>
-
-                    
 
                     </div>
 
@@ -529,31 +529,33 @@ by beach, pool and wellness amenities, with the island's parks and community cen
             </article>
 
 
-            <!-- 2 BEDROOM -->
-
             <article class="pja-collection-card">
                 <a href="#" data-open-enquiry>
 
                     <div class="pja-collection-image">
-
                         <img
-                            src="{{ asset('assets/img/landing/palm-central/palm-central-2-br.webp') }}"
-                            alt="2 Bedroom apartments at Palm Central"
+                            src="{{ asset('assets/img/landing/bay-estate/4-br-townhouse.webp') }}"
+                            alt="4 Bedroom Townhouse at Bay Estate"
                         >
-
                     </div>
 
                     <div class="pja-collection-content">
 
                         <div class="pja-collection-label">
-                            APARTMENTS
+                            TOWNHOUSE
                         </div>
 
                         <h3>
-                            2 BEDROOM
+                            4 BEDROOM<br>
+                            TOWNHOUSE
                         </h3>
 
                         <div class="pja-collection-meta">
+
+                            <div>
+                                <span>FLOORS &amp; SIZE</span>
+                                <strong>2 FLOORS · 3,500+ SQ FT</strong>
+                            </div>
 
                             <div>
                                 <span>PRICE</span>
@@ -562,39 +564,39 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                         </div>
 
-
                     </div>
 
                 </a>
             </article>
 
 
-            <!-- 2 BEDROOM + MAID -->
-
             <article class="pja-collection-card">
                 <a href="#" data-open-enquiry>
 
                     <div class="pja-collection-image">
-
                         <img
-                            src="{{ asset('assets/img/landing/palm-central/palm-central-2-BR-Maid.webp') }}"
-                            alt="2 Bedroom plus Maid apartments at Palm Central"
+                            src="{{ asset('assets/img/landing/bay-estate/4-br-attached-villa.webp') }}"
+                            alt="4 Bedroom Attached Villa at Bay Estate"
                         >
-
                     </div>
 
                     <div class="pja-collection-content">
 
                         <div class="pja-collection-label">
-                            APARTMENTS
+                            ATTACHED VILLA
                         </div>
 
                         <h3>
-                            2 BEDROOM
-                            + MAID
+                            4 BEDROOM<br>
+                            ATTACHED VILLA
                         </h3>
 
                         <div class="pja-collection-meta">
+
+                            <div>
+                                <span>FLOORS &amp; SIZE</span>
+                                <strong>G+1 · 3,600+ SQ FT</strong>
+                            </div>
 
                             <div>
                                 <span>PRICE</span>
@@ -603,39 +605,39 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                         </div>
 
-                 
-
                     </div>
 
                 </a>
             </article>
 
 
-            <!-- 3 BEDROOM -->
-
             <article class="pja-collection-card">
                 <a href="#" data-open-enquiry>
 
                     <div class="pja-collection-image">
-
                         <img
-                            src="{{ asset('assets/img/landing/palm-central/palm-central-3-BR.webp') }}"
-                            alt="3 Bedroom apartments at Palm Central"
+                            src="{{ asset('assets/img/landing/bay-estate/4-br-plus-attached-villas.webp') }}"
+                            alt="4 Bedroom Plus Attached Villa at Bay Estate"
                         >
-
                     </div>
 
                     <div class="pja-collection-content">
 
                         <div class="pja-collection-label">
-                            APARTMENTS
+                            ATTACHED VILLA
                         </div>
 
                         <h3>
-                            3 BEDROOM
+                            4 BEDROOM<br>
+                            PLUS ATTACHED VILLA
                         </h3>
 
                         <div class="pja-collection-meta">
+
+                            <div>
+                                <span>FLOORS &amp; SIZE</span>
+                                <strong>G+2 · 5,200+ SQ FT</strong>
+                            </div>
 
                             <div>
                                 <span>PRICE</span>
@@ -644,39 +646,39 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                         </div>
 
-                 
-
                     </div>
 
                 </a>
             </article>
 
 
-            <!-- 4 BEDROOM -->
-
             <article class="pja-collection-card">
                 <a href="#" data-open-enquiry>
 
                     <div class="pja-collection-image">
-
                         <img
-                            src="{{ asset('assets/img/landing/palm-central/palm-central-4-BR.webp') }}"
-                            alt="4 Bedroom apartments at Palm Central"
+                            src="{{ asset('assets/img/landing/bay-estate/4-br-garden-villa.webp') }}"
+                            alt="4 Bedroom Garden Villa at Bay Estate"
                         >
-
                     </div>
 
                     <div class="pja-collection-content">
 
                         <div class="pja-collection-label">
-                            APARTMENTS
+                            GARDEN VILLA
                         </div>
 
                         <h3>
-                            4 BEDROOM
+                            4 BEDROOM<br>
+                            GARDEN VILLA
                         </h3>
 
                         <div class="pja-collection-meta">
+
+                            <div>
+                                <span>PLOT &amp; SIZE</span>
+                                <strong>LARGEST PLOTS · 5,200+ SQ FT</strong>
+                            </div>
 
                             <div>
                                 <span>PRICE</span>
@@ -685,57 +687,48 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                         </div>
 
-                
-
                     </div>
 
                 </a>
             </article>
 
-            <!-- GET PRICES FOR ALL HOME TYPES -->
 
-<article class="pja-collection-card pja-collection-card-cta">
-    <a href="#" data-open-enquiry>
+            <article class="pja-collection-card pja-collection-card-cta">
+                <a href="#" data-open-enquiry>
 
-        <div class="pja-collection-content">
+                    <div class="pja-collection-content">
 
-            <div class="pja-collection-label">
-                PALM CENTRAL
-            </div>
+                        <div class="pja-collection-label">
+                            BAY ESTATE
+                        </div>
 
-            <h3>
-                GET PRICES<br>
-                FOR ALL<br>
-                HOME TYPES
-            </h3>
+                        <h3>
+                            GET PRICES<br>
+                            FOR ALL<br>
+                            HOME TYPES
+                        </h3>
 
-            <div class="pja-collection-meta">
+                        <div class="pja-collection-meta">
 
-                <div>
-                    <span>AVAILABLE HOME TYPES</span>
-                    <strong>1–4 BEDROOM</strong>
-                </div>
+                            <div>
+                                <span>AVAILABLE HOME TYPES</span>
+                                <strong>3–4 BEDROOM</strong>
+                            </div>
 
-            </div>
+                        </div>
 
-            <span class="pja-collection-link">
-                GET PRICES
-                <span>→</span>
-            </span>
+                        <span class="pja-collection-link">
+                            GET PRICES
+                            <span>→</span>
+                        </span>
+
+                    </div>
+
+                </a>
+            </article>
 
         </div>
 
-    </a>
-</article>
-
-        </div>
-        <!-- <div class="pja-gallery-button-wrapper" bis_skin_checked="1">
-
-                <a href="#" class="pja-btn pja-btn-transparent" data-lead-popup-open="">
-                    UNLOCK THE DETAILS
-                </a>
-
-            </div> -->
     </div>
 
 </section>
@@ -748,123 +741,148 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
         <div class="pja-payment-plan-content">
 
-                <div class="section-eyebrow">
-                   PAYMENT PLAN TEASER
-                </div>
-
-                <h2 class="title">
-                          Palm Central Payment Plan
-                </h2>
-
-                <p class="section-description">
-                       Secure your home with 20%
-                </p>
-
+            <div class="section-eyebrow">
+                PAYMENT PLAN TEASER
             </div>
 
-        <!-- PAYMENT PLAN CARDS -->
-        <div class="pja-payment-plan-cards">
+            <h2 class="title">
+                Bay Estate Payment Plan
+            </h2>
 
-            <!-- 1–2 BEDROOM -->
-            <div class="pja-payment-plan-card">
-
-                <div class="pja-payment-plan-card-label">
-                    1–2 BEDROOM HOMES
-                </div>
-
-                <div class="pja-payment-plan-card-title">
-                    70<span>/</span>30
-                </div>
-
-                <div class="pja-payment-plan-card-description">
-                    A flexible structure with 20% on booking,
-                    followed by instalments during construction
-                    and 30% on completion.
-                </div>
-
-                <div class="pja-payment-plan-breakdown">
-
-                    <div class="pja-payment-plan-item">
-                        <strong>20%</strong>
-                        <span>ON BOOKING</span>
-                    </div>
-
-                    <div class="pja-payment-plan-item">
-                        <strong>50%</strong>
-                        <span>DURING CONSTRUCTION</span>
-                    </div>
-
-                    <div class="pja-payment-plan-item">
-                        <strong>30%</strong>
-                        <span>ON COMPLETION</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- 3–4 BEDROOM -->
-            <div class="pja-payment-plan-card">
-
-                <div class="pja-payment-plan-card-label">
-                    3–4 BEDROOM HOMES
-                </div>
-
-                <div class="pja-payment-plan-card-title">
-                    60<span>/</span>40
-                </div>
-
-                <div class="pja-payment-plan-card-description">
-                    Secure your home with 20% on booking,
-                    followed by instalments, with the
-                    remaining 40% payable in September 2030.
-                </div>
-
-                <div class="pja-payment-plan-breakdown">
-
-                    <div class="pja-payment-plan-item">
-                        <strong>20%</strong>
-                        <span>ON BOOKING</span>
-                    </div>
-
-                    <div class="pja-payment-plan-item">
-                        <strong>40%</strong>
-                        <span>INSTALMENTS</span>
-                    </div>
-
-                    <div class="pja-payment-plan-item">
-                        <strong>40%</strong>
-                        <span>SEP 2030</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- TIMELINE NOTE -->
-        <div class="pja-payment-plan-note">
-
-            <p>
-                Instalments are spread from 2026 to 2029, with completion
-                estimated for <strong>September 2030</strong>.
-                Request the schedule to see every date.
+            <p class="section-description">
+                Secure Your Home With 20%
             </p>
 
         </div>
 
+        <div class="pja-payment-plan-cards">
 
-        <!-- CTA BUTTONS -->
+            <div class="pja-payment-plan-card">
+
+                <div class="pja-payment-plan-card-label">
+                    BAY ESTATE
+                </div>
+
+                <div class="pja-payment-plan-card-title">
+                    20<span>/</span>40<span>/</span>40
+                </div>
+
+                <div class="pja-payment-plan-card-description">
+                    Secure your home with 20% on booking,
+                    followed by instalments during construction,
+                    with 40% payable on handover in 2031.
+                </div>
+
+                <div class="pja-payment-plan-breakdown">
+
+                    <div class="pja-payment-plan-item">
+                        <strong>20%</strong>
+                        <span>ON BOOKING</span>
+                    </div>
+
+                    <div class="pja-payment-plan-item">
+                        <strong>40%</strong>
+                        <span>DURING CONSTRUCTION</span>
+                    </div>
+
+                    <div class="pja-payment-plan-item">
+                        <strong>40%</strong>
+                        <span>ON HANDOVER<br>(2031)</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="pja-payment-plan-note">
+
+            <p>
+                Spread over instalments between <strong>2027 and 2029</strong>.
+                Request the full schedule to see every date.
+            </p>
+
+        </div>
+
         <div class="pja-payment-plan-buttons">
 
             <a href="#" class="pja-btn pja-btn-fill" data-open-enquiry>
                 GET THE PAYMENT SCHEDULE
             </a>
 
-         
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="pja-floor-plans pja-section" id="floor-plans">
+
+    <div class="main-container">
+
+        <div class="pja-floor-plans-header">
+
+            <div class="section-eyebrow">
+                FLOOR PLANS
+            </div>
+
+            <h2 class="title">
+                Bay Estate Floor Plans
+            </h2>
+
+            <p class="section-description">
+                Explore the layouts and spaces available across Bay Estate.
+            </p>
+
+        </div>
+
+        <div class="pja-floor-plans-gallery">
+
+            <div class="pja-floor-plan-card">
+                <img
+                    src="{{ asset('assets/img/landing/bay-estate/floor-plan-1.webp') }}"
+                    alt="Bay Estate floor plan"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="pja-floor-plan-card">
+                <img
+                    src="{{ asset('assets/img/landing/bay-estate/floor-plan-2.webp') }}"
+                    alt="Bay Estate floor plan"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="pja-floor-plan-card">
+                <img
+                    src="{{ asset('assets/img/landing/bay-estate/floor-plan-3.webp') }}"
+                    alt="Bay Estate floor plan"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="pja-floor-plans-overlay">
+
+                <div class="pja-floor-plans-overlay-content">
+                    <span>
+                        DETAILED FLOOR PLANS
+                    </span>
+
+                    <strong>
+                        Get the full layouts,
+                        dimensions and details
+                    </strong>
+
+                    <a href="#" class="pja-btn pja-btn-fill" data-open-enquiry>
+                        GET FLOOR PLANS ON WHATSAPP
+                    </a>
+                </div>
+
+            </div>
 
         </div>
 
@@ -883,7 +901,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
             </div>
 
             <h2 class="title">
-                Palm Central Amenities
+                BAY ESTATE Amenities
             </h2>
 
             <p class="section-description">
@@ -1145,7 +1163,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
             </div>
 
             <h2 class="title">
-                Palm Central Collections
+               EXPLORE BAY ESTATE Collections
             </h2>
 
         </div>
@@ -1156,17 +1174,17 @@ by beach, pool and wellness amenities, with the island's parks and community cen
             @php
 
                 $galleryItems = [
-                    'LIVING ROOM, KITCHEN AND DINING AREA',
-                    'TERRACE',
-                    'PRIVATE BEACH',
-                    'LIVING ROOM',
-                    'LOBBY',
+                    'BEACH CLUB FRONT VIEW',
+                    'BEACH CLUB POOL',
+                    'COMMUNITY AERIAL VIEW',
                     'GYM',
-                    'INFINITY POOL',
-                    'CLUBHOUSE',
-                    'BEDROOM',
-                    'BALCONY',
-
+                    'COMMUNITY POOL',
+                    'MULTIPURPOSE ROOM',
+                    'PRIVATE LAGOONS',
+                    'POOL CLUB HOUSE',
+                    'PROMENADE',
+                    'SPORTS COURT',
+              
                     
                 ];
 
@@ -1287,54 +1305,53 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
 
     @php
-        $locations = [
-            [
-                'type' => 'metro',
-                'text' => '16 minutes from Life Pharmacy Metro Station',
-                'lat' => 25.0485,
-                'lng' => 55.1180,
-                'icon' => 'metro',
-            ],
-            [
-                'type' => 'mall',
-                'text' => '19 minutes from Ibn Battuta Mall',
-                'lat' => 25.0442,
-                'lng' => 55.1203,
-                'icon' => 'mall',
-            ],
-            [
-                'type' => 'plane',
-                'text' => '24 minutes from Al Maktoum International Airport (DWC)',
-                'lat' => 24.8962,
-                'lng' => 55.1614,
-                'icon' => 'plane',
-            ],
-            [
-                'type' => 'location',
-                'text' => '24 minutes from Expo City',
-                'lat' => 24.9608,
-                'lng' => 55.1523,
-                'icon' => 'location',
-            ],
-            [
-                'type' => 'boat',
-                'text' => '25 minutes from Dubai Marina',
-                'lat' => 25.0772,
-                'lng' => 55.1332,
-                'icon' => 'beach_side',
-            ],
-            [
-                'type' => 'palm',
-                'text' => '27 minutes from Palm Jumeirah',
-                'lat' => 25.1124,
-                'lng' => 55.1390,
-                'icon' => 'location',
-            ],
-        ];
-    @endphp
+    $locations = [
+        [
+            'type' => 'airport',
+            'text' => '15 minutes from Dubai International Airport',
+            'lat' => 25.0485,
+            'lng' => 55.1180,
+            'icon' => 'plane',
+        ],
+        [
+            'type' => 'location',
+            'text' => '10 minutes from Gold Souq',
+            'lat' => 25.0442,
+            'lng' => 55.1203,
+            'icon' => 'location',
+        ],
+        [
+            'type' => 'location',
+            'text' => '25 minutes from Downtown Dubai',
+            'lat' => 24.8962,
+            'lng' => 55.1614,
+            'icon' => 'location',
+        ],
+        [
+            'type' => 'location',
+            'text' => '20 minutes from Dubai Creek Harbour',
+            'lat' => 24.9608,
+            'lng' => 55.1523,
+            'icon' => 'location',
+        ],
+        [
+            'type' => 'boat',
+            'text' => '35 minutes from Dubai Marina',
+            'lat' => 25.0772,
+            'lng' => 55.1332,
+            'icon' => 'beach_side',
+        ],
+        [
+            'type' => 'palm',
+            'text' => '40 minutes from Palm Jumeirah',
+            'lat' => 25.1124,
+            'lng' => 55.1390,
+            'icon' => 'location',
+        ],
+    ];
+@endphp
 
-
-    <section class="pja-location pja-section" id="location">
+<section class="pja-location pja-section" id="location">
     <div class="main-container">
 
         <div class="pja-gallery-header">
@@ -1344,37 +1361,34 @@ by beach, pool and wellness amenities, with the island's parks and community cen
             </div>
 
             <h2 class="title">
-                Palm Central Location on Palm Jebel Ali
+                Bay Estate Location on Dubai Islands
             </h2>
 
             <p class="section-description">
-                Palm Central sits on the island's central strip, close to parks,
-                community centres, mosques, wellness hubs and leisure venues.
-                About 23 minutes to Bluewaters, 25 to Al Maktoum International
-                Airport (DWC), 27 to Mall of the Emirates and 28 to Palm Jumeirah.
+                Bay Estate is positioned on Dubai Islands, offering residents
+                convenient access to Dubai International Airport, Deira, Downtown
+                Dubai, Dubai Creek Harbour and the city's major leisure destinations.
+                The development combines a waterfront setting with easy connections
+                to key areas across Dubai.
             </p>
 
         </div>
-
 
         @if(!empty($locations))
 
             <div class="pja-location-visual">
 
-                {{-- MAP --}}
                 <div class="pja-location-map">
 
                     <div
                         id="custom-map"
                         data-api-key="{{ config('services.google.maps_key') }}"
-                        data-lat="25.008860"
-                        data-lng="54.987102"
-                        data-title="Palm Jebel Ali"
+                        data-lat="25.299946"
+                        data-lng="55.312385"
+                        data-title="Bay Estate - Dubai Islands"
                         data-locations='@json($locations)'
                     ></div>
 
-
-                    {{-- LOCATION OVERLAY --}}
                     <div class="pja-location-overlay">
 
                         @foreach($locations as $item)
@@ -1384,9 +1398,6 @@ by beach, pool and wellness amenities, with the island's parks and community cen
                                 class="pja-location-item {{ $loop->first ? 'active' : '' }}"
                                 data-location-index="{{ $loop->index }}"
                             >
-
-                          
-
                                 <span class="pja-location-content">
 
                                     <span class="pja-location-icon">
@@ -1398,7 +1409,6 @@ by beach, pool and wellness amenities, with the island's parks and community cen
                                     </span>
 
                                 </span>
-
                             </button>
 
                         @endforeach
@@ -1408,25 +1418,25 @@ by beach, pool and wellness amenities, with the island's parks and community cen
                 </div>
 
             </div>
-         <div class="pja-gallery-button-wrapper">
 
-                        <a
-                            href="#"
-                            class="pja-btn pja-btn-transparent"
-                            data-open-enquiry>
-                            GET LOCATION GUIDE
-                        </a>
+            <div class="pja-gallery-button-wrapper">
 
-                    </div>
+                <a
+                    href="#"
+                    class="pja-btn pja-btn-transparent"
+                    data-open-enquiry>
+                    GET LOCATION GUIDE
+                </a>
+
+            </div>
+
         @endif
 
-
-        
     </div>
-    
 </section>
 
 <section class="golden-visa-section pja-section" id="golden-visa">
+
     <div class="main-container">
 
         <div class="pja-gallery-header">
@@ -1436,11 +1446,10 @@ by beach, pool and wellness amenities, with the island's parks and community cen
             </div>
 
             <h2 class="title">
-                Golden Visa With Palm Central
+                Golden Visa With Bay Estate
             </h2>
 
         </div>
-
 
         <div class="golden-visa-content">
 
@@ -1450,22 +1459,128 @@ by beach, pool and wellness amenities, with the island's parks and community cen
             </div>
 
             <div class="golden-visa-copy">
+
                 <p>
-                    Every home at Palm Central, from the 1-bedroom up, is priced
-                    above the value that qualifies for the UAE's 10-year Golden Visa.
+                    Every home at Bay Estate is priced above the property value
+                    that qualifies for the UAE's 10-year Golden Visa.
+                    Our advisors can take you through the requirements.
                 </p>
+
             </div>
 
         </div>
 
     </div>
+
+</section>
+
+<section class="pja-launch pja-section" id="why-buy">
+
+    <div class="main-container">
+
+        <div class="pja-launch-header">
+
+            <div class="section-eyebrow">
+                WHY BUY AT LAUNCH
+            </div>
+
+            <h2 class="title">
+                Why Buy at Bay Estate Now
+            </h2>
+
+            <p class="section-description">
+                Secure your preferred home early and benefit from launch-stage
+                pricing, choice and a flexible payment timeline.
+            </p>
+
+        </div>
+
+        <div class="pja-launch-reasons">
+
+            <div class="pja-launch-reason">
+          
+
+                <div class="pja-launch-reason-content">
+                    <h3>Early buyers choose first</h3>
+                    <p>
+                        The best positions go early, especially
+                        waterfront-facing units.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pja-launch-reason">
+          
+
+                <div class="pja-launch-reason-content">
+                    <h3>Launch pricing</h3>
+                    <p>
+                        First-phase prices are typically the lowest
+                        a project will see.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pja-launch-reason">
+     
+
+                <div class="pja-launch-reason-content">
+                    <h3>More time to pay</h3>
+                    <p>
+                        40% of the price isn't due until 2031.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pja-launch-process">
+
+            <div class="section-eyebrow">
+                HOW IT WORKS
+            </div>
+
+            <div class="pja-launch-steps">
+
+                <div class="pja-launch-step">
+                    <span class="pja-launch-step-number">01</span>
+
+                    <div>
+                        <h3>Request the details.</h3>
+                        <p>Takes 30 seconds.</p>
+                    </div>
+                </div>
+
+                <div class="pja-launch-step">
+                    <span class="pja-launch-step-number">02</span>
+
+                    <div>
+                        <h3>Get prices, floor plans and availability on WhatsApp.</h3>
+                    </div>
+                </div>
+
+                <div class="pja-launch-step">
+                    <span class="pja-launch-step-number">03</span>
+
+                    <div>
+                        <h3>Choose your unit and reserve it with 20%.</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
     {{-- =========================================================
      FAQ
 ========================================================= --}}
 
-    <section class="pja-faq pja-section">
+
+<section class="pja-faq pja-section">
 
     <div class="main-container pja-faq-container">
 
@@ -1477,12 +1592,12 @@ by beach, pool and wellness amenities, with the island's parks and community cen
             </div>
 
             <h2 class="title">
-                Palm Central FAQs
+                Bay Estate FAQs
             </h2>
 
             <p class="section-description">
                 Explore answers to the most common questions
-                about Palm Central apartments on Palm Jebel Ali.
+                about Bay Estate townhouses, villas and plots on Dubai Islands.
             </p>
 
         </div>
@@ -1500,7 +1615,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
                     <span class="pja-faq-number">01</span>
 
                     <span class="pja-faq-title">
-                        What is the starting price at Palm Central?
+                        How much are homes at Bay Estate?
                     </span>
 
                     <span class="pja-faq-icon">+</span>
@@ -1509,8 +1624,8 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                 <div class="pja-faq-answer">
                     <p>
-                        1-bedroom apartments start from AED 2.7M.
-                        Prices for larger apartments are shared on request.
+                        3-bedroom townhouses start from around AED 5.9M.
+                        Villa and plot prices are shared on request.
                     </p>
                 </div>
 
@@ -1526,7 +1641,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
                     <span class="pja-faq-number">02</span>
 
                     <span class="pja-faq-title">
-                        What is the Palm Central payment plan?
+                        What's the payment plan?
                     </span>
 
                     <span class="pja-faq-icon">+</span>
@@ -1535,8 +1650,8 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                 <div class="pja-faq-answer">
                     <p>
-                        20% on booking. 1–2 bedroom homes are on a 70/30 plan,
-                        while 3–4 bedroom apartments are on a 60/40 plan.
+                        20% on booking, 40% during construction and 40% on handover.
+                        Request the schedule for exact dates.
                     </p>
                 </div>
 
@@ -1552,7 +1667,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
                     <span class="pja-faq-number">03</span>
 
                     <span class="pja-faq-title">
-                        When will Palm Central be completed?
+                        When is handover?
                     </span>
 
                     <span class="pja-faq-icon">+</span>
@@ -1561,7 +1676,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                 <div class="pja-faq-answer">
                     <p>
-                        Construction completion is estimated for September 2030.
+                        Construction completion is estimated for January 2031.
                     </p>
                 </div>
 
@@ -1586,7 +1701,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                 <div class="pja-faq-answer">
                     <p>
-                        Nakheel, the master developer of Palm Jebel Ali.
+                        Nakheel, the master developer behind Dubai Islands.
                     </p>
                 </div>
 
@@ -1602,7 +1717,33 @@ by beach, pool and wellness amenities, with the island's parks and community cen
                     <span class="pja-faq-number">05</span>
 
                     <span class="pja-faq-title">
-                        Does Palm Central qualify for the Golden Visa?
+                        Is Bay Estate the same as Bay Villas?
+                    </span>
+
+                    <span class="pja-faq-icon">+</span>
+
+                </button>
+
+                <div class="pja-faq-answer">
+                    <p>
+                        No. Bay Villas was an earlier Nakheel villa community on Dubai Islands,
+                        and Bay Estate is Nakheel's new villa and townhouse launch there.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="pja-faq-item">
+
+                <button type="button"
+                        class="pja-faq-question"
+                        aria-expanded="false">
+
+                    <span class="pja-faq-number">06</span>
+
+                    <span class="pja-faq-title">
+                        Does Bay Estate qualify for the Golden Visa?
                     </span>
 
                     <span class="pja-faq-icon">+</span>
@@ -1625,10 +1766,10 @@ by beach, pool and wellness amenities, with the island's parks and community cen
                         class="pja-faq-question"
                         aria-expanded="false">
 
-                    <span class="pja-faq-number">06</span>
+                    <span class="pja-faq-number">07</span>
 
                     <span class="pja-faq-title">
-                        Are there villas at Palm Central?
+                        Are plots available?
                     </span>
 
                     <span class="pja-faq-icon">+</span>
@@ -1637,8 +1778,8 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                 <div class="pja-faq-answer">
                     <p>
-                        Palm Central offers 1–2 bedroom apartments.
-                        For villas on Palm Jebel Ali, speak to our advisors.
+                        A limited number of waterfront and beach plots are available.
+                        Ask us for current availability.
                     </p>
                 </div>
 
@@ -1650,114 +1791,57 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
 </section>
 
-
-    <section class="editorial-section pja-section" id="developer">
-        <div class="editorial-container">
-            <div class="editorial-grid">
-
-                <!-- LEFT COLUMN: ABOUT THE DEVELOPER -->
-                <div class="editorial-col col-left">
-                    <div>
-                        <div class="section-eyebrow">About The Developer</div>
-                        <h2 class="main-heading">Nakheel Properties</h2>
-
-                        <p class="body-paragraph">
-                            Nakheel is one of Dubai's premier master developers, world-renowned for pioneering iconic waterfront developments, luxury island sanctuaries, and transformative urban destinations across the UAE.
-                        </p>
-
-                        <p class="body-paragraph">
-                            Palm Jebel Ali is Nakheel's flagship master development in Dubai, engineered to set a new benchmark for ultra-luxury coastal living, featuring pristine private beaches, lush green corridors, and an exclusive island lifestyle.
-                        </p>
-                    </div>
-
-                    <!-- 4 Mini Feature Columns -->
-                    <div class="mini-features-grid">
-                        <div class="mini-feature-item">
-                            <div class="mini-feature-icon">
-                                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
-                                </svg>
-                            </div>
-                            <div class="mini-feature-title">Global Leader</div>
-                            <div class="mini-feature-sub">in Waterfront Masterplans</div>
-                        </div>
-
-                        <div class="mini-feature-item">
-                            <div class="mini-feature-icon">
-                                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
-                                </svg>
-                            </div>
-                            <div class="mini-feature-title">Proven</div>
-                            <div class="mini-feature-sub">Track Record</div>
-                        </div>
-
-                        <div class="mini-feature-item">
-                            <div class="mini-feature-icon">
-                                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6 0 3.375 3.375 0 016 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/>
-                                </svg>
-                            </div>
-                            <div class="mini-feature-title">Premium</div>
-                            <div class="mini-feature-sub">Communities</div>
-                        </div>
-
-                        <div class="mini-feature-item">
-                            <div class="mini-feature-icon">
-                                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/>
-                                </svg>
-                            </div>
-                            <div class="mini-feature-title">20+ Years</div>
-                            <div class="mini-feature-sub">of Excellence</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- RIGHT COLUMN: COMMUNITY / PROJECT HIGHLIGHTS -->
-                
-
-            </div>
-        </div>
-    </section>
-
-    </div>
-
-
-
-
-   <section class="pja-enquiry pja-section" id="contact">
+<section class="pja-plots pja-section" id="plots">
 
     <div class="main-container">
 
-        <div class="pja-enquiry-content">
+        <div class="pja-plots-header">
 
-            {{-- LEFT CONTENT --}}
-            <div class="pja-enquiry-copy">
-
-                <div class="section-eyebrow">
-                    BE FIRST IN LINE
-                </div>
-
-                <h2 class="pja-enquiry-title">
-                    Be First in Line<br>
-                    at Palm Central
-                </h2>
-
-                <p class="section-description">
-                    Get launch prices, floor plans and availability
-                    sent to your WhatsApp.
-                </p>
-    <a href="#" class="pja-enquiry-button" data-open-enquiry>
-        Send Me the Details
-    </a>
+            <div class="section-eyebrow">
+                WATERFRONT & BEACH PLOTS
             </div>
 
+            <h2 class="title">
+                Waterfront & Beach Plots on Dubai Islands
+            </h2>
 
-            {{-- RIGHT FORM --}}
-            <div class="pja-enquiry-form">
+            <p class="section-description">
+                Build Your Own on the Water
+            </p>
 
-                @include('partials.lead-form-palm-central')
+        </div>
+
+        <div class="pja-plots-content">
+
+            <p class="pja-plots-description">
+                A limited number of waterfront and beach villa plots are available.
+                Each is around 8,000 sqft, with about 7,800 sqft of buildable area.
+            </p>
+
+            <div class="pja-plots-stats">
+
+                <div class="pja-plots-stat">
+                    <strong>8,000</strong>
+                    <span>SQFT PLOT SIZE</span>
+                </div>
+
+                <div class="pja-plots-stat">
+                    <strong>7,800</strong>
+                    <span>SQFT BUILDABLE AREA</span>
+                </div>
+
+                <div class="pja-plots-stat">
+                    <strong>LIMITED</strong>
+                    <span>AVAILABILITY</span>
+                </div>
+
+            </div>
+
+            <div class="pja-plots-cta">
+
+                <a href="#" class="pja-btn pja-btn-fill" data-open-enquiry>
+                    ASK ABOUT PLOT AVAILABILITY
+                </a>
 
             </div>
 
@@ -1766,6 +1850,131 @@ by beach, pool and wellness amenities, with the island's parks and community cen
     </div>
 
 </section>
+
+
+    <section class="editorial-section pja-section" id="developer">
+    <div class="editorial-container">
+        <div class="editorial-grid">
+
+
+        <div class="editorial-col col-left">
+            <div>
+                <div class="section-eyebrow">ABOUT THE DEVELOPER</div>
+                <h2 class="main-heading">Nakheel Properties</h2>
+
+                <p class="body-paragraph">
+                    Nakheel is one of Dubai's leading master developers, known for creating
+                    landmark waterfront destinations, residential communities and
+                    transformative developments that have helped shape the city's coastline.
+                </p>
+
+                <p class="body-paragraph">
+                    With Bay Estate on Dubai Islands, Nakheel continues its focus on
+                    waterfront living, bringing an exclusive residential experience to one
+                    of Dubai's emerging coastal destinations, surrounded by beaches,
+                    promenades and views across the Arabian Gulf.
+                </p>
+            </div>
+
+            <div class="mini-features-grid">
+
+                <div class="mini-feature-item">
+                    <div class="mini-feature-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
+                        </svg>
+                    </div>
+                    <div class="mini-feature-title">Waterfront</div>
+                    <div class="mini-feature-sub">Master Developments</div>
+                </div>
+
+                <div class="mini-feature-item">
+                    <div class="mini-feature-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+                        </svg>
+                    </div>
+                    <div class="mini-feature-title">Proven</div>
+                    <div class="mini-feature-sub">Development Experience</div>
+                </div>
+
+                <div class="mini-feature-item">
+                    <div class="mini-feature-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6 0 3.375 3.375 0 016 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 01-5.25 0z"/>
+                        </svg>
+                    </div>
+                    <div class="mini-feature-title">Premium</div>
+                    <div class="mini-feature-sub">Residential Communities</div>
+                </div>
+
+                <div class="mini-feature-item">
+                    <div class="mini-feature-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/>
+                        </svg>
+                    </div>
+                    <div class="mini-feature-title">20+ Years</div>
+                    <div class="mini-feature-sub">of Development</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</section>
+
+
+    </div>
+
+
+
+
+
+<section class="pja-enquiry pja-section" id="contact">
+
+    <div class="main-container">
+
+        <div class="pja-enquiry-content">
+
+            <div class="pja-enquiry-copy">
+
+                <div class="section-eyebrow">
+                    BE FIRST IN LINE
+                </div>
+
+                <h2 class="pja-enquiry-title">
+                    Be First in Line<br>
+                    at Bay Estate
+                </h2>
+
+                <p class="section-description">
+                    Get launch prices, floor plans and availability
+                    sent to your WhatsApp.
+                </p>
+
+                <a href="#" class="pja-enquiry-button" data-open-enquiry>
+                    Send Me the Details
+                </a>
+
+            </div>
+
+            <div class="pja-enquiry-form">
+
+                @include('partials.lead-form-bay-estate')
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 
 
  <section class="pja-footer">
@@ -1835,7 +2044,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
 
 
-                    @include('partials.lead-form-wadeem')
+                    @include('partials.lead-form-bay-estate')
 
 
 
@@ -1845,11 +2054,11 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
 
 <aside class="sticky-sidebar" aria-label="Registration Sidebar" id="side-form-lp">
-        @include('partials.lead-form-palm-central')
+        @include('partials.lead-form-bay-estate')
     </aside>
 
         <a
-            href="https://wa.me/971555342535?text=Hi%2C%20I%E2%80%99m%20interested%20to%20know%20more%20about%20Palm%20Central%20By%20Nakheel.%20Please%20share%20all%20relevant%20details.%0AThank%20you."
+            href="https://wa.me/971555342535?text=Hi%2C%20I%E2%80%99m%20interested%20to%20know%20more%20about%20Bay%20Estate%20By%20Nakheel.%20Please%20share%20all%20relevant%20details.%0AThank%20you."
             class="landing-whatsapp-float whatsapp-track"
             target="_blank"
             rel="noopener noreferrer"
