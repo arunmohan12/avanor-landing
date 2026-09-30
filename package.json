@@ -4,6 +4,9 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
+        "build:local": "vite build --config vite.dev.config.js",
+        "dev:local": "vite --config vite.dev.config.js",
+        "merge:local": "node scripts/merge-vite-build.mjs",
         "dev": "vite"
     },
     "devDependencies": {

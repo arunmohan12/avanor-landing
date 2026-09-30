@@ -1,0 +1,67 @@
+{
+  "_fonts-C9MNnjVw.css": {
+    "file": "assets/fonts-C9MNnjVw.css",
+    "src": "_fonts-C9MNnjVw.css"
+  },
+  "_instrument-sans-400-normal-D1W7dsQl.woff": {
+    "file": "assets/instrument-sans-400-normal-D1W7dsQl.woff",
+    "src": "_instrument-sans-400-normal-D1W7dsQl.woff"
+  },
+  "_instrument-sans-400-normal-DRC__1Mx.woff2": {
+    "file": "assets/instrument-sans-400-normal-DRC__1Mx.woff2",
+    "src": "_instrument-sans-400-normal-DRC__1Mx.woff2"
+  },
+  "_instrument-sans-500-normal-Dk9ku72i.woff2": {
+    "file": "assets/instrument-sans-500-normal-Dk9ku72i.woff2",
+    "src": "_instrument-sans-500-normal-Dk9ku72i.woff2"
+  },
+  "_instrument-sans-500-normal-Z6ESRlEs.woff": {
+    "file": "assets/instrument-sans-500-normal-Z6ESRlEs.woff",
+    "src": "_instrument-sans-500-normal-Z6ESRlEs.woff"
+  },
+  "_instrument-sans-600-normal-B7fBEWYG.woff2": {
+    "file": "assets/instrument-sans-600-normal-B7fBEWYG.woff2",
+    "src": "_instrument-sans-600-normal-B7fBEWYG.woff2"
+  },
+  "_instrument-sans-600-normal-B9e8oLYv.woff": {
+    "file": "assets/instrument-sans-600-normal-B9e8oLYv.woff",
+    "src": "_instrument-sans-600-normal-B9e8oLYv.woff"
+  },
+  "resources/css/landing/bay-estate.css": {
+    "file": "assets/bay-estate-CTb6TDHN.css",
+    "name": "bay-estate",
+    "names": [
+      "bay-estate.css"
+    ],
+    "src": "resources/css/landing/bay-estate.css",
+    "isEntry": true,
+    "assets": [
+      "assets/Nakheel-TextRegular-Wz4d7xXZ.woff2",
+      "assets/Nakheel-TextRegular-C7GDnss0.woff",
+      "assets/Nakheel-TextBold-nqtSceLM.woff2",
+      "assets/Nakheel-TextBold-B90GRwVF.woff"
+    ]
+  },
+  "resources/css/landing/fonts/Nakheel-TextBold.woff": {
+    "file": "assets/Nakheel-TextBold-B90GRwVF.woff",
+    "src": "resources/css/landing/fonts/Nakheel-TextBold.woff"
+  },
+  "resources/css/landing/fonts/Nakheel-TextBold.woff2": {
+    "file": "assets/Nakheel-TextBold-nqtSceLM.woff2",
+    "src": "resources/css/landing/fonts/Nakheel-TextBold.woff2"
+  },
+  "resources/css/landing/fonts/Nakheel-TextRegular.woff": {
+    "file": "assets/Nakheel-TextRegular-C7GDnss0.woff",
+    "src": "resources/css/landing/fonts/Nakheel-TextRegular.woff"
+  },
+  "resources/css/landing/fonts/Nakheel-TextRegular.woff2": {
+    "file": "assets/Nakheel-TextRegular-Wz4d7xXZ.woff2",
+    "src": "resources/css/landing/fonts/Nakheel-TextRegular.woff2"
+  },
+  "resources/js/landing/bay-estate.js": {
+    "file": "assets/bay-estate-CVsk2qJr.js",
+    "name": "bay-estate",
+    "src": "resources/js/landing/bay-estate.js",
+    "isEntry": true
+  }
+}
