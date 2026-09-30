@@ -1835,7 +1835,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
 
 
-                    @include('partials.lead-form-wadeem')
+                    @include('partials.lead-form-palm-central')
 
 
 
