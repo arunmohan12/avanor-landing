@@ -93,7 +93,7 @@ strip_tags($property->description ?? ''),
 
             <a href="#" class="pja-logo">
                 <img
-                    src="{{ asset('assets/img/landing/bay-estate/Bay-Estate-Logo.svg') }}"
+                    src="{{ asset('assets/img/landing/bay-estate/Bay-Estate-logo.svg') }}"
                     alt="{{ $property->project?->name ?? $property->title }}"
                 >
             </a>
