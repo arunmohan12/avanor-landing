@@ -283,7 +283,7 @@
         "isEntry": true
     },
     "resources/js/landing/bay-estate.js": {
-        "file": "assets/bay-estate-CVsk2qJr.js",
+        "file": "assets/bay-estate-B5-prvkr.js",
         "name": "bay-estate",
         "src": "resources/js/landing/bay-estate.js",
         "isEntry": true
@@ -319,13 +319,13 @@
         ]
     },
     "resources/js/map.js": {
-        "file": "assets/map-CSRvC6rt.js",
+        "file": "assets/map-PNaWZZqP.js",
         "name": "map",
         "src": "resources/js/map.js",
         "isEntry": true
     },
     "resources/css/landing/bay-estate.css": {
-        "file": "assets/bay-estate-CTb6TDHN.css",
+        "file": "assets/bay-estate-6srqHUSn.css",
         "name": "bay-estate",
         "names": [
             "bay-estate.css"

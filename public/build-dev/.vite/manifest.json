@@ -28,7 +28,7 @@
     "src": "_instrument-sans-600-normal-B9e8oLYv.woff"
   },
   "resources/css/landing/bay-estate.css": {
-    "file": "assets/bay-estate-CTb6TDHN.css",
+    "file": "assets/bay-estate-6srqHUSn.css",
     "name": "bay-estate",
     "names": [
       "bay-estate.css"
@@ -59,9 +59,15 @@
     "src": "resources/css/landing/fonts/Nakheel-TextRegular.woff2"
   },
   "resources/js/landing/bay-estate.js": {
-    "file": "assets/bay-estate-CVsk2qJr.js",
+    "file": "assets/bay-estate-B5-prvkr.js",
     "name": "bay-estate",
     "src": "resources/js/landing/bay-estate.js",
+    "isEntry": true
+  },
+  "resources/js/map.js": {
+    "file": "assets/map-PNaWZZqP.js",
+    "name": "map",
+    "src": "resources/js/map.js",
     "isEntry": true
   }
 }
