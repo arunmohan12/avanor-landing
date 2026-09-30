@@ -53,11 +53,11 @@ your WhatsApp.</p>
             <div class="field">
                 <label for="sticky-Interest">I'm Interested In*</label>
                 <select id="sticky-Interest" name="bedroom_type" required>
-                    <option value="" selected disabled>Select Villa Type</option>
-                    <option value="1 Bedroom Villa">1-Bedroom Villa</option>
-                    <option value="2 Bedroom Villa">2-Bedroom Villa </option>
-                    <option value="3 Bedroom Villa">3-Bedroom Villa </option>
-             <option value="4 Bedroom Villa">4-Bedroom Villa </option>
+                    <option value="" selected disabled>Select Apartment Types</option>
+                    <option value="1 Bedroom Apartment">1-Bedroom Apartment</option>
+                    <option value="2 Bedroom Apartment">2-Bedroom  Apartment</option>
+                    <option value="3 Bedroom Apartment">3-Bedroom  Apartment</option>
+             <option value="4 Bedroom Apartment">4-Bedroom  Apartment</option>
                 </select>
             </div>
             <button class="btn btn-champagne sticky-submit-btn" type="submit">Submit</button>

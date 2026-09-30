@@ -206,7 +206,7 @@ class LeadController extends Controller
             'bedroom_type' => [
                 'required',
                 'string',
-                'in:4 Bedroom Villa,5 Bedroom Villa,6 Bedroom Villa',
+                'max:255',
             ],
 
             'budget' => [

@@ -472,7 +472,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
         <div class="pja-collections-header">
 
             <div class="section-eyebrow">
-                EXPLORE THE VILLA COLLECTIONS
+                EXPLORE THE APARTMENT COLLECTIONS
             </div>
 
             <h2 class="title">
