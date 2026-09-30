@@ -1448,35 +1448,35 @@ if (mobileMenuToggle && mobileNavigation) {
 }
 
 
-// let leadPopupOpened = false;
+let leadPopupOpened = false;
 
-// document
-//     .querySelectorAll('[data-open-enquiry]')
-//     .forEach((trigger) => {
-//         trigger.addEventListener('click', () => {
-//             leadPopupOpened = true;
-//         });
-//     });
+document
+    .querySelectorAll('[data-open-enquiry]')
+    .forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+            leadPopupOpened = true;
+        });
+    });
 
-// setTimeout(() => {
+setTimeout(() => {
 
-//     if (leadPopupOpened) {
-//         return;
-//     }
+    if (leadPopupOpened) {
+        return;
+    }
 
-//     const popupTrigger = document.querySelector(
-//         '[data-open-enquiry]'
-//     );
+    const popupTrigger = document.querySelector(
+        '[data-open-enquiry]'
+    );
 
-//     if (!popupTrigger) {
-//         return;
-//     }
+    if (!popupTrigger) {
+        return;
+    }
 
-//     leadPopupOpened = true;
-//     popupTrigger.click();
+    leadPopupOpened = true;
+    popupTrigger.click();
 
-//     setTimeout(() => {
-//         popupTrigger.click();
-//     }, 25000);
+    setTimeout(() => {
+        popupTrigger.click();
+    }, 25000);
 
-// }, 10000);
+}, 10000);
