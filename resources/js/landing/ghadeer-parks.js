@@ -262,42 +262,42 @@ if (document.readyState === 'loading') {
    Opens once after 5 seconds
 ===================================================== */
 
-// let leadPopupOpened = false;
+let leadPopupOpened = false;
 
-// document
-//     .querySelectorAll('[data-lead-popup-open]')
-//     .forEach((button) => {
-//         button.addEventListener('click', () => {
-//             leadPopupOpened = true;
-//         });
-//     });
+document
+    .querySelectorAll('[data-lead-popup-open]')
+    .forEach((button) => {
+        button.addEventListener('click', () => {
+            leadPopupOpened = true;
+        });
+    });
 
-// setTimeout(() => {
+setTimeout(() => {
 
-//     if (leadPopupOpened) {
-//         return;
-//     }
+    if (leadPopupOpened) {
+        return;
+    }
 
-//     const popupTrigger = document.querySelector(
-//         '[data-lead-popup-open]'
-//     );
+    const popupTrigger = document.querySelector(
+        '[data-lead-popup-open]'
+    );
 
-//     if (!popupTrigger) {
-//         return;
-//     }
+    if (!popupTrigger) {
+        return;
+    }
 
-//     leadPopupOpened = true;
-//     popupTrigger.click();
+    leadPopupOpened = true;
+    popupTrigger.click();
 
 
   
-//     setTimeout(() => {
+    setTimeout(() => {
 
-//         popupTrigger.click();
+        popupTrigger.click();
 
-//     }, 25000);
+    }, 25000);
 
-// }, 10000);
+}, 10000);
 
 
 const header = document.querySelector('.landing-header');
