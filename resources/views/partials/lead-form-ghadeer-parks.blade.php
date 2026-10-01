@@ -44,7 +44,7 @@
     <form
         id="{{ $formId }}"
         method="POST"
-        action="{{ $action ?? route('leads.store') }}"
+        action="{{ $action ?? route('landing.leads.store') }}"
         class="avanor-lead-form-element"
     >
 

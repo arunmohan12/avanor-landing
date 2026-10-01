@@ -13,9 +13,9 @@ Route::get('/', function () {
 //});
 
 
-Route::post('/enquiry', [LeadController::class, 'store'])
-    ->middleware('throttle:10,1')
-    ->name('leads.store');
+// Route::post('/enquiry', [LeadController::class, 'store'])
+//     ->middleware('throttle:10,1')
+//     ->name('leads.store');
 
 
 Route::post(
@@ -42,12 +42,12 @@ Route::get('/terms-and-condition', function () {
 //Pages
 
 //local
-// Route::get('/yas-riva-by-aldar', [LandingPageController::class, 'showYasRivaByAldar']);
-// Route::get('/wadeem-gardens-by-modon', [LandingPageController::class, 'showWadeemByModon']);
-// Route::get('/palm-central', [LandingPageController::class, 'showPalmCentral']);
-// Route::get('/the-heights-by-emaar', [LandingPageController::class, 'showTheheights']);
-// Route::get('/bay-estate', [LandingPageController::class, 'showBayEstate']);
-//  Route::get('/ghadeer-parks', [LandingPageController::class, 'showGhadeerParks']);
+Route::get('/yas-riva-by-aldar', [LandingPageController::class, 'showYasRivaByAldar']);
+Route::get('/wadeem-gardens-by-modon', [LandingPageController::class, 'showWadeemByModon']);
+Route::get('/palm-central', [LandingPageController::class, 'showPalmCentral']);
+Route::get('/the-heights-by-emaar', [LandingPageController::class, 'showTheheights']);
+Route::get('/bay-estate', [LandingPageController::class, 'showBayEstate']);
+ Route::get('/ghadeer-parks', [LandingPageController::class, 'showGhadeerParks']);
 
 
 //live
