@@ -9,6 +9,7 @@ export default defineConfig({
             input: [
                 'resources/css/landing/bay-estate.css',
                 'resources/js/landing/bay-estate.js',
+                'resources/js/map.js',
             ],
             refresh: true,
             fonts: [

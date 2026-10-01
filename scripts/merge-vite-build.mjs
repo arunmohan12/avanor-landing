@@ -19,12 +19,25 @@ function findManifest(buildDirectory) {
     throw new Error(`Manifest not found in ${buildDirectory}`);
 }
 
-function copyDirectory(source, destination) {
+function copyFile(source, destination) {
     fs.mkdirSync(path.dirname(destination), {
         recursive: true,
     });
 
     fs.copyFileSync(source, destination);
+}
+
+function removeOldAsset(oldFile, newFile) {
+    if (!oldFile || oldFile === newFile) {
+        return;
+    }
+
+    const oldPath = path.join(productionBuild, oldFile);
+
+    if (fs.existsSync(oldPath)) {
+        fs.unlinkSync(oldPath);
+        console.log(`Removed: ${oldFile}`);
+    }
 }
 
 const devManifestPath = findManifest(devBuild);
@@ -45,6 +58,20 @@ if (entries.length === 0) {
 }
 
 for (const [key, entry] of entries) {
+    const oldEntry = productionManifest[key];
+
+    if (oldEntry?.file) {
+        removeOldAsset(oldEntry.file, entry.file);
+    }
+
+    if (oldEntry?.css && entry.css) {
+        for (const oldCss of oldEntry.css) {
+            if (!entry.css.includes(oldCss)) {
+                removeOldAsset(oldCss, entry.css.join(','));
+            }
+        }
+    }
+
     productionManifest[key] = entry;
 
     if (entry.file) {
@@ -55,7 +82,7 @@ for (const [key, entry] of entries) {
         );
 
         if (fs.existsSync(sourceFile)) {
-            copyDirectory(sourceFile, destinationFile);
+            copyFile(sourceFile, destinationFile);
 
             console.log(`Updated: ${key}`);
             console.log(`        ${entry.file}`);
@@ -71,7 +98,7 @@ for (const [key, entry] of entries) {
             );
 
             if (fs.existsSync(sourceFile)) {
-                copyDirectory(sourceFile, destinationFile);
+                copyFile(sourceFile, destinationFile);
 
                 console.log(`        ${cssFile}`);
             }
