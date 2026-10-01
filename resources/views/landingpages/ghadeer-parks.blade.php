@@ -834,8 +834,8 @@ $propertySchema['offers'] = [
 
             <div class="villa-card">
                 <div class="villa-image-wrapper">
-                    <img src="{{ asset('assets/img/landing/yas-riva/villa1.webp') }}"
-                         alt="2 Bedroom Townhouse"
+                    <img src="{{ asset('assets/img/landing/ghadeer-parks/2-br-townhouse.webp') }}"
+                         alt=" Al Ghadeer Parks by Aldar 2 Bedroom Townhouse"
                          class="villa-image">
                     <span class="villa-tag">2 BEDROOM</span>
                 </div>
@@ -873,8 +873,8 @@ $propertySchema['offers'] = [
 
             <div class="villa-card">
                 <div class="villa-image-wrapper">
-                    <img src="{{ asset('assets/img/landing/yas-riva/villa2.webp') }}"
-                         alt="3 Bedroom Townhouse"
+                    <img src="{{ asset('assets/img/landing/ghadeer-parks/3-br-townhouse.webp') }}"
+                         alt="Al Ghadeer Parks by Aldar 3 Bedroom Townhouse"
                          class="villa-image">
                     <span class="villa-tag">3 BEDROOM</span>
                 </div>
@@ -912,8 +912,8 @@ $propertySchema['offers'] = [
 
             <div class="villa-card">
                 <div class="villa-image-wrapper">
-                    <img src="{{ asset('assets/img/landing/yas-riva/villa3.webp') }}"
-                         alt="3 Bedroom Corner Townhouse"
+                    <img src="{{ asset('assets/img/landing/ghadeer-parks/3-br-corner-townhouse.webp') }}"
+                         alt="Al Ghadeer Parks by Aldar 3 Bedroom Corner Townhouse"
                          class="villa-image">
                     <span class="villa-tag">3 BEDROOM</span>
                 </div>
@@ -951,8 +951,8 @@ $propertySchema['offers'] = [
 
             <div class="villa-card">
                 <div class="villa-image-wrapper">
-                    <img src="{{ asset('assets/img/landing/yas-riva/villa1.webp') }}"
-                         alt="4 Bedroom Villa"
+                    <img src="{{ asset('assets/img/landing/ghadeer-parks/4-br-villa.webp') }}"
+                         alt="Al Ghadeer Parks by Aldar 4 Bedroom Villa"
                          class="villa-image">
                     <span class="villa-tag">4 BEDROOM</span>
                 </div>
@@ -1618,9 +1618,7 @@ $propertySchema['offers'] = [
             <ul class="registration-list">
 
                 <li>
-                    <div class="check-icon">
-                        <x-landing-icon name="check" />
-                    </div>
+                    
 
                     <span>
                         <strong>1. Request the details.</strong>
@@ -1629,9 +1627,7 @@ $propertySchema['offers'] = [
                 </li>
 
                 <li>
-                    <div class="check-icon">
-                        <x-landing-icon name="check" />
-                    </div>
+                   
 
                     <span>
                         <strong>2. Get prices, floor plans and availability on WhatsApp.</strong>
@@ -1639,9 +1635,7 @@ $propertySchema['offers'] = [
                 </li>
 
                 <li>
-                    <div class="check-icon">
-                        <x-landing-icon name="check" />
-                    </div>
+                    
 
                     <span>
                         <strong>3. Choose your home and reserve it with 5%.</strong>
@@ -1897,7 +1891,7 @@ $propertySchema['offers'] = [
 ===================================================== --}}
 
     <section >
-<div class="landing-gallery-container ghadeer-enquiry-section">
+            <div class="landing-gallery-container ghadeer-enquiry-section">
     <div class="ghadeer-enquiry-left">
         <span>AL GHADEER PARKS</span>
 
