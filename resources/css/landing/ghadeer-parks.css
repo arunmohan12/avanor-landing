@@ -3870,8 +3870,9 @@ body.landing-popup-open {
 
     background: rgba(5, 12, 22, 0.72);
 
-    backdrop-filter: blur(4px);
+
     -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(4px);
 }
 
 .landing-lead-popup-dialog {
