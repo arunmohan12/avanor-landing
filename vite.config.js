@@ -22,12 +22,13 @@ export default defineConfig({
                 'resources/css/landing/wadeem.css',
                 'resources/css/landing/yas-riva.css',
                 'resources/css/landing/wadeemv2.css',
-   
+      
 
                 'resources/js/landing/the-heights.js',
                 'resources/js/landing/wadeem.js',
                 'resources/js/landing/yas-riva.js',
                 'resources/js/landing/bay-estate.js',
+          
             ],
             refresh: true,
             fonts: [

@@ -338,5 +338,48 @@
             "assets/Nakheel-TextBold-nqtSceLM.woff2",
             "assets/Nakheel-TextBold-B90GRwVF.woff"
         ]
+    },
+    "resources/css/landing/ghadeer-parks.css": {
+        "file": "assets/ghadeer-parks-D9-IQuJ-.css",
+        "name": "ghadeer-parks",
+        "names": [
+            "ghadeer-parks.css"
+        ],
+        "src": "resources/css/landing/ghadeer-parks.css",
+        "isEntry": true,
+        "assets": [
+            "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
+            "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
+            "assets/lato-latin-400-normal-BEhtfm5r.woff2",
+            "assets/lato-latin-400-normal-B11PyLys.woff",
+            "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
+            "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
+            "assets/lato-latin-700-normal-BUGMgin4.woff2",
+            "assets/lato-latin-700-normal-DAdL7O4w.woff",
+            "assets/CormorantGaramond-Light-BE5xuUei.woff",
+            "assets/CormorantGaramond-LightItalic-B9mD87km.woff",
+            "assets/CormorantGaramond-Regular-CiAV_ro-.woff",
+            "assets/CormorantGaramond-Italic-CgqzdayI.woff",
+            "assets/CormorantGaramond-Medium-a81lqqsF.woff",
+            "assets/CormorantGaramond-MediumItalic-DLxFICkJ.woff",
+            "assets/CormorantGaramond-SemiBold-DFvMWUQ8.woff",
+            "assets/CormorantGaramond-SemiBoldItalic-CzUKSUAX.woff",
+            "assets/CormorantGaramond-Bold-CYsBYQCd.woff",
+            "assets/CormorantGaramond-BoldItalic-Bk1l1XVg.woff",
+            "assets/OutfitVariableFont_wght1-EwbcG2E8.woff"
+        ]
+    },
+    "resources/js/landing/ghadeer-parks.js": {
+        "file": "assets/ghadeer-parks-ajksIiz0.js",
+        "name": "ghadeer-parks",
+        "src": "resources/js/landing/ghadeer-parks.js",
+        "isEntry": true,
+        "css": [
+            "assets/ghadeer-parks-DmSsuaRf.css"
+        ],
+        "assets": [
+            "assets/flags-DjVgN9ag.webp",
+            "assets/flags@2x-QBzdwbZ8.webp"
+        ]
     }
 }
