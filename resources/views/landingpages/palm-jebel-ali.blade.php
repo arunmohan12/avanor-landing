@@ -200,7 +200,7 @@ yours with just 20%.
                 <div class="pja-hero-buttons">
 
                     <a href="#" data-open-enquiry class="pja-btn pja-btn-primary"  data-open-enquiry data-button-text="DOWNLOAD BROCHURE">
-                        ENQUIR NOW
+                        ENQUIRE NOW
                     </a>
 
                     
