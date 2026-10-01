@@ -10122,7 +10122,7 @@ li {
 }
 .landing-side-form {
     position: fixed;
-    z-index: 9999;
+    z-index: 1;
 
     width: 360px;
     top: 50%;
