@@ -617,7 +617,7 @@ class LandingPageController extends Controller
                 'amenities',
                 'sections',
             ])
-            ->where('id', 11)
+            ->where('id', 10)
             ->firstOrFail();
 
         /*
