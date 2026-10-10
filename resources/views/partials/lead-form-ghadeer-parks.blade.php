@@ -226,21 +226,21 @@
                 </option>
 
                 <option
-                    value="4 Bedroom Villa"
+                    value="2 Bedroom "
                     {{ old('bedroom_type') === '2 Bedroom ' ? 'selected' : '' }}
                 >
                     2 Bedroom 
                 </option>
 
                 <option
-                    value="5 Bedroom Villa"
+                    value="3 Bedroom "
                     {{ old('bedroom_type') === '3 Bedroom Villa' ? 'selected' : '' }}
                 >
                     3 Bedroom 
                 </option>
 
                 <option
-                    value="6 Bedroom Villa"
+                    value="4 Bedroom "
                     {{ old('bedroom_type') === '4 Bedroom Villa' ? 'selected' : '' }}
                 >
                     4 Bedroom 
