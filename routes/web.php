@@ -47,7 +47,7 @@ Route::get('/terms-and-condition', function () {
 // Route::get('/palm-central', [LandingPageController::class, 'showPalmCentral']);
 // Route::get('/the-heights-by-emaar', [LandingPageController::class, 'showTheheights']);
 // Route::get('/bay-estate', [LandingPageController::class, 'showBayEstate']);
-//  Route::get('/ghadeer-parks', [LandingPageController::class, 'showGhadeerParks']);
+ Route::get('/ghadeer-parks', [LandingPageController::class, 'showGhadeerParks']);
 Route::get('/riverside', [LandingPageController::class, 'showRiverside']);
 
 //live

@@ -12327,7 +12327,7 @@ li {
     left: 50%;
     bottom: 16px;
     transform: translateX(-50%);
-    z-index: 1000;
+   
  
     display: flex;
     align-items: center;
@@ -13422,7 +13422,7 @@ font-size: clamp(20px, 2.5vw, 34px);
 
 .rv-dev__copy p {
   margin: 0 0 16px;
-  font-size: clamp(15px, 1.4vw, 18px);
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
   color: #1a1a1a;

@@ -36,7 +36,7 @@
     "src": "node_modules/intl-tel-input/dist/img/flags@2x.webp"
   },
   "resources/css/landing/riverside.css": {
-    "file": "assets/riverside-BJNIjARa.css",
+    "file": "assets/riverside-HIZk_H6q.css",
     "name": "riverside",
     "names": [
       "riverside.css"
@@ -45,19 +45,29 @@
     "isEntry": true,
     "assets": [
       "assets/Roboto-Regular-BRoazS9J.woff",
-      "assets/termina-DqdVnZmc.woff2"
+      "assets/termina-DqdVnZmc.woff2",
+      "assets/TerminaTest-Bold-BihEk_AI.woff",
+      "assets/TerminaTest-Medium-CGvpT4cc.woff"
     ]
   },
   "resources/fonts/riverside/Roboto-Regular.woff": {
     "file": "assets/Roboto-Regular-BRoazS9J.woff",
     "src": "resources/fonts/riverside/Roboto-Regular.woff"
   },
+  "resources/fonts/riverside/TerminaTest-Bold.woff": {
+    "file": "assets/TerminaTest-Bold-BihEk_AI.woff",
+    "src": "resources/fonts/riverside/TerminaTest-Bold.woff"
+  },
+  "resources/fonts/riverside/TerminaTest-Medium.woff": {
+    "file": "assets/TerminaTest-Medium-CGvpT4cc.woff",
+    "src": "resources/fonts/riverside/TerminaTest-Medium.woff"
+  },
   "resources/fonts/riverside/termina.woff2": {
     "file": "assets/termina-DqdVnZmc.woff2",
     "src": "resources/fonts/riverside/termina.woff2"
   },
   "resources/js/landing/riverside.js": {
-    "file": "assets/riverside-CnbKv9oG.js",
+    "file": "assets/riverside-mw7XAeCQ.js",
     "name": "riverside",
     "src": "resources/js/landing/riverside.js",
     "isEntry": true,

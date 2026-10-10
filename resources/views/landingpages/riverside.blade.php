@@ -1082,7 +1082,7 @@ Emirates Road.</p>
             <img class="float-bar__logo" src="{{ asset('assets/img/landing/riverside/Riverside_Logo_Black.svg') }}" alt="{{ $property->title }}">
             <p class="float-bar__price "><span class="float-bar__unit">1 & 2 BR Apartments </span><strong>FROM AED 1.7M</strong></p>
         </div>
-        <a class="float-bar__cta" href="#enquire">Enquire now</a>
+        <a class="float-bar__cta" href="#enquire" data-lead-popup-open>Enquire now</a>
     </div>
 
     <a
