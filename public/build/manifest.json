@@ -381,5 +381,43 @@
             "assets/flags-DjVgN9ag.webp",
             "assets/flags@2x-QBzdwbZ8.webp"
         ]
+    },
+    "resources/css/landing/riverside.css": {
+        "file": "assets/riverside-BJNIjARa.css",
+        "name": "riverside",
+        "names": [
+            "riverside.css"
+        ],
+        "src": "resources/css/landing/riverside.css",
+        "isEntry": true,
+        "assets": [
+            "assets/Roboto-Regular-BRoazS9J.woff",
+            "assets/termina-DqdVnZmc.woff2"
+        ]
+    },
+    "resources/js/landing/riverside.js": {
+        "file": "assets/riverside-CnbKv9oG.js",
+        "name": "riverside",
+        "src": "resources/js/landing/riverside.js",
+        "isEntry": true,
+        "css": [
+            "assets/riverside-DmSsuaRf.css"
+        ],
+        "assets": [
+            "assets/flags-DjVgN9ag.webp",
+            "assets/flags@2x-QBzdwbZ8.webp"
+        ]
+    },
+    "resources/fonts/riverside/roboto.woff2": {
+        "file": "assets/roboto-CYVgFitr.woff2",
+        "src": "resources/fonts/riverside/roboto.woff2"
+    },
+    "resources/fonts/riverside/termina.woff2": {
+        "file": "assets/termina-DqdVnZmc.woff2",
+        "src": "resources/fonts/riverside/termina.woff2"
+    },
+    "resources/fonts/riverside/Roboto-Regular.woff": {
+        "file": "assets/Roboto-Regular-BRoazS9J.woff",
+        "src": "resources/fonts/riverside/Roboto-Regular.woff"
     }
 }

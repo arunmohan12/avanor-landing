@@ -44,4 +44,14 @@ return [
         'secret' => env('INTERNAL_API_SECRET'),
     ],
 
+
+    'google_sheets' => [
+    'credentials' => env(
+        'GOOGLE_SHEETS_CREDENTIALS',
+        'storage/app/google/avanor-lead-integration-79aba6fa1e88.json'
+    ),
+    'spreadsheet_id' => env('GOOGLE_SHEETS_SPREADSHEET_ID'),
+    'worksheet' => env('GOOGLE_SHEETS_WORKSHEET', 'Sheet1'),
+],
+
 ];

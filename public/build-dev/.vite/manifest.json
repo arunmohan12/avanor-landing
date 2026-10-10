@@ -27,38 +27,6 @@
     "file": "assets/instrument-sans-600-normal-B9e8oLYv.woff",
     "src": "_instrument-sans-600-normal-B9e8oLYv.woff"
   },
-  "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff": {
-    "file": "assets/lato-latin-400-normal-B11PyLys.woff",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff"
-  },
-  "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff2": {
-    "file": "assets/lato-latin-400-normal-BEhtfm5r.woff2",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff2"
-  },
-  "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff": {
-    "file": "assets/lato-latin-700-normal-DAdL7O4w.woff",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff"
-  },
-  "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff2": {
-    "file": "assets/lato-latin-700-normal-BUGMgin4.woff2",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff2"
-  },
-  "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff": {
-    "file": "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff"
-  },
-  "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff2": {
-    "file": "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff2"
-  },
-  "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff": {
-    "file": "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff"
-  },
-  "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff2": {
-    "file": "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff2"
-  },
   "node_modules/intl-tel-input/dist/img/flags.webp": {
     "file": "assets/flags-DjVgN9ag.webp",
     "src": "node_modules/intl-tel-input/dist/img/flags.webp"
@@ -67,87 +35,34 @@
     "file": "assets/flags@2x-QBzdwbZ8.webp",
     "src": "node_modules/intl-tel-input/dist/img/flags@2x.webp"
   },
-  "resources/css/landing/ghadeer-parks.css": {
-    "file": "assets/ghadeer-parks-BUDRowce.css",
-    "name": "ghadeer-parks",
+  "resources/css/landing/riverside.css": {
+    "file": "assets/riverside-BJNIjARa.css",
+    "name": "riverside",
     "names": [
-      "ghadeer-parks.css"
+      "riverside.css"
     ],
-    "src": "resources/css/landing/ghadeer-parks.css",
+    "src": "resources/css/landing/riverside.css",
     "isEntry": true,
     "assets": [
-      "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
-      "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
-      "assets/lato-latin-400-normal-BEhtfm5r.woff2",
-      "assets/lato-latin-400-normal-B11PyLys.woff",
-      "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
-      "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
-      "assets/lato-latin-700-normal-BUGMgin4.woff2",
-      "assets/lato-latin-700-normal-DAdL7O4w.woff",
-      "assets/CormorantGaramond-Light-BE5xuUei.woff",
-      "assets/CormorantGaramond-LightItalic-B9mD87km.woff",
-      "assets/CormorantGaramond-Regular-CiAV_ro-.woff",
-      "assets/CormorantGaramond-Italic-CgqzdayI.woff",
-      "assets/CormorantGaramond-Medium-a81lqqsF.woff",
-      "assets/CormorantGaramond-MediumItalic-DLxFICkJ.woff",
-      "assets/CormorantGaramond-SemiBold-DFvMWUQ8.woff",
-      "assets/CormorantGaramond-SemiBoldItalic-CzUKSUAX.woff",
-      "assets/CormorantGaramond-Bold-CYsBYQCd.woff",
-      "assets/CormorantGaramond-BoldItalic-Bk1l1XVg.woff",
-      "assets/OutfitVariableFont_wght1-EwbcG2E8.woff"
+      "assets/Roboto-Regular-BRoazS9J.woff",
+      "assets/termina-DqdVnZmc.woff2"
     ]
   },
-  "resources/fonts/wadeem/CormorantGaramond-Bold.woff": {
-    "file": "assets/CormorantGaramond-Bold-CYsBYQCd.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-Bold.woff"
+  "resources/fonts/riverside/Roboto-Regular.woff": {
+    "file": "assets/Roboto-Regular-BRoazS9J.woff",
+    "src": "resources/fonts/riverside/Roboto-Regular.woff"
   },
-  "resources/fonts/wadeem/CormorantGaramond-BoldItalic.woff": {
-    "file": "assets/CormorantGaramond-BoldItalic-Bk1l1XVg.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-BoldItalic.woff"
+  "resources/fonts/riverside/termina.woff2": {
+    "file": "assets/termina-DqdVnZmc.woff2",
+    "src": "resources/fonts/riverside/termina.woff2"
   },
-  "resources/fonts/wadeem/CormorantGaramond-Italic.woff": {
-    "file": "assets/CormorantGaramond-Italic-CgqzdayI.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-Italic.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-Light.woff": {
-    "file": "assets/CormorantGaramond-Light-BE5xuUei.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-Light.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-LightItalic.woff": {
-    "file": "assets/CormorantGaramond-LightItalic-B9mD87km.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-LightItalic.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-Medium.woff": {
-    "file": "assets/CormorantGaramond-Medium-a81lqqsF.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-Medium.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-MediumItalic.woff": {
-    "file": "assets/CormorantGaramond-MediumItalic-DLxFICkJ.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-MediumItalic.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-Regular.woff": {
-    "file": "assets/CormorantGaramond-Regular-CiAV_ro-.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-Regular.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-SemiBold.woff": {
-    "file": "assets/CormorantGaramond-SemiBold-DFvMWUQ8.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-SemiBold.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-SemiBoldItalic.woff": {
-    "file": "assets/CormorantGaramond-SemiBoldItalic-CzUKSUAX.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-SemiBoldItalic.woff"
-  },
-  "resources/fonts/wadeem/OutfitVariableFont_wght1.woff": {
-    "file": "assets/OutfitVariableFont_wght1-EwbcG2E8.woff",
-    "src": "resources/fonts/wadeem/OutfitVariableFont_wght1.woff"
-  },
-  "resources/js/landing/ghadeer-parks.js": {
-    "file": "assets/ghadeer-parks-C-JOqL-D.js",
-    "name": "ghadeer-parks",
-    "src": "resources/js/landing/ghadeer-parks.js",
+  "resources/js/landing/riverside.js": {
+    "file": "assets/riverside-CnbKv9oG.js",
+    "name": "riverside",
+    "src": "resources/js/landing/riverside.js",
     "isEntry": true,
     "css": [
-      "assets/ghadeer-parks-DmSsuaRf.css"
+      "assets/riverside-DmSsuaRf.css"
     ],
     "assets": [
       "assets/flags-DjVgN9ag.webp",

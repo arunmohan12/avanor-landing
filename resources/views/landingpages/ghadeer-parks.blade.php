@@ -344,7 +344,8 @@ $propertySchema['offers'] = [
                         'heading' => 'GET EARLY ACCESS',
                         'source' => 'ghadeer_parks_mobile_form',
                         'buttonText' => 'SUBMIT',
-
+     'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
                         ])
 
 
@@ -1836,7 +1837,8 @@ $propertySchema['offers'] = [
                 'heading' => 'Get Launch Prices & Availability',
                 'source' => 'ghadeer_parks_floating_form',
                 'buttonText' => 'SUBMIT',
-
+     'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
                 ])
 
             </div>
@@ -1912,6 +1914,9 @@ $propertySchema['offers'] = [
             'formId' => 'landing-image-form',
             'heading' => 'Get Launch Prices & Availability',
             'source' => 'ghadeer_parks_footer_form',
+
+                 'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
         ])
     </div>
     </div>

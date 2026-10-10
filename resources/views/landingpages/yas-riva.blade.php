@@ -348,6 +348,8 @@ strip_tags($property->description ?? ''),
                            'heading' => 'GET EARLY ACCESS',
                            'source' => 'the_yas_riva_mobile_form',
                            'buttonText' => 'SUBMIT',
+                            'propertyId' => $property->id,
+                            'developerId' => $property->developer_id,
 
                        ])
 
@@ -2095,6 +2097,8 @@ strip_tags($property->description ?? ''),
                             'heading' => 'GET EARLY ACCESS',
                              'source' => 'the_yas_riva_side_form',
                             'buttonText' => 'SUBMIT',
+                            'propertyId' => $property->id,
+                            'developerId' => $property->developer_id,
 
                         ])
 
@@ -2168,6 +2172,8 @@ strip_tags($property->description ?? ''),
                         @include('partials.lead-form', [
                             'formId' => 'landing-image-form',
                             'heading' => 'GET EARLY ACCESS',
+                            'propertyId' => $property->id,
+                            'developerId' => $property->developer_id,
                         ])
 
                     </div>

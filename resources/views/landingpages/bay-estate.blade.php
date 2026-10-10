@@ -223,7 +223,11 @@ down.
 
        
 
-         @include('partials.lead-form-bay-estate')
+         @include('partials.lead-form-bay-estate', [
+            'source' => 'bay_estate_form',
+            'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
+         ])
 
              
 
@@ -1964,7 +1968,11 @@ with a payment plan that spreads 40% of the cost to handover.
 
             <div class="pja-enquiry-form">
 
-                @include('partials.lead-form-bay-estate')
+                         @include('partials.lead-form-bay-estate', [
+            'source' => 'bay_estate_form',
+            'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
+         ])
 
             </div>
 
@@ -2044,7 +2052,11 @@ with a payment plan that spreads 40% of the cost to handover.
 
 
 
-                    @include('partials.lead-form-bay-estate')
+                            @include('partials.lead-form-bay-estate', [
+            'source' => 'bay_estate_form',
+            'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
+         ])
 
 
 
@@ -2054,7 +2066,11 @@ with a payment plan that spreads 40% of the cost to handover.
 
 
 <aside class="sticky-sidebar" aria-label="Registration Sidebar" id="side-form-lp">
-        @include('partials.lead-form-bay-estate')
+                 @include('partials.lead-form-bay-estate', [
+            'source' => 'bay_estate_form',
+            'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
+         ])
     </aside>
 
         <a

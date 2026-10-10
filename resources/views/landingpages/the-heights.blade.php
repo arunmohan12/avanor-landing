@@ -387,6 +387,9 @@ strip_tags($property->description ?? ''),
                        'formId' => 'landing-about-form',
                        'heading' => 'GET EARLY ACCESS',
                        'buttonText' => 'SUBMIT',
+
+                              'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
                    ])
 
 
@@ -2063,6 +2066,8 @@ strip_tags($property->description ?? ''),
                             'formId' => 'landing-about-form',
                             'heading' => 'GET EARLY ACCESS',
                             'buttonText' => 'SUBMIT',
+                                   'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
                         ])
 
                     </div>
@@ -2104,6 +2109,8 @@ strip_tags($property->description ?? ''),
                 'propertyId' => $property->id,
                 'developerId' => $property->developer_id,
                 'action' => route('landing.leads.store'),
+                       'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
                 ])
 
             </div>
@@ -2135,6 +2142,8 @@ strip_tags($property->description ?? ''),
                     @include('partials.lead-form', [
                         'formId' => 'landing-image-form',
                         'heading' => 'GET EARLY ACCESS',
+                               'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
                     ])
 
                 </div>

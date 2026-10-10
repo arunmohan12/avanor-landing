@@ -22,7 +22,7 @@ Route::post(
     '/landing-leads',
     [LeadController::class, 'storeLandingV2']
 )
-    ->middleware('throttle:5,10')
+    ->middleware('throttle:20,10')
     ->name('landing.leads.store');
 
 
@@ -48,7 +48,7 @@ Route::get('/terms-and-condition', function () {
 // Route::get('/the-heights-by-emaar', [LandingPageController::class, 'showTheheights']);
 // Route::get('/bay-estate', [LandingPageController::class, 'showBayEstate']);
 //  Route::get('/ghadeer-parks', [LandingPageController::class, 'showGhadeerParks']);
-
+Route::get('/riverside', [LandingPageController::class, 'showRiverside']);
 
 //live
 Route::domain('aldaryasriva.sales-centre.net')->group(function () {

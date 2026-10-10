@@ -222,7 +222,13 @@ yours with just 20%.
 
        
 
-         @include('partials.lead-form-palm-central')
+         @include('partials.lead-form-palm-central'
+         
+         , [
+            'source' => 'palm_central_form',
+            'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
+         ])
 
              
 
@@ -1757,7 +1763,13 @@ by beach, pool and wellness amenities, with the island's parks and community cen
             {{-- RIGHT FORM --}}
             <div class="pja-enquiry-form">
 
-                @include('partials.lead-form-palm-central')
+                  @include('partials.lead-form-palm-central'
+         
+         , [
+            'source' => 'palm_central_form',
+            'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
+         ])
 
             </div>
 
@@ -1835,7 +1847,13 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
 
 
-                    @include('partials.lead-form-palm-central')
+                      @include('partials.lead-form-palm-central'
+         
+         , [
+            'source' => 'palm_central_form',
+            'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
+         ])
 
 
 
@@ -1845,7 +1863,13 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
 
 <aside class="sticky-sidebar" aria-label="Registration Sidebar" id="side-form-lp">
-        @include('partials.lead-form-palm-central')
+          @include('partials.lead-form-palm-central'
+         
+         , [
+            'source' => 'palm_central_form',
+            'propertyId' => $property->id,
+            'developerId' => $property->developer_id,
+         ])
     </aside>
 
         <a

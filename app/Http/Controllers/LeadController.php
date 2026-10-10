@@ -9,6 +9,8 @@ use App\Models\Lead;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use App\Jobs\SyncLeadToGoogleSheets;
+
 class LeadController extends Controller
 {
     public function show(Lead $lead): LeadResource
@@ -286,11 +288,20 @@ class LeadController extends Controller
         $lead = Lead::create($validated);
 
         try {
+            SyncLeadToGoogleSheets::dispatch($lead->id,  $request->ip())
+                ->onQueue('default');
+        } catch (\Throwable $exception) {
+            Log::error('Failed to queue Google Sheets lead sync.', [
+                'lead_id' => $lead->id,
+                'error' => $exception->getMessage(),
+            ]);
+        }
+        try {
             Http::withHeaders([
                 'X-Internal-Secret' => config('services.internal.secret'),
             ])->post(
                 rtrim(config('services.avanor_api_url'), '/')
-                . "/internal/leads/{$lead->id}/notify"
+                    . "/internal/leads/{$lead->id}/notify"
             )->throw();
         } catch (\Throwable $exception) {
             Log::error('Failed to trigger lead notification.', [

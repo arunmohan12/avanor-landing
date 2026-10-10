@@ -233,7 +233,13 @@ strip_tags($property->description ?? ''),
 
 
                     {{-- Your reusable form --}}
-                @include('partials.lead-form-wadeem')
+                @include('partials.lead-form-wadeem'
+                
+                , [
+                    'source' => 'wadeem_form',
+                    'propertyId' => $property->id,
+                    'developerId' => $property->developer_id,
+                ])
 
 
 
@@ -1628,7 +1634,13 @@ strip_tags($property->description ?? ''),
 
 
                 {{-- Right --}}
-                @include('partials.lead-form-wadeem')
+                @include('partials.lead-form-wadeem'
+                
+                , [
+                    'source' => 'wadeem_form',
+                    'propertyId' => $property->id,
+                    'developerId' => $property->developer_id,
+                ])
 
             </div>
 
@@ -1679,7 +1691,13 @@ strip_tags($property->description ?? ''),
 
 </section>
     <aside class="sticky-sidebar" aria-label="Registration Sidebar" id="side-form-lp">
-        @include('partials.lead-form-wadeem')
+        @include('partials.lead-form-wadeem'
+                
+                , [
+                    'source' => 'wadeem_form',
+                    'propertyId' => $property->id,
+                    'developerId' => $property->developer_id,
+                ])
     </aside>
 
         <a
@@ -1725,7 +1743,13 @@ strip_tags($property->description ?? ''),
 
 {{--                <div class="enquiry-popup-form enquiry-popup-dialog">--}}
 
-                    @include('partials.lead-form-wadeem')
+                    @include('partials.lead-form-wadeem'
+                
+                , [
+                    'source' => 'wadeem_form',
+                    'propertyId' => $property->id,
+                    'developerId' => $property->developer_id,
+                ])
 
 {{--                </div>--}}
 
