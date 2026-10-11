@@ -1167,7 +1167,7 @@ Emirates Road.</p>
     </div>
 
     <a
-        href="https://wa.me/971555342535?text=Hi%2C%20I%E2%80%99m%20interested%20to%20know%20more%20about%20Ghadeer%20Parks%20by%20Aldar.%20Please%20share%20all%20relevant%20details.%20Thank%20you."
+        href="https://wa.me/971555342535?text=Hi%2C%20I%E2%80%99m%20interested%20to%20know%20more%20about%20DAMAC%20Riverside%20Views%20Please%20share%20all%20relevant%20details.%20Thank%20you."
         class="landing-whatsapp-float whatsapp-track"
         target="_blank"
         rel="noopener noreferrer"
