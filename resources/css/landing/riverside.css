@@ -4196,7 +4196,7 @@ body.landing-popup-open {
 
     color: #fff;
 
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 300;
     letter-spacing: 1px;
 
@@ -12387,7 +12387,7 @@ li {
     flex-shrink: 0;
     display: inline-flex;
     align-items: center;
-    padding: 12px 32px;
+    padding: 0px 28px;
     background: #000;
     color: #fff;
     font-size: 12px;
@@ -12879,11 +12879,11 @@ font-size: clamp(18px, 2.2vw, 28px);
 }
 
 .rv-apt__body {
-  padding: 28px 30px 30px;
+  padding: 20px 20px 20px;
 }
 
 .rv-apt__type {
-  margin: 0 0 22px;
+  margin: 0 0 15px;
   font-size: var(--space-md);
   font-weight: 500;
   line-height: 1.2;
@@ -12898,7 +12898,7 @@ font-size: clamp(18px, 2.2vw, 28px);
   justify-content: space-between;
   align-items: baseline;
   gap: 16px;
-  padding: 14px 0;
+  padding: 8px 0;
   border-top: 1px solid rgba(128, 128, 128, 0.3);
 }
 
@@ -12928,7 +12928,7 @@ font-size: clamp(18px, 2.2vw, 28px);
 @media (max-width: 700px) {
   .rv-apt__grid { grid-template-columns: 1fr; gap: 20px; }
   .rv-apt__card { border-radius: 22px; }
-  .rv-apt__body { padding: 22px 22px 24px; }
+  .rv-apt__body { padding: 20px 20px 20px; }
 }
 
 .rv-pay__sub {
@@ -13493,4 +13493,261 @@ font-size: clamp(20px, 2.5vw, 34px);
 
 .landing-header.scrolled .landing-menu-toggle span {
     background: #000;
+}
+
+.rv-lock-section {
+  padding: 90px 0 100px;
+  background: #dedede;
+  color: #000;
+}
+
+.rv-lock__title {
+  max-width: 800px;
+  margin: 0 auto 52px;
+  color: #000;
+  font-family: var(--font-primary);
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: none;
+}
+
+/* flex so the last row of 2 cards stays centered */
+.rv-lock__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.rv-lock__card {
+  flex: 0 1 calc((100% - 48px) / 3);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 34px 30px 30px;
+  background: #fff;
+  border-radius: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rv-lock__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+.rv-lock__badge {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #000;
+  border-radius: 50%;
+}
+
+.rv-lock__heading {
+  margin: 0 0 10px;
+  font-size: clamp(20px, 2vw, 25px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.rv-lock__text {
+  margin: 0 0 22px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #444;
+}
+
+/* blurred "hidden content" lines */
+.rv-lock__preview {
+  width: 100%;
+  margin-bottom: 26px;
+  display: grid;
+  gap: 9px;
+  filter: blur(3px);
+  opacity: 0.55;
+  user-select: none;
+}
+.rv-lock__preview span {
+  height: 9px;
+  background: #bdbdbd;
+  border-radius: 999px;
+}
+.rv-lock__preview span:nth-child(1) { width: 100%; }
+.rv-lock__preview span:nth-child(2) { width: 78%; }
+.rv-lock__preview span:nth-child(3) { width: 90%; }
+
+/* pushes the button to the bottom so all buttons line up */
+.rv-lock__btn { margin-top: auto; }
+
+@media (max-width: 900px) {
+  .rv-lock__card { flex-basis: calc((100% - 24px) / 2); }
+}
+
+@media (max-width: 600px) {
+  .rv-lock-section { padding: 60px 0 70px; }
+  .rv-lock__title { margin-bottom: 34px; }
+  .rv-lock__card { flex-basis: 100%; padding: 28px 24px 26px; border-radius: 20px; }
+  .rv-lock__card:hover { transform: none; box-shadow: none; }
+}
+
+.rv-intro {
+  position: relative;
+  padding: 60px 0;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* dark overlay, stronger on the text side */
+.rv-intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.25) 100%);
+}
+
+.rv-intro .landing-gallery-container {
+  position: relative;
+  z-index: 1;
+}
+
+.rv-intro__content {
+  max-width: 680px;
+}
+
+.rv-intro__title {
+  margin: 0 0 18px;
+  color: #fff;
+  font-family: var(--font-primary);
+font-size: clamp(20px, 2vw, 25px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-transform: none;
+}
+
+.rv-intro__sub {
+  margin: 0 0 28px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #e3cf9b; /* soft gold accent */
+}
+
+.rv-intro__copy {
+  margin: 0 0 22px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.rv-intro__cities {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.rv-intro__cities li {
+  padding: 9px 18px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+}
+
+.rv-intro__badge {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 24px 14px 20px;
+  background: rgba(255, 255, 255, 0.14);
+
+  backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+}
+
+.rv-intro__badge strong {
+  font-family: var(--font-primary);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.rv-intro__badge span {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .rv-intro { padding: 70px 0 80px; }
+  .rv-intro::before { background: rgba(0, 0, 0, 0.62); }
+  .rv-intro__cities li { padding: 8px 14px; font-size: 11px; }
+}
+.rv-intro__cities,
+.rv-intro__cities li {
+  list-style: none;
+  margin-left: 0;
+}
+
+.rv-intro__cities li::marker {
+  content: "";
+}
+
+.rv-intro__cities li::before,
+.rv-intro__cities li::after {
+  content: none;
+}
+
+/* new: lock + heading on one row */
+.rv-lock__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+/* replace: badge no longer needs the bottom margin */
+.rv-lock__badge {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #000;
+  border-radius: 50%;
+}
+
+/* replace: heading sits beside the badge */
+.rv-lock__heading {
+  margin: 0;
+  font-size: clamp(19px, 1.8vw, 24px);
+  font-weight: 500;
+  line-height: 1.2;
 }

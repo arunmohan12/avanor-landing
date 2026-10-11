@@ -47,8 +47,8 @@ Route::get('/terms-and-condition', function () {
 // Route::get('/palm-central', [LandingPageController::class, 'showPalmCentral']);
 // Route::get('/the-heights-by-emaar', [LandingPageController::class, 'showTheheights']);
 // Route::get('/bay-estate', [LandingPageController::class, 'showBayEstate']);
- Route::get('/ghadeer-parks', [LandingPageController::class, 'showGhadeerParks']);
-Route::get('/riverside', [LandingPageController::class, 'showRiverside']);
+//  Route::get('/ghadeer-parks', [LandingPageController::class, 'showGhadeerParks']);
+// Route::get('/riverside', [LandingPageController::class, 'showRiverside']);
 
 //live
 Route::domain('aldaryasriva.sales-centre.net')->group(function () {
@@ -66,3 +66,8 @@ Route::domain('bay-estate.sales-centre.net')->group(function () {
 Route::domain('ghadeer-parks.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showGhadeerParks']);
 });
+
+Route::domain('riverside.sales-centre.net')->group(function () {
+    Route::get('/', [LandingPageController::class, 'showRiverside']);
+});
+

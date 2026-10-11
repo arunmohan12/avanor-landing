@@ -355,11 +355,94 @@ $propertySchema['offers'] = [
                 </div>
             </section>
 
+@php
+    $locked = [
+        ['Offer price list',  'Prices after the discount for each apartment'],
+        ['Payment plans',     'Both schedules, installment by installment'],
+        ['Floor plans',       'Every 1 & 2 BR layout by building'],
+        ['Building guide',    'The 8 clusters, from Marine and Capri to Royal and Azure'],
+        ['Live availability', 'Which units and floors are open, and which qualify for the offer'],
+    ];
+@endphp
 
+<section class="landing-about-v2 rv-lock-section" id="locked-details">
+    <div class="landing-gallery-container">
 
+        <h2 class="landing-about-v2-title rv-lock__title">
+            Riverside Views Prices, Floor Plans &amp; Availability
+        </h2>
 
+        <div class="rv-lock__grid">
+            @foreach ($locked as [$heading, $text])
+                <article class="rv-lock__card">
 
-            <section class="landing-about-v2" id="apartment-types">
+    <div class="rv-lock__head">
+        <span class="rv-lock__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="11" width="16" height="10" rx="2"/>
+                <path d="M8 11V8a4 4 0 0 1 8 0v3"/>
+            </svg>
+        </span>
+
+        <h3 class="rv-lock__heading">{{ $heading }}</h3>
+    </div>
+
+    <p class="rv-lock__text">{{ $text }}</p>
+
+    {{-- blurred preview lines, purely decorative --}}
+    <div class="rv-lock__preview" aria-hidden="true">
+        <span></span><span></span><span></span>
+    </div>
+
+    <a href="#enquiry" class="float-bar__cta rv-lock__btn" data-lead-popup-open>
+        Unlock the Details
+    </a>
+
+</article>
+            @endforeach
+        </div>
+
+    </div>
+</section>
+
+<section class="landing-about-v2 rv-intro" id="about"
+         style="background-image: url('{{ asset('assets/img/landing/riverside/damac-riverside-night-view.webp') }}')">
+    <div class="landing-gallery-container">
+        <div class="rv-intro__content">
+
+            <h2 class="landing-about-v2-title rv-intro__title">
+                DAMAC Riverside Views: Waterfront Apartments in Dubai Investments Park
+            </h2>
+
+            <p class="rv-intro__sub">Urban living elevated by the river</p>
+
+            <p class="rv-intro__copy">
+                The design takes its cue from the world's great river cities.
+            </p>
+
+            <ul class="rv-intro__cities" aria-label="Design inspiration">
+                @foreach (['London', 'New York', 'Paris', 'Amsterdam', 'Rome'] as $city)
+                    <li>{{ $city }}</li>
+                @endforeach
+            </ul>
+
+            <p class="rv-intro__copy">
+                DAMAC Riverside Views brings apartment towers to both banks of DAMAC Riverside's
+                river, following the success of the community's townhouses. Eight clusters, named
+                after shades of blue, pair city energy with open waterfront views, in what DAMAC
+                calls Dubai's first riverside community.
+            </p>
+
+            <div class="rv-intro__badge">
+                <strong>8</strong>
+                <span>clusters named after<br>shades of blue</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+            <section class="landing-about-v2" id="properties">
                 <div class="landing-gallery-container">
                     <div class="landing-about-v2-content">
 
@@ -371,8 +454,8 @@ $propertySchema['offers'] = [
 
                             @php
                             $apartments = [
-                            ['1 Bedroom', '~800–1,060 sqft', 'From AED 1.35M', 'Save up to 8%', asset('assets/img/landing/ghadeer-parks/2-br-townhouse.webp')],
-                            ['2 Bedroom', '~1,200–1,500 sqft', 'From AED 1.9M', 'Save up to 8%', asset('assets/img/landing/ghadeer-parks/2-br-townhouse.webp')],
+                            ['1 Bedroom', '~800–1,060 sqft', 'From AED 1.35M', 'Save up to 8%', asset('assets/img/landing/riverside/DAMAC-Riverside-1-BR.webp')],
+                            ['2 Bedroom', '~1,200–1,500 sqft', 'From AED 1.9M', 'Save up to 8%', asset('assets/img/landing/riverside/DAMAC-Riverside-2-BR.webp')],
                             ];
                             @endphp
 
