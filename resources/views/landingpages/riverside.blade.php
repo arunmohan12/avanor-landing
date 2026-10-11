@@ -30,7 +30,7 @@ strip_tags($property->description ?? ''),
 @section('meta_keywords', $property->meta_keywords)
 @endif
 
-@section('canonical', 'https://ghadeer-parks.sales-centre.net')
+@section('canonical', 'https://riverside.sales-centre.net')
 
 
 @section('robots', 'index,follow')
@@ -58,7 +58,7 @@ strip_tags($property->description ?? ''),
 155
 ),
 
-'url' => 'https://ghadeer-parks.sales-centre.net',
+'url' => 'https://riverside.sales-centre.net',
 ];
 
 if (!empty($propertyImageUrl)) {
@@ -80,7 +80,7 @@ $propertySchema['offers'] = [
 '@type' => 'Offer',
 'priceCurrency' => 'AED',
 'price' => $displayPrice,
-'url' => 'https://ghadeer-parks.sales-centre.net',
+'url' => 'https://riverside.sales-centre.net',
 ];
 }
 @endphp
@@ -88,12 +88,10 @@ $propertySchema['offers'] = [
 
 @push('structured-data')
 <script type="application/ld+json">
-    {
-        !!json_encode(
-            $propertySchema,
-            JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
-        ) !!
-    }
+{!! json_encode(
+    $propertySchema,
+    JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+) !!}
 </script>
 @endpush
 
