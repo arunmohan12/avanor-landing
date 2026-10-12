@@ -285,17 +285,38 @@ class LeadController extends Controller
 
 
 
+            // Attempt 1: Save to the database.
+    try {
         $lead = Lead::create($validated);
+    } catch (\Throwable $exception) {
+        $databaseError = $exception->getMessage();
 
-        try {
-            SyncLeadToGoogleSheets::dispatch($lead->id,  $request->ip())
-                ->onQueue('default');
-        } catch (\Throwable $exception) {
-            Log::error('Failed to queue Google Sheets lead sync.', [
-                'lead_id' => $lead->id,
-                'error' => $exception->getMessage(),
-            ]);
-        }
+        Log::error('Lead database insert failed.', [
+            'phone' => $validated['phone'],
+            'error' => $databaseError,
+        ]);
+    }
+
+    // 2. Queue the Google Sheets sync.
+    try {
+        SyncLeadToGoogleSheets::dispatch(
+            $lead->id,
+            $request->ip()
+        )->onQueue('default');
+    } catch (\Throwable $exception) {
+        Log::error('Failed to queue Google Sheets lead sync.', [
+            'lead_id' => $lead->id,
+            'error' => $exception->getMessage(),
+        ]);
+
+        return back()
+            ->withInput()
+            ->with('lead_error', 'Your enquiry was saved, but syncing is delayed. Please contact our team if needed.');
+    }
+
+
+
+        
         try {
             Http::withHeaders([
                 'X-Internal-Secret' => config('services.internal.secret'),

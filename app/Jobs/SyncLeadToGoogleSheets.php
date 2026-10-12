@@ -47,6 +47,8 @@ public function handle(GoogleSheetsLeadService $sheets): void
   
     $sheets->appendLead([
         $propertyName,
+         $lead->created_at?->format('Y-m-d') ?? '',
+        $lead->created_at?->format('H:i:s') ?? '',
         'Landing page',
         $lead->name,
         $lead->email ?? '',
@@ -54,6 +56,7 @@ public function handle(GoogleSheetsLeadService $sheets): void
         $lead->bedroom_type ?? '',
         '',
         $this->ipAddress ?? '',
+        
     ]);
 }
 
