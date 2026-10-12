@@ -56,7 +56,10 @@ public function handle(GoogleSheetsLeadService $sheets): void
         $lead->bedroom_type ?? '',
         '',
         $this->ipAddress ?? '',
-        
+        $lead->gclid ?? '',                        
+    $lead->utm_source ?? '',                   
+    $lead->utm_medium ?? '',                   
+    $lead->utm_campaign ?? '',    
     ]);
 }
 

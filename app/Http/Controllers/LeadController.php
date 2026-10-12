@@ -283,7 +283,16 @@ class LeadController extends Controller
             'email.email' => 'Please enter a valid email address.',
         ]);
 
-
+    foreach ([
+        'gclid',
+        'utm_source',
+        'utm_medium',
+        'utm_campaign',
+    ] as $parameter) {
+        $validated[$parameter] = $request->session()->get(
+            "campaign.$parameter"
+        );
+    }
 
             // Attempt 1: Save to the database.
     try {

@@ -38,7 +38,7 @@ class GoogleSheetsLeadService
 
         $service->spreadsheets_values->append(
             $spreadsheetId,
-            "'" . str_replace("'", "''", $worksheet) . "'!A:H",
+            "'" . str_replace("'", "''", $worksheet) . "'!A:N",
             $values,
             [
                 'valueInputOption' => 'USER_ENTERED',
