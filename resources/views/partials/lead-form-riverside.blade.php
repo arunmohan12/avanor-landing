@@ -224,15 +224,15 @@
                 </option>
 
                 <option
-                    value="1 Bedroom Villa"
-                    {{ old('bedroom_type') === '1 Bedroom Villa' ? 'selected' : '' }}
+                    value="1 Bedroom "
+                    {{ old('bedroom_type') === '1 Bedroom ' ? 'selected' : '' }}
                 >
                     1 Bedroom 
                 </option>
 
                 <option
-                    value="2 Bedroom Villa"
-                    {{ old('bedroom_type') === '2 Bedroom Villa' ? 'selected' : '' }}
+                    value="2 Bedroom "
+                    {{ old('bedroom_type') === '2 Bedroom ' ? 'selected' : '' }}
                 >
                     2 Bedroom 
                 </option>

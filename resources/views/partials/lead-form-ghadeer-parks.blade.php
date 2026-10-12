@@ -234,14 +234,14 @@
 
                 <option
                     value="3 Bedroom "
-                    {{ old('bedroom_type') === '3 Bedroom Villa' ? 'selected' : '' }}
+                    {{ old('bedroom_type') === '3 Bedroom ' ? 'selected' : '' }}
                 >
                     3 Bedroom 
                 </option>
 
                 <option
                     value="4 Bedroom "
-                    {{ old('bedroom_type') === '4 Bedroom Villa' ? 'selected' : '' }}
+                    {{ old('bedroom_type') === '4 Bedroom ' ? 'selected' : '' }}
                 >
                     4 Bedroom 
                 </option>
