@@ -177,15 +177,17 @@ class LeadController extends Controller
     {
 
 
-    Log::info('Landing page lead form submitted', [
-        'name' => $request->input('name'),
-        'phone' => $request->input('phone'),
-        'email' => $request->input('email'),
-        'url' => $request->fullUrl(),
-        'time' => now()->toDateTimeString(),
-    ]);
+        Log::info('Landing page lead form submitted', [
+            'name' => $request->input('name'),
+            'phone' => $request->input('phone'),
+            'email' => $request->input('email'),
+            'bedroom_type' => $request->input('bedroom_type'),
 
-    
+            'url' => $request->input('page_url') ?? $request->fullUrl(),
+            'time' => now()->toDateTimeString(),
+        ]);
+
+
 
         $validated = $request->validate([
             'property_id' => [
@@ -337,8 +339,8 @@ class LeadController extends Controller
             );
 
 
-        return redirect()
-            ->route('landing.thank-you');
+            return redirect()
+                ->route('landing.thank-you');
         }
 
 
@@ -372,8 +374,8 @@ class LeadController extends Controller
             );
 
 
-        return redirect()
-            ->route('landing.thank-you');
+            return redirect()
+                ->route('landing.thank-you');
         }
 
 
