@@ -14,7 +14,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
-
+    'error_alert_email' => env('ERROR_ALERT_EMAIL'),
     /*
     |--------------------------------------------------------------------------
     | Application Environment

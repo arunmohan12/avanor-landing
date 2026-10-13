@@ -175,6 +175,18 @@ class LeadController extends Controller
 
     public function storeLandingV2(Request $request)
     {
+
+
+    Log::info('Landing page lead form submitted', [
+        'name' => $request->input('name'),
+        'phone' => $request->input('phone'),
+        'email' => $request->input('email'),
+        'url' => $request->fullUrl(),
+        'time' => now()->toDateTimeString(),
+    ]);
+
+    
+
         $validated = $request->validate([
             'property_id' => [
                 'nullable',
@@ -283,49 +295,91 @@ class LeadController extends Controller
             'email.email' => 'Please enter a valid email address.',
         ]);
 
-    foreach ([
-        'gclid',
-        'utm_source',
-        'utm_medium',
-        'utm_campaign',
-    ] as $parameter) {
-        $validated[$parameter] = $request->session()->get(
-            "campaign.$parameter"
-        );
-    }
+        foreach (
+            [
+                'gclid',
+                'utm_source',
+                'utm_medium',
+                'utm_campaign',
+            ] as $parameter
+        ) {
+            $validated[$parameter] = $request->session()->get(
+                "campaign.$parameter"
+            );
+        }
 
-            // Attempt 1: Save to the database.
-    try {
-        $lead = Lead::create($validated);
-    } catch (\Throwable $exception) {
-        $databaseError = $exception->getMessage();
+        // Attempt 1: Save to the database.
 
-        Log::error('Lead database insert failed.', [
-            'phone' => $validated['phone'],
-            'error' => $databaseError,
-        ]);
-    }
+        // Attempt 1: Save to the database.
+        try {
+            $lead = Lead::create($validated);
+        } catch (\Throwable $exception) {
+            Log::error('Lead database insert failed.', [
+                'error' => $exception->getMessage(),
+                'environment' => app()->environment(),
+            ]);
 
-    // 2. Queue the Google Sheets sync.
-    try {
-        SyncLeadToGoogleSheets::dispatch(
-            $lead->id,
-            $request->ip()
-        )->onQueue('default');
-    } catch (\Throwable $exception) {
-        Log::error('Failed to queue Google Sheets lead sync.', [
-            'lead_id' => $lead->id,
-            'error' => $exception->getMessage(),
-        ]);
-
-        return back()
-            ->withInput()
-            ->with('lead_error', 'Your enquiry was saved, but syncing is delayed. Please contact our team if needed.');
-    }
-
+            app(\App\Services\ErrorAlertService::class)->send(
+                'Lead database insertion failed',
+                'A landing-page enquiry could not be saved to the database.',
+                [
+                    'name' => $validated['name'] ?? null,
+                    'phone' => $validated['phone'] ?? null,
+                    'email' => $validated['email'] ?? null,
+                    'bedroom_type' => $validated['bedroom_type'] ?? null,
+                    'page_url' => $validated['page_url'] ?? null,
+                    'ip_address' => $request->ip(),
+                    'error' => $exception->getMessage(),
+                    'timestamp' => now()->toDateTimeString(),
+                    'environment' => app()->environment(),
+                    'route' => $request->path(),
+                ]
+            );
 
 
-        
+        return redirect()
+            ->route('landing.thank-you');
+        }
+
+
+        // 2. Queue the Google Sheets sync.
+        try {
+            SyncLeadToGoogleSheets::dispatch(
+                $lead->id,
+                $request->ip()
+            )->onQueue('default');
+        } catch (\Throwable $exception) {
+            Log::error('Failed to queue Google Sheets lead sync.', [
+                'lead_id' => $lead->id,
+                'error' => $exception->getMessage(),
+            ]);
+
+            app(\App\Services\ErrorAlertService::class)->send(
+                'Google Sheets sync could not be queued',
+                'A lead was saved, but Laravel could not queue its Google Sheets synchronization.',
+                [
+                    'lead_id' => $lead->id,
+                    'name' => $lead->name,
+                    'phone' => $lead->phone,
+                    'email' => $lead->email,
+                    'bedroom_type' => $lead->bedroom_type,
+                    'page_url' => $validated['page_url'] ?? null,
+                    'ip_address' => $request->ip(),
+                    'error' => $exception->getMessage(),
+                    'timestamp' => now()->toDateTimeString(),
+                    'environment' => app()->environment(),
+                ]
+            );
+
+
+        return redirect()
+            ->route('landing.thank-you');
+        }
+
+
+
+
+
         try {
             Http::withHeaders([
                 'X-Internal-Secret' => config('services.internal.secret'),

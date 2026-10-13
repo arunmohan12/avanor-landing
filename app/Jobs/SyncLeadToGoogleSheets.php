@@ -44,7 +44,7 @@ public function handle(GoogleSheetsLeadService $sheets): void
         $lead->property?->developer?->name,
     ])));
 
-  
+
     $sheets->appendLead([
         $propertyName,
          $lead->created_at?->format('Y-m-d') ?? '',
@@ -56,19 +56,49 @@ public function handle(GoogleSheetsLeadService $sheets): void
         $lead->bedroom_type ?? '',
         '',
         $this->ipAddress ?? '',
-        $lead->gclid ?? '',                        
-    $lead->utm_source ?? '',                   
-    $lead->utm_medium ?? '',                   
-    $lead->utm_campaign ?? '',    
+        $lead->gclid ?? '',
+    $lead->utm_source ?? '',
+    $lead->utm_medium ?? '',
+    $lead->utm_campaign ?? '',
     ]);
 }
 
 
-    public function failed(?Throwable $exception): void
-    {
-        Log::error('Google Sheets lead sync permanently failed.', [
+
+
+/**
+ * Handle a job that has exhausted all retry attempts.
+ */
+public function failed(Throwable $exception): void
+{
+    Log::error('Google Sheets lead sync permanently failed.', [
+        'lead_id' => $this->leadId,
+        'error' => $exception->getMessage(),
+    ]);
+
+    $lead = Lead::find($this->leadId);
+
+    app(\App\Services\ErrorAlertService::class)->send(
+        'Google Sheets lead sync permanently failed',
+        'A lead could not be synchronized to Google Sheets after all retry attempts.',
+        [
             'lead_id' => $this->leadId,
-            'error' => $exception?->getMessage(),
-        ]);
-    }
+            'name' => $lead?->name,
+            'phone' => $lead?->phone,
+            'email' => $lead?->email,
+            'bedroom_type' => $lead?->bedroom_type,
+            'page_url' => $lead?->page_url,
+            'error' => $exception->getMessage(),
+            'attempts' => $this->tries,
+            'environment' => app()->environment(),
+            'timestamp' => now()->toDateTimeString(),
+        ]
+    );
 }
+
+
+
+
+}
+
+
