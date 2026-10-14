@@ -7,8 +7,8 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/landing/riverside.css',
-                'resources/js/landing/riverside.js',
+                'resources/css/landing/the-heightsv2.css',
+              
    
             ],
             refresh: true,

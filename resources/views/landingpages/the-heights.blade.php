@@ -27,7 +27,7 @@ strip_tags($property->description ?? ''),
     @section('meta_keywords', $property->meta_keywords)
 @endif
 
-@section('canonical', 'https://theheights.avanorcap.com')
+@section('canonical', 'https://the-heights.sales-centre.net')
 
 
 @section('robots', 'index,follow')
@@ -55,7 +55,7 @@ strip_tags($property->description ?? ''),
     155
     ),
 
-    'url' => 'https://theheights.avanorcap.com',
+    'url' => 'https://the-heights.sales-centre.net',
     ];
 
     if (!empty($propertyImageUrl)) {
@@ -77,7 +77,7 @@ strip_tags($property->description ?? ''),
     '@type' => 'Offer',
     'priceCurrency' => 'AED',
     'price' => $displayPrice,
-    'url' => 'https://theheights.avanorcap.com',
+    'url' => 'https://the-heights.sales-centre.net',
     ];
     }
 @endphp
@@ -85,12 +85,10 @@ strip_tags($property->description ?? ''),
 
 @push('structured-data')
     <script type="application/ld+json">
-        {
-            !!json_encode(
+        {!!json_encode(
                 $propertySchema,
                 JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
-            ) !!
-        }
+            ) !!}
     </script>
 @endpush
 
@@ -245,15 +243,21 @@ strip_tags($property->description ?? ''),
                     <div class="avanor-property-slide-content-landing">
 
                 <span class="avanor-property-slide-eyebrow">
-                    EMAAR PROPERTIES
+                    The Heights Country Club & Wellness
                 </span>
 
                         <h1 class="avanor-property-slide-title">
-                            {{ $property->title }} - New Launch Villas for Sale in Dubai
+                            The Heights by Emaar
                         </h1>
 
                         <p class="avanor-property-slide-description">
                             Luxury <span class="ext-bold">3, 4 & 5 Bedroom Villas </span>at The Heights Country Club & Wellness by Emaar. Explore latest prices, payment plans, floor plans and available units.
+                            
+                            Discover <span class="ext-bold">The Heights Country Club & Wellness by Emaar</span>, a nature-led residential
+community in Dubai designed around wellness, green living and connection with nature.
+The community offers <span class="ext-bold">3–5 bedroom villas</span> across residential collections including <span class="ext-bold">Serro, Serro
+2 and Salva </span>, surrounded by landscaped greenways, water features, wellness spaces and
+community amenities.
 
                         </p>
 
@@ -311,15 +315,9 @@ strip_tags($property->description ?? ''),
 
 
 
-                                    <a
-                                        href="tel:+971589798257"
-                                        class="landing-hero-offer-btn call-track">
-
-                                        <span>CALL</span>
-
-                                        <x-landing-icon name="phone" />
-
-                                    </a>
+                                    <a href="#" class="landing-header-btn c-white" data-lead-popup-open="">
+                    ENQUIRE ABOUT THE HEIGHTS
+                </a>
 
                                 </div>
 
@@ -357,14 +355,14 @@ strip_tags($property->description ?? ''),
                 <div class="landing-property-actions">
                     <a
                     href="#"
-                    class="landing-property-btn landing-property-btn-outline" data-lead-popup-open  data-button-text="DOWNLOAD BROCHURE">
-                    DOWNLOAD BROCHURE
+                    class="landing-property-btn landing-property-btn-outline" data-lead-popup-open  data-button-text="GET BROCHURE">
+                    GET BROCHURE
                     </a>
 
                     <a
                         href="#"
                         class="landing-property-btn landing-property-btn-primary" data-lead-popup-open>
-                        DOWNLOAD PAYMENT PLAN
+                        GET PAYMENT PLAN
                     </a>
 
                 </div>
@@ -387,8 +385,7 @@ strip_tags($property->description ?? ''),
                        'formId' => 'landing-about-form',
                        'heading' => 'GET EARLY ACCESS',
                        'buttonText' => 'SUBMIT',
-
-                              'propertyId' => $property->id,
+                       'propertyId' => $property->id,
             'developerId' => $property->developer_id,
                    ])
 
@@ -417,7 +414,7 @@ strip_tags($property->description ?? ''),
                 </span>
 
                             <h2 class="landing-about-v2-title">
-                                About {{ $property->title }}
+                                The Heights Country Club & Wellness by Emaar
                             </h2>
 
                             <span class="landing-about-v2-line"></span>
@@ -645,90 +642,7 @@ strip_tags($property->description ?? ''),
                                 LOCATION BOXES
                                 ===================================================== --}}
 
-                                <div class="landing-reach__locations">
-
-
-                                    {{-- Expo --}}
-                                    <div class="landing-reach__location">
-
-                                        <div class="landing-reach__location-time">
-                                            <strong>10</strong>
-                                            <span>MINS</span>
-                                        </div>
-
-                                        <div class="landing-reach__location-place">
-
-
-                                            <strong>
-                                                Expo City Dubai
-                                            </strong>
-
-                                        </div>
-
-                                    </div>
-
-
-                                    {{-- Airport --}}
-                                    <div class="landing-reach__location">
-
-                                        <div class="landing-reach__location-time">
-                                            <strong>10</strong>
-                                            <span>MINS</span>
-                                        </div>
-
-                                        <div class="landing-reach__location-place">
-
-
-                                            <strong>
-                                                Al Maktoum Int’l Airport
-                                            </strong>
-
-                                        </div>
-
-                                    </div>
-
-
-                                    {{-- Dubai Hills --}}
-                                    <div class="landing-reach__location">
-
-                                        <div class="landing-reach__location-time">
-                                            <strong>20</strong>
-                                            <span>MINS</span>
-                                        </div>
-
-                                        <div class="landing-reach__location-place">
-
-
-
-                                            <strong>
-                                                Dubai Hills Estate
-                                            </strong>
-
-                                        </div>
-
-                                    </div>
-
-
-                                    {{-- Downtown --}}
-                                    <div class="landing-reach__location">
-
-                                        <div class="landing-reach__location-time">
-                                            <strong>30</strong>
-                                            <span>MINS</span>
-                                        </div>
-
-                                        <div class="landing-reach__location-place">
-
-
-                                            <strong>
-                                                Downtown Dubai
-                                            </strong>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
+                                
 
                             </div>
 
@@ -759,13 +673,13 @@ strip_tags($property->description ?? ''),
                                                                          </span>
 
                     <h2 class="area-hardcoded landing-about-v2-title">
-                        Discover Three Elegant Villa Clusters
+                        The Heights Emaar Villas
                     </h2>
                     <span class="landing-about-v2-line"></span>
                     <p class="landing-about-v2-description">
 
                     <h3 class="fs-4" >
-                        A visionary master community inspired by holistic luxury living, where nature, wellness and thoughtful design come together in perfect harmony at The Heights Country Club & Wellness.
+                        Looking for <span class="ext-bold">Emaar Heights villas </span>? The Heights offers a collection of <span class="ext-bold">3–5 bedroom villas </span>across:
                     </h3>
 
 
@@ -868,7 +782,7 @@ strip_tags($property->description ?? ''),
                                                                 data-lead-popup-open
                                                                 data-request-type="location-details">
 
-                                                                GET EARLY ACCESS
+                                                                VIEW AVAILABLE VILLAS
 
                                                             </button>
 
@@ -918,14 +832,14 @@ strip_tags($property->description ?? ''),
                                                                 data-lead-popup-open
                                                                 data-request-type="location-details">
 
-                                                                GET EARLY ACCESS
+                                                                View Available Villas
 
                                                             </button>
 
                                                         </div>
 
                                                     </div>
-
+ 
                                                 @endif
 
 
@@ -1306,6 +1220,63 @@ strip_tags($property->description ?? ''),
             </div>
 
         </section>
+        
+        
+        
+        
+        
+        <section class="landing-about-v2">
+
+
+<div class="landing-gallery-container">
+
+    <div class="landing-plan-heading">
+
+        <span class="landing-about-v2-eyebrow">
+            EXCLUSIVE VILLA COLLECTION
+        </span>
+
+        <h2 class="area-hardcoded landing-about-v2-title">
+            Salva &amp; Serro at The Heights
+        </h2>
+
+        <span class="landing-about-v2-line"></span>
+
+        <div class="landing-about-v2-description">
+
+            <p>
+                Explore the latest residential offerings at
+                <strong>The Heights by Emaar</strong>, including
+                <strong>Salva, Serro and Serro 2</strong>.
+            </p>
+
+            <p>
+                Emaar's current community page lists these as the residential
+                collections within The Heights Country Club &amp; Wellness.
+            </p>
+
+            <div class="landing-section-cta cta-browse-project">
+
+                <button
+                    type="button"
+                    class="landing-plan-button"
+                    data-lead-popup-open
+                    data-request-type="location-details">
+                    ENQUIRE NOW
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+        
         <section class="landing-amenities-v2 landing-about-v2" id="amenities">
 
             <div class="landing-gallery-container">
@@ -1320,12 +1291,16 @@ strip_tags($property->description ?? ''),
 
 
                     <h2 class=" landing-about-v2-title">
-                        Designed for a life of well-being
+                        The Heights Country Club
                     </h2>
                     <span class="landing-about-v2-line"></span>
 
                     <p class="landing-about-v2-description mb-lg">
-                        From active living to family time, every amenity enhances comfort and convenience.
+                       At the centre of <strong>The Heights Country Club & Wellness </strong>is a lifestyle focused on movement,
+relaxation and connection with nature.
+                    </p>
+                    <p>
+                        Community experiences include:
                     </p>
 
                 </div>
@@ -1341,13 +1316,12 @@ strip_tags($property->description ?? ''),
                             <x-landing-icon name="beach" />
                         </div>
 
-                        <h3>Beach Clubhouse</h3>
+                        <h3>Wellness Centre</h3>
 
                         <span class="landing-amenities-v2-card-line"></span>
 
                         <p>
-                            An exclusive beachfront clubhouse designed for leisure,
-                            relaxation and social experiences.
+                            A serene space for relaxation, rejuvenation, and holistic well-being.
                         </p>
 
                     </div>
@@ -1356,16 +1330,15 @@ strip_tags($property->description ?? ''),
                     <div class="landing-amenities-v2-card">
 
                         <div class="landing-amenities-v2-icon">
-                            <x-landing-icon name="farm-cafe" />
+                            <x-landing-icon name="beach" />
                         </div>
 
-                        <h3>Farm-to-Table Café</h3>
+                        <h3>Private Beach</h3>
 
                         <span class="landing-amenities-v2-card-line"></span>
 
                         <p>
-                            Fresh dining experiences inspired by locally sourced
-                            ingredients and healthy living.
+                            An exclusive beachfront escape for peaceful moments by the sea.
                         </p>
 
                     </div>
@@ -1395,67 +1368,12 @@ strip_tags($property->description ?? ''),
                             <x-landing-icon name="retail" />
                         </div>
 
-                        <h3>Shopping Malls</h3>
+                        <h3>Fitness Area</h3>
 
                         <span class="landing-amenities-v2-card-line"></span>
 
                         <p>
-                            Everyday shopping and lifestyle conveniences
-                            located close to home.
-                        </p>
-
-                    </div>
-
-
-                    <div class="landing-amenities-v2-card">
-
-                        <div class="landing-amenities-v2-icon">
-                            <x-landing-icon name="sports-court" />
-                        </div>
-
-                        <h3>Sports Courts</h3>
-
-                        <span class="landing-amenities-v2-card-line"></span>
-
-                        <p>
-                            Dedicated courts for recreational activities,
-                            fitness and active community living.
-                        </p>
-
-                    </div>
-
-
-                    <div class="landing-amenities-v2-card">
-
-                        <div class="landing-amenities-v2-icon">
-                            <x-landing-icon name="garden" />
-                        </div>
-
-                        <h3>Landscaped Gardens</h3>
-
-                        <span class="landing-amenities-v2-card-line"></span>
-
-                        <p>
-                            Beautifully landscaped green spaces for relaxation,
-                            walking and outdoor moments.
-                        </p>
-
-                    </div>
-
-
-                    <div class="landing-amenities-v2-card">
-
-                        <div class="landing-amenities-v2-icon">
-                            <x-landing-icon name="cycling" />
-                        </div>
-
-                        <h3>Cycling Tracks</h3>
-
-                        <span class="landing-amenities-v2-card-line"></span>
-
-                        <p>
-                            Dedicated cycling routes designed for an active
-                            and healthy lifestyle.
+                            A dedicated space to stay active, energized, and healthy.
                         </p>
 
                     </div>
@@ -1467,19 +1385,70 @@ strip_tags($property->description ?? ''),
                             <x-landing-icon name="water" />
                         </div>
 
-                        <h3>Lakes &amp; Water Features</h3>
+                        <h3>Yoga Lake</h3>
 
                         <span class="landing-amenities-v2-card-line"></span>
 
                         <p>
-                            Scenic lakes and water features creating a calm
-                            and refreshing community environment.
+                            A serene lakeside setting for yoga, stretching, and mindful movement.
+                        </p>
+
+                    </div>
+
+
+                    <div class="landing-amenities-v2-card">
+
+                        <div class="landing-amenities-v2-icon">
+                            <x-landing-icon name="garden" />
+                        </div>
+
+                        <h3>Meditation Garden</h3>
+
+                        <span class="landing-amenities-v2-card-line"></span>
+
+                        <p>
+                            A peaceful garden designed for mindfulness, reflection, and inner calm.
+                        </p>
+
+                    </div>
+
+
+                    <div class="landing-amenities-v2-card">
+
+                        <div class="landing-amenities-v2-icon">
+                            <x-landing-icon name="sports-court" />
+                        </div>
+
+                        <h3>Social Terrace</h3>
+
+                        <span class="landing-amenities-v2-card-line"></span>
+
+                        <p>
+                            A vibrant gathering space designed for relaxed social moments and conversations.
+                        </p>
+
+                    </div>
+
+
+                    <div class="landing-amenities-v2-card">
+
+                        <div class="landing-amenities-v2-icon">
+                            <x-landing-icon name="water" />
+                        </div>
+
+                        <h3>Wellness Lake & Promenade</h3>
+
+                        <span class="landing-amenities-v2-card-line"></span>
+
+                        <p>
+                            A tranquil lakeside setting with a scenic promenade for leisurely walks.
                         </p>
 
                     </div>
 
                 </div>
-
+<p></p>Emaar describes the development as a community-wide country club experience,
+complemented by parks, ponds, greenways, cycling and jogging tracks and event spaces.</p>
 
                 {{-- Bottom Highlights --}}
                 <div class="landing-amenities-v2-highlights">
@@ -1553,6 +1522,126 @@ strip_tags($property->description ?? ''),
                     </div>
 
                 </div>
+
+            </div>
+
+        </section>
+        
+        
+        
+        <section class="landing-payment-plan landing-about-v2" id="payment-plan">
+
+            <div class="landing-gallery-container">
+
+                <div class="landing-payment-heading">
+
+                <span class=" landing-about-v2-eyebrow">
+                    LOCATIONS NEAR COMMUNITY
+                </span>
+
+
+
+                    <h2 class=" landing-about-v2-title">
+                        The Heights Dubai
+                    </h2>
+                    <span class="landing-about-v2-line"></span>
+
+                    <p class="landing-about-v2-description mb-lg">
+                       The Heights Dubai is located within easy reach of major destinations in Dubai.
+Emaar currently lists approximately:
+                    </p>
+
+                </div>
+
+
+
+
+
+                {{-- SUMMARY --}}
+         <div class="landing-reach__locations">
+
+
+                                    {{-- Expo --}}
+                                    <div class="landing-reach__location">
+
+                                        <div class="landing-reach__location-time">
+                                            <strong>10</strong>
+                                            <span>MINS</span>
+                                        </div>
+
+                                        <div class="landing-reach__location-place">
+
+
+                                            <strong>
+                                                Expo City Dubai
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    {{-- Airport --}}
+                                    <div class="landing-reach__location">
+
+                                        <div class="landing-reach__location-time">
+                                            <strong>10</strong>
+                                            <span>MINS</span>
+                                        </div>
+
+                                        <div class="landing-reach__location-place">
+
+
+                                            <strong>
+                                                Al Maktoum Int’l Airport
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    {{-- Dubai Hills --}}
+                                    <div class="landing-reach__location">
+
+                                        <div class="landing-reach__location-time">
+                                            <strong>20</strong>
+                                            <span>MINS</span>
+                                        </div>
+
+                                        <div class="landing-reach__location-place">
+
+
+
+                                            <strong>
+                                                Dubai Hills Estate
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    {{-- Downtown --}}
+                                    <div class="landing-reach__location">
+
+                                        <div class="landing-reach__location-time">
+                                            <strong>30</strong>
+                                            <span>MINS</span>
+                                        </div>
+
+                                        <div class="landing-reach__location-place">
+
+
+                                            <strong>
+                                                Downtown Dubai
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
 
             </div>
 
@@ -1712,7 +1801,7 @@ strip_tags($property->description ?? ''),
                         data-lead-popup-open
                         data-request-type="payment-plan">
 
-                        DOWNLOAD GALLERY
+                        GET GALLERY BROCHURE
 
                     </button>
 
@@ -1741,148 +1830,123 @@ strip_tags($property->description ?? ''),
 
                     <div class="col-lg-6 d-flex">
 
-                        <div class="landing-faq-intro">
+<div class="landing-faq-intro">
 
-                    <span class="   landing-about-v2-title">
-                        FAQ
-                    </span>
-                            <span class="landing-about-v2-line mb-lg"></span>
+    <span class="landing-about-v2-title">
+        FAQ
+    </span>
 
-                            <details class="landing-faq-item">
-
-                                <summary>
-                            <span>
-                                What is The Heights by Emaar?
-                            </span>
-
-                                    <span
-                                        class="landing-faq-toggle"
-                                        aria-hidden="true">
-                            </span>
-                                </summary>
-
-                                <div class="landing-faq-answer">
-
-                                    <p>
-                                        The Heights by Emaar is a premium villa
-                                        community focused on wellness, nature, and
-                                        family living, offering spacious 3, 4 and
-                                        5-bedroom villas with world-class amenities.
-                                    </p>
-
-                                </div>
-
-                            </details>
+    <span class="landing-about-v2-line mb-lg"></span>
 
 
-                            <details class="landing-faq-item">
+    <details class="landing-faq-item">
 
-                                <summary>
-                            <span>
-                                What is the payment plan for The Heights by Emaar?
-                            </span>
+        <summary>
+            <span>
+                What is The Heights by Emaar?
+            </span>
 
-                                    <span
-                                        class="landing-faq-toggle"
-                                        aria-hidden="true">
-                            </span>
-                                </summary>
+            <span
+                class="landing-faq-toggle"
+                aria-hidden="true">
+            </span>
+        </summary>
 
-                                <div class="landing-faq-answer">
+        <div class="landing-faq-answer">
 
-                                    <p>
-                                        The Heights offers an 80/20 payment plan,
-                                        with payments structured throughout
-                                        construction and the remaining 20% due
-                                        upon handover.
-                                    </p>
+            <p>
+                <strong>The Heights Country Club &amp; Wellness</strong>
+                is a master-planned residential community by Emaar
+                centered around wellness, nature and integrated lifestyle
+                experiences.
+            </p>
 
-                                </div>
+        </div>
 
-                            </details>
-
-
-                            <details class="landing-faq-item">
-
-                                <summary>
-                            <span>
-                                How large is the Emaar Heights community?
-                            </span>
-
-                                    <span
-                                        class="landing-faq-toggle"
-                                        aria-hidden="true">
-                            </span>
-                                </summary>
-
-                                <div class="landing-faq-answer">
-
-                                    <p>
-                                        The Heights spans approximately 81 million
-                                        sq. ft., featuring expansive green spaces,
-                                        parks, wellness facilities, and community
-                                        amenities.
-                                    </p>
-
-                                </div>
-
-                            </details>
+    </details>
 
 
-                            <details class="landing-faq-item">
+    <details class="landing-faq-item">
 
-                                <summary>
-                            <span>
-                                Is The Heights by Emaar a good investment?
-                            </span>
+        <summary>
+            <span>
+                What properties are available at The Heights?
+            </span>
 
-                                    <span
-                                        class="landing-faq-toggle"
-                                        aria-hidden="true">
-                            </span>
-                                </summary>
+            <span
+                class="landing-faq-toggle"
+                aria-hidden="true">
+            </span>
+        </summary>
 
-                                <div class="landing-faq-answer">
+        <div class="landing-faq-answer">
 
-                                    <p>
-                                        The Heights offers strong long-term potential
-                                        due to its Emaar brand, strategic location,
-                                        premium villas, and wellness-focused community
-                                        concept.
-                                    </p>
+            <p>
+                Emaar currently lists
+                <strong>3–5 bedroom villas</strong> through communities
+                including <strong>Serro, Serro 2 and Salva</strong>.
+            </p>
 
-                                </div>
+        </div>
 
-                            </details>
+    </details>
 
 
-                            <details class="landing-faq-item">
+    <details class="landing-faq-item">
 
-                                <summary>
-                            <span>
-                                When is The Heights expected to be handed over?
-                            </span>
+        <summary>
+            <span>
+                Who is the developer of The Heights?
+            </span>
 
-                                    <span
-                                        class="landing-faq-toggle"
-                                        aria-hidden="true">
-                            </span>
-                                </summary>
+            <span
+                class="landing-faq-toggle"
+                aria-hidden="true">
+            </span>
+        </summary>
 
-                                <div class="landing-faq-answer">
+        <div class="landing-faq-answer">
 
-                                    <p>
-                                        The Heights by Emaar is currently an off-plan
-                                        project, with expected handover in 2030.
-                                    </p>
+            <p>
+                The Heights Country Club &amp; Wellness is developed by
+                <strong>Emaar</strong>.
+            </p>
 
-                                </div>
+        </div>
 
-                            </details>
+    </details>
 
-                        </div>
 
-                    </div>
+    <details class="landing-faq-item">
+
+        <summary>
+            <span>
+                How much are The Heights villas?
+            </span>
+
+            <span
+                class="landing-faq-toggle"
+                aria-hidden="true">
+            </span>
+        </summary>
+
+        <div class="landing-faq-answer">
+
+            <p>
+                Emaar's current website lists
+                <strong>Salva from AED 6.7M</strong>. Pricing varies by
+                collection and availability.
+            </p>
+
+        </div>
+
+    </details>
+
+</div>
+
+
+</div>
+
 
 
                     {{-- =====================================================
@@ -1940,7 +2004,128 @@ strip_tags($property->description ?? ''),
 
         </section>
 
+ <section class="landing-payment-plan landing-about-v2" id="payment-plan">
 
+            <div class="landing-gallery-container">
+
+                <div class="landing-payment-heading">
+
+                <span class=" landing-about-v2-eyebrow">
+                    GET UPDATES
+                </span>
+
+
+
+                    <h2 class=" landing-about-v2-title">
+                        The Heights Villas
+                    </h2>
+                    <span class="landing-about-v2-line"></span>
+
+                    <p class="landing-about-v2-description mb-lg">
+                       Whether you're searching for <strong>The Heights villas, Emaar Heights villas </strong>or villas at <strong>The
+Heights Country Club & Wellness</strong>, the community offers 3–5 bedroom homes across multiple
+residential collections.
+                    </p>
+                    <p>
+                        Register to receive:
+                    </p>
+
+                </div>
+
+
+
+
+
+                {{-- SUMMARY --}}
+         <div class="landing-amenities-v2-highlights">
+
+
+                    <div class="landing-amenities-v2-highlight">
+
+                        <div class="landing-amenities-v2-highlight-icon">
+                            <x-landing-icon name="payment" />
+                        </div>
+
+                        <div>
+                            <strong>   Current Prices</strong>
+
+                            <span>
+                         Explore the latest pricing for available residences
+                        </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="landing-amenities-v2-highlight">
+
+                        <div class="landing-amenities-v2-highlight-icon">
+                            <x-landing-icon name="retail" />
+                        </div>
+
+                        <div>
+                            <strong>Available Villas</strong>
+
+                            <span>
+                            Discover villas currently available for purchase
+                        </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="landing-amenities-v2-highlight">
+
+                        <div class="landing-amenities-v2-highlight-icon">
+                            <x-landing-icon name="masterplan" />
+                        </div>
+
+                        <div>
+                            <strong>Floor Plans</strong>
+
+                            <span>
+                           View thoughtfully designed layouts and villa configurations
+                        </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="landing-amenities-v2-highlight">
+
+                        <div class="landing-amenities-v2-highlight-icon">
+                            <x-landing-icon name="star" />
+                        </div>
+
+                        <div>
+                            <strong>Payment Plans</strong>
+
+                            <span>
+                            Explore flexible payment options tailored to your purchase
+                        </span>
+                        </div>
+
+                    </div>
+
+                </div>
+ <div class="landing-payment-actions">
+
+                    <button
+                        type="button"
+                        class="landing-payment-btn landing-payment-btn-outline"
+                        data-lead-popup-open
+                        data-request-type="payment-plan">
+
+                       GET THE HEIGHTS DETAILS
+
+                    </button>
+
+
+
+                </div>
+            </div>
+
+        </section>
             <section class="landing-developer-community landing-about-v2 " id="about-dev">
 
                 <div class="landing-gallery-container">
@@ -2066,7 +2251,8 @@ strip_tags($property->description ?? ''),
                             'formId' => 'landing-about-form',
                             'heading' => 'GET EARLY ACCESS',
                             'buttonText' => 'SUBMIT',
-                                   'propertyId' => $property->id,
+
+                            'propertyId' => $property->id,
             'developerId' => $property->developer_id,
                         ])
 
@@ -2109,8 +2295,6 @@ strip_tags($property->description ?? ''),
                 'propertyId' => $property->id,
                 'developerId' => $property->developer_id,
                 'action' => route('landing.leads.store'),
-                       'propertyId' => $property->id,
-            'developerId' => $property->developer_id,
                 ])
 
             </div>
@@ -2142,7 +2326,7 @@ strip_tags($property->description ?? ''),
                     @include('partials.lead-form', [
                         'formId' => 'landing-image-form',
                         'heading' => 'GET EARLY ACCESS',
-                               'propertyId' => $property->id,
+                        'propertyId' => $property->id,
             'developerId' => $property->developer_id,
                     ])
 
@@ -2201,7 +2385,7 @@ strip_tags($property->description ?? ''),
 
 
         <a
-            href="https://wa.me/971589798257?text=Hi%2C%20I%E2%80%99m%20interested%20to%20know%20more%20about%20this%20project.%20Please%20share%20all%20relevant%20details.%0AThank%20you."
+            href="https://wa.me/971555342535?text=Hi%2C%20I%E2%80%99m%20interested%20to%20know%20more%20about%20The%20Heights.%20Please%20share%20all%20relevant%20details.%0AThank%20you."
             class="landing-whatsapp-float whatsapp-track"
             target="_blank"
             rel="noopener noreferrer"

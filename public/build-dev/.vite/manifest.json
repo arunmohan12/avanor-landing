@@ -27,56 +27,80 @@
     "file": "assets/instrument-sans-600-normal-B9e8oLYv.woff",
     "src": "_instrument-sans-600-normal-B9e8oLYv.woff"
   },
-  "node_modules/intl-tel-input/dist/img/flags.webp": {
-    "file": "assets/flags-DjVgN9ag.webp",
-    "src": "node_modules/intl-tel-input/dist/img/flags.webp"
+  "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff": {
+    "file": "assets/lato-latin-400-normal-B11PyLys.woff",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff"
   },
-  "node_modules/intl-tel-input/dist/img/flags@2x.webp": {
-    "file": "assets/flags@2x-QBzdwbZ8.webp",
-    "src": "node_modules/intl-tel-input/dist/img/flags@2x.webp"
+  "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff2": {
+    "file": "assets/lato-latin-400-normal-BEhtfm5r.woff2",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff2"
   },
-  "resources/css/landing/riverside.css": {
-    "file": "assets/riverside-B3Aat82Z.css",
-    "name": "riverside",
+  "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff": {
+    "file": "assets/lato-latin-700-normal-DAdL7O4w.woff",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff"
+  },
+  "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff2": {
+    "file": "assets/lato-latin-700-normal-BUGMgin4.woff2",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff2"
+  },
+  "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff": {
+    "file": "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff"
+  },
+  "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff2": {
+    "file": "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff2"
+  },
+  "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff": {
+    "file": "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff"
+  },
+  "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff2": {
+    "file": "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
+    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff2"
+  },
+  "resources/css/landing/the-heightsv2.css": {
+    "file": "assets/the-heightsv2-DjsqxYiQ.css",
+    "name": "the-heightsv2",
     "names": [
-      "riverside.css"
+      "the-heightsv2.css"
     ],
-    "src": "resources/css/landing/riverside.css",
+    "src": "resources/css/landing/the-heightsv2.css",
     "isEntry": true,
     "assets": [
-      "assets/Roboto-Regular-BRoazS9J.woff",
-      "assets/termina-DqdVnZmc.woff2",
-      "assets/TerminaTest-Bold-BihEk_AI.woff",
-      "assets/TerminaTest-Medium-CGvpT4cc.woff"
+      "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
+      "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
+      "assets/lato-latin-400-normal-BEhtfm5r.woff2",
+      "assets/lato-latin-400-normal-B11PyLys.woff",
+      "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
+      "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
+      "assets/lato-latin-700-normal-BUGMgin4.woff2",
+      "assets/lato-latin-700-normal-DAdL7O4w.woff",
+      "assets/optima_lt_pro_n4-CR_umPCx.woff2",
+      "assets/optima_lt_pro_n7-DjMDkqcH.woff2",
+      "assets/optima_lt_pro_i4-DPP4vEV9.woff2",
+      "assets/optima_lt_pro_i7-PDqk5eIp.woff2",
+      "assets/aed-Regular-lH271UDw.otf"
     ]
   },
-  "resources/fonts/riverside/Roboto-Regular.woff": {
-    "file": "assets/Roboto-Regular-BRoazS9J.woff",
-    "src": "resources/fonts/riverside/Roboto-Regular.woff"
+  "resources/fonts/aed-Regular.otf": {
+    "file": "assets/aed-Regular-lH271UDw.otf",
+    "src": "resources/fonts/aed-Regular.otf"
   },
-  "resources/fonts/riverside/TerminaTest-Bold.woff": {
-    "file": "assets/TerminaTest-Bold-BihEk_AI.woff",
-    "src": "resources/fonts/riverside/TerminaTest-Bold.woff"
+  "resources/fonts/optima_lt_pro_i4.woff2": {
+    "file": "assets/optima_lt_pro_i4-DPP4vEV9.woff2",
+    "src": "resources/fonts/optima_lt_pro_i4.woff2"
   },
-  "resources/fonts/riverside/TerminaTest-Medium.woff": {
-    "file": "assets/TerminaTest-Medium-CGvpT4cc.woff",
-    "src": "resources/fonts/riverside/TerminaTest-Medium.woff"
+  "resources/fonts/optima_lt_pro_i7.woff2": {
+    "file": "assets/optima_lt_pro_i7-PDqk5eIp.woff2",
+    "src": "resources/fonts/optima_lt_pro_i7.woff2"
   },
-  "resources/fonts/riverside/termina.woff2": {
-    "file": "assets/termina-DqdVnZmc.woff2",
-    "src": "resources/fonts/riverside/termina.woff2"
+  "resources/fonts/optima_lt_pro_n4.woff2": {
+    "file": "assets/optima_lt_pro_n4-CR_umPCx.woff2",
+    "src": "resources/fonts/optima_lt_pro_n4.woff2"
   },
-  "resources/js/landing/riverside.js": {
-    "file": "assets/riverside-mw7XAeCQ.js",
-    "name": "riverside",
-    "src": "resources/js/landing/riverside.js",
-    "isEntry": true,
-    "css": [
-      "assets/riverside-DmSsuaRf.css"
-    ],
-    "assets": [
-      "assets/flags-DjVgN9ag.webp",
-      "assets/flags@2x-QBzdwbZ8.webp"
-    ]
+  "resources/fonts/optima_lt_pro_n7.woff2": {
+    "file": "assets/optima_lt_pro_n7-DjMDkqcH.woff2",
+    "src": "resources/fonts/optima_lt_pro_n7.woff2"
   }
 }
