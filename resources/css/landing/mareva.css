@@ -4035,7 +4035,7 @@ body.landing-popup-open {
         max-width: none;
         padding: 0;
         position: absolute;
-        /* inset: 110px 22px auto; */
+
         transform: none;
         top: 15%;
 
@@ -5064,7 +5064,7 @@ body.landing-gallery-lightbox-open {
         margin: 0;
         padding: 0;
         position: absolute;
-        inset: 18px 18px auto;
+
         transform: none
     }
 
@@ -7619,9 +7619,9 @@ li {
 
 @media (width<=991px) {
     .landing-whatsapp-float {
-        width: 58px !important;
-        height: 58px !important;
-        bottom: 90px !important;
+        width: 48px !important;
+        height: 48px !important;
+        bottom: 18px !important;
         right: 18px !important
     }
 
