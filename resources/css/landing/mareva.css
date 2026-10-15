@@ -3321,7 +3321,7 @@ body.landing-popup-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    z-index: 999
+    z-index: 9999;
 }
 
 .landing-lead-popup-backdrop {
