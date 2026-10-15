@@ -2795,8 +2795,9 @@ slider-area {
 
 .landing-header {
     z-index: 1040;
-    backdrop-filter: blur(8px);
+
     -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
     background: rgba(255, 255, 255, 0.65);
     width: 100%;
     height: 70px;
