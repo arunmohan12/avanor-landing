@@ -51,7 +51,7 @@ Route::get('/terms-and-condition', function () {
 //  Route::get('/ghadeer-parks', [LandingPageController::class, 'showGhadeerParks']);
 // Route::get('/riverside', [LandingPageController::class, 'showRiverside']);
 
-
+// Route::get('/mareva', [LandingPageController::class, 'showMareva']);
 
 //live
 Route::domain('the-heights.sales-centre.net')->group(function () {
@@ -77,3 +77,6 @@ Route::domain('riverside.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showRiverside']);
 });
 
+Route::domain('mareva.sales-centre.net')->group(function () {
+    Route::get('/', [LandingPageController::class, 'showMareva']);
+});

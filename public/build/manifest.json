@@ -429,5 +429,42 @@
     "resources/fonts/riverside/TerminaTest-Medium.woff": {
         "file": "assets/TerminaTest-Medium-CGvpT4cc.woff",
         "src": "resources/fonts/riverside/TerminaTest-Medium.woff"
+    },
+    "resources/css/landing/mareva.css": {
+        "file": "assets/mareva-DXSwru-_.css",
+        "name": "mareva",
+        "names": [
+            "mareva.css"
+        ],
+        "src": "resources/css/landing/mareva.css",
+        "isEntry": true,
+        "assets": [
+            "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
+            "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
+            "assets/lato-latin-400-normal-BEhtfm5r.woff2",
+            "assets/lato-latin-400-normal-B11PyLys.woff",
+            "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
+            "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
+            "assets/lato-latin-700-normal-BUGMgin4.woff2",
+            "assets/lato-latin-700-normal-DAdL7O4w.woff",
+            "assets/optima_lt_pro_n4-CR_umPCx.woff2",
+            "assets/optima_lt_pro_n7-DjMDkqcH.woff2",
+            "assets/optima_lt_pro_i4-DPP4vEV9.woff2",
+            "assets/optima_lt_pro_i7-PDqk5eIp.woff2",
+            "assets/aed-Regular-lH271UDw.otf"
+        ]
+    },
+    "resources/js/landing/mareva.js": {
+        "file": "assets/mareva-CyNNtlIs.js",
+        "name": "mareva",
+        "src": "resources/js/landing/mareva.js",
+        "isEntry": true,
+        "css": [
+            "assets/mareva-DmSsuaRf.css"
+        ],
+        "assets": [
+            "assets/flags-DjVgN9ag.webp",
+            "assets/flags@2x-QBzdwbZ8.webp"
+        ]
     }
 }

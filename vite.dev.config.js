@@ -7,9 +7,9 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/landing/the-heightsv2.css',
+                'resources/css/landing/mareva.css',
               
-   
+                'resources/js/landing/mareva.js',
             ],
             refresh: true,
             fonts: [

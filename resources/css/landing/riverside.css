@@ -2965,7 +2965,6 @@ slider-area {
     width: 100%;
     max-width: 100%;
 
-    z-index: 999;
 
     opacity: 0;
     visibility: hidden;
@@ -12539,7 +12538,7 @@ li {
 
 .rv-hero__content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   max-width: 680px;
 }
 

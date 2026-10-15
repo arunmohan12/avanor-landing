@@ -59,13 +59,21 @@
     "file": "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
     "src": "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff2"
   },
-  "resources/css/landing/the-heightsv2.css": {
-    "file": "assets/the-heightsv2-DjsqxYiQ.css",
-    "name": "the-heightsv2",
+  "node_modules/intl-tel-input/dist/img/flags.webp": {
+    "file": "assets/flags-DjVgN9ag.webp",
+    "src": "node_modules/intl-tel-input/dist/img/flags.webp"
+  },
+  "node_modules/intl-tel-input/dist/img/flags@2x.webp": {
+    "file": "assets/flags@2x-QBzdwbZ8.webp",
+    "src": "node_modules/intl-tel-input/dist/img/flags@2x.webp"
+  },
+  "resources/css/landing/mareva.css": {
+    "file": "assets/mareva-DXSwru-_.css",
+    "name": "mareva",
     "names": [
-      "the-heightsv2.css"
+      "mareva.css"
     ],
-    "src": "resources/css/landing/the-heightsv2.css",
+    "src": "resources/css/landing/mareva.css",
     "isEntry": true,
     "assets": [
       "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
@@ -102,5 +110,18 @@
   "resources/fonts/optima_lt_pro_n7.woff2": {
     "file": "assets/optima_lt_pro_n7-DjMDkqcH.woff2",
     "src": "resources/fonts/optima_lt_pro_n7.woff2"
+  },
+  "resources/js/landing/mareva.js": {
+    "file": "assets/mareva-CyNNtlIs.js",
+    "name": "mareva",
+    "src": "resources/js/landing/mareva.js",
+    "isEntry": true,
+    "css": [
+      "assets/mareva-DmSsuaRf.css"
+    ],
+    "assets": [
+      "assets/flags-DjVgN9ag.webp",
+      "assets/flags@2x-QBzdwbZ8.webp"
+    ]
   }
 }

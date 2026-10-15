@@ -49,7 +49,7 @@ public function handle(GoogleSheetsLeadService $sheets): void
         $propertyName,
          $lead->created_at?->format('Y-m-d') ?? '',
         $lead->created_at?->format('H:i:s') ?? '',
-        'Landing page',
+        $lead->source,
         $lead->name,
         $lead->email ?? '',
         $lead->phone,
