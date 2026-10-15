@@ -143,8 +143,8 @@ $propertySchema['offers'] = [
                 Property Details
             </a>
 
-            <a href="#downloads">
-                Downloads
+            <a href="#amenities">
+                Amenities
             </a>
 
             <a href="#gallery">
@@ -200,8 +200,8 @@ $propertySchema['offers'] = [
 
             <a href="#location">Location</a>
 
-            <a href="#downloads">
-                Downloads
+            <a href="#amenities">
+                Amenities
             </a>
 
             <a href="#gallery">
@@ -506,7 +506,7 @@ $propertySchema['offers'] = [
 
 
 
-            <section class="section-villas-showcase landing-about-v2" id="branded-release">
+            <section class="section-villas-showcase landing-about-v2" id="about">
                 <div class="landing-gallery-container">
 
                     <div class="showcase-header">
@@ -1227,7 +1227,7 @@ $propertySchema['offers'] = [
             </section>
 
 
-            <section class="landing-payment-plan landing-about-v2" id="payment-plan">
+            <section class="landing-payment-plan landing-about-v2" id="location">
 
                 <div class="landing-gallery-container">
 
