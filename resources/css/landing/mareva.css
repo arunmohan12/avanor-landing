@@ -3973,7 +3973,7 @@ body.landing-popup-open {
     max-width: 820px;
     position: absolute;
     top: 50%;
-    left: 8%;
+    left: 4%;
     transform: translateY(-50%)
 }
 
