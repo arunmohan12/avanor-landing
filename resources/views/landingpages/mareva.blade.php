@@ -13,6 +13,10 @@
 'title',
 $property->meta_title ?: $property->title . ' | Avanor Capital'
 )
+@push('favicon')
+    <link rel="icon" type="image/png"
+          href="{{ asset('assets/img/landing/mareva/favicon.svg') }}">
+@endpush
 
 @section(
 'meta_description',
