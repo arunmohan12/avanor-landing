@@ -224,7 +224,16 @@ class LeadController extends Controller
                 'string',
                 'max:255',
             ],
-
+        'interested_in' => [
+            'nullable',
+            'string',
+            \Illuminate\Validation\Rule::in([
+                'Address Tierra',
+                'Palace Ostra',
+                'Mareva',
+                'Not sure',
+            ]),
+        ],
             'budget' => [
                 'nullable',
                 'string',
@@ -310,7 +319,7 @@ class LeadController extends Controller
             );
         }
 
-        // Attempt 1: Save to the database.
+      $interestedIn = $validated['interested_in'] ?? null;
 
         // Attempt 1: Save to the database.
         try {
@@ -348,7 +357,8 @@ class LeadController extends Controller
         try {
             SyncLeadToGoogleSheets::dispatch(
                 $lead->id,
-                $request->ip()
+                $request->ip(),
+                $interestedIn
             )->onQueue('default');
         } catch (\Throwable $exception) {
             Log::error('Failed to queue Google Sheets lead sync.', [

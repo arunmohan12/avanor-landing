@@ -59,7 +59,7 @@ strip_tags($property->description ?? ''),
 155
 ),
 
-'url' => 'https://mareva.sales-centre.net',
+'url' => 'https://the-oasis.sales-centre.net',
 ];
 
 if (!empty($propertyImageUrl)) {
@@ -81,7 +81,7 @@ $propertySchema['offers'] = [
 '@type' => 'Offer',
 'priceCurrency' => 'AED',
 'price' => $displayPrice,
-'url' => 'https://mareva.sales-centre.net',
+'url' => 'https://the-oasis.sales-centre.net',
 ];
 }
 @endphp
@@ -108,20 +108,20 @@ $propertySchema['offers'] = [
 <div class="oasis-release-banner" id="oasisReleaseBanner">
     <div class="oasis-release-banner__content">
         <span class="oasis-release-banner__label" id="oasisReleaseLabel">
-            NOW BOOKING
+            EXCLUSIVE RELEASE
         </span>
 
         <span class="oasis-release-banner__divider">·</span>
 
         <span class="oasis-release-banner__description" id="oasisReleaseDescription">
-            Limited Address Tierra & Palace Ostra villas
+            Address Tierra & Palace Ostra villas
         </span>
 
         <span class="oasis-release-banner__divider oasis-release-banner__date-divider">·</span>
 
-        <!-- <span class="oasis-release-banner__date" id="oasisReleaseDate">
-            19 October
-        </span> -->
+        <span class="oasis-release-banner__date" id="oasisReleaseDate">
+            BOOKINGS OPENS 19 OCTOBER
+        </span>
 
         <a
             href="#"
@@ -1717,7 +1717,7 @@ $propertySchema['offers'] = [
             <div class="landing-side-form-inner">
 
                 @include('partials.lead-form-mareva', [
-                'formId' => 'landing-about-form',
+                'formId' => 'mareva-floating-form',
                 'heading' => 'Get Launch Prices & Availability',
                 'source' => 'mareva_floating_side_form',
                 'buttonText' => 'SUBMIT',
@@ -1818,7 +1818,7 @@ $propertySchema['offers'] = [
                 <div class="oasis-priority-form" id="priority-access-form">
                     <div class="landing-side-form-inner">
                         @include('partials.lead-form-mareva', [
-                        'formId' => 'landing-about-form',
+                        'formId' => 'mareva-footer-form',
                         'heading' => 'Get Launch Prices & Availability',
                         'source' => 'mareva_footer_form',
    
@@ -1880,7 +1880,7 @@ $propertySchema['offers'] = [
 
 
     <a
-        href="https://wa.me/971555342535?text=Hi%2C%20I%E2%80%99m%20interested%20to%20know%20more%20about%20Mareva%20At%20The%20Oasis.%20Please%20share%20all%20relevant%20details.%0AThank%20you."
+        href="https://wa.me/971555342535?text=Hi%2C%20I%E2%80%99m%20interested%20to%20know%20more%20about%20Villas%20At%20The%20Oasis%20By%20Emaar.%20Please%20share%20all%20relevant%20details.%0AThank%20you."
         class="landing-whatsapp-float whatsapp-track"
         target="_blank"
         rel="noopener noreferrer"

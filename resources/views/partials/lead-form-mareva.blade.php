@@ -208,6 +208,68 @@
         </div>
 
 
+
+
+{{-- Interested In --}}
+
+<div class="avanor-lead-field">
+
+    <label for="{{ $formId }}-interested-in">
+        Interested In
+    </label>
+
+    <select
+        id="{{ $formId }}-interested-in"
+        name="interested_in"
+        required
+    >
+        <option
+            value=""
+            disabled
+            {{ old('interested_in') ? '' : 'selected' }}
+        >
+            Select your preferred property
+        </option>
+
+        <option
+            value="Address Tierra"
+            {{ old('interested_in') === 'Address Tierra' ? 'selected' : '' }}
+        >
+            Address Tierra
+        </option>
+
+        <option
+            value="Palace Ostra"
+            {{ old('interested_in') === 'Palace Ostra' ? 'selected' : '' }}
+        >
+            Palace Ostra
+        </option>
+
+        <option
+            value="Mareva"
+            {{ old('interested_in') === 'Mareva' ? 'selected' : '' }}
+        >
+            Mareva
+        </option>
+
+        <option
+            value="Not sure"
+            {{ old('interested_in') === 'Not sure' ? 'selected' : '' }}
+        >
+            Not sure
+        </option>
+    </select>
+
+    @error('interested_in')
+        <span class="avanor-lead-error">
+            {{ $message }}
+        </span>
+    @enderror
+
+</div>
+
+
+
         {{-- Villa Type --}}
 
         <div class="avanor-lead-field">
@@ -227,23 +289,23 @@
 
                 <option
                     value="4 Bedroom Villa"
-                    {{ old('bedroom_type') === '4 Bedroom ' ? 'selected' : '' }}
+                    {{ old('bedroom_type') === '4 Bedroom Villa' ? 'selected' : '' }}
                 >
                     4 Bedroom Villa
                 </option>
 
                 <option
-                    value="5 Bedroom villa"
-                    {{ old('bedroom_type') === '5 Bedroom ' ? 'selected' : '' }}
+                    value="5 Bedroom Villa"
+                    {{ old('bedroom_type') === '5 Bedroom Villa' ? 'selected' : '' }}
                 >
-                    5 Bedroom villa
+                    5 Bedroom Villa
                 </option>
 
                 <option
-                    value="6 Bedroom villa"
-                    {{ old('bedroom_type') === '6 Bedroom ' ? 'selected' : '' }}
+                    value="6 Bedroom Villa"
+                    {{ old('bedroom_type') === '6 Bedroom Villa' ? 'selected' : '' }}
                 >
-                    6 Bedroom villa
+                    6 Bedroom Villa
                 </option>
             </select>
 

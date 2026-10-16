@@ -22,7 +22,8 @@ class SyncLeadToGoogleSheets implements ShouldQueue
 
 public function __construct(
     public int $leadId,
-    public ?string $ipAddress = null
+    public ?string $ipAddress = null,
+        public ?string $interestedIn = null
 ) {}
 
 
@@ -53,6 +54,7 @@ public function handle(GoogleSheetsLeadService $sheets): void
         $lead->name,
         $lead->email ?? '',
         $lead->phone,
+        $this->interestedIn ?? '',
         $lead->bedroom_type ?? '',
         '',
         $this->ipAddress ?? '',

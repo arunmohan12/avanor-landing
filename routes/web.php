@@ -77,6 +77,6 @@ Route::domain('riverside.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showRiverside']);
 });
 
-Route::domain('mareva.sales-centre.net')->group(function () {
+Route::domain('the-oasis.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showMareva']);
 });

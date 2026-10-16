@@ -512,9 +512,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const adContent = {
         branded: {
-            headline: 'Address & Palace Branded Villas at The Oasis',
+            headline: 'Address Tierra & Palace Ostra at The Oasis',
             description:
-                'A limited collection of 5-bedroom branded villas by Emaar. Register for priority access.'
+                '5-bedroom + basement branded villas from AED 17.6M. Booking opens 19 October.'
         },
 
         oasis: {
