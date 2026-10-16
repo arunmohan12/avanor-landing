@@ -120,7 +120,7 @@ $propertySchema['offers'] = [
         <span class="oasis-release-banner__divider oasis-release-banner__date-divider">·</span>
 
         <span class="oasis-release-banner__date" id="oasisReleaseDate">
-            BOOKINGS OPENS 19 OCTOBER
+            BOOKING OPENS 19 OCTOBER
         </span>
 
         <a
@@ -139,7 +139,7 @@ $propertySchema['offers'] = [
 
         <a href="#home" class="landing-logo">
             <img
-                src="{{ asset('assets/img/landing/mareva/mareva-logo.svg') }}"
+                src="{{ asset('assets/img/landing/mareva/logoMareva.png') }}"
                 alt="Avanor">
         </a>
         <nav class="landing-nav">
