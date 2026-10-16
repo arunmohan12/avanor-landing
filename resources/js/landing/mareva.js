@@ -284,33 +284,33 @@ document
         });
     });
 
-// setTimeout(() => {
+setTimeout(() => {
 
-//     if (leadPopupOpened) {
-//         return;
-//     }
+    if (leadPopupOpened) {
+        return;
+    }
 
-//     const popupTrigger = document.querySelector(
-//         '[data-lead-popup-open]'
-//     );
+    const popupTrigger = document.querySelector(
+        '[data-lead-popup-open]'
+    );
 
-//     if (!popupTrigger) {
-//         return;
-//     }
+    if (!popupTrigger) {
+        return;
+    }
 
-//     // First popup - 10 seconds
-//     leadPopupOpened = true;
-//     popupTrigger.click();
+    // First popup - 10 seconds
+    leadPopupOpened = true;
+    popupTrigger.click();
 
 
-//     // Second popup - 25 seconds after first popup
-//     setTimeout(() => {
+    // Second popup - 25 seconds after first popup
+    setTimeout(() => {
 
-//         popupTrigger.click();
+        popupTrigger.click();
 
-//     }, 25000);
+    }, 25000);
 
-// }, 10000);
+}, 10000);
 
 
 
