@@ -139,7 +139,7 @@ $propertySchema['offers'] = [
 
         <a href="#home" class="landing-logo">
             <img
-                src="{{ asset('assets/img/landing/mareva/logoMareva.png') }}"
+                src="{{ asset('assets/img/landing/mareva/logoMareva.webp') }}"
                 alt="Avanor">
         </a>
         <nav class="landing-nav">
