@@ -1365,17 +1365,35 @@ if (sideForm && developerSection) {
 
     checkDeveloperProgress();
 }
+
+
+
+
 const enquiryPopup = document.querySelector('[data-enquiry-popup]');
 const enquiryOpenButtons = document.querySelectorAll('[data-open-enquiry]');
 const enquiryCloseButtons = document.querySelectorAll('[data-close-enquiry]');
 
 if (enquiryPopup) {
+    let leadPopupOpened = false;
+    let automaticPopupTimer = null;
+    let automaticPopupRepeatTimer = null;
 
-    const openEnquiryPopup = () => {
+    const updateLeadSource = (source) => {
+        const sourceInput = enquiryPopup.querySelector(
+            'input[name="source"]'
+        );
+
+        if (sourceInput) {
+            sourceInput.value = source;
+        }
+    };
+
+    const openEnquiryPopup = (source = 'Enquiry Popup') => {
+        updateLeadSource(source);
+
         enquiryPopup.classList.add('is-open');
         enquiryPopup.setAttribute('aria-hidden', 'false');
 
-        // Disable background scrolling
         document.body.classList.add('enquiry-popup-open');
     };
 
@@ -1383,15 +1401,24 @@ if (enquiryPopup) {
         enquiryPopup.classList.remove('is-open');
         enquiryPopup.setAttribute('aria-hidden', 'true');
 
-        // Enable background scrolling
         document.body.classList.remove('enquiry-popup-open');
     };
 
-    // Manual open buttons
+    // Manual popup triggers
     enquiryOpenButtons.forEach((button) => {
         button.addEventListener('click', (event) => {
             event.preventDefault();
-            openEnquiryPopup();
+
+            leadPopupOpened = true;
+
+            // Prevent automatic popup timers after manual interaction.
+            clearTimeout(automaticPopupTimer);
+            clearTimeout(automaticPopupRepeatTimer);
+
+            const source =
+                button.dataset.leadSource || 'Enquiry Popup';
+
+            openEnquiryPopup(source);
         });
     });
 
@@ -1400,7 +1427,7 @@ if (enquiryPopup) {
         button.addEventListener('click', closeEnquiryPopup);
     });
 
-    // ESC key
+    // Close on Escape
     document.addEventListener('keydown', (event) => {
         if (
             event.key === 'Escape' &&
@@ -1410,7 +1437,28 @@ if (enquiryPopup) {
         }
     });
 
+    // Automatic popup after 10 seconds
+    automaticPopupTimer = setTimeout(() => {
+        if (leadPopupOpened) {
+            return;
+        }
 
+        leadPopupOpened = true;
+
+        // Explicit source; does not inherit the first button's source.
+        openEnquiryPopup('Automatic Popup');
+
+        // Optional: reopen after 25 seconds.
+        automaticPopupRepeatTimer = setTimeout(() => {
+            // Do not reopen if the visitor has already closed the popup.
+            if (!enquiryPopup.classList.contains('is-open')) {
+                return;
+            }
+
+            openEnquiryPopup('Automatic Popup');
+        }, 25000);
+
+    }, 10000);
 }
 
 
@@ -1447,36 +1495,3 @@ if (mobileMenuToggle && mobileNavigation) {
 
 }
 
-
-let leadPopupOpened = false;
-
-document
-    .querySelectorAll('[data-open-enquiry]')
-    .forEach((trigger) => {
-        trigger.addEventListener('click', () => {
-            leadPopupOpened = true;
-        });
-    });
-
-setTimeout(() => {
-
-    if (leadPopupOpened) {
-        return;
-    }
-
-    const popupTrigger = document.querySelector(
-        '[data-open-enquiry]'
-    );
-
-    if (!popupTrigger) {
-        return;
-    }
-
-    leadPopupOpened = true;
-    popupTrigger.click();
-
-    setTimeout(() => {
-        popupTrigger.click();
-    }, 25000);
-
-}, 10000);

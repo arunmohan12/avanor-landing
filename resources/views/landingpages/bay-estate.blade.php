@@ -200,7 +200,7 @@ down.
 
                 <div class="pja-hero-buttons">
 
-                    <a href="#" data-open-enquiry class="pja-btn pja-btn-primary"  data-open-enquiry data-button-text="DOWNLOAD BROCHURE">
+                    <a href="#" data-open-enquiry class="pja-btn pja-btn-primary"  data-open-enquiry data-lead-source="hero_ENQUIRE_NOW">
                         ENQUIRE NOW
                     </a>
 
@@ -224,7 +224,7 @@ down.
        
 
          @include('partials.lead-form-bay-estate', [
-            'source' => 'bay_estate_form',
+            'source' => 'bay_estate_mobile_form',
             'propertyId' => $property->id,
             'developerId' => $property->developer_id,
          ])
@@ -309,6 +309,7 @@ down.
 
             <div class="pja-details-card"
                  data-open-enquiry
+                 data-lead-source="Get_Floor_Plan"
                  role="button"
                  tabindex="0">
 
@@ -334,6 +335,7 @@ down.
 
             <div class="pja-details-card"
                  data-open-enquiry
+                 data-lead-source="Get_Master_Plan"
                  role="button"
                  tabindex="0">
 
@@ -359,6 +361,7 @@ down.
 
             <div class="pja-details-card"
                  data-open-enquiry
+                 data-lead-source="Get_Live_Availability"
                  role="button"
                  tabindex="0">
 
@@ -385,7 +388,7 @@ down.
 
              <div class="pja-gallery-button-wrapper" bis_skin_checked="1">
 
-                <a href="#" class="pja-btn pja-btn-transparent" data-open-enquiry="">
+                <a href="#" class="pja-btn pja-btn-transparent" data-open-enquiry data-lead-source="UNLOCK_THE_DETAILS">
                     UNLOCK THE DETAILS
                 </a>
 
@@ -493,7 +496,7 @@ with a payment plan that spreads 40% of the cost to handover.
         <div class="pja-collections-grid">
 
             <article class="pja-collection-card">
-                <a href="#" data-open-enquiry>
+                <a href="#" data-open-enquiry data-lead-source="3_Bedroom_Townhouse_at_Bay_Estate">
 
                     <div class="pja-collection-image">
                         <img
@@ -534,7 +537,7 @@ with a payment plan that spreads 40% of the cost to handover.
 
 
             <article class="pja-collection-card">
-                <a href="#" data-open-enquiry>
+                <a href="#" data-open-enquiry data-lead-source="4_Bedroom_Townhouse">
 
                     <div class="pja-collection-image">
                         <img
@@ -575,7 +578,7 @@ with a payment plan that spreads 40% of the cost to handover.
 
 
             <article class="pja-collection-card">
-                <a href="#" data-open-enquiry>
+                <a href="#" data-open-enquiry data-lead-source="4_Bedroom_Attached_Villa">
 
                     <div class="pja-collection-image">
                         <img
@@ -616,7 +619,7 @@ with a payment plan that spreads 40% of the cost to handover.
 
 
             <article class="pja-collection-card">
-                <a href="#" data-open-enquiry>
+                <a href="#" data-open-enquiry data-lead-source="4_Bedroom_Plus_Attached_Villa">
 
                     <div class="pja-collection-image">
                         <img
@@ -657,7 +660,7 @@ with a payment plan that spreads 40% of the cost to handover.
 
 
             <article class="pja-collection-card">
-                <a href="#" data-open-enquiry>
+                <a href="#" data-open-enquiry data-lead-source="4_Bedroom_Garden_Villa">
 
                     <div class="pja-collection-image">
                         <img
@@ -698,7 +701,7 @@ with a payment plan that spreads 40% of the cost to handover.
 
 
             <article class="pja-collection-card pja-collection-card-cta">
-                <a href="#" data-open-enquiry>
+                <a href="#" data-open-enquiry data-lead-source="Price_for_all_home_types">
 
                     <div class="pja-collection-content">
 
@@ -811,7 +814,7 @@ with a payment plan that spreads 40% of the cost to handover.
 
         <div class="pja-payment-plan-buttons">
 
-            <a href="#" class="pja-btn pja-btn-fill" data-open-enquiry>
+            <a href="#" class="pja-btn pja-btn-fill" data-open-enquiry data-lead-source="Get_payment_shedule">
                 GET THE PAYMENT SCHEDULE
             </a>
 
@@ -881,7 +884,7 @@ with a payment plan that spreads 40% of the cost to handover.
                         dimensions and details
                     </strong>
 
-                    <a href="#" class="pja-btn pja-btn-fill" data-open-enquiry>
+                    <a href="#" class="pja-btn pja-btn-fill" data-open-enquiry data-lead-source="get_floor_plan_on_whatsapp">
                         GET FLOOR PLANS ON WHATSAPP
                     </a>
                 </div>
@@ -1279,7 +1282,7 @@ with a payment plan that spreads 40% of the cost to handover.
                         <a
                             href="#"
                             class="pja-btn pja-btn-transparent"
-                            data-open-enquiry>
+                            data-open-enquiry data-lead-source="get_brochure">
                             GET BROCHURE
                         </a>
 
@@ -1428,7 +1431,7 @@ with a payment plan that spreads 40% of the cost to handover.
                 <a
                     href="#"
                     class="pja-btn pja-btn-transparent"
-                    data-open-enquiry>
+                    data-open-enquiry data-lead-source="get_location_guide">
                     GET LOCATION GUIDE
                 </a>
 
@@ -1843,7 +1846,7 @@ with a payment plan that spreads 40% of the cost to handover.
 
             <div class="pja-plots-cta">
 
-                <a href="#" class="pja-btn pja-btn-fill" data-open-enquiry>
+                <a href="#" class="pja-btn pja-btn-fill" data-open-enquiry data-lead-source="ask_about_plot_availability">
                     ASK ABOUT PLOT AVAILABILITY
                 </a>
 
@@ -1960,7 +1963,7 @@ with a payment plan that spreads 40% of the cost to handover.
                     sent to your WhatsApp.
                 </p>
 
-                <a href="#" class="pja-enquiry-button" data-open-enquiry>
+                <a href="#" class="pja-enquiry-button" data-open-enquiry data-lead-source="footer_send_me_the_details">
                     Send Me the Details
                 </a>
 
@@ -1969,7 +1972,7 @@ with a payment plan that spreads 40% of the cost to handover.
             <div class="pja-enquiry-form">
 
                          @include('partials.lead-form-bay-estate', [
-            'source' => 'bay_estate_form',
+            'source' => 'footer_form',
             'propertyId' => $property->id,
             'developerId' => $property->developer_id,
          ])
@@ -2053,7 +2056,7 @@ with a payment plan that spreads 40% of the cost to handover.
 
 
                             @include('partials.lead-form-bay-estate', [
-            'source' => 'bay_estate_form',
+            'source' => 'Enquiry Popup',
             'propertyId' => $property->id,
             'developerId' => $property->developer_id,
          ])
@@ -2067,7 +2070,7 @@ with a payment plan that spreads 40% of the cost to handover.
 
 <aside class="sticky-sidebar" aria-label="Registration Sidebar" id="side-form-lp">
                  @include('partials.lead-form-bay-estate', [
-            'source' => 'bay_estate_form',
+            'source' => 'bay_estate_floating_side_form',
             'propertyId' => $property->id,
             'developerId' => $property->developer_id,
          ])

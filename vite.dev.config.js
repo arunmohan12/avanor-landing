@@ -7,16 +7,10 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/landing/mareva.css',
-              
-                'resources/js/landing/mareva.js',
+                'resources/js/landing/bay-estate.js',
             ],
             refresh: true,
-            fonts: [
-                bunny('Instrument Sans', {
-                    weights: [400, 500, 600],
-                }),
-            ],
+         
         }),
         tailwindcss(),
     ],

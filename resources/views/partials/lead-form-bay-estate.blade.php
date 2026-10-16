@@ -1,3 +1,7 @@
+@php
+    $source = $source ?? 'bayestate-popup';
+@endphp
+
 
 <div class="sticky-register-card">
     <div class="sticky-card-head">
@@ -10,8 +14,8 @@ WhatsApp by a Bay Estate advisor.</p>
         @csrf
         <input type="hidden" name="property_id" value="{{ $property->id }}">
         <input type="hidden" name="developer_id" value="{{ $property->developer_id }}">
-        <input type="hidden" name="source" value="bay-villa-landing">
-        <input type="hidden" name="page_url" value="{{ url()->current() }}">
+        <input type="hidden" name="source" value="{{ $source }}"  autocomplete="off">
+        <input type="hidden" name="page_url" value="{{ url()->full() }}">
 
         <input type="hidden" name="utm_source">
         <input type="hidden" name="utm_medium">
