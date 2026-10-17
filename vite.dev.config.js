@@ -7,7 +7,8 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/js/landing/bay-estate.js',
+                'resources/js/landing/ghadeer-parks.js',
+                'resources/css/landing/ghadeer-parks.css',
             ],
             refresh: true,
          

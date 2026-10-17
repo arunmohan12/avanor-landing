@@ -190,7 +190,7 @@ $propertySchema['offers'] = [
 
             <a
                 href="#"
-                class="landing-mobile-contact " data-lead-popup-open>
+                class="landing-mobile-contact " data-lead-popup-open  data-lead-source="get_latest_prices">
                 GET LATEST PRICES
 
 
@@ -288,7 +288,7 @@ $propertySchema['offers'] = [
 
                     </div>
 
-                    <a href="#enquiry" class="landing-property-cta" data-lead-popup-open>
+                    <a href="#enquiry" class="landing-property-cta" data-lead-popup-open  data-lead-source="get_early_access">
                         GET EARLY ACCESS
                     </a>
 
@@ -373,7 +373,7 @@ $propertySchema['offers'] = [
 
                         <div class="ghadeer-details-grid">
 
-                            <div class="ghadeer-detail-card" data-lead-popup-open>
+                            <div class="ghadeer-detail-card" data-lead-popup-open data-lead-source="full_price_list_unlock_details">
 
                                 <div class="ghadeer-detail-lock">
                                     🔒
@@ -386,7 +386,7 @@ $propertySchema['offers'] = [
                                         Middle and corner townhouses, and villas.
                                     </p>
 
-                                    <a href="#enquiry" class="ghadeer-detail-button">
+                                    <a href="#enquiry" class="ghadeer-detail-button" data-lead-source="full_price_list_unlock_details">
                                         Unlock Details
                                     </a>
                                 </div>
@@ -394,7 +394,7 @@ $propertySchema['offers'] = [
                             </div>
 
 
-                            <div class="ghadeer-detail-card" data-lead-popup-open>
+                            <div class="ghadeer-detail-card" data-lead-popup-open data-lead-source="payment_shedule">
 
                                 <div class="ghadeer-detail-lock">
                                     🔒
@@ -407,7 +407,7 @@ $propertySchema['offers'] = [
                                         All 8 instalments with payment dates.
                                     </p>
 
-                                    <a href="#enquiry" class="ghadeer-detail-button">
+                                    <a href="#enquiry" class="ghadeer-detail-button" data-lead-source="payment_shedule">
                                         Unlock Details
                                     </a>
                                 </div>
@@ -415,7 +415,7 @@ $propertySchema['offers'] = [
                             </div>
 
 
-                            <div class="ghadeer-detail-card" data-lead-popup-open>
+                            <div class="ghadeer-detail-card" data-lead-popup-open data-lead-source="floor_plans">
 
                                 <div class="ghadeer-detail-lock">
                                     🔒
@@ -428,7 +428,7 @@ $propertySchema['offers'] = [
                                         Every layout, including the villa with pool option.
                                     </p>
 
-                                    <a href="#enquiry" class="ghadeer-detail-button">
+                                    <a href="#enquiry" class="ghadeer-detail-button" data-lead-source="floor_plans">
                                         Unlock Details
                                     </a>
                                 </div>
@@ -436,7 +436,7 @@ $propertySchema['offers'] = [
                             </div>
 
 
-                            <div class="ghadeer-detail-card" data-lead-popup-open>
+                            <div class="ghadeer-detail-card" data-lead-popup-open ata-lead-source="interior_finishes">
 
                                 <div class="ghadeer-detail-lock">
                                     🔒
@@ -449,7 +449,7 @@ $propertySchema['offers'] = [
                                         Light and dark interior finish schemes.
                                     </p>
 
-                                    <a href="#enquiry" class="ghadeer-detail-button">
+                                    <a href="#enquiry" class="ghadeer-detail-button" data-lead-source="interior_finishes">
                                         Unlock Details
                                     </a>
                                 </div>
@@ -457,7 +457,7 @@ $propertySchema['offers'] = [
                             </div>
 
 
-                            <div class="ghadeer-detail-card" data-lead-popup-open>
+                            <div class="ghadeer-detail-card" data-lead-popup-open data-lead-source="live_availability">
 
                                 <div class="ghadeer-detail-lock">
                                     🔒
@@ -470,7 +470,7 @@ $propertySchema['offers'] = [
                                         Which units and plots are still open.
                                     </p>
 
-                                    <a href="#enquiry" class="ghadeer-detail-button">
+                                    <a href="#enquiry" class="ghadeer-detail-button" data-lead-source="live_availability">
                                         Unlock Details
                                     </a>
                                 </div>
@@ -479,7 +479,7 @@ $propertySchema['offers'] = [
 
 
                             {{-- 6th CTA CARD --}}
-                            <div class="ghadeer-detail-card ghadeer-detail-card-cta" data-lead-popup-open>
+                            <div class="ghadeer-detail-card ghadeer-detail-card-cta" data-lead-popup-open data-lead-source="request_full_details">
 
                                 <div class="ghadeer-detail-lock">
                                     🔓
@@ -495,7 +495,7 @@ $propertySchema['offers'] = [
 
                                     <a href="#enquiry"
                                         class="ghadeer-detail-button"
-                                        data-lead-popup-open>
+                                        data-lead-popup-open data-lead-source="request_full_details">
                                         Request Full Details
                                     </a>
 
@@ -859,11 +859,11 @@ $propertySchema['offers'] = [
                     </div>
 
                     <div class="villa-actions">
-                        <button type="button" class="btn-villa-secondary" data-lead-popup-open>
+                        <button type="button" class="btn-villa-secondary" data-lead-popup-open data-lead-source="2_br_floor_plan">
                             <span>Floor Plan</span>
                         </button>
 
-                        <button type="button" class="btn-villa-primary" data-lead-popup-open>
+                        <button type="button" class="btn-villa-primary" data-lead-popup-open data-lead-source="2_br_enquire">
                             <span>Enquire</span>
                         </button>
                     </div>
@@ -898,11 +898,11 @@ $propertySchema['offers'] = [
                     </div>
 
                     <div class="villa-actions">
-                        <button type="button" class="btn-villa-secondary" data-lead-popup-open>
+                        <button type="button" class="btn-villa-secondary" data-lead-popup-open data-lead-source="3_br_floor_plan">
                             <span>Floor Plan</span>
                         </button>
 
-                        <button type="button" class="btn-villa-primary" data-lead-popup-open>
+                        <button type="button" class="btn-villa-primary" data-lead-popup-open data-lead-source="3_br_enquiry">
                             <span>Enquire</span>
                         </button>
                     </div>
@@ -937,11 +937,11 @@ $propertySchema['offers'] = [
                     </div>
 
                     <div class="villa-actions">
-                        <button type="button" class="btn-villa-secondary" data-lead-popup-open>
+                        <button type="button" class="btn-villa-secondary" data-lead-popup-open data-lead-source="3_br_corner_townhouse_floor_plan">
                             <span>Floor Plan</span>
                         </button>
 
-                        <button type="button" class="btn-villa-primary" data-lead-popup-open>
+                        <button type="button" class="btn-villa-primary" data-lead-popup-open data-lead-source="3_br_corner_townhouse_enquiry">
                             <span>Enquire</span>
                         </button>
                     </div>
@@ -976,11 +976,11 @@ $propertySchema['offers'] = [
                     </div>
 
                     <div class="villa-actions">
-                        <button type="button" class="btn-villa-secondary" data-lead-popup-open>
+                        <button type="button" class="btn-villa-secondary" data-lead-popup-open data-lead-source="4_br_villa_floor_plan">
                             <span>Floor Plan</span>
                         </button>
 
-                        <button type="button" class="btn-villa-primary" data-lead-popup-open>
+                        <button type="button" class="btn-villa-primary" data-lead-popup-open data-lead-source="4_br_villa_enquiry">
                             <span>Enquire</span>
                         </button>
                     </div>
@@ -997,7 +997,7 @@ $propertySchema['offers'] = [
             </div>
 
             <div class="ghadeer-properties-banner-action">
-                <button type="button" class="btn-villa-secondary" data-lead-popup-open>
+                <button type="button" class="btn-villa-secondary" data-lead-popup-open data-lead-source="get_prices_for_all_home_types">
                     <span>Get Prices for All Home Types</span>
                 </button>
             </div>
@@ -1066,6 +1066,7 @@ $propertySchema['offers'] = [
                     type="button"
                     class="landing-payment-btn landing-payment-btn-outline"
                     data-lead-popup-open
+                    data-lead-source="get_the_payment_shedule"
                     data-request-type="payment-plan">
 
                     GET THE PAYMENT SCHEDULE
@@ -1398,6 +1399,7 @@ $propertySchema['offers'] = [
                             type="button"
                             class="landing-payment-btn landing-payment-btn-outline"
                             data-lead-popup-open
+                            data-lead-source="explore_gallery_brochure"
                             data-request-type="payment-plan">
 
                             EXPLORE GALLERY BROCHURE
@@ -1646,7 +1648,7 @@ $propertySchema['offers'] = [
         </div>
 
         <div class="sale-cta-wrapper">
-            <button type="button" class="btn-enquire-now" data-lead-popup-open>
+            <button type="button" class="btn-enquire-now" data-lead-popup-open data-lead-source="get_al_ghadeer_park_details">
                 <span>Get Al Ghadeer Parks Details</span>
                 <x-landing-icon name="arrow-right" />
             </button>
@@ -1833,7 +1835,7 @@ $propertySchema['offers'] = [
                 @include('partials.lead-form-ghadeer-parks', [
                 'formId' => 'landing-about-form',
                 'heading' => 'Get Launch Prices & Availability',
-                'source' => 'ghadeer_parks_floating_form',
+                'source' => 'ghadeer_parks_floating_side_form',
                 'buttonText' => 'SUBMIT',
      'propertyId' => $property->id,
             'developerId' => $property->developer_id,
@@ -1901,7 +1903,7 @@ $propertySchema['offers'] = [
             Get launch prices, floor plans and availability sent to your WhatsApp.
         </p>
 
-        <button type="button" data-lead-popup-open>
+        <button type="button" data-lead-popup-open data-lead-source="footer_send_me_the_details">
             Send Me the Details
         </button>
     </div>

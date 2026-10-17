@@ -4,6 +4,20 @@
 
 @section('content')
 
+@if (session('lead_email') || session('lead_phone'))
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        window.dataLayer.push({
+            event: 'lead_conversion_user_data',
+            user_data: {
+                email: @json(session('lead_email')),
+                phone_number: @json(session('lead_phone'))
+            }
+        });
+    </script>
+@endif
+
 <section class="landing-thankyou">
 
     <div class="landing-thankyou-content">

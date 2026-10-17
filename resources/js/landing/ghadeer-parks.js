@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-
     const popup = document.getElementById('landingLeadPopup');
 
     if (!popup) {
@@ -92,67 +91,60 @@ document.addEventListener('DOMContentLoaded', () => {
         '[data-lead-popup-submit]'
     );
 
-    const openPopup = () => {
+    const sourceInput = popup.querySelector(
+        'input[name="source"]'
+    );
+
+    let leadPopupOpened = false;
+    let automaticPopupTimer;
+
+    const openPopup = ({
+        source = 'Enquiry Popup',
+        buttonText = 'SUBMIT'
+    } = {}) => {
+        // Set the lead source explicitly.
+        if (sourceInput) {
+            sourceInput.value = source;
+        }
+
+        // Set the submit button label.
+        if (submitButton) {
+            submitButton.textContent = buttonText;
+        }
 
         popup.classList.add('is-open');
+        popup.setAttribute('aria-hidden', 'false');
 
-        popup.setAttribute(
-            'aria-hidden',
-            'false'
-        );
-
-        document.body.classList.add(
-            'landing-popup-open'
-        );
+        document.body.classList.add('landing-popup-open');
     };
 
     const closePopup = () => {
-
         popup.classList.remove('is-open');
+        popup.setAttribute('aria-hidden', 'true');
 
-        popup.setAttribute(
-            'aria-hidden',
-            'true'
-        );
-
-        document.body.classList.remove(
-            'landing-popup-open'
-        );
+        document.body.classList.remove('landing-popup-open');
     };
 
     openButtons.forEach((button) => {
-
         button.addEventListener('click', (event) => {
-
             event.preventDefault();
 
-            /*
-             * Get the text from the button that opened
-             * the popup.
-             */
-            const buttonText =
-                button.dataset.buttonText || 'SUBMIT';
+            // Manual interaction cancels the automatic popup.
+            leadPopupOpened = true;
+            clearTimeout(automaticPopupTimer);
 
-            /*
-             * Change popup submit button text.
-             */
-            if (submitButton) {
-                submitButton.textContent = buttonText;
-            }
-
-            openPopup();
+            openPopup({
+                source: button.dataset.leadSource || 'Enquiry Popup',
+                buttonText: button.dataset.buttonText || 'SUBMIT'
+            });
         });
     });
 
     closeButtons.forEach((button) => {
-
-        button.addEventListener('click', () => {
-            closePopup();
-        });
+        button.addEventListener('click', closePopup);
     });
 
     document.addEventListener('keydown', (event) => {
-
         if (
             event.key === 'Escape' &&
             popup.classList.contains('is-open')
@@ -161,6 +153,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Automatically open the popup after 10 seconds.
+    automaticPopupTimer = setTimeout(() => {
+        if (leadPopupOpened) {
+            return;
+        }
+
+        leadPopupOpened = true;
+
+        openPopup({
+            source: 'Automatic Popup',
+            buttonText: 'SUBMIT'
+        });
+    }, 10000);
 });
 
 
@@ -257,47 +262,8 @@ if (document.readyState === 'loading') {
     initPhoneInputs();
 
 }
-/* =====================================================
-   AUTO OPEN LEAD POPUP
-   Opens once after 5 seconds
-===================================================== */
-
-let leadPopupOpened = false;
-
-document
-    .querySelectorAll('[data-lead-popup-open]')
-    .forEach((button) => {
-        button.addEventListener('click', () => {
-            leadPopupOpened = true;
-        });
-    });
-
-setTimeout(() => {
-
-    if (leadPopupOpened) {
-        return;
-    }
-
-    const popupTrigger = document.querySelector(
-        '[data-lead-popup-open]'
-    );
-
-    if (!popupTrigger) {
-        return;
-    }
-
-    leadPopupOpened = true;
-    popupTrigger.click();
 
 
-  
-    setTimeout(() => {
-
-        popupTrigger.click();
-
-    }, 25000);
-
-}, 10000);
 
 
 const header = document.querySelector('.landing-header');

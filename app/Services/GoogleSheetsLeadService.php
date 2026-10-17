@@ -41,7 +41,7 @@ class GoogleSheetsLeadService
             "'" . str_replace("'", "''", $worksheet) . "'!A:N",
             $values,
             [
-                'valueInputOption' => 'USER_ENTERED',
+                'valueInputOption' => 'RAW',
                 'insertDataOption' => 'INSERT_ROWS',
             ]
         );

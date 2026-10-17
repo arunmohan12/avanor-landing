@@ -224,16 +224,16 @@ class LeadController extends Controller
                 'string',
                 'max:255',
             ],
-        'interested_in' => [
-            'nullable',
-            'string',
-            \Illuminate\Validation\Rule::in([
-                'Address Tierra',
-                'Palace Ostra',
-                'Mareva',
-                'Not sure',
-            ]),
-        ],
+            'interested_in' => [
+                'nullable',
+                'string',
+                \Illuminate\Validation\Rule::in([
+                    'Address Tierra',
+                    'Palace Ostra',
+                    'Mareva',
+                    'Not sure',
+                ]),
+            ],
             'budget' => [
                 'nullable',
                 'string',
@@ -319,7 +319,7 @@ class LeadController extends Controller
             );
         }
 
-      $interestedIn = $validated['interested_in'] ?? null;
+        $interestedIn = $validated['interested_in'] ?? null;
 
         // Attempt 1: Save to the database.
         try {
@@ -349,7 +349,11 @@ class LeadController extends Controller
 
 
             return redirect()
-                ->route('landing.thank-you');
+                ->route('landing.thank-you')
+                ->with([
+                    'lead_email' => $lead->email,
+                    'lead_phone' => $lead->phone,
+                ]);
         }
 
 
@@ -385,7 +389,11 @@ class LeadController extends Controller
 
 
             return redirect()
-                ->route('landing.thank-you');
+                ->route('landing.thank-you')
+                ->with([
+                    'lead_email' => $lead->email,
+                    'lead_phone' => $lead->phone,
+                ]);
         }
 
 
@@ -407,6 +415,10 @@ class LeadController extends Controller
         }
 
         return redirect()
-            ->route('landing.thank-you');
+            ->route('landing.thank-you')
+            ->with([
+                'lead_email' => $lead->email,
+                'lead_phone' => $lead->phone,
+            ]);
     }
 }
