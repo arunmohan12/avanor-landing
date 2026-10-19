@@ -108,20 +108,20 @@ $propertySchema['offers'] = [
 <div class="oasis-release-banner" id="oasisReleaseBanner">
     <div class="oasis-release-banner__content">
         <span class="oasis-release-banner__label" id="oasisReleaseLabel">
-            EXCLUSIVE RELEASE
+            NOW BOOKING
         </span>
 
         <span class="oasis-release-banner__divider">·</span>
 
         <span class="oasis-release-banner__description" id="oasisReleaseDescription">
-            Address Tierra & Palace Ostra villas
+            Limited Address Tierra & Palace Ostra villas
         </span>
 
-        <span class="oasis-release-banner__divider oasis-release-banner__date-divider">·</span>
+        <!-- <span class="oasis-release-banner__divider oasis-release-banner__date-divider">·</span>
 
         <span class="oasis-release-banner__date" id="oasisReleaseDate">
             BOOKING OPENS 19 OCTOBER
-        </span>
+        </span> -->
 
         <a
             href="#"
