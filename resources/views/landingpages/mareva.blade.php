@@ -487,7 +487,7 @@ $propertySchema['offers'] = [
 
                             <div class="villa-comparison-row">
                                 <span>Status</span>
-                                <strong>Booking opens 19 October</strong>
+                                <strong>Now Booking</strong>
                             </div>
 
                             <button
@@ -534,7 +534,7 @@ $propertySchema['offers'] = [
 
                         <div class="branded-release-description">
                             <p>
-                                Emaar opens bookings on 19 October for a limited collection of
+                                Emaar opens bookings are now open for a limited collection of
                                 Address Tierra and Palace Ostra villas at The Oasis: 5-bedroom
                                 homes with basements, built-up areas of 7,922–10,394 sq ft, and
                                 plots of up to 17,113 sq ft. They bring the design and service
@@ -1366,8 +1366,8 @@ $propertySchema['offers'] = [
                                         A limited collection of
                                         <strong>5-bedroom villas with basements</strong>
                                         under the <strong>Address Tierra</strong> and
-                                        <strong>Palace Ostra</strong> brands. Booking opens
-                                        on <strong>19 October</strong>.
+                                        <strong>Palace Ostra</strong> brands.
+                                        <strong>Bookings are now open</strong>.
                                     </p>
                                 </div>
                             </details>
