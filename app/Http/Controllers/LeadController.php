@@ -319,6 +319,29 @@ class LeadController extends Controller
             );
         }
 
+
+// Prevent duplicate enquiries for the same property.
+
+$phone = trim($validated['phone']);
+$email = mb_strtolower(trim($validated['email']));
+
+$duplicateExists = Lead::query()
+    ->where('property_id', $validated['property_id'])
+    ->where(function ($query) use ($phone, $email) {
+        $query->where('phone', $phone)
+            ->orWhereRaw('LOWER(email) = ?', [$email]);
+    })
+    ->exists();
+
+if ($duplicateExists) {
+    return back()
+        ->withInput()
+        ->withErrors([
+            'email' => 'You have already enquired about this property. Our team will contact you soon.',
+        ]);
+}
+
+        
         $interestedIn = $validated['interested_in'] ?? null;
 
         // Attempt 1: Save to the database.
