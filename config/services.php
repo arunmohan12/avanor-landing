@@ -54,4 +54,8 @@ return [
     'worksheet' => env('GOOGLE_SHEETS_WORKSHEET', 'Sheet1'),
 ],
 
+'whatsapp' => [
+    'number' => env('AVANOR_WHATSAPP_NUMBER'),
+],
+
 ];

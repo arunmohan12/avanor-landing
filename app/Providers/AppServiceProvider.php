@@ -8,6 +8,9 @@ use Illuminate\Queue\Events\JobFailed;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Log;
 use Throwable;
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\RateLimiter;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,6 +27,19 @@ class AppServiceProvider extends ServiceProvider
      */
 public function boot(): void
     {
+
+    RateLimiter::for('landing-leads', function (Request $request) {
+        return [
+            // Maximum 5 submissions per IP every 10 minutes.
+            Limit::perMinutes(10, 5)
+                ->by('landing-leads:ip:' . $request->ip()),
+
+            // Maximum 100 submissions across the site every 10 minutes.
+            Limit::perMinutes(10, 100)
+                ->by('landing-leads:global'),
+        ];
+    });
+
         Queue::failing(function (JobFailed $event): void {
             $payload = $event->job->payload();
             $jobName = $payload['displayName']

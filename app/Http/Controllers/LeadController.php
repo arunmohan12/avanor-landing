@@ -350,10 +350,10 @@ class LeadController extends Controller
 
             return redirect()
                 ->route('landing.thank-you')
-                ->with([
-                    'lead_email' => $lead->email,
-                    'lead_phone' => $lead->phone,
-                ]);
+                  ->with([
+        'lead_email' => $validated['email'] ?? null,
+        'lead_phone' => $validated['phone'] ?? null,
+    ]);
         }
 
 
@@ -390,10 +390,10 @@ class LeadController extends Controller
 
             return redirect()
                 ->route('landing.thank-you')
-                ->with([
-                    'lead_email' => $lead->email,
-                    'lead_phone' => $lead->phone,
-                ]);
+                  ->with([
+        'lead_email' => $validated['email'] ?? null,
+        'lead_phone' => $validated['phone'] ?? null,
+    ]);
         }
 
 
@@ -416,9 +416,9 @@ class LeadController extends Controller
 
         return redirect()
             ->route('landing.thank-you')
-            ->with([
-                'lead_email' => $lead->email,
-                'lead_phone' => $lead->phone,
-            ]);
+              ->with([
+        'lead_email' => $validated['email'] ?? null,
+        'lead_phone' => $validated['phone'] ?? null,
+    ]);
     }
 }

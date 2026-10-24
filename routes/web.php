@@ -18,14 +18,14 @@ Route::get('/', function () {
 //     ->middleware('throttle:10,1')
 //     ->name('leads.store');
 
-
 Route::post(
     '/landing-leads',
     [LeadController::class, 'storeLandingV2']
 )
-    ->middleware('throttle:20,10')
+    ->middleware('throttle:landing-leads')
     ->name('landing.leads.store');
 
+    
 
 Route::get('/thank-you', function () {
     return view('thank-you');
