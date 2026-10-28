@@ -623,41 +623,44 @@ It’s being developed with Dubai Holding and is expected to launch before the e
 
 
 
-            <section class="section-villas-sale-white landing-about-v2" id="aldar-dubai">
-                <div class="landing-gallery-container">
+ 
+<section
+    class="aldar-dubai-hero"
+    id="aldar-dubai"
+    style="--aldar-hero-bg: url('{{ asset('assets/img/landing/aldar-new/section-img.webp') }}');"
+>
+    <div class="aldar-dubai-hero__overlay"></div>
 
-                    <div class="sale-header">
-                        <span class="landing-about-v2-eyebrow">
-                            ALDAR IN DUBAI
-                        </span>
+    <div class="aldar-dubai-hero__container">
+        <div class="aldar-dubai-hero__content">
 
-                        <h2 class="landing-about-v2-title">
-                            Aldar’s fourth Dubai community
-                        </h2>
+            <span class="aldar-dubai-hero__eyebrow">
+     
+                ALDAR IN DUBAI
+            </span>
 
-                        <p class="sale-description">
-                            Aldar, the developer behind many of Abu Dhabi’s best-known
-                            communities, has already launched three Dubai projects:
-                            Haven, Athlon and The Wilds. This new community near Dubai
-                            Silicon Oasis will be its fourth.
-                        </p>
-                    </div>
+            <h2 class="aldar-dubai-hero__title">
+                Aldar’s fourth<br>
+                Dubai community
+            </h2>
 
-                    <div class="sale-cta-wrapper">
-                        <button
-                            type="button"
-                            class="btn-enquire-now"
-                            data-lead-popup-open
-                            data-lead-source="aldar_dubai_priority_list">
+            <p class="aldar-dubai-hero__description">
+                Aldar, the developer behind many of Abu Dhabi’s best-known
+                communities, has already launched three Dubai projects:
+                Haven, Athlon and The Wilds. This new community near Dubai
+                Silicon Oasis will be its fourth.
+            </p>
 
-                            <span>Join the Priority List</span>
 
-                            <x-landing-icon name="arrow-right" />
-                        </button>
-                    </div>
+            <a href="#enquiry" class="landing-property-cta" data-lead-popup-open="" data-lead-source="join_the_priority_list">
+                        Join the Priority List
+                          <x-landing-icon name="arrow-right" />
+                    </a>
 
-                </div>
-            </section>
+        </div>
+    </div>
+</section>
+
 
 
             <section class="section-why-yas-riva landing-about-v2" id="why-register">
@@ -1043,12 +1046,12 @@ It’s being developed with Dubai Holding and is expected to launch before the e
     <section>
         <div class="landing-gallery-container ghadeer-enquiry-section">
 
-            <div class="ghadeer-enquiry-left">
-                <span>ALDAR’S NEW DUBAI COMMUNITY</span>
+            <div class="ghadeer-enquiry-left"        style="--aldar-bg-image: url('{{ asset('assets/img/landing/aldar-new/aldar-new-footer-img.webp') }}');">
+                <span class="footer-eyebrow">ALDAR’S NEW DUBAI COMMUNITY</span>
 
-                <h2>Be First in Line for Aldar’s New Dubai Community</h2>
+                <h2 class="footer-heading">Be First in Line for Aldar’s New Dubai Community</h2>
 
-                <p>
+                <p class="footer-description">
                     Join the priority list to receive launch prices, floor plans,
                     the payment plan and location details on WhatsApp as soon as
                     they are announced.
