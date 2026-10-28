@@ -259,7 +259,7 @@ $propertySchema['offers'] = [
                 <div class="ghadeer-parks-highlights">
 
                     <div class="ghadeer-parks-highlights-heading">
-                        <span>AVAILABLE UNITS & PAYMENT PLANS</span>
+                        <span>PRIORITY REGISTRATION</span>
                     </div>
 
                     <div class="ghadeer-parks-highlights-items">

@@ -5005,7 +5005,7 @@ body.landing-popup-open {
 @media (max-width: 767px) {
 
     .avanor-property-hero-overlay {
-        background: linear-gradient(75deg, rgb(0 0 0 / 64%) 0%, rgb(0 0 0 / 56%) 55%, rgb(0 0 0 / 36%) 100%);
+background: linear-gradient(75deg, #000000b8 0%, #000000ba 55%, #000000b8 100%);
     }
 
 
