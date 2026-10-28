@@ -49,7 +49,7 @@ Route::get('/terms-and-condition', function () {
 // Route::get('/riverside', [LandingPageController::class, 'showRiverside']);
 // Route::get('/mareva', [LandingPageController::class, 'showMareva']);
 // Route::get('/aldar', [LandingPageController::class, 'showAldarNew']);
-Route::get('/palm-springs', [LandingPageController::class, 'showPalmSprings']);
+// Route::get('/palm-springs', [LandingPageController::class, 'showPalmSprings']);
 
 //live
 Route::domain('the-heights.sales-centre.net')->group(function () {
@@ -80,4 +80,8 @@ Route::domain('the-oasis.sales-centre.net')->group(function () {
 });
 Route::domain('aldar-dubai.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showAldarNew']);
+});
+
+Route::domain('palm-springs.sales-centre.net')->group(function () {
+    Route::get('/', [LandingPageController::class, 'showPalmSprings']);
 });

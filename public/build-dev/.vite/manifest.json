@@ -1,129 +1,45 @@
 {
-  "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff": {
-    "file": "assets/lato-latin-400-normal-B11PyLys.woff",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff"
+  "resources/css/landing/fonts/Nakheel-TextBold.woff": {
+    "file": "assets/Nakheel-TextBold-B90GRwVF.woff",
+    "src": "resources/css/landing/fonts/Nakheel-TextBold.woff"
   },
-  "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff2": {
-    "file": "assets/lato-latin-400-normal-BEhtfm5r.woff2",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-400-normal.woff2"
+  "resources/css/landing/fonts/Nakheel-TextBold.woff2": {
+    "file": "assets/Nakheel-TextBold-nqtSceLM.woff2",
+    "src": "resources/css/landing/fonts/Nakheel-TextBold.woff2"
   },
-  "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff": {
-    "file": "assets/lato-latin-700-normal-DAdL7O4w.woff",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff"
+  "resources/css/landing/fonts/Nakheel-TextRegular.woff": {
+    "file": "assets/Nakheel-TextRegular-C7GDnss0.woff",
+    "src": "resources/css/landing/fonts/Nakheel-TextRegular.woff"
   },
-  "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff2": {
-    "file": "assets/lato-latin-700-normal-BUGMgin4.woff2",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-700-normal.woff2"
+  "resources/css/landing/fonts/Nakheel-TextRegular.woff2": {
+    "file": "assets/Nakheel-TextRegular-Wz4d7xXZ.woff2",
+    "src": "resources/css/landing/fonts/Nakheel-TextRegular.woff2"
   },
-  "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff": {
-    "file": "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff"
-  },
-  "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff2": {
-    "file": "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-400-normal.woff2"
-  },
-  "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff": {
-    "file": "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff"
-  },
-  "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff2": {
-    "file": "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
-    "src": "node_modules/@fontsource/lato/files/lato-latin-ext-700-normal.woff2"
-  },
-  "node_modules/intl-tel-input/dist/img/flags.webp": {
-    "file": "assets/flags-DjVgN9ag.webp",
-    "src": "node_modules/intl-tel-input/dist/img/flags.webp"
-  },
-  "node_modules/intl-tel-input/dist/img/flags@2x.webp": {
-    "file": "assets/flags@2x-QBzdwbZ8.webp",
-    "src": "node_modules/intl-tel-input/dist/img/flags@2x.webp"
-  },
-  "resources/css/landing/aldar-new.css": {
-    "file": "assets/aldar-new-BVBJ4S3W.css",
-    "name": "aldar-new",
+  "resources/css/landing/palm-springs.css": {
+    "file": "assets/palm-springs-Rg7FdaSk.css",
+    "name": "palm-springs",
     "names": [
-      "aldar-new.css"
+      "palm-springs.css"
     ],
-    "src": "resources/css/landing/aldar-new.css",
+    "src": "resources/css/landing/palm-springs.css",
     "isEntry": true,
     "assets": [
-      "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
-      "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
-      "assets/lato-latin-400-normal-BEhtfm5r.woff2",
-      "assets/lato-latin-400-normal-B11PyLys.woff",
-      "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
-      "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
-      "assets/lato-latin-700-normal-BUGMgin4.woff2",
-      "assets/lato-latin-700-normal-DAdL7O4w.woff",
-      "assets/CormorantGaramond-Light-BE5xuUei.woff",
-      "assets/CormorantGaramond-LightItalic-B9mD87km.woff",
-      "assets/CormorantGaramond-Regular-CiAV_ro-.woff",
-      "assets/CormorantGaramond-Italic-CgqzdayI.woff",
-      "assets/CormorantGaramond-Medium-a81lqqsF.woff",
-      "assets/CormorantGaramond-MediumItalic-DLxFICkJ.woff",
-      "assets/CormorantGaramond-SemiBold-DFvMWUQ8.woff",
-      "assets/CormorantGaramond-SemiBoldItalic-CzUKSUAX.woff",
-      "assets/CormorantGaramond-Bold-CYsBYQCd.woff",
-      "assets/CormorantGaramond-BoldItalic-Bk1l1XVg.woff",
-      "assets/OutfitVariableFont_wght1-EwbcG2E8.woff"
+      "assets/Nakheel-TextRegular-Wz4d7xXZ.woff2",
+      "assets/Nakheel-TextRegular-C7GDnss0.woff",
+      "assets/Nakheel-TextBold-nqtSceLM.woff2",
+      "assets/Nakheel-TextBold-B90GRwVF.woff"
     ]
   },
-  "resources/fonts/wadeem/CormorantGaramond-Bold.woff": {
-    "file": "assets/CormorantGaramond-Bold-CYsBYQCd.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-Bold.woff"
+  "resources/js/landing/palm-springs.js": {
+    "file": "assets/palm-springs-CJsGy2CJ.js",
+    "name": "palm-springs",
+    "src": "resources/js/landing/palm-springs.js",
+    "isEntry": true
   },
-  "resources/fonts/wadeem/CormorantGaramond-BoldItalic.woff": {
-    "file": "assets/CormorantGaramond-BoldItalic-Bk1l1XVg.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-BoldItalic.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-Italic.woff": {
-    "file": "assets/CormorantGaramond-Italic-CgqzdayI.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-Italic.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-Light.woff": {
-    "file": "assets/CormorantGaramond-Light-BE5xuUei.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-Light.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-LightItalic.woff": {
-    "file": "assets/CormorantGaramond-LightItalic-B9mD87km.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-LightItalic.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-Medium.woff": {
-    "file": "assets/CormorantGaramond-Medium-a81lqqsF.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-Medium.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-MediumItalic.woff": {
-    "file": "assets/CormorantGaramond-MediumItalic-DLxFICkJ.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-MediumItalic.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-Regular.woff": {
-    "file": "assets/CormorantGaramond-Regular-CiAV_ro-.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-Regular.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-SemiBold.woff": {
-    "file": "assets/CormorantGaramond-SemiBold-DFvMWUQ8.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-SemiBold.woff"
-  },
-  "resources/fonts/wadeem/CormorantGaramond-SemiBoldItalic.woff": {
-    "file": "assets/CormorantGaramond-SemiBoldItalic-CzUKSUAX.woff",
-    "src": "resources/fonts/wadeem/CormorantGaramond-SemiBoldItalic.woff"
-  },
-  "resources/fonts/wadeem/OutfitVariableFont_wght1.woff": {
-    "file": "assets/OutfitVariableFont_wght1-EwbcG2E8.woff",
-    "src": "resources/fonts/wadeem/OutfitVariableFont_wght1.woff"
-  },
-  "resources/js/landing/aldar-new.js": {
-    "file": "assets/aldar-new-D0foXVAL.js",
-    "name": "aldar-new",
-    "src": "resources/js/landing/aldar-new.js",
-    "isEntry": true,
-    "css": [
-      "assets/aldar-new-DmSsuaRf.css"
-    ],
-    "assets": [
-      "assets/flags-DjVgN9ag.webp",
-      "assets/flags@2x-QBzdwbZ8.webp"
-    ]
+  "resources/js/palm-springs-map.js": {
+    "file": "assets/palm-springs-map-BvXLP0i-.js",
+    "name": "palm-springs-map",
+    "src": "resources/js/palm-springs-map.js",
+    "isEntry": true
   }
 }

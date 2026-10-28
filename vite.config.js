@@ -28,6 +28,7 @@ export default defineConfig({
                 'resources/css/landing/mareva.css',
                 'resources/css/landing/aldar-new.css',
                 'resources/css/landing/bay-estate.css',
+                'resources/css/landing/palm-springs.css',
 
                 'resources/js/landing/the-heights.js',
                 'resources/js/landing/wadeem.js',
@@ -39,6 +40,7 @@ export default defineConfig({
                   'resources/js/landing/mareva.js',
                   'resources/js/landing/aldar-new.js',
                   'resources/js/landing/bay-estate.js',
+                  'resources/js/landing/palm-springs.js',
             ],
             refresh: true,
             fonts: [
