@@ -22,13 +22,21 @@ export default defineConfig({
                 'resources/css/landing/wadeem.css',
                 'resources/css/landing/yas-riva.css',
                 'resources/css/landing/wadeemv2.css',
-      
+                'resources/css/landing/ghadeer-parks.css',
+                'resources/css/landing/riverside.css',
+                'resources/css/landing/the-heightsv2.css',
+                'resources/css/landing/mareva.css',
+                'resources/css/landing/aldar-new.css',
 
                 'resources/js/landing/the-heights.js',
                 'resources/js/landing/wadeem.js',
                 'resources/js/landing/yas-riva.js',
                 'resources/js/landing/bay-estate.js',
-          
+                'resources/js/landing/ghadeer-parks.js',
+                 'resources/js/landing/riverside.js',
+                  'resources/js/landing/the-heights.js',
+                  'resources/js/landing/mareva.js',
+                  'resources/js/landing/aldar-new.js',
             ],
             refresh: true,
             fonts: [
