@@ -9,14 +9,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/palm-jebel-ali', function () {
-//    return view('landingpages.palm-jebel-ali');
-//});
-
-
-// Route::post('/enquiry', [LeadController::class, 'store'])
-//     ->middleware('throttle:10,1')
-//     ->name('leads.store');
 
 Route::post(
     '/landing-leads',
@@ -25,7 +17,12 @@ Route::post(
     ->middleware('throttle:landing-leads')
     ->name('landing.leads.store');
 
-    
+Route::post(
+    '/aldar-enquiry',
+    [LeadController::class, 'storeAldarEnquiry']
+)
+    ->middleware('throttle:landing-leads')
+    ->name('landing.aldar-enquiry.store'); 
 
 Route::get('/thank-you', function () {
     return view('thank-you');
@@ -50,8 +47,8 @@ Route::get('/terms-and-condition', function () {
 // Route::get('/bay-estate', [LandingPageController::class, 'showBayEstate']);
 //  Route::get('/ghadeer-parks', [LandingPageController::class, 'showGhadeerParks']);
 // Route::get('/riverside', [LandingPageController::class, 'showRiverside']);
-
 // Route::get('/mareva', [LandingPageController::class, 'showMareva']);
+// Route::get('/aldar', [LandingPageController::class, 'showAldarNew']);
 
 //live
 Route::domain('the-heights.sales-centre.net')->group(function () {
@@ -79,4 +76,7 @@ Route::domain('riverside.sales-centre.net')->group(function () {
 
 Route::domain('the-oasis.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showMareva']);
+});
+Route::domain('aldar-dubai.sales-centre.net')->group(function () {
+    Route::get('/', [LandingPageController::class, 'showAldarNew']);
 });

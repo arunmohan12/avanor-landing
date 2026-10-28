@@ -153,3 +153,43 @@
     }
 
 }
+.aldar-thank-you {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.aldar-thank-you-content {
+    width: 100%;
+    max-width: 680px;
+}
+
+.aldar-thank-you-content h1 {
+    margin-bottom: 24px;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+}
+
+.aldar-thank-you-content p {
+    margin-bottom: 16px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.aldar-whatsapp-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 15px 28px;
+    border-radius: 5px;
+    background: #25D366;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.aldar-whatsapp-btn:hover {
+    background: #1EAF55;
+}

@@ -83,7 +83,7 @@
         "src": "node_modules/intl-tel-input/dist/img/flags@2x.webp"
     },
     "resources/css/app.css": {
-        "file": "assets/app-BlHywhgT.css",
+        "file": "assets/app-ClaZQTeI.css",
         "name": "app",
         "names": [
             "app.css"
@@ -324,28 +324,13 @@
         "src": "resources/js/map.js",
         "isEntry": true
     },
-    "resources/css/landing/bay-estate.css": {
-        "file": "assets/bay-estate-6srqHUSn.css",
-        "name": "bay-estate",
+    "resources/css/landing/aldar-new.css": {
+        "file": "assets/aldar-new-CZ7DCVjm.css",
+        "name": "aldar-new",
         "names": [
-            "bay-estate.css"
+            "aldar-new.css"
         ],
-        "src": "resources/css/landing/bay-estate.css",
-        "isEntry": true,
-        "assets": [
-            "assets/Nakheel-TextRegular-Wz4d7xXZ.woff2",
-            "assets/Nakheel-TextRegular-C7GDnss0.woff",
-            "assets/Nakheel-TextBold-nqtSceLM.woff2",
-            "assets/Nakheel-TextBold-B90GRwVF.woff"
-        ]
-    },
-    "resources/css/landing/ghadeer-parks.css": {
-        "file": "assets/ghadeer-parks-B4FsH2eJ.css",
-        "name": "ghadeer-parks",
-        "names": [
-            "ghadeer-parks.css"
-        ],
-        "src": "resources/css/landing/ghadeer-parks.css",
+        "src": "resources/css/landing/aldar-new.css",
         "isEntry": true,
         "assets": [
             "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
@@ -369,98 +354,13 @@
             "assets/OutfitVariableFont_wght1-EwbcG2E8.woff"
         ]
     },
-    "resources/js/landing/ghadeer-parks.js": {
-        "file": "assets/ghadeer-parks-GmdWi5iZ.js",
-        "name": "ghadeer-parks",
-        "src": "resources/js/landing/ghadeer-parks.js",
+    "resources/js/landing/aldar-new.js": {
+        "file": "assets/aldar-new-D0foXVAL.js",
+        "name": "aldar-new",
+        "src": "resources/js/landing/aldar-new.js",
         "isEntry": true,
         "css": [
-            "assets/ghadeer-parks-DmSsuaRf.css"
-        ],
-        "assets": [
-            "assets/flags-DjVgN9ag.webp",
-            "assets/flags@2x-QBzdwbZ8.webp"
-        ]
-    },
-    "resources/css/landing/riverside.css": {
-        "file": "assets/riverside-B3Aat82Z.css",
-        "name": "riverside",
-        "names": [
-            "riverside.css"
-        ],
-        "src": "resources/css/landing/riverside.css",
-        "isEntry": true,
-        "assets": [
-            "assets/Roboto-Regular-BRoazS9J.woff",
-            "assets/termina-DqdVnZmc.woff2",
-            "assets/TerminaTest-Bold-BihEk_AI.woff",
-            "assets/TerminaTest-Medium-CGvpT4cc.woff"
-        ]
-    },
-    "resources/js/landing/riverside.js": {
-        "file": "assets/riverside-mw7XAeCQ.js",
-        "name": "riverside",
-        "src": "resources/js/landing/riverside.js",
-        "isEntry": true,
-        "css": [
-            "assets/riverside-DmSsuaRf.css"
-        ],
-        "assets": [
-            "assets/flags-DjVgN9ag.webp",
-            "assets/flags@2x-QBzdwbZ8.webp"
-        ]
-    },
-    "resources/fonts/riverside/roboto.woff2": {
-        "file": "assets/roboto-CYVgFitr.woff2",
-        "src": "resources/fonts/riverside/roboto.woff2"
-    },
-    "resources/fonts/riverside/termina.woff2": {
-        "file": "assets/termina-DqdVnZmc.woff2",
-        "src": "resources/fonts/riverside/termina.woff2"
-    },
-    "resources/fonts/riverside/Roboto-Regular.woff": {
-        "file": "assets/Roboto-Regular-BRoazS9J.woff",
-        "src": "resources/fonts/riverside/Roboto-Regular.woff"
-    },
-    "resources/fonts/riverside/TerminaTest-Bold.woff": {
-        "file": "assets/TerminaTest-Bold-BihEk_AI.woff",
-        "src": "resources/fonts/riverside/TerminaTest-Bold.woff"
-    },
-    "resources/fonts/riverside/TerminaTest-Medium.woff": {
-        "file": "assets/TerminaTest-Medium-CGvpT4cc.woff",
-        "src": "resources/fonts/riverside/TerminaTest-Medium.woff"
-    },
-    "resources/css/landing/mareva.css": {
-        "file": "assets/mareva-Bg4rgfiZ.css",
-        "name": "mareva",
-        "names": [
-            "mareva.css"
-        ],
-        "src": "resources/css/landing/mareva.css",
-        "isEntry": true,
-        "assets": [
-            "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
-            "assets/lato-latin-ext-400-normal-NoO0okhb.woff",
-            "assets/lato-latin-400-normal-BEhtfm5r.woff2",
-            "assets/lato-latin-400-normal-B11PyLys.woff",
-            "assets/lato-latin-ext-700-normal-C6gwlRgY.woff2",
-            "assets/lato-latin-ext-700-normal-oVW-9CSr.woff",
-            "assets/lato-latin-700-normal-BUGMgin4.woff2",
-            "assets/lato-latin-700-normal-DAdL7O4w.woff",
-            "assets/optima_lt_pro_n4-CR_umPCx.woff2",
-            "assets/optima_lt_pro_n7-DjMDkqcH.woff2",
-            "assets/optima_lt_pro_i4-DPP4vEV9.woff2",
-            "assets/optima_lt_pro_i7-PDqk5eIp.woff2",
-            "assets/aed-Regular-lH271UDw.otf"
-        ]
-    },
-    "resources/js/landing/mareva.js": {
-        "file": "assets/mareva-U94373pd.js",
-        "name": "mareva",
-        "src": "resources/js/landing/mareva.js",
-        "isEntry": true,
-        "css": [
-            "assets/mareva-DmSsuaRf.css"
+            "assets/aldar-new-DmSsuaRf.css"
         ],
         "assets": [
             "assets/flags-DjVgN9ag.webp",

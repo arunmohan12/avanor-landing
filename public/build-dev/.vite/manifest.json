@@ -39,13 +39,13 @@
     "file": "assets/flags@2x-QBzdwbZ8.webp",
     "src": "node_modules/intl-tel-input/dist/img/flags@2x.webp"
   },
-  "resources/css/landing/ghadeer-parks.css": {
-    "file": "assets/ghadeer-parks-B4FsH2eJ.css",
-    "name": "ghadeer-parks",
+  "resources/css/landing/aldar-new.css": {
+    "file": "assets/aldar-new-CZ7DCVjm.css",
+    "name": "aldar-new",
     "names": [
-      "ghadeer-parks.css"
+      "aldar-new.css"
     ],
-    "src": "resources/css/landing/ghadeer-parks.css",
+    "src": "resources/css/landing/aldar-new.css",
     "isEntry": true,
     "assets": [
       "assets/lato-latin-ext-400-normal-CK4GAP86.woff2",
@@ -113,13 +113,13 @@
     "file": "assets/OutfitVariableFont_wght1-EwbcG2E8.woff",
     "src": "resources/fonts/wadeem/OutfitVariableFont_wght1.woff"
   },
-  "resources/js/landing/ghadeer-parks.js": {
-    "file": "assets/ghadeer-parks-GmdWi5iZ.js",
-    "name": "ghadeer-parks",
-    "src": "resources/js/landing/ghadeer-parks.js",
+  "resources/js/landing/aldar-new.js": {
+    "file": "assets/aldar-new-D0foXVAL.js",
+    "name": "aldar-new",
+    "src": "resources/js/landing/aldar-new.js",
     "isEntry": true,
     "css": [
-      "assets/ghadeer-parks-DmSsuaRf.css"
+      "assets/aldar-new-DmSsuaRf.css"
     ],
     "assets": [
       "assets/flags-DjVgN9ag.webp",

@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use App\Jobs\SyncLeadToGoogleSheets;
-
+use Illuminate\Validation\Rule;
 class LeadController extends Controller
 {
     public function show(Lead $lead): LeadResource
@@ -444,4 +444,166 @@ if ($duplicateExists) {
         'lead_phone' => $validated['phone'] ?? null,
     ]);
     }
+
+
+    public function storeAldarEnquiry(Request $request)
+{
+    Log::info('Property enquiry form submitted', [
+        'name' => $request->input('name'),
+        'phone' => $request->input('phone'),
+        'email' => $request->input('email'),
+        'interested_in' => $request->input('interested_in'),
+        'bedroom_type' => $request->input('bedroom_type'),
+        'budget' => $request->input('budget'),
+        'page_url' => $request->input('page_url'),
+        'time' => now()->toDateTimeString(),
+    ]);
+
+    $validated = $request->validate([
+        'property_id' => ['required', 'exists:properties,id'],
+        'developer_id' => ['nullable', 'exists:developers,id'],
+
+        'name' => ['required', 'string', 'max:255'],
+        'phone' => [
+            'required',
+            'string',
+            'max:30',
+            'regex:/^\+\d{6,29}$/',
+        ],
+        'email' => ['required', 'email', 'max:255'],
+
+        'interested_in' => [
+            'required',
+            \Illuminate\Validation\Rule::in([
+                'Villa',
+                'Townhouse',
+                'Not sure yet',
+            ]),
+        ],
+
+        'bedroom_type' => [
+    'required',
+    Rule::in([
+        '3 Bedrooms',
+        '4 Bedrooms',
+        '5+',
+        'Not sure yet',
+    ]),
+],
+
+        'budget' => [
+            'required',
+            \Illuminate\Validation\Rule::in([
+                'Under AED 3M',
+                'AED 3–5M',
+                'AED 5–8M',
+                'AED 8M+',
+            ]),
+        ],
+
+        'source' => ['nullable', 'string', 'max:100'],
+        'page_url' => ['nullable', 'string', 'max:1000'],
+        'message' => ['nullable', 'string', 'max:2000'],
+
+        'utm_source' => ['nullable', 'string', 'max:255'],
+        'utm_medium' => ['nullable', 'string', 'max:255'],
+        'utm_campaign' => ['nullable', 'string', 'max:255'],
+        'utm_content' => ['nullable', 'string', 'max:255'],
+        'utm_term' => ['nullable', 'string', 'max:255'],
+        'gclid' => ['nullable', 'string', 'max:255'],
+        'fbclid' => ['nullable', 'string', 'max:255'],
+    ]);
+
+    foreach ([
+        'gclid',
+        'utm_source',
+        'utm_medium',
+        'utm_campaign',
+    ] as $parameter) {
+        $validated[$parameter] = $request->session()->get(
+            "campaign.$parameter"
+        );
+    }
+
+    $phone = trim($validated['phone']);
+    $email = mb_strtolower(trim($validated['email']));
+
+    $duplicateExists = Lead::query()
+        ->where('property_id', $validated['property_id'])
+        ->where(function ($query) use ($phone, $email) {
+            $query->where('phone', $phone)
+                ->orWhereRaw('LOWER(email) = ?', [$email]);
+        })
+        ->exists();
+
+    if ($duplicateExists) {
+        return back()
+            ->withInput()
+            ->withErrors([
+                'email' => 'You have already enquired about this property. Our team will contact you soon.',
+            ]);
+    }
+
+    try {
+        $lead = Lead::create($validated);
+    } catch (\Throwable $exception) {
+        Log::error('Property enquiry database insert failed', [
+            'error' => $exception->getMessage(),
+            'environment' => app()->environment(),
+        ]);
+
+        app(\App\Services\ErrorAlertService::class)->send(
+            'Property enquiry database insertion failed',
+            'A property enquiry could not be saved.',
+            [
+                'name' => $validated['name'],
+                'phone' => $validated['phone'],
+                'email' => $validated['email'],
+                'property_id' => $validated['property_id'],
+                'page_url' => $validated['page_url'] ?? null,
+                'error' => $exception->getMessage(),
+            ]
+        );
+
+        return back()
+            ->withInput()
+            ->withErrors([
+                'form' => 'We could not submit your enquiry right now. Please try again shortly.',
+            ]);
+    }
+
+    try {
+        SyncLeadToGoogleSheets::dispatch(
+            $lead->id,
+            $request->ip(),
+            $validated['interested_in']
+        )->onQueue('default');
+    } catch (\Throwable $exception) {
+        Log::error('Property enquiry Sheets sync could not be queued', [
+            'lead_id' => $lead->id,
+            'error' => $exception->getMessage(),
+        ]);
+    }
+
+    try {
+        Http::withHeaders([
+            'X-Internal-Secret' => config('services.internal.secret'),
+        ])->post(
+            rtrim(config('services.avanor_api_url'), '/')
+                . "/internal/leads/{$lead->id}/notify"
+        )->throw();
+    } catch (\Throwable $exception) {
+        Log::error('Property enquiry notification failed', [
+            'lead_id' => $lead->id,
+            'error' => $exception->getMessage(),
+        ]);
+    }
+
+    return redirect()
+        ->route('landing.thank-you')
+        ->with([
+            'lead_email' => $validated['email'],
+            'lead_phone' => $validated['phone'],
+        ]);
+}
 }
