@@ -48,7 +48,7 @@ Route::get('/terms-and-condition', function () {
 //  Route::get('/ghadeer-parks', [LandingPageController::class, 'showGhadeerParks']);
 // Route::get('/riverside', [LandingPageController::class, 'showRiverside']);
 // Route::get('/mareva', [LandingPageController::class, 'showMareva']);
-// Route::get('/aldar', [LandingPageController::class, 'showAldarNew']);
+Route::get('/aldar', [LandingPageController::class, 'showAldarNew']);
 
 //live
 Route::domain('the-heights.sales-centre.net')->group(function () {

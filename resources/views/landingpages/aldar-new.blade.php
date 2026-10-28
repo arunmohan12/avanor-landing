@@ -256,28 +256,24 @@ $propertySchema['offers'] = [
 
 
 
-                <div class="ghadeer-parks-highlights">
+                <fieldset class="ghadeer-parks-highlights">
 
-                    <div class="ghadeer-parks-highlights-heading">
-                        <span>PRIORITY REGISTRATION</span>
-                    </div>
+    <legend class="ghadeer-parks-highlights-heading">
+        PRIORITY REGISTRATION
+    </legend>
 
-                    <div class="ghadeer-parks-highlights-items">
+    <div class="ghadeer-parks-highlights-items">
+        <ul class="rv-hero__points">
+            <li>Priority list for launch day</li>
+            <li>Launch details sent to your WhatsApp</li>
+            <li>No obligation</li>
+        </ul>
+    </div>
 
-                        <ul class="rv-hero__points">
-                            <li>Priority list for launch day</li>
-                            <li>Launch details sent to your WhatsApp</li>
-                            <li>No obligation</li>
-                        </ul>
-
-                    </div>
-
-                    <a href="#enquiry" class="landing-property-cta" data-lead-popup-open data-lead-source="get_early_access">
+</fieldset>
+ <a href="#enquiry" class="landing-property-cta" data-lead-popup-open data-lead-source="get_early_access">
                         GET EARLY ACCESS
                     </a>
-
-                </div>
-
           
 
             </div>

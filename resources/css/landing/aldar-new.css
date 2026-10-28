@@ -10539,7 +10539,7 @@ li {
     align-items: center;
     justify-content: center;
 
-    margin-top: 10%;
+    margin-top: 0%;
 
     padding: 0.9rem 0.9rem;
 
@@ -11861,28 +11861,31 @@ li {
     }
 }
 
-
 .ghadeer-parks-highlights {
-    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    padding: 20px 24px;
+    margin: 20px 0;
+    min-width: 0;
 }
 
 .ghadeer-parks-highlights-heading {
-    margin-bottom: 24px;
-}
-
-.ghadeer-parks-highlights-heading span {
+    padding: 0 12px;
+    margin-left: 8px;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1.5px;
-    text-transform: uppercase;
+    color: #fff;
 }
 
 .ghadeer-parks-highlights-items {
-    display: flex;
-    align-items: stretch;
-    width: 100%;
+    padding-top: 8px;
 }
 
+.ghadeer-parks-highlights-items .rv-hero__points {
+    margin: 0;
+    padding-left: 20px;
+}
 .ghadeer-parks-highlight-item {
     flex: 1;
     display: flex;
