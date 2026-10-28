@@ -56,6 +56,7 @@ public function handle(GoogleSheetsLeadService $sheets): void
         $lead->phone,
         $this->interestedIn ?? '',
         $lead->bedroom_type ?? '',
+        $lead->budget ?? '',
         '',
         $this->ipAddress ?? '',
         $lead->gclid ?? '',
