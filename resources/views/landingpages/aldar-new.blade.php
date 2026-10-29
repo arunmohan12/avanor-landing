@@ -236,20 +236,19 @@ $propertySchema['offers'] = [
             {{-- HERO CONTENT --}}
             <div class="avanor-property-slide-content-landing">
 
-                <span class="avanor-property-slide-eyebrow">
+                <span class="avanor-property-slide-eyebrow" id="dynamic-ad-eyebrow">
+    UPCOMING LAUNCH NEAR · DUBAI SILICON OASIS
+</span>
 
-                    UPCOMING LAUNCH NEAR · DUBAI SILICON OASIS
-                </span>
+<h1 class="avanor-property-slide-title" id="dynamic-ad-h1">
+    {{ $property->title }}
+</h1>
 
-                <h1 class="avanor-property-slide-title" id="dynamic-ad-h1">
-                    {{ $property->title }}
-                </h1>
-
-                <p class="avanor-property-slide-description">
-                    Villas and townhouses by Aldar and Dubai Holding, expected to launch
-                    before the end of 2026. Register now and get prices, floor plans and the payment plan
-                    first.
-                </p>
+<p class="avanor-property-slide-description" id="dynamic-ad-description">
+    Villas and townhouses by Aldar and Dubai Holding, expected to launch
+    before the end of 2026. Register now and get prices, floor plans and the payment plan
+    first.
+</p>
 
 
            

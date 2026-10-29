@@ -413,12 +413,16 @@
         "isEntry": true
     },
     "resources/js/landing/aldar-new.js": {
-        "file": "assets/aldar-new-CcIvdJ_r.js",
+        "file": "assets/aldar-new-D_D9Q6kW.js",
         "name": "aldar-new",
         "src": "resources/js/landing/aldar-new.js",
         "isEntry": true,
-        "imports": [
-            "_intlTelInput-jRFmtbbD.js"
+        "css": [
+            "assets/aldar-new-DmSsuaRf.css"
+        ],
+        "assets": [
+            "assets/flags-DjVgN9ag.webp",
+            "assets/flags@2x-QBzdwbZ8.webp"
         ]
     },
     "resources/js/landing/bay-estate.js": {

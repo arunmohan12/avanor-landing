@@ -1,45 +1,23 @@
 {
-  "resources/css/landing/fonts/Nakheel-TextBold.woff": {
-    "file": "assets/Nakheel-TextBold-B90GRwVF.woff",
-    "src": "resources/css/landing/fonts/Nakheel-TextBold.woff"
+  "node_modules/intl-tel-input/dist/img/flags.webp": {
+    "file": "assets/flags-DjVgN9ag.webp",
+    "src": "node_modules/intl-tel-input/dist/img/flags.webp"
   },
-  "resources/css/landing/fonts/Nakheel-TextBold.woff2": {
-    "file": "assets/Nakheel-TextBold-nqtSceLM.woff2",
-    "src": "resources/css/landing/fonts/Nakheel-TextBold.woff2"
+  "node_modules/intl-tel-input/dist/img/flags@2x.webp": {
+    "file": "assets/flags@2x-QBzdwbZ8.webp",
+    "src": "node_modules/intl-tel-input/dist/img/flags@2x.webp"
   },
-  "resources/css/landing/fonts/Nakheel-TextRegular.woff": {
-    "file": "assets/Nakheel-TextRegular-C7GDnss0.woff",
-    "src": "resources/css/landing/fonts/Nakheel-TextRegular.woff"
-  },
-  "resources/css/landing/fonts/Nakheel-TextRegular.woff2": {
-    "file": "assets/Nakheel-TextRegular-Wz4d7xXZ.woff2",
-    "src": "resources/css/landing/fonts/Nakheel-TextRegular.woff2"
-  },
-  "resources/css/landing/palm-springs.css": {
-    "file": "assets/palm-springs-CivPpero.css",
-    "name": "palm-springs",
-    "names": [
-      "palm-springs.css"
-    ],
-    "src": "resources/css/landing/palm-springs.css",
+  "resources/js/landing/aldar-new.js": {
+    "file": "assets/aldar-new-D_D9Q6kW.js",
+    "name": "aldar-new",
+    "src": "resources/js/landing/aldar-new.js",
     "isEntry": true,
+    "css": [
+      "assets/aldar-new-DmSsuaRf.css"
+    ],
     "assets": [
-      "assets/Nakheel-TextRegular-Wz4d7xXZ.woff2",
-      "assets/Nakheel-TextRegular-C7GDnss0.woff",
-      "assets/Nakheel-TextBold-nqtSceLM.woff2",
-      "assets/Nakheel-TextBold-B90GRwVF.woff"
+      "assets/flags-DjVgN9ag.webp",
+      "assets/flags@2x-QBzdwbZ8.webp"
     ]
-  },
-  "resources/js/landing/palm-springs.js": {
-    "file": "assets/palm-springs-BWYy1BLF.js",
-    "name": "palm-springs",
-    "src": "resources/js/landing/palm-springs.js",
-    "isEntry": true
-  },
-  "resources/js/palm-springs-map.js": {
-    "file": "assets/palm-springs-map-BvXLP0i-.js",
-    "name": "palm-springs-map",
-    "src": "resources/js/palm-springs-map.js",
-    "isEntry": true
   }
 }

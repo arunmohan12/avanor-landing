@@ -596,3 +596,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+const adGroupH1 = document.getElementById('dynamic-ad-h1');
+const adGroupEyebrow = document.getElementById('dynamic-ad-eyebrow');
+const adGroupDescription = document.getElementById('dynamic-ad-description');
+
+if (adGroupH1 && adGroupEyebrow && adGroupDescription) {
+    const params = new URLSearchParams(window.location.search);
+    const adGroup = params.get('ag');
+
+    const adContent = {
+        greenwood: {
+            eyebrow: 'REPORTED IN THE MARKET AS “GREENWOOD”',
+            headline: 'Aldar’s Upcoming Dubai Community',
+            description:
+                'Market reports call it Greenwood. Aldar hasn’t confirmed the name yet, but it has confirmed a villa and townhouse community near Dubai Silicon Oasis, with Dubai Holding, launching before the end of 2026. Register to get prices and floor plans first.'
+        },
+
+        aldar: {
+            eyebrow: 'ALDAR’S NEXT DUBAI LAUNCH · NEAR DUBAI SILICON OASIS',
+            headline: 'Aldar’s New Dubai Launch',
+            description:
+                'After Haven, Athlon and The Wilds, Aldar’s fourth Dubai community brings villas and townhouses near Dubai Silicon Oasis. Register now for prices, floor plans and the payment plan first.'
+        }
+    };
+
+    if (adGroup && adContent[adGroup]) {
+        adGroupEyebrow.textContent = adContent[adGroup].eyebrow;
+        adGroupH1.textContent = adContent[adGroup].headline;
+        adGroupDescription.textContent = adContent[adGroup].description;
+    }
+}

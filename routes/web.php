@@ -49,7 +49,7 @@ Route::get('/terms-and-condition', function () {
 // Route::get('/riverside', [LandingPageController::class, 'showRiverside']);
 // Route::get('/mareva', [LandingPageController::class, 'showMareva']);
 // Route::get('/aldar', [LandingPageController::class, 'showAldarNew']);
-Route::get('/palm-springs', [LandingPageController::class, 'showPalmSprings']);
+// Route::get('/palm-springs', [LandingPageController::class, 'showPalmSprings']);
 
 //live
 Route::domain('the-heights.sales-centre.net')->group(function () {
