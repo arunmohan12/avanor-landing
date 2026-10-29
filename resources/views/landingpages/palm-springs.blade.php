@@ -164,18 +164,18 @@ strip_tags($property->description ?? ''),
 
             <div class="pja-hero-box">
 
-                <div class="pja-hero-eyebrow">
-                    UPCOMING NAKHEEL LAUNCH · NEXT TO PALM JEBEL ALI
-                </div>
+                <div class="pja-hero-eyebrow" id="dynamic-ad-eyebrow">
+    UPCOMING NAKHEEL LAUNCH · NEXT TO PALM JEBEL ALI
+</div>
 
-                <h1 class="pja-hero-title" id="dynamic-ad-h1">
-                    Palm Springs by Nakheel
-                </h1>
+<h1 class="pja-hero-title" id="dynamic-ad-h1">
+    Palm Springs by Nakheel
+</h1>
 
-                <p class="pja-hero-description">
-                    3–4 bedroom townhouses and 4–5 bedroom villas on Sheikh Zayed Road,
-beside a Metro station. Indicative prices from AED 3.8M.
-                </p>
+<p class="pja-hero-description" id="dynamic-ad-description">
+    3–4 bedroom townhouses and 4–5 bedroom villas on Sheikh Zayed Road,
+    beside a Metro station. Indicative prices from AED 3.8M.
+</p>
 
                                 <fieldset class="ghadeer-parks-highlights">
 
@@ -667,11 +667,11 @@ Road.
             @php
 
                 $galleryItems = [
-                    'COMMUNITY VIEW',
-                    'AERIAL VIEW',
-                    'DOWNTOWN VIEW',
-                    'SUNSET',
-                    'VIEW FROM LIVING ROOM',
+                    'COMMUNITY POOL',
+                    'VILLA COMMUNITY',
+                    'SUNSET VIEW FROM VILLA',
+                    'TOWNHOUSE EXTERIOR',
+                    'TOWNHOUSE COMMUNITY',
              
               
                     

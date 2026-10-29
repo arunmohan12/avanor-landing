@@ -1464,20 +1464,33 @@ if (enquiryPopup) {
 
 
 const adGroupH1 = document.getElementById('dynamic-ad-h1');
+const adGroupEyebrow = document.getElementById('dynamic-ad-eyebrow');
+const adGroupDescription = document.getElementById('dynamic-ad-description');
 
-if (adGroupH1) {
+if (adGroupH1 && adGroupEyebrow && adGroupDescription) {
     const params = new URLSearchParams(window.location.search);
-
     const adGroup = params.get('ag');
 
-    const headlines = {
-        brand: 'Bay Estate by Nakheel on Dubai Islands',
-        'dubai-islands': 'New Villas & Townhouses on Dubai Islands by Nakheel',
-        nakheel: "Bay Estate: Nakheel's New Villas & Townhouses",
+    const adContent = {
+        nakheel: {
+            eyebrow: 'NAKHEEL’S NEW LAUNCH',
+            headline: 'Nakheel’s New Townhouses & Villas',
+            description:
+                'Palm Springs by Nakheel brings 3–4 bedroom townhouses and 4–5 bedroom villas next to Palm Jebel Ali, from AED 3.8M. Register to get the price list first.'
+        },
+
+        pja: {
+            eyebrow: 'NEXT TO PALM JEBEL ALI',
+            headline: 'Villas & Townhouses Next to Palm Jebel Ali',
+            description:
+                'Palm Springs by Nakheel: townhouses and villas beside Palm Jebel Ali from AED 3.8M, far below on-island prices. Register for the price list first.'
+        }
     };
 
-    if (adGroup && headlines[adGroup]) {
-        adGroupH1.textContent = headlines[adGroup];
+    if (adGroup && adContent[adGroup]) {
+        adGroupEyebrow.textContent = adContent[adGroup].eyebrow;
+        adGroupH1.textContent = adContent[adGroup].headline;
+        adGroupDescription.textContent = adContent[adGroup].description;
     }
 }
 
