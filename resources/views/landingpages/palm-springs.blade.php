@@ -269,7 +269,7 @@ strip_tags($property->description ?? ''),
                         </div>
 
                         <h3>
-                            3 BEDROOM<br>
+                            3 & 4 BEDROOM<br>
                             TOWNHOUSE
                         </h3>
 
