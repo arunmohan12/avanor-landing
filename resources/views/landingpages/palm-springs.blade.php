@@ -270,7 +270,7 @@ strip_tags($property->description ?? ''),
 
                         <h3>
                             3 & 4 BEDROOM<br>
-                            TOWNHOUSE
+                            TOWNHOUSES
                         </h3>
 
                         <div class="pja-collection-meta">
