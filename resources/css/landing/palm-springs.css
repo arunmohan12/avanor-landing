@@ -534,8 +534,8 @@ body.landing-popup-open {
 
 .pja-logo img {
     display: block ;
-    width: 180px;
-    height: 50px;
+    width: 15%;
+    height: auto;
 
     /*max-height: 50px ;*/
 }
@@ -3631,7 +3631,7 @@ font-size: clamp(28px, 3vw, 44px);
 .pja-location-overlay {
     position: absolute;
 
-    top: 0px;
+    top: 10%;
 
 
 
@@ -3641,9 +3641,9 @@ font-size: clamp(28px, 3vw, 44px);
     flex-direction: column;
 
     background: rgba(0, 0, 0, 0.32);
-
+  -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+  
 
     border: 1px solid rgba(255, 255, 255, 0.24);
 
@@ -3669,7 +3669,7 @@ font-size: clamp(28px, 3vw, 44px);
 
     gap: 16px;
 
-    padding: 18px 20px;
+    padding: 5px 20px;
 
     border: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.16);

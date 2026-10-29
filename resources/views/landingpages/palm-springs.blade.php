@@ -380,7 +380,7 @@ registered clients receive them first.
 
                             <span>    Townhouses FROM</span>
 
-                            <strong>AED 5.9M</strong>
+                            <strong>AED 3.8M</strong>
 
                         </div>
 
@@ -388,21 +388,7 @@ registered clients receive them first.
 
 
                     <!-- PAYMENT PLAN -->
-                    <div class="pja-project-highlight">
-
-                        <div class="pja-project-highlight-icon">
-                            <x-landing-icon name="aed" />
-                        </div>
-
-                        <div class="pja-project-highlight-content">
-
-                            <span>Villas from</span>
-
-                            <strong>AED 9M</strong>
-
-                        </div>
-
-                    </div>
+               
 
                 </div>
 
@@ -497,9 +483,9 @@ Road.
                     <div
                         id="custom-map"
                         data-api-key="{{ config('services.google.maps_key') }}"
-                       data-lat="24.999828961191696"
-                        data-lng="54.99681780808441"
-                     
+                       data-lat="24.95210335822424"
+                        data-lng="55.037290891458426"
+                 
                         data-title="Palm Jebel Ali - Dubai"
                         data-locations='@json($locations)'
                     ></div>
