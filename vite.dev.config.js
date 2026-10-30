@@ -7,7 +7,7 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/js/landing/aldar-new.js',
+                'resources/css/landing/palm-springs.css',
 
             ],
             refresh: true,

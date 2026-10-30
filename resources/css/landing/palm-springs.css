@@ -4545,7 +4545,7 @@ body.enquiry-popup-open {
 
 @media (max-width: 767px) {
     .pja-logo img {
-        width: 140px;
+        width: auto;
         margin-left: 15px;
     }
 }
