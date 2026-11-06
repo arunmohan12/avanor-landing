@@ -146,7 +146,7 @@ strip_tags($property->description ?? ''),
             ) }}"
 
             srcset="
-                {{ \App\Support\MediaUrl::fromMedia($coverMedia, 'cover_mobile_avif') }} 768w,
+                {{ \App\Support\MediaUrl::fromMedia($coverMedia, 'cover_mobile_avif') }} 828w,
                 {{ \App\Support\MediaUrl::fromMedia($coverMedia, 'cover_tablet_avif') }} 1280w,
                 {{ \App\Support\MediaUrl::fromMedia($coverMedia, 'cover_avif') }} 1920w
             "
@@ -256,7 +256,7 @@ strip_tags($property->description ?? ''),
 
                     <div class="pja-collection-image">
                         <img
-                            src="{{ asset('assets/img/landing/bay-estate/3-br-townhouse.webp') }}"
+                            src="{{ asset('assets/img/landing/palm-springs/3-br-townhouse.webp') }}"
                             alt="3 Bedroom Townhouse at Palm Springs"
                         >
                     </div>
@@ -294,7 +294,7 @@ strip_tags($property->description ?? ''),
 
                     <div class="pja-collection-image">
                         <img
-                            src="{{ asset('assets/img/landing/bay-estate/4-br-townhouse.webp') }}"
+                            src="{{ asset('assets/img/landing/palm-springs/4-br-townhouse.webp') }}"
                             alt="4 Bedroom Townhouse at Palm Springs"
                         >
                     </div>
@@ -343,7 +343,7 @@ strip_tags($property->description ?? ''),
 
 
 
-<section class="pja-project-info pja-section" id="#prices">
+<section class="pja-project-info pja-section" id="prices">
 
         <div class="main-container ">
 

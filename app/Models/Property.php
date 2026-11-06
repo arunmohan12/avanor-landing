@@ -39,10 +39,10 @@ class Property extends Model implements HasMedia
     {
         // Cover
         $this->addMediaConversion('cover_mobile_avif')
-            ->format('avif')
-            ->width(768)
-            ->quality(65)
-            ->nonQueued();
+    ->format('avif')
+    ->fit(Fit::Crop, 828, 1792)
+    ->quality(65)
+    ->nonQueued();
 
         $this->addMediaConversion('cover_tablet_avif')
             ->format('avif')
