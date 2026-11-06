@@ -164,17 +164,16 @@ strip_tags($property->description ?? ''),
 
             <div class="pja-hero-box">
 
-                <div class="pja-hero-eyebrow" id="dynamic-ad-eyebrow">
-    UPCOMING NAKHEEL LAUNCH · NEXT TO PALM JEBEL ALI
+<div class="pja-hero-eyebrow">
+    {{ $heroContent['eyebrow'] }}
 </div>
 
-<h1 class="pja-hero-title" id="dynamic-ad-h1">
-    Palm Springs by Nakheel
+<h1 class="pja-hero-title">
+    {{ $heroContent['headline'] }}
 </h1>
 
-<p class="pja-hero-description" id="dynamic-ad-description">
-    3–4 bedroom townhouses and 4–5 bedroom villas on Sheikh Zayed Road,
-    beside a Metro station. Indicative prices from AED 3.8M.
+<p class="pja-hero-description">
+    {{ $heroContent['description'] }}
 </p>
 
                                 <fieldset class="ghadeer-parks-highlights">

@@ -124,7 +124,6 @@ class LandingPageController extends Controller
             'hasFacts',
             'hasProjectDescription',
         ));
-
     }
 
     public function showPalmCentral()
@@ -362,7 +361,6 @@ class LandingPageController extends Controller
             'hasFacts',
             'hasProjectDescription',
         ));
-
     }
     public function showYasRivaByAldar()
     {
@@ -480,7 +478,6 @@ class LandingPageController extends Controller
             'hasFacts',
             'hasProjectDescription',
         ));
-
     }
 
 
@@ -844,7 +841,7 @@ class LandingPageController extends Controller
     }
 
 
-public function showMareva()
+    public function showMareva()
     {
 
         $property = Property::query()
@@ -960,7 +957,6 @@ public function showMareva()
             'hasFacts',
             'hasProjectDescription',
         ));
-
     }
 
 
@@ -1182,11 +1178,48 @@ public function showMareva()
             $property->project !== null &&
             filled($property->project->description);
 
+
+
+        /*
+|--------------------------------------------------------------------------
+| Dynamic Ad Group Hero Content
+|--------------------------------------------------------------------------
+*/
+
+        $adGroup = request()->query('ag');
+
+        $heroContent = [
+            'eyebrow' => 'UPCOMING NAKHEEL LAUNCH · NEXT TO PALM JEBEL ALI',
+            'headline' => 'Palm Springs by Nakheel',
+            'description' => '3–4 bedroom townhouses and 4–5 bedroom villas on Sheikh Zayed Road, beside a Metro station. Indicative prices from AED 3.8M.',
+        ];
+
+        $adGroupContent = [
+            'nakheel' => [
+                'eyebrow' => 'NAKHEEL’S NEW LAUNCH',
+                'headline' => 'Nakheel’s New Townhouses & Villas',
+                'description' => 'Palm Springs by Nakheel brings 3–4 bedroom townhouses and 4–5 bedroom villas next to Palm Jebel Ali, from AED 3.8M. Register to get the price list first.',
+            ],
+
+            'pja' => [
+                'eyebrow' => 'NEXT TO PALM JEBEL ALI',
+                'headline' => 'Villas & Townhouses Next to Palm Jebel Ali',
+                'description' => 'Palm Springs by Nakheel: townhouses and villas beside Palm Jebel Ali from AED 3.8M, far below on-island prices. Register for the price list first.',
+            ],
+        ];
+
+        if (isset($adGroupContent[$adGroup])) {
+            $heroContent = $adGroupContent[$adGroup];
+        }
+
         /*
         |--------------------------------------------------------------------------
         | View
         |--------------------------------------------------------------------------
         */
+
+
+
 
 
         return view('landingpages.palm-springs', compact(
@@ -1201,9 +1234,7 @@ public function showMareva()
             'activeSections',
             'hasFacts',
             'hasProjectDescription',
+            'heroContent',
         ));
     }
-
-
 }
-
