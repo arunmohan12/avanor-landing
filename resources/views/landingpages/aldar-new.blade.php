@@ -236,18 +236,16 @@ $propertySchema['offers'] = [
             {{-- HERO CONTENT --}}
             <div class="avanor-property-slide-content-landing">
 
-                <span class="avanor-property-slide-eyebrow" id="dynamic-ad-eyebrow">
-    UPCOMING LAUNCH NEAR · DUBAI SILICON OASIS
+<span class="avanor-property-slide-eyebrow">
+    {{ $heroContent['eyebrow'] }}
 </span>
 
-<h1 class="avanor-property-slide-title" id="dynamic-ad-h1">
-    {{ $property->title }}
+<h1 class="avanor-property-slide-title">
+    {{ $heroContent['headline'] }}
 </h1>
 
-<p class="avanor-property-slide-description" id="dynamic-ad-description">
-    Villas and townhouses by Aldar and Dubai Holding, expected to launch
-    before the end of 2026. Register now and get prices, floor plans and the payment plan
-    first.
+<p class="avanor-property-slide-description">
+    {{ $heroContent['description'] }}
 </p>
 
 

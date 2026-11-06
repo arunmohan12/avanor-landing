@@ -1058,6 +1058,77 @@ class LandingPageController extends Controller
             filled($property->project->description);
 
         /*
+|--------------------------------------------------------------------------
+| Dynamic Ad Group Content
+|--------------------------------------------------------------------------
+*/
+
+        $adGroup = request()->query('ag');
+
+        /*
+|--------------------------------------------------------------------------
+| Hero Content (Default)
+|--------------------------------------------------------------------------
+*/
+
+        $heroContent = [
+            'eyebrow' => 'UPCOMING LAUNCH · NEAR DUBAI SILICON OASIS',
+            'headline' => 'Aldar’s New Dubai Community',
+            'description' => 'Villas and townhouses by Aldar and Dubai Holding, expected to launch before the end of 2026. Register now and get prices, floor plans and the payment plan first.',
+        ];
+
+        /*
+|--------------------------------------------------------------------------
+| Overview Content (Default)
+|--------------------------------------------------------------------------
+*/
+
+        $overviewContent = [
+            'eyebrow' => 'Overview',
+            'title' => 'What we know so far',
+            'description' => 'Aldar has confirmed plans for a large villa and townhouse community near Dubai Silicon Oasis. It’s being developed with Dubai Holding and is expected to launch before the end of 2026.',
+        ];
+
+        /*
+|--------------------------------------------------------------------------
+| Ad Group Variations
+|--------------------------------------------------------------------------
+*/
+
+        $adGroupContent = [
+            'greenwood' => [
+                'hero' => [
+                    'eyebrow' => 'REPORTED IN THE MARKET AS “GREENWOOD”',
+                    'headline' => 'Aldar’s Upcoming Dubai Community',
+                    'description' => 'Market reports call it Greenwood. Aldar hasn’t confirmed the name yet, but it has confirmed a villa and townhouse community near Dubai Silicon Oasis, with Dubai Holding, launching before the end of 2026. Register to get prices and floor plans first.',
+                ],
+                'overview' => [
+                    'eyebrow' => 'GREENWOOD',
+                    'title' => 'What is Greenwood?',
+                    'description' => 'Market reports refer to the upcoming community as Greenwood. Aldar hasn’t confirmed the name yet, but it has confirmed a villa and townhouse community near Dubai Silicon Oasis, developed with Dubai Holding and expected to launch before the end of 2026.',
+                ],
+            ],
+
+            'aldar' => [
+                'hero' => [
+                    'eyebrow' => 'ALDAR’S NEXT DUBAI LAUNCH · NEAR DUBAI SILICON OASIS',
+                    'headline' => 'Aldar’s New Dubai Launch',
+                    'description' => 'After Haven, Athlon and The Wilds, Aldar’s fourth Dubai community brings villas and townhouses near Dubai Silicon Oasis. Register now for prices, floor plans and the payment plan first.',
+                ],
+                'overview' => [
+                    'eyebrow' => 'ALDAR’S NEXT DUBAI COMMUNITY',
+                    'title' => 'What makes this launch significant?',
+                    'description' => 'Following Haven, Athlon and The Wilds, Aldar is preparing another Dubai community featuring villas and townhouses near Dubai Silicon Oasis, in partnership with Dubai Holding. The launch is expected before the end of 2026.',
+                ],
+            ],
+        ];
+
+        if (isset($adGroupContent[$adGroup])) {
+            $heroContent = $adGroupContent[$adGroup]['hero'];
+            $overviewContent = $adGroupContent[$adGroup]['overview'];
+        }
+
+        /*
         |--------------------------------------------------------------------------
         | View
         |--------------------------------------------------------------------------
@@ -1076,6 +1147,7 @@ class LandingPageController extends Controller
             'activeSections',
             'hasFacts',
             'hasProjectDescription',
+            'heroContent',
         ));
     }
 
