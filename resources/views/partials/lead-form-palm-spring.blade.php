@@ -5,7 +5,7 @@ $source = $source ?? 'palm-springs-popup';
 
 <div class="sticky-register-card">
     <div class="sticky-card-head">
-        <span class="sticky-card-tag">Palm Spring &bull; PALM JEBEL ALI</span>
+        <span class="sticky-card-tag">Palm Springs &bull; PALM JEBEL ALI</span>
         <h3 class="sticky-card-title">
             {{ $title ?? 'Get the Price List First' }}
         </h3>

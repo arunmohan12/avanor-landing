@@ -176,6 +176,25 @@ strip_tags($property->description ?? ''),
     {{ $heroContent['description'] }}
 </p>
 
+<div class="pja-hero-stats">
+
+    <div class="pja-hero-stat">
+        <strong>FROM AED 3.8M</strong>
+        <span>STARTING PRICE</span>
+    </div>
+
+    <div class="pja-hero-stat">
+        <strong>10%</strong>
+        <span>ON BOOKING</span>
+    </div>
+
+    <div class="pja-hero-stat">
+        <strong>OCT 2030</strong>
+        <span>ESTIMATED HANDOVER</span>
+    </div>
+
+</div>
+
                                 <fieldset class="ghadeer-parks-highlights">
 
     <legend class="ghadeer-parks-highlights-heading">
@@ -184,8 +203,8 @@ strip_tags($property->description ?? ''),
 
     <div class="ghadeer-parks-highlights-items">
         <ul class="rv-hero__points">
-            <li>Priority list for launch day</li>
-            <li>Launch details sent to your WhatsApp</li>
+            <li>Full price list and floor plans on WhatsApp</li>
+            <li>Help choosing the right unit and plot</li>
             <li>No obligation</li>
         </ul>
     </div>
@@ -219,6 +238,7 @@ strip_tags($property->description ?? ''),
 
          @include('partials.lead-form-palm-spring', [
             'source' => 'palm_spring_mobile_form',
+            'title' => 'Get the Price List & Floor Plans',
             'propertyId' => $property->id,
             'developerId' => $property->developer_id,
          ])
@@ -245,7 +265,9 @@ strip_tags($property->description ?? ''),
                 Townhouses and villas by Nakheel
             </h2>
 
-        
+          <p class="section-description">
+            977 homes in five layouts, from 3-bedroom townhouses to 5-bedroom villas.
+          </p>
 
         </div>
 
@@ -273,15 +295,18 @@ strip_tags($property->description ?? ''),
                         </h3>
 
                         <div class="pja-collection-meta">
+    <div>
+        <span>3 Bedroom Townhouse</span>
+        <strong>2,326 sq ft</strong>
+    </div>
 
-                            <div>
-                                <span>Sizes releases soon...</span>
-                                
-                            </div>
+    <div>
+        <span>4 Bedroom Townhouse </span>
+        <strong>2,672 sq ft (G+1)<br>3,115 sq ft (G+2)<br> Only 52 homes</strong>
+    </div>
 
-                         
 
-                        </div>
+</div>
 
                     </div>
 
@@ -294,8 +319,8 @@ strip_tags($property->description ?? ''),
 
                     <div class="pja-collection-image">
                         <img
-                            src="{{ asset('assets/img/landing/palm-springs/4-br-townhouse.webp') }}"
-                            alt="4 Bedroom Townhouse at Palm Springs"
+                            src="{{ asset('assets/img/landing/palm-springs/4-br-villa.webp') }}"
+                            alt="4 Bedroom Villa at Palm Springs"
                         >
                     </div>
 
@@ -311,15 +336,16 @@ strip_tags($property->description ?? ''),
                         </h3>
 
                         <div class="pja-collection-meta">
+    <div>
+        <span>4 Bedroom Villa</span>
+        <strong>4,041 sq ft</strong>
+    </div>
 
-                            <div>
-                                <span>Sizes releases soon...</span>
-                      
-                            </div>
-
-                         
-
-                        </div>
+    <div>
+        <span>5 Bedroom Villa</span>
+        <strong>4,921 sq ft</strong>
+    </div>
+</div>
 
                     </div>
 
@@ -332,7 +358,7 @@ strip_tags($property->description ?? ''),
 
                 <a href="#" class="pja-btn pja-btn-transparent" data-open-enquiry data-lead-source="get_floor_plan_first">
                
-                    GET FLOOR PLANS FIRST
+                    Get Floor Plans
                 </a>
 
             </div>
@@ -351,50 +377,75 @@ strip_tags($property->description ?? ''),
             <div class="pja-project-info-content">
 
                 <div class="section-eyebrow">
-                     PRICES
+                     PRICES & PLANS
                 </div>
 
                 <h2 class="title">
-                     Indicative prices from AED 3.8M
+                     Prices and payment plan
                 </h2>
 
                 <p class="section-description">
-            Prices are expected to range from about AED 3.8M for townhouses to AED 9M for the
-largest villas. Nakheel will release the full price list and payment plan at launch, and
-registered clients receive them first.
+Townhouses from AED 3.8M · Villas from AED 7.0M
                 </p>
 
 
                 <!-- PRICE & PAYMENT -->
                 <div class="pja-project-highlights">
 
-                    <!-- STARTING PRICE -->
-                    <div class="pja-project-highlight">
+    <!-- BOOKING -->
+    <div class="pja-project-highlight">
 
-                        <div class="pja-project-highlight-icon">
-                            <x-landing-icon name="aed" />
-                        </div>
+        <div class="pja-project-highlight-icon">
+            <x-landing-icon name="aed" />
+        </div>
 
-                        <div class="pja-project-highlight-content">
+        <div class="pja-project-highlight-content">
+            <span>ON BOOKING</span>
+            <strong>10%</strong>
+        </div>
 
-                            <span>    Townhouses FROM</span>
+    </div>
 
-                            <strong>AED 3.8M</strong>
+    <!-- CONSTRUCTION -->
+    <div class="pja-project-highlight">
 
-                        </div>
+        <div class="pja-project-highlight-icon">
+            <x-landing-icon name="aed" />
+        </div>
 
-                    </div>
+        <div class="pja-project-highlight-content">
+            <span>DURING CONSTRUCTION</span>
+            <strong>50%</strong>
+            <small>Six instalments · 2027–2029</small>
+        </div>
 
+    </div>
 
-                    <!-- PAYMENT PLAN -->
-               
+    <!-- HANDOVER -->
+    <div class="pja-project-highlight">
 
-                </div>
+        <div class="pja-project-highlight-icon">
+            <x-landing-icon name="aed" />
+        </div>
 
+        <div class="pja-project-highlight-content">
+            <span>ON HANDOVER</span>
+            <strong>40%</strong>
+            <small>Estimated October 2030</small>
+        </div>
+
+    </div>
+
+</div>
+
+     <p class="section-description">
+Get the full price list for each unit type and the dated payment schedule on
+WhatsApp.
+                </p>
             </div>
 
 
-             <div class="pja-gallery-button-wrapper" bis_skin_checked="1">
+             <div class="pja-gallery-button-wrapper bis_skin_checked=1 mt-20">
 
                 <a href="#" class="pja-btn pja-btn-transparent" data-open-enquiry data-lead-source="UNLOCK_THE_PRICE_LIST">
                     UNLOCK THE PRICE LIST
@@ -417,35 +468,35 @@ registered clients receive them first.
     $locations = [
         [
             'type' => 'airport',
-            'text' => '15 minutes from Al Maktoum International Airport (DWC)',
+            'text' => '15 minutes to Al Maktoum International Airport (DWC)',
             'lat' => 24.8967,
             'lng' => 55.1614,
             'icon' => 'plane',
         ],
         [
             'type' => 'location',
-            'text' => '17 minutes from Palm Jebel Ali',
+            'text' => '14 minutes to Palm Jebel Ali',
             'lat' => 24.7800,
             'lng' => 54.9800,
             'icon' => 'location',
         ],
         [
             'type' => 'location',
-            'text' => '20 minutes from Bluewaters Island',
+            'text' => '20 minutes to Bluewaters Island',
             'lat' => 25.0800,
             'lng' => 55.1220,
             'icon' => 'location',
         ],
         [
             'type' => 'palm',
-            'text' => '25 minutes from Palm Jumeirah',
+            'text' => '25 minutes to Palm Jumeirah',
             'lat' => 25.1124,
             'lng' => 55.1390,
             'icon' => 'location',
         ],
         [
             'type' => 'location',
-            'text' => '30 minutes from Burj Al Arab',
+            'text' => '30 minutes to Burj Al Arab',
             'lat' => 25.1413,
             'lng' => 55.1853,
             'icon' => 'location',
@@ -467,8 +518,8 @@ registered clients receive them first.
             </h2>
 
             <p class="section-description">
-                A new Nakheel masterplan beside a Metro station, with direct access to Sheikh Zayed
-Road.
+                Part of a new Nakheel masterplan beside a Metro station, with direct access to Sheikh
+Zayed Road.
             </p>
 
         </div>
@@ -525,7 +576,7 @@ Road.
                     href="#"
                     class="pja-btn pja-btn-transparent"
                     data-open-enquiry data-lead-source="get_location_guide">
-                    GET LOCATION GUIDE
+                    GET THE MASTERPLAN
                 </a>
 
             </div>
@@ -542,92 +593,212 @@ Road.
 
         <div class="pja-launch-header">
             <div class="section-eyebrow">
-                SECTION 5 · WHY REGISTER NOW
+            WHY BUY
             </div>
 
             <h2 class="title">
-                Why Register for Palm Springs by Nakheel?
+                Why Palm Springs by Nakheel?
             </h2>
 
-            <p class="section-description">
-                Get early access to launch information, compare your options
-                and receive guidance from an Avanor Capital advisor before
-                availability becomes limited.
-            </p>
+            <div class="section-description">
+                Discover the advantages of choosing Palm Springs, from
+                accessible entry prices and a flexible payment plan to
+                early unit selection and expert guidance.
+            </div>
         </div>
 
         <div class="pja-launch-reasons">
 
             <div class="pja-launch-reason">
                 <div class="pja-launch-reason-content">
-                    <h3>More Affordable Entry</h3>
+                    <h3>More Affordable Entry to the Area</h3>
                     <p>
                         Townhouses on Palm Jebel Ali itself start around
-                        AED 14.9M, while Palm Springs starts from about
-                        AED 3.8M.
+                        AED 14.9M, while Palm Springs starts from AED 3.8M.
                     </p>
                 </div>
             </div>
 
             <div class="pja-launch-reason">
                 <div class="pja-launch-reason-content">
-                    <h3>Launch-Day Access</h3>
+                    <h3>Easy Payment Plan</h3>
                     <p>
-                        Nakheel launches move fast, and registered buyers
-                        hear first.
+                        Secure your home with 10% on booking, 50% spread
+                        over construction, and the remaining 40% on
+                        handover in 2030.
                     </p>
                 </div>
             </div>
 
             <div class="pja-launch-reason">
                 <div class="pja-launch-reason-content">
-                    <h3>Expert Guidance</h3>
+                    <h3>First Choice of Units</h3>
                     <p>
-                        A licensed Avanor Capital advisor helps you compare
-                        unit types and choose before inventory goes.
+                        Early buyers can choose from the full release,
+                        with the opportunity to secure their preferred
+                        layouts and plots before availability becomes limited.
                     </p>
                 </div>
             </div>
 
         </div>
 
-        <div class="pja-launch-process">
-            <div class="section-eyebrow">
-                HOW IT WORKS
+        <div class="pja-launch-expert mt-20">
+            <div class="pja-launch-reason-icon">
+                <x-landing-icon name="advisor" />
             </div>
+    <div class="pja-launch-reason-content">
+        <h3>Expert Guidance</h3>
+        <p>
+            A licensed Avanor Capital advisor helps you
+            compare layouts and plots to find the right
+            property for your requirements.
+        </p>
+    </div>
+</div>
 
-            <div class="pja-launch-steps">
-
-                <div class="pja-launch-step">
-                    <span class="pja-launch-step-number">01</span>
-                    <div>
-                        <h3>Request the details.</h3>
-                        <p>Takes 30 seconds.</p>
-                    </div>
-                </div>
-
-                <div class="pja-launch-step">
-                    <span class="pja-launch-step-number">02</span>
-                    <div>
-                        <h3>Get prices, floor plans and availability on WhatsApp.</h3>
-                    </div>
-                </div>
-
-                <div class="pja-launch-step">
-                    <span class="pja-launch-step-number">03</span>
-                    <div>
-                        <h3>Choose your preferred unit and review the reservation terms.</h3>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        
 
     </div>
 </section>
 
 
+<section class="pja-amenities pja-section">
 
+    <div class="main-container">
+
+        <div class="pja-amenities-header">
+
+            <div class="section-eyebrow">
+                AMENITIES
+            </div>
+
+            <h2 class="title">
+                Life at Palm Springs
+            </h2>
+
+            <p class="section-description">
+                Lagoon-style pools, waterways and green spaces,
+                with everyday amenities inside the community.
+            </p>
+
+        </div>
+
+        <div class="pja-amenities-grid">
+
+            <!-- AMENITY 1 -->
+            <div class="pja-amenity-box">
+                <div class="pja-amenity-icon">
+                    <x-landing-icon name="pool" />
+                </div>
+                <h3>Beach & Lap Pools</h3>
+                <p>
+                    Enjoy refreshing swims, relaxed poolside moments
+                    and spaces to unwind by the water.
+                </p>
+            </div>
+
+            <!-- AMENITY 2 -->
+            <div class="pja-amenity-box">
+                <div class="pja-amenity-icon">
+                    <x-landing-icon name="dumbbell" />
+                </div>
+                <h3>Gym & Wellness Centres</h3>
+                <p>
+                    Stay active and maintain your wellness routine
+                    with dedicated fitness and relaxation spaces.
+                </p>
+            </div>
+
+            <!-- AMENITY 3 -->
+            <div class="pja-amenity-box">
+                <div class="pja-amenity-icon">
+                    <x-landing-icon name="sports-court" />
+                </div>
+                <h3>Racquet & Sports Courts</h3>
+                <p>
+                    Enjoy friendly matches, recreational activities
+                    and opportunities to stay active outdoors.
+                </p>
+            </div>
+
+            <!-- AMENITY 4 -->
+            <div class="pja-amenity-box">
+                <div class="pja-amenity-icon">
+                    <x-landing-icon name="cycling" />
+                </div>
+                <h3>Cycling & Jogging Tracks</h3>
+                <p>
+                    Explore dedicated routes for morning runs,
+                    cycling and everyday outdoor exercise.
+                </p>
+            </div>
+
+            <!-- AMENITY 5 -->
+            <div class="pja-amenity-box">
+                <div class="pja-amenity-icon">
+                    <x-landing-icon name="kids-play" />
+                </div>
+                <h3>Kids' Play Areas</h3>
+                <p>
+                    Give children space to play, explore and enjoy
+                    outdoor activities within the community.
+                </p>
+            </div>
+
+            <!-- AMENITY 6 -->
+            <div class="pja-amenity-box">
+                <div class="pja-amenity-icon">
+                    <x-landing-icon name="garden" />
+                </div>
+                <h3>Gardens & Events</h3>
+                <p>
+                    Landscaped green spaces and outdoor settings
+                    create opportunities for gatherings and events.
+                </p>
+            </div>
+
+            <!-- AMENITY 7 -->
+            <div class="pja-amenity-box">
+                <div class="pja-amenity-icon">
+                    <x-landing-icon name="water" />
+                </div>
+                <h3>Waterways</h3>
+                <p>
+                    Enjoy scenic water features that bring a sense
+                    of calm and a refreshing atmosphere to the community.
+                </p>
+            </div>
+
+            <!-- AMENITY 8 -->
+            <div class="pja-amenity-box">
+                <div class="pja-amenity-icon">
+                    <x-landing-icon name="star" />
+                </div>
+                <h3>Multipurpose Spaces</h3>
+                <p>
+                    Flexible community spaces designed for
+                    activities, social gatherings and shared experiences.
+                </p>
+            </div>
+
+            <!-- AMENITY 9 -->
+            <div class="pja-amenity-box">
+                <div class="pja-amenity-icon">
+                    <x-landing-icon name="building-2" />
+                </div>
+                <h3>Schools</h3>
+                <p>
+                    Educational facilities within the community
+                    support convenient everyday family living.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
     
@@ -653,7 +824,7 @@ Road.
     </h2>
 
     <p class="section-description">
-        Explore the coastal lifestyle, waterfront surroundings and island
+        Explore the coastal lifestyle, waterfront surroundings and community
         setting that make Palm Springs an exciting new opportunity near
         Palm Jebel Ali.
     </p>
@@ -666,14 +837,18 @@ Road.
             @php
 
                 $galleryItems = [
-                    'COMMUNITY POOL',
-                    'VILLA COMMUNITY',
-                    'SUNSET VIEW FROM VILLA',
-                    'TOWNHOUSE EXTERIOR',
+                    'VILLA LIVING & DINING ROOM',
+                    'VILLA MASTER BEDROOM',
+                    'VILLA COMMUNITY POOL',
+                    'TOWNHOUSE LIVING & DINING ROOM',
+                    'TOWNHOUSE MASTER BEDROOM',
                     'TOWNHOUSE COMMUNITY',
-             
-              
-                    
+                    'COMMUNITY PARK',
+                    'TOWNHOUSE COMMUNITY POOL',
+                    'COMMUNITY POOL',
+                    '5 BEDROOM VILLA COMMUNITY',
+                    '4 BEDROOM VILLA COMMUNITY',
+                    'VILLA EXTERIOR',
                 ];
 
                 $firstImage = $galleryImages->first();
@@ -784,7 +959,50 @@ Road.
 
 
     
+<section class="pja-launch pja-section" id="how-to-buy">
+    <div class="main-container">
 
+        <div class="pja-launch-header">
+            <div class="section-eyebrow">
+                GET IT NOW
+            </div>
+
+            <h2 class="title">
+                How It Works
+            </h2>
+        </div>
+
+        <div class="pja-launch-process">
+
+            <div class="pja-launch-steps">
+
+                <div class="pja-launch-step">
+                    <span class="pja-launch-step-number">01</span>
+                    <div>
+                        <h3>Request the details.</h3>
+                        <p>It takes 30 seconds.</p>
+                    </div>
+                </div>
+
+                <div class="pja-launch-step">
+                    <span class="pja-launch-step-number">02</span>
+                    <div>
+                        <h3>Get the price list, floor plans and live availability on WhatsApp.</h3>
+                    </div>
+                </div>
+
+                <div class="pja-launch-step">
+                    <span class="pja-launch-step-number">03</span>
+                    <div>
+                        <h3>Choose your unit and plot, then secure it with 10%.</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
 
 
 
@@ -811,7 +1029,8 @@ Road.
 
             <p class="section-description">
                 Find answers to common questions about Palm Springs by Nakheel,
-                including the launch date, payment plan and registration process.
+                including its launch status, payment plan, property sizes,
+                handover and registration process.
             </p>
 
         </div>
@@ -819,36 +1038,41 @@ Road.
         {{-- RIGHT FAQ --}}
         <div class="pja-faq-list">
 
+            <!-- FAQ 01 -->
             <div class="pja-faq-item">
                 <button type="button" class="pja-faq-question" aria-expanded="false">
                     <span class="pja-faq-number">01</span>
-                    <span class="pja-faq-title">When does it launch?</span>
+                    <span class="pja-faq-title">Has Palm Springs launched?</span>
                     <span class="pja-faq-icon">+</span>
                 </button>
 
                 <div class="pja-faq-answer">
                     <p>
-                        Nakheel will confirm the launch date shortly.
-                        Registered clients are messaged first.
+                        Nakheel has released the prices, payment plan and floor
+                        plans. Register to get the full details and current
+                        availability on WhatsApp.
                     </p>
                 </div>
             </div>
 
+            <!-- FAQ 02 -->
             <div class="pja-faq-item">
                 <button type="button" class="pja-faq-question" aria-expanded="false">
                     <span class="pja-faq-number">02</span>
-                    <span class="pja-faq-title">What’s the payment plan?</span>
+                    <span class="pja-faq-title">What's the payment plan?</span>
                     <span class="pja-faq-icon">+</span>
                 </button>
 
                 <div class="pja-faq-answer">
                     <p>
-                        It hasn’t been released yet. We’ll send it to registered
-                        clients as soon as Nakheel announces it.
+                        The payment plan is 10% on booking, 50% in six
+                        instalments during construction, and 40% on handover,
+                        which is estimated for October 2030.
                     </p>
                 </div>
             </div>
 
+            <!-- FAQ 03 -->
             <div class="pja-faq-item">
                 <button type="button" class="pja-faq-question" aria-expanded="false">
                     <span class="pja-faq-number">03</span>
@@ -858,14 +1082,32 @@ Road.
 
                 <div class="pja-faq-answer">
                     <p>
-                        Unit sizes will be released at launch with the floor plans.
+                        Homes range from 2,326 sq ft for a 3-bedroom townhouse
+                        to 4,921 sq ft for a 5-bedroom villa.
                     </p>
                 </div>
             </div>
 
+            <!-- FAQ 04 -->
             <div class="pja-faq-item">
                 <button type="button" class="pja-faq-question" aria-expanded="false">
                     <span class="pja-faq-number">04</span>
+                    <span class="pja-faq-title">When is handover?</span>
+                    <span class="pja-faq-icon">+</span>
+                </button>
+
+                <div class="pja-faq-answer">
+                    <p>
+                        Nakheel estimates construction completion in
+                        October 2030.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 05 -->
+            <div class="pja-faq-item">
+                <button type="button" class="pja-faq-question" aria-expanded="false">
+                    <span class="pja-faq-number">05</span>
                     <span class="pja-faq-title">
                         Is this the Palm Springs villas in Umm Suqeim?
                     </span>
@@ -880,17 +1122,18 @@ Road.
                 </div>
             </div>
 
+            <!-- FAQ 06 -->
             <div class="pja-faq-item">
                 <button type="button" class="pja-faq-question" aria-expanded="false">
-                    <span class="pja-faq-number">05</span>
+                    <span class="pja-faq-number">06</span>
                     <span class="pja-faq-title">Is registering a commitment?</span>
                     <span class="pja-faq-icon">+</span>
                 </button>
 
                 <div class="pja-faq-answer">
                     <p>
-                        No. Registering simply puts you on the list to receive
-                        launch details first.
+                        No. You'll receive the details and can take your time
+                        to review the information and decide in your own time.
                     </p>
                 </div>
             </div>
@@ -926,9 +1169,7 @@ Road.
                         With Palm Springs, Nakheel is introducing a new residential
                         opportunity near Palm Jebel Ali, offering buyers an opportunity
                         to explore townhouse and villa living in this emerging coastal
-                        area. Register your interest to receive launch announcements,
-                        indicative prices, floor plans and payment plan details when
-                        they become available.
+                        area. Register to receive the full price list, floor plans and payment schedule.
                     </p>
                 </div>
 
@@ -971,7 +1212,7 @@ Road.
                             </svg>
                         </div>
                         <div class="mini-feature-title">Palm Springs</div>
-                        <div class="mini-feature-sub">Upcoming Launch</div>
+                        <div class="mini-feature-sub">Now Released</div>
                     </div>
 
                 </div>
@@ -1048,10 +1289,8 @@ Road.
             <p>
                  This page is operated by Avanor Capital L.L.C, a licensed Dubai real estate brokerage (RERA : 63012
                     ORN: 63296 ), and is not the official website of Nakheel.
-                    Information is based on public reports and may change. The project name, prices, payment
-
-                    plans and availability have not yet been announced and are subject to the developer’s terms.
-                    Project names and trademarks belong to their respective owners.
+                    Information is based on public reports and may change. Prices, sizes and the payment plan are as released by Nakheel in November 2026 and may
+change. Availability and final terms are subject to the developer.
             </p>
 
         </div>
@@ -1108,9 +1347,9 @@ Road.
             'source' => 'Enquiry Popup',
             'propertyId' => $property->id,
             'developerId' => $property->developer_id,
-            'title' => 'Palm Springs by Nakheel: Get Prices First',
-            'subtitle' => 'Townhouses and villas next to Palm Jebel Ali from AED 3.8M. Get the price list and
-floor plans on WhatsApp as soon as they’re released.',
+            'title' => 'Palm Springs by Nakheel: Get The Price List',
+            'subtitle' => 'Townhouses next to Palm Jebel Ali from AED 3.8M with 10% on booking. Get
+the full price list and floor plans on WhatsApp.',
 'buttontext' => 'Register My Interest',
          ])
 
@@ -1127,7 +1366,7 @@ floor plans on WhatsApp as soon as they’re released.',
             'propertyId' => $property->id,
             'developerId' => $property->developer_id,
             'title' => 'Palm Springs by Nakheel',
-            'subtitle' => 'From AED 3.8M. Price list sent first',
+            'subtitle' => 'From AED 3.8M · 10% on booking',
             'buttontext' => 'Register'
          ])
     </aside>

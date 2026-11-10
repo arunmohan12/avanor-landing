@@ -1261,9 +1261,9 @@ class LandingPageController extends Controller
         $adGroup = request()->query('ag');
 
         $heroContent = [
-            'eyebrow' => 'UPCOMING NAKHEEL LAUNCH · NEXT TO PALM JEBEL ALI',
+            'eyebrow' => 'NEW NAKHEEL LAUNCH · NEXT TO PALM JEBEL ALI',
             'headline' => 'Palm Springs by Nakheel',
-            'description' => '3–4 bedroom townhouses and 4–5 bedroom villas on Sheikh Zayed Road, beside a Metro station. Indicative prices from AED 3.8M.',
+            'description' => '3–4 bedroom townhouses and 4–5 bedroom villas on Sheikh Zayed Road, beside a Metro station. From AED 3.8M with 10% on booking.',
         ];
 
         $adGroupContent = [
