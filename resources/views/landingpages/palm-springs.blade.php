@@ -278,7 +278,7 @@ strip_tags($property->description ?? ''),
 
                     <div class="pja-collection-image">
                         <img
-                            src="{{ asset('assets/img/landing/palm-springs/3-br-townhouse.webp') }}"
+                            src="{{ asset('assets/img/landing/palm-springs/3-br-townhouse-v2.webp') }}"
                             alt="3 Bedroom Townhouse at Palm Springs"
                         >
                     </div>

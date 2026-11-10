@@ -701,7 +701,7 @@ body.landing-popup-open {
 
     .pja-hero-content {
         width: calc(100% - 40px);
-         padding-top: 50%;
+         padding-top: 30%;
     }
 
     .pja-hero-box {
@@ -730,7 +730,7 @@ body.landing-popup-open {
         width: calc(100% - 30px);
         align-items: flex-end;
         padding-bottom: 40px;
-         padding-top: 50%;
+         padding-top: 30%;
     }
 
 
