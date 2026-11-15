@@ -7,8 +7,8 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/landing/palm-springs.css',
-
+                'resources/css/landing/hayat.css',
+                'resources/js/landing/hayat.js',
             ],
             refresh: true,
          

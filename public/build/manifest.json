@@ -520,5 +520,20 @@
         "name": "palm-springs-map",
         "src": "resources/js/palm-springs-map.js",
         "isEntry": true
+    },
+    "resources/css/landing/hayat.css": {
+        "file": "assets/hayat-B8scJl0W.css",
+        "name": "hayat",
+        "names": [
+            "hayat.css"
+        ],
+        "src": "resources/css/landing/hayat.css",
+        "isEntry": true
+    },
+    "resources/js/landing/hayat.js": {
+        "file": "assets/hayat-C5Hkz2aU.js",
+        "name": "hayat",
+        "src": "resources/js/landing/hayat.js",
+        "isEntry": true
     }
 }

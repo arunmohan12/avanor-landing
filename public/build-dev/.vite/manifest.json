@@ -1,33 +1,17 @@
 {
-  "resources/css/landing/fonts/Nakheel-TextBold.woff": {
-    "file": "assets/Nakheel-TextBold-B90GRwVF.woff",
-    "src": "resources/css/landing/fonts/Nakheel-TextBold.woff"
-  },
-  "resources/css/landing/fonts/Nakheel-TextBold.woff2": {
-    "file": "assets/Nakheel-TextBold-nqtSceLM.woff2",
-    "src": "resources/css/landing/fonts/Nakheel-TextBold.woff2"
-  },
-  "resources/css/landing/fonts/Nakheel-TextRegular.woff": {
-    "file": "assets/Nakheel-TextRegular-C7GDnss0.woff",
-    "src": "resources/css/landing/fonts/Nakheel-TextRegular.woff"
-  },
-  "resources/css/landing/fonts/Nakheel-TextRegular.woff2": {
-    "file": "assets/Nakheel-TextRegular-Wz4d7xXZ.woff2",
-    "src": "resources/css/landing/fonts/Nakheel-TextRegular.woff2"
-  },
-  "resources/css/landing/palm-springs.css": {
-    "file": "assets/palm-springs-BrNt1TNK.css",
-    "name": "palm-springs",
+  "resources/css/landing/hayat.css": {
+    "file": "assets/hayat-B8scJl0W.css",
+    "name": "hayat",
     "names": [
-      "palm-springs.css"
+      "hayat.css"
     ],
-    "src": "resources/css/landing/palm-springs.css",
-    "isEntry": true,
-    "assets": [
-      "assets/Nakheel-TextRegular-Wz4d7xXZ.woff2",
-      "assets/Nakheel-TextRegular-C7GDnss0.woff",
-      "assets/Nakheel-TextBold-nqtSceLM.woff2",
-      "assets/Nakheel-TextBold-B90GRwVF.woff"
-    ]
+    "src": "resources/css/landing/hayat.css",
+    "isEntry": true
+  },
+  "resources/js/landing/hayat.js": {
+    "file": "assets/hayat-C5Hkz2aU.js",
+    "name": "hayat",
+    "src": "resources/js/landing/hayat.js",
+    "isEntry": true
   }
 }

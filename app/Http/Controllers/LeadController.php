@@ -174,280 +174,283 @@ class LeadController extends Controller
             ->route('landing.thank-you');
     }
 
-    public function storeLandingV2(Request $request)
-    {
+    
+public function storeLandingV2(Request $request)
+{
+    Log::info('Landing page lead form submitted', [
+        'name' => $request->input('name'),
+        'phone' => $request->input('phone'),
+        'email' => $request->input('email'),
+        'bedroom_type' => $request->input('bedroom_type'),
+        'url' => $request->input('page_url') ?? $request->fullUrl(),
+        'time' => now()->toDateTimeString(),
+    ]);
 
+    $validated = $request->validate([
+        'property_id' => [
+            'nullable',
+            'exists:properties,id',
+        ],
 
-        Log::info('Landing page lead form submitted', [
-            'name' => $request->input('name'),
-            'phone' => $request->input('phone'),
-            'email' => $request->input('email'),
-            'bedroom_type' => $request->input('bedroom_type'),
+        'developer_id' => [
+            'nullable',
+            'exists:developers,id',
+        ],
 
-            'url' => $request->input('page_url') ?? $request->fullUrl(),
-            'time' => now()->toDateTimeString(),
+        'name' => [
+            'required',
+            'string',
+            'max:255',
+        ],
+
+        'phone' => [
+            'required',
+            'string',
+            'max:30',
+            'regex:/^\+\d{6,29}$/',
+        ],
+
+        'email' => [
+            'required',
+            'email',
+            'max:255',
+        ],
+
+        'bedroom_type' => [
+            'required',
+            'string',
+            'max:255',
+        ],
+
+        'interested_in' => [
+            'nullable',
+            'string',
+            \Illuminate\Validation\Rule::in([
+                'Address Tierra',
+                'Palace Ostra',
+                'Mareva',
+                'Not sure',
+                'Townhouse',
+                'Villa',
+                'Not sure yet',
+            ]),
+        ],
+
+        'budget' => [
+            'nullable',
+            'string',
+            'max:255',
+        ],
+
+        'source' => [
+            'nullable',
+            'string',
+            'max:100',
+        ],
+
+        'message' => [
+            'nullable',
+            'string',
+            'max:2000',
+        ],
+
+        'utm_source' => [
+            'nullable',
+            'string',
+            'max:255',
+        ],
+
+        'utm_medium' => [
+            'nullable',
+            'string',
+            'max:255',
+        ],
+
+        'utm_campaign' => [
+            'nullable',
+            'string',
+            'max:255',
+        ],
+
+        'utm_content' => [
+            'nullable',
+            'string',
+            'max:255',
+        ],
+
+        'utm_term' => [
+            'nullable',
+            'string',
+            'max:255',
+        ],
+
+        'gclid' => [
+            'nullable',
+            'string',
+            'max:255',
+        ],
+
+        'fbclid' => [
+            'nullable',
+            'string',
+            'max:255',
+        ],
+
+        'page_url' => [
+            'nullable',
+            'string',
+            'max:1000',
+        ],
+    ], [
+        'phone.required' => 'Please enter your mobile number.',
+        'phone.regex' => 'Please enter a valid mobile number.',
+        'email.required' => 'Please enter your email address.',
+        'email.email' => 'Please enter a valid email address.',
+    ]);
+
+    // Restore campaign tracking values from the session.
+    foreach ([
+        'gclid',
+        'utm_source',
+        'utm_medium',
+        'utm_campaign',
+    ] as $parameter) {
+        $validated[$parameter] = $request->session()->get(
+            "campaign.$parameter"
+        );
+    }
+
+    // Select the correct thank-you page based on the lead source.
+    $thankYouView = str_starts_with(
+        $validated['source'] ?? '',
+        'hayat_'
+    )
+        ? 'thankyoupages.hayat-thank-you'
+        : 'thank-you';
+
+    $interestedIn = $validated['interested_in'] ?? null;
+$purchaseTimeline = $validated['message'] ?? null;
+    // Prevent duplicate enquiries for the same property.
+    $phone = trim($validated['phone']);
+    $email = mb_strtolower(trim($validated['email']));
+
+    $duplicateExists = Lead::query()
+        ->where('property_id', $validated['property_id'] ?? null)
+        ->where(function ($query) use ($phone, $email) {
+            $query->where('phone', $phone)
+                ->orWhereRaw('LOWER(email) = ?', [$email]);
+        })
+        ->exists();
+
+    if ($duplicateExists) {
+        return back()
+            ->withInput()
+            ->withErrors([
+                'email' => 'You have already enquired about this property. Our team will contact you soon.',
+            ]);
+    }
+
+    // Attempt 1: Save the lead to the database.
+    try {
+        $lead = Lead::create($validated);
+    } catch (\Throwable $exception) {
+        Log::error('Lead database insert failed.', [
+            'error' => $exception->getMessage(),
+            'environment' => app()->environment(),
         ]);
 
-
-
-        $validated = $request->validate([
-            'property_id' => [
-                'nullable',
-                'exists:properties,id',
-            ],
-
-            'developer_id' => [
-                'nullable',
-                'exists:developers,id',
-            ],
-
-            'name' => [
-                'required',
-                'string',
-                'max:255',
-            ],
-
-            'phone' => [
-                'required',
-                'string',
-                'max:30',
-                'regex:/^\+\d{6,29}$/',
-            ],
-
-            'email' => [
-                'required',
-                'email',
-                'max:255',
-            ],
-
-            'bedroom_type' => [
-                'required',
-                'string',
-                'max:255',
-            ],
-            'interested_in' => [
-                'nullable',
-                'string',
-                \Illuminate\Validation\Rule::in([
-                    'Address Tierra',
-                    'Palace Ostra',
-                    'Mareva',
-                    'Not sure',
-                    'Townhouse',
-                    'Villa',
-                    'Not sure yet',
-                ]),
-            ],
-            'budget' => [
-                'nullable',
-                'string',
-                'max:255',
-            ],
-
-            'source' => [
-                'nullable',
-                'string',
-                'max:100',
-            ],
-
-            'message' => [
-                'nullable',
-                'string',
-                'max:2000',
-            ],
-
-            'utm_source' => [
-                'nullable',
-                'string',
-                'max:255',
-            ],
-
-            'utm_medium' => [
-                'nullable',
-                'string',
-                'max:255',
-            ],
-
-            'utm_campaign' => [
-                'nullable',
-                'string',
-                'max:255',
-            ],
-
-            'utm_content' => [
-                'nullable',
-                'string',
-                'max:255',
-            ],
-
-            'utm_term' => [
-                'nullable',
-                'string',
-                'max:255',
-            ],
-
-            'gclid' => [
-                'nullable',
-                'string',
-                'max:255',
-            ],
-
-            'fbclid' => [
-                'nullable',
-                'string',
-                'max:255',
-            ],
-
-            'page_url' => [
-                'nullable',
-                'string',
-                'max:1000',
-            ],
-        ], [
-            'phone.required' => 'Please enter your mobile number.',
-            'phone.regex' => 'Please enter a valid mobile number.',
-            'email.required' => 'Please enter your email address.',
-            'email.email' => 'Please enter a valid email address.',
-        ]);
-
-        foreach (
+        app(\App\Services\ErrorAlertService::class)->send(
+            'Lead database insertion failed',
+            'A landing-page enquiry could not be saved to the database.',
             [
-                'gclid',
-                'utm_source',
-                'utm_medium',
-                'utm_campaign',
-            ] as $parameter
-        ) {
-            $validated[$parameter] = $request->session()->get(
-                "campaign.$parameter"
-            );
-        }
-
-
-        // Prevent duplicate enquiries for the same property.
-
-        $phone = trim($validated['phone']);
-        $email = mb_strtolower(trim($validated['email']));
-
-        $duplicateExists = Lead::query()
-            ->where('property_id', $validated['property_id'])
-            ->where(function ($query) use ($phone, $email) {
-                $query->where('phone', $phone)
-                    ->orWhereRaw('LOWER(email) = ?', [$email]);
-            })
-            ->exists();
-
-        if ($duplicateExists) {
-            return back()
-                ->withInput()
-                ->withErrors([
-                    'email' => 'You have already enquired about this property. Our team will contact you soon.',
-                ]);
-        }
-
-
-        $interestedIn = $validated['interested_in'] ?? null;
-
-        // Attempt 1: Save to the database.
-        try {
-            $lead = Lead::create($validated);
-        } catch (\Throwable $exception) {
-            Log::error('Lead database insert failed.', [
+                'name' => $validated['name'] ?? null,
+                'phone' => $validated['phone'] ?? null,
+                'email' => $validated['email'] ?? null,
+                'bedroom_type' => $validated['bedroom_type'] ?? null,
+                'page_url' => $validated['page_url'] ?? null,
+                'ip_address' => $request->ip(),
                 'error' => $exception->getMessage(),
+                'timestamp' => now()->toDateTimeString(),
                 'environment' => app()->environment(),
-            ]);
-
-            app(\App\Services\ErrorAlertService::class)->send(
-                'Lead database insertion failed',
-                'A landing-page enquiry could not be saved to the database.',
-                [
-                    'name' => $validated['name'] ?? null,
-                    'phone' => $validated['phone'] ?? null,
-                    'email' => $validated['email'] ?? null,
-                    'bedroom_type' => $validated['bedroom_type'] ?? null,
-                    'page_url' => $validated['page_url'] ?? null,
-                    'ip_address' => $request->ip(),
-                    'error' => $exception->getMessage(),
-                    'timestamp' => now()->toDateTimeString(),
-                    'environment' => app()->environment(),
-                    'route' => $request->path(),
-                ]
-            );
-
-
-            return redirect()
-                ->route('landing.thank-you')
-                ->with([
-                    'lead_email' => $validated['email'] ?? null,
-                    'lead_phone' => $validated['phone'] ?? null,
-                ]);
-        }
-
-
-        // 2. Queue the Google Sheets sync.
-        try {
-            SyncLeadToGoogleSheets::dispatch(
-                $lead->id,
-                $request->ip(),
-                $interestedIn
-            )->onQueue('default');
-        } catch (\Throwable $exception) {
-            Log::error('Failed to queue Google Sheets lead sync.', [
-                'lead_id' => $lead->id,
-                'error' => $exception->getMessage(),
-            ]);
-
-            app(\App\Services\ErrorAlertService::class)->send(
-                'Google Sheets sync could not be queued',
-                'A lead was saved, but Laravel could not queue its Google Sheets synchronization.',
-                [
-                    'lead_id' => $lead->id,
-                    'name' => $lead->name,
-                    'phone' => $lead->phone,
-                    'email' => $lead->email,
-                    'bedroom_type' => $lead->bedroom_type,
-                    'page_url' => $validated['page_url'] ?? null,
-                    'ip_address' => $request->ip(),
-                    'error' => $exception->getMessage(),
-                    'timestamp' => now()->toDateTimeString(),
-                    'environment' => app()->environment(),
-                ]
-            );
-
-
-            return redirect()
-                ->route('landing.thank-you')
-                ->with([
-                    'lead_email' => $validated['email'] ?? null,
-                    'lead_phone' => $validated['phone'] ?? null,
-                ]);
-        }
-
-
-
-
-
-        try {
-            Http::withHeaders([
-                'X-Internal-Secret' => config('services.internal.secret'),
-            ])->post(
-                rtrim(config('services.avanor_api_url'), '/')
-                    . "/internal/leads/{$lead->id}/notify"
-            )->throw();
-        } catch (\Throwable $exception) {
-            Log::error('Failed to trigger lead notification.', [
-                'lead_id' => $lead->id,
-                'error' => $exception->getMessage(),
-            ]);
-        }
+                'route' => $request->path(),
+            ]
+        );
 
         return redirect()
             ->route('landing.thank-you')
             ->with([
+                'thank_you_view' => $thankYouView,
                 'lead_email' => $validated['email'] ?? null,
                 'lead_phone' => $validated['phone'] ?? null,
             ]);
     }
+
+    // Attempt 2: Queue the Google Sheets synchronization.
+    try {
+        SyncLeadToGoogleSheets::dispatch(
+            $lead->id,
+            $request->ip(),
+            $interestedIn,
+            $purchaseTimeline
+        )->onQueue('default');
+
+    } catch (\Throwable $exception) {
+        Log::error('Failed to queue Google Sheets lead sync.', [
+            'lead_id' => $lead->id,
+            'error' => $exception->getMessage(),
+        ]);
+
+        app(\App\Services\ErrorAlertService::class)->send(
+            'Google Sheets sync could not be queued',
+            'A lead was saved, but Laravel could not queue its Google Sheets synchronization.',
+            [
+                'lead_id' => $lead->id,
+                'name' => $lead->name,
+                'phone' => $lead->phone,
+                'email' => $lead->email,
+                'bedroom_type' => $lead->bedroom_type,
+                'page_url' => $validated['page_url'] ?? null,
+                'ip_address' => $request->ip(),
+                'error' => $exception->getMessage(),
+                'timestamp' => now()->toDateTimeString(),
+                'environment' => app()->environment(),
+            ]
+        );
+
+        return redirect()
+            ->route('landing.thank-you')
+            ->with([
+                'thank_you_view' => $thankYouView,
+                'lead_email' => $validated['email'] ?? null,
+                'lead_phone' => $validated['phone'] ?? null,
+            ]);
+    }
+
+    // Trigger the internal lead notification.
+    try {
+        Http::withHeaders([
+            'X-Internal-Secret' => config('services.internal.secret'),
+        ])->post(
+            rtrim(config('services.avanor_api_url'), '/')
+                . "/internal/leads/{$lead->id}/notify"
+        )->throw();
+
+    } catch (\Throwable $exception) {
+        Log::error('Failed to trigger lead notification.', [
+            'lead_id' => $lead->id,
+            'error' => $exception->getMessage(),
+        ]);
+    }
+
+    // Final successful redirect.
+    return redirect()
+        ->route('landing.thank-you')
+        ->with([
+            'thank_you_view' => $thankYouView,
+            'lead_email' => $validated['email'] ?? null,
+            'lead_phone' => $validated['phone'] ?? null,
+        ]);
+}
 
 
     public function storeAldarEnquiry(Request $request)
@@ -606,10 +609,10 @@ class LeadController extends Controller
         }
 
         return redirect()
-            ->route('landing.thank-you')
-            ->with([
+    ->route('landing.thank-you')
+    ->with([
                 'lead_email' => $validated['email'],
                 'lead_phone' => $validated['phone'],
-            ]);
+    ]);
     }
 }

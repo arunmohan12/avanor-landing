@@ -29,6 +29,7 @@ export default defineConfig({
                 'resources/css/landing/aldar-new.css',
                 'resources/css/landing/bay-estate.css',
                 'resources/css/landing/palm-springs.css',
+                'resources/css/landing/hayat.css',
 
                 'resources/js/landing/the-heights.js',
                 'resources/js/landing/wadeem.js',
@@ -41,6 +42,7 @@ export default defineConfig({
                   'resources/js/landing/aldar-new.js',
                   'resources/js/landing/bay-estate.js',
                   'resources/js/landing/palm-springs.js',
+                  'resources/js/landing/hayat.js',
             ],
             refresh: true,
             fonts: [

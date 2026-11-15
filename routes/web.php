@@ -24,9 +24,24 @@ Route::post(
     ->middleware('throttle:landing-leads')
     ->name('landing.aldar-enquiry.store'); 
 
+
 Route::get('/thank-you', function () {
-    return view('thank-you');
+
+    $view = session('thank_you_view', 'thank-you');
+
+    $allowedViews = [
+        'thank-you',
+        'thankyoupages.hayat-thank-you',
+    ];
+
+    if (!in_array($view, $allowedViews, true)) {
+        $view = 'thank-you';
+    }
+
+    return view($view);
+
 })->name('landing.thank-you');
+
 
 Route::get('/privacy-policies', function () {
     return view('privacypolicy');
@@ -50,7 +65,7 @@ Route::get('/terms-and-condition', function () {
 // Route::get('/mareva', [LandingPageController::class, 'showMareva']);
 // Route::get('/aldar', [LandingPageController::class, 'showAldarNew']);
 // Route::get('/palm-springs', [LandingPageController::class, 'showPalmSprings']);
-
+Route::get('/hayat', [LandingPageController::class, 'showHayat']);
 //live
 Route::domain('the-heights.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showTheheights']);
@@ -84,4 +99,7 @@ Route::domain('aldar-dubai.sales-centre.net')->group(function () {
 
 Route::domain('palm-springs.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showPalmSprings']);
+});
+Route::domain('hayat-dubai-south.sales-centre.net')->group(function () {
+    Route::get('/', [LandingPageController::class, 'showHayat']);
 });
