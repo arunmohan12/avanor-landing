@@ -65,7 +65,7 @@ Route::get('/terms-and-condition', function () {
 // Route::get('/mareva', [LandingPageController::class, 'showMareva']);
 // Route::get('/aldar', [LandingPageController::class, 'showAldarNew']);
 // Route::get('/palm-springs', [LandingPageController::class, 'showPalmSprings']);
-Route::get('/hayat', [LandingPageController::class, 'showHayat']);
+// Route::get('/hayat', [LandingPageController::class, 'showHayat']);
 //live
 Route::domain('the-heights.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showTheheights']);
