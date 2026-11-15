@@ -183,7 +183,9 @@
         </a>
 
         <div>
-          <a href="index.html" class="back-home-link">← Return to HAYAT 8 Overview</a>
+         <a href="https://hayat-dubai-south.sales-centre.net/" class="back-home-link">
+    ← Return to HAYAT 8 Overview
+</a>
         </div>
 
         <div class="advisor-trust-box">
