@@ -1862,10 +1862,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 991px) {
     .landing-whatsapp-float {
-        right: 18px !important;
-        bottom: 18px !important;
         width: 46px !important;
         height: 46px !important;
+        bottom: 72px !important;
+        right: 4px !important;
     }
 
 
