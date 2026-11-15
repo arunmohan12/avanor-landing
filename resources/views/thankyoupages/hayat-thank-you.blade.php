@@ -9,9 +9,9 @@
   <link rel="canonical" href="https://hayat-dubai-south.sales-centre.net/thank-you">
 
   <!-- Favicons -->
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="{{ asset('assets/img/landing/hayat/favicon.ico') }}" sizes="any">
+  <link rel="icon" href="{{ asset('assets/img/landing/hayat/favicon.ico') }}" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="{{ asset('assets/img/landing/hayat/favicon.ico') }}">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
