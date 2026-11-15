@@ -325,9 +325,10 @@
 
     @php
         $galleryItems = [
-            'EXPANSIVE LIVING & DINING HALL',
-            'INDOOR-OUTDOOR FLOW & COVERED TERRACE',
-            'CONTEMPORARY ARCHITECTURAL POISE',
+            'VILLA EX§TERIOR & PRIVATE GARDEN',
+            'VILLA LIVING ROOM & FAMILY SPACE',
+            'COMMUNITY OUTDOOR AMENITIES & GREEN SPACES',
+            'COMMUNITY AERIAL VIEW & GOLF COURSE VISTAS',
         ];
 
         $firstImage = $galleryImages->first();
