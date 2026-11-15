@@ -992,15 +992,7 @@
                 </div>
               </div>
 
-              <div class="booking-advisor-banner">
-                <div class="booking-advisor-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div class="booking-advisor-text">
-                  <strong>Licensed Brokerage Coordination</strong>
-                  An authorized Avanor Capital advisor (RERA: 63012, ORN: 63296) handles your EOI submission and guides your unit selection directly with Dubai South Properties.
-                </div>
-              </div>
+              
             </div>
 
             <!-- Right Side: Embedded Form -->
