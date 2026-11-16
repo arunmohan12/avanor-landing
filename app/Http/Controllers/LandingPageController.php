@@ -1432,6 +1432,12 @@ $adGroupContent = [
         'headline' => 'New Standalone Villas in Dubai South from AED 6.5M',
         'description' => 'HAYAT 8 by Dubai South Properties: 4–6 bedroom villas next to the Golf District. 5% down, 2% DLD fee waiver, completion Q3 2029.',
     ],
+
+        'hayat' => [
+        'eyebrow' => 'NEW LAUNCH · 21 NOVEMBER · EOI NOW OPEN',
+        'headline' => 'HAYAT 8: Standalone Villas by Dubai South',
+        'description' => 'The first standalone villa collection in HAYAT. 4, 5 and 6 bedrooms from AED 6.5M with 5% down and 30% after handover.',
+    ],
 ];
 
 if (isset($adGroupContent[$adGroup])) {

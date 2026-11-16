@@ -251,7 +251,7 @@
                   <h3 class="villa-title">4-Bedroom Villa</h3>
                   <div class="villa-size">4,842 sq ft built-up</div>
                   <p class="villa-desc">
-                    Generous two-storey standalone residence featuring expansive private garden space, maid's quarters, ensuite bedrooms, and seamless indoor-outdoor living.
+                    Standalone villa with a private garden and 4,842 sq ft of built-up space, designed for family living.
                   </p>
                   <div class="villa-action-row">
                     <div>
@@ -273,7 +273,7 @@
                   <h3 class="villa-title">5-Bedroom Villa</h3>
                   <div class="villa-size">5,678 sq ft built-up</div>
                   <p class="villa-desc">
-                    Extended plot frontage offering private swimming pool potential, statement family living rooms, show kitchen, and expansive master terrace with garden views.
+                    Standalone villa with a private garden and 5,678 sq ft of built-up space, with room for a growing family.
                   </p>
                   <div class="villa-action-row">
                     <div>
@@ -295,7 +295,7 @@
                   <h3 class="villa-title">6-Bedroom Villa</h3>
                   <div class="villa-size">6,305 sq ft built-up</div>
                   <p class="villa-desc">
-                    The pinnacle standalone villa in the HAYAT 8 collection with dramatic double-height foyer, driver's &amp; maid's rooms, elevator provision, and private sanctuary grounds.
+                    The largest layout in HAYAT 8, a standalone villa with a private garden and 6,305 sq ft of built-up space.
                   </p>
                   <div class="villa-action-row">
                     <div>
@@ -325,10 +325,10 @@
 
     @php
         $galleryItems = [
-            'VILLA EX§TERIOR & PRIVATE GARDEN',
+            'VILLA EXTERIOR & PRIVATE GARDEN',
             'VILLA LIVING ROOM & FAMILY SPACE',
             'COMMUNITY OUTDOOR AMENITIES & GREEN SPACES',
-            'COMMUNITY AERIAL VIEW & GOLF COURSE VISTAS',
+            'COMMUNITY AERIAL VIEW ',
         ];
 
         $firstImage = $galleryImages->first();
@@ -455,7 +455,7 @@
 
             <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
               <button type="button" class="btn-primary" data-open-form>Get the Full Payment Schedule</button>
-              <span style="font-size:0.75rem;color:var(--text-muted);">*Detailed instalment schedule and bank guarantee terms sent via WhatsApp.</span>
+              <span style="font-size:0.75rem;color:var(--text-muted);">*Full instalment schedule sent on WhatsApp.</span>
             </div>
 
           </div>
@@ -625,7 +625,7 @@
               <!-- 4-BR Floorplan Preview -->
               <div class="floorplan-card">
                 <div class="floorplan-thumbnail-wrap">
-                  <img src="images/m9.jpg" alt="4 Bedroom Villa Floor Plan preview" class="floorplan-blurred-img">
+                  <img src="{{ asset('assets/img/landing/hayat/4-br-fp.webp') }}" alt="4 Bedroom Villa Floor Plan preview" class="floorplan-blurred-img">
                   <div class="floorplan-lock-overlay">
                     <div class="lock-icon-circle">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -645,7 +645,7 @@
               <!-- 5-BR Floorplan Preview -->
               <div class="floorplan-card">
                 <div class="floorplan-thumbnail-wrap">
-                  <img src="images/m10.jpg" alt="5 Bedroom Villa Floor Plan preview" class="floorplan-blurred-img">
+                  <img src="{{ asset('assets/img/landing/hayat/5-br-fp.webp') }}" alt="5 Bedroom Villa Floor Plan preview" class="floorplan-blurred-img">
                   <div class="floorplan-lock-overlay">
                     <div class="lock-icon-circle">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -665,7 +665,7 @@
               <!-- 6-BR Floorplan Preview -->
               <div class="floorplan-card">
                 <div class="floorplan-thumbnail-wrap">
-                  <img src="images/m11.jpg" alt="6 Bedroom Villa Floor Plan preview" class="floorplan-blurred-img">
+                  <img src="{{ asset('assets/img/landing/hayat/6-br-fp.webp') }}" alt="6 Bedroom Villa Floor Plan preview" class="floorplan-blurred-img">
                   <div class="floorplan-lock-overlay">
                     <div class="lock-icon-circle">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -934,12 +934,12 @@
               <div class="dev-stat-card">
                 <div class="dev-stat-badge">Security</div>
                 <div class="dev-stat-val">Government Backed</div>
-                <div class="dev-stat-desc">Official Dubai government master developer ensuring timely Q3 2029 handover.</div>
+                <div class="dev-stat-desc">Government of Dubai master developer. Completion expected Q3 2029.</div>
               </div>
               <div class="dev-stat-card">
                 <div class="dev-stat-badge">Track Record</div>
                 <div class="dev-stat-val">100% Sold Out</div>
-                <div class="dev-stat-desc">Earlier HAYAT phases sold out within hours due to high investor demand.</div>
+                <div class="dev-stat-desc">Strong demand: earlier HAYAT phases sold out within hours of launch.</div>
               </div>
             </div>
           </div>
