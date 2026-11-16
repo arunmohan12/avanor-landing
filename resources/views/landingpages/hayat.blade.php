@@ -244,7 +244,7 @@
               <!-- 4-bedroom villa -->
               <article class="villa-card">
                 <div class="villa-media">
-                  <img src="{{ asset('assets/img/landing/hayat/4-bedroom-villa.webp') }}" alt="4-bedroom standalone villa exterior at HAYAT 8" loading="lazy">
+                  <img src="{{ asset('assets/img/landing/hayat/4-bedroom-villas.webp') }}" alt="4-bedroom standalone villa exterior at HAYAT 8" loading="lazy">
                   <span class="villa-badge">Standalone Villa</span>
                 </div>
                 <div class="villa-body">
@@ -266,7 +266,7 @@
               <!-- 5-bedroom villa -->
               <article class="villa-card">
                 <div class="villa-media">
-                  <img src="{{ asset('assets/img/landing/hayat/5-bedroom-villa.webp') }}" alt="5-bedroom standalone villa exterior at HAYAT 8" loading="lazy">
+                  <img src="{{ asset('assets/img/landing/hayat/5-bedroom-villas.webp') }}" alt="5-bedroom standalone villa exterior at HAYAT 8" loading="lazy">
                   <span class="villa-badge">Standalone Villa</span>
                 </div>
                 <div class="villa-body">
@@ -288,7 +288,7 @@
               <!-- 6-bedroom villa -->
               <article class="villa-card">
                 <div class="villa-media">
-                  <img src="{{ asset('assets/img/landing/hayat/6-bedroom-villa.webp') }}" alt="6-bedroom standalone villa exterior at HAYAT 8" loading="lazy">
+                  <img src="{{ asset('assets/img/landing/hayat/6-bedroom-villas.webp') }}" alt="6-bedroom standalone villa exterior at HAYAT 8" loading="lazy">
                   <span class="villa-badge">Flagship Residence</span>
                 </div>
                 <div class="villa-body">

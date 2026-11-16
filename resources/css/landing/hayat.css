@@ -1517,7 +1517,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(8px) contrast(0.9);
   transform: scale(1.08);
   user-select: none;
 }
@@ -1525,8 +1524,7 @@ h1, h2, h3, h4, h5, h6 {
 .floorplan-lock-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(11, 26, 40, 0.45);
-  backdrop-filter: blur(2px);
+  background: rgba(11, 26, 40, 0.119);
   display: flex;
   flex-direction: column;
   align-items: center;
