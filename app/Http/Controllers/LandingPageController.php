@@ -228,7 +228,13 @@ class LandingPageController extends Controller
         | View
         |--------------------------------------------------------------------------
         */
+$ag = request()->query('ag');
 
+$heroEyebrow = match ($ag) {
+    'name' => 'Palm Central Private Residences – New Release',
+    'frondd' => 'Palm Central Frond D – Upcoming Release',
+    default => 'Palm Central by Nakheel',
+};
 
         return view('landingpages.palm-jebel-ali', compact(
             'property',
@@ -242,6 +248,7 @@ class LandingPageController extends Controller
             'activeSections',
             'hasFacts',
             'hasProjectDescription',
+            'heroEyebrow',
         ));
     }
 
@@ -1421,7 +1428,7 @@ class LandingPageController extends Controller
 
 // Default content — no ad group parameter
 $heroContent = [
-    'eyebrow' => 'NEW LAUNCH · DUBAI SOUTH',
+    'eyebrow' => 'NOW SELLING · DUBAI SOUTH',
     'headline' => 'HAYAT 8 by Dubai South',
     'description' => '4, 5 and 6-bedroom standalone villas from AED 6.5M. 5% down payment, 30% post-handover, 2% DLD fee waiver.',
 ];

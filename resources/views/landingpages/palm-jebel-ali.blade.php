@@ -243,11 +243,12 @@ yours with just 20%.
         <div class="pja-project-info-content">
 
             <div class="section-eyebrow">
-                Palm Central by Nakheel
-            </div>
+    {{ $heroEyebrow }}
+</div>
 
             <h2 class="title">
-                Palm Central Price List, Floor Plans &amp; Availability
+                <!-- Palm Central Price List, Floor Plans &amp; Availability -->
+                 New Palm Central Release – Register for Priority Access
             </h2>
 
             <p class="section-description">
@@ -563,7 +564,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                             <div>
                                 <span>PRICE</span>
-                                <strong>ON REQUEST</strong>
+                                <strong>AED 4.3M</strong>
                             </div>
 
                         </div>
@@ -1873,7 +1874,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
     </aside>
 
         <a
-            href="https://wa.me/971555342535?text=Hi%2C%20I%E2%80%99m%20interested%20to%20know%20more%20about%20Palm%20Central%20By%20Nakheel.%20Please%20share%20all%20relevant%20details.%0AThank%20you."
+            href="https://wa.me/971555342535?text=Hi%2C%20I%E2%80%99m%20interested%20to%20know%20more%20about%20Palm%20Central%20New%20Release.%20Please%20share%20all%20relevant%20details.%0AThank%20you."
             class="landing-whatsapp-float whatsapp-track"
             target="_blank"
             rel="noopener noreferrer"

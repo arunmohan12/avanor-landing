@@ -8,6 +8,7 @@ your WhatsApp.</p>
     </div>
     <form data-enquire     action="{{ route('landing.leads.store') }}" method="post" novalidate aria-label="Registration form">
         @csrf
+        
         <input type="hidden" name="property_id" value="{{ $property->id }}">
         <input type="hidden" name="developer_id" value="{{ $property->developer_id }}">
         <input type="hidden" name="source" value="palm-central-landing">
@@ -60,6 +61,34 @@ your WhatsApp.</p>
              <option value="4 Bedroom Apartment">4-Bedroom  Apartment</option>
                 </select>
             </div>
+
+
+<div class="field">
+    <label for="sticky-Timeline">Purchase Timeline*</label>
+
+    <select
+        id="sticky-Timeline"
+        name="message"
+        required
+    >
+        <option value="" selected disabled>
+            Select Your Timeline
+        </option>
+
+        <option value="Ready to Book">
+            Ready to Book
+        </option>
+
+        <option value="Within 3 months">
+            Within 3 months
+        </option>
+
+        <option value="Just exploring">
+            Just exploring
+        </option>
+    </select>
+</div>
+
             <button class="btn btn-champagne sticky-submit-btn" type="submit">Submit</button>
             <div class="form-status" role="status" aria-live="polite"></div>
             <div class="sticky-card-trust">
