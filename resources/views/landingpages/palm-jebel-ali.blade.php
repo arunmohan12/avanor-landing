@@ -562,8 +562,8 @@ by beach, pool and wellness amenities, with the island's parks and community cen
                         <div class="pja-collection-meta">
 
                             <div>
-                                <span>PRICE</span>
-                                <strong>FROM AED 4.3M</strong>
+                                <span>FROM</span>
+                                <strong> AED 4.3M</strong>
                             </div>
 
                         </div>
