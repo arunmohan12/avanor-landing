@@ -1434,7 +1434,7 @@ $adGroupContent = [
     ],
 
         'hayat' => [
-        'eyebrow' => 'NEW LAUNCH · 21 NOVEMBER · EOI NOW OPEN',
+        'eyebrow' => 'NOW SELLING · ALL VILLA TYPES AVAILABLE',
         'headline' => 'HAYAT 8: Standalone Villas by Dubai South',
         'description' => 'The first standalone villa collection in HAYAT. 4, 5 and 6 bedrooms from AED 6.5M with 5% down and 30% after handover.',
     ],

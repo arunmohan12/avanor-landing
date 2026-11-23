@@ -7,7 +7,7 @@
 
     <title>HAYAT 8 by Dubai South | 4–6 BR Standalone Villas from AED 6.5M</title>
 
-    <meta name="description" content="New standalone villas in HAYAT, Dubai South, from AED 6.5M. 5% down, 30% post-handover, 2% DLD waiver. Register for priority EOI before the 21 Nov launch.">
+    <meta name="description" content="New standalone villas in HAYAT, Dubai South, from AED 6.5M. 5% down, 30% post-handover, 2% DLD waiver. Register for live availability, floor plans and price-list.">
 
     <link rel="canonical" href="https://hayat-dubai-south.sales-centre.net/">
 
@@ -95,7 +95,7 @@
             <div class="floating-card" id="desktop-floating-card">
 
                 <div class="floating-card-header">
-                    <span class="floating-badge">Exclusive Launch</span>
+                    <span class="floating-badge">Now Selling</span>
                     <h2 class="floating-title">HAYAT 8 by Dubai South</h2>
                     <p class="floating-sub">From AED 6.5M · 5% Down Payment</p>
                 </div>
@@ -206,7 +206,7 @@
                                     </span>
 
                                     <h2 class="floating-title">
-                                        Register for Priority Launch
+                                        Check Availability
                                     </h2>
 
                                     <p class="floating-sub">
@@ -471,12 +471,12 @@
             <div class="eoi-banner">
               <div class="eoi-content">
                 <span class="eyebrow eoi-eyebrow">Priority Allocation</span>
-                <h2 class="eoi-title">Secure priority allocation before 21 November</h2>
+                <h2 class="eoi-title">Choose your villa and plot while every type is still available </h2>
                 <p class="eoi-text">
-                  HAYAT launches on Saturday 21 November. Buyers who submit an EOI before launch day get priority allocation. Register and an Avanor Capital advisor will send you the EOI amount, the process and the best available villas for your budget.
+                  HAYAT Launched 21 November. Buyers who submit an EOI before launch day get priority allocation. Register and an Avanor Capital advisor will send you the EOI amount, the process and the best available villas for your budget.
                 </p>
                 <button type="button" class="btn-primary" style="background:#ffffff;color:var(--navy);border-color:#ffffff;" data-open-form>
-                  <span>Register for Priority EOI</span>
+                  <span>Get the Price List</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
               </div>
@@ -630,7 +630,7 @@
                     <div class="lock-icon-circle">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     </div>
-                    <span style="font-size:0.75rem;font-weight:700;">Confidential Launch Floor Plan</span>
+                    <span style="font-size:0.75rem;font-weight:700;">Floor Plan – Register to View</span>
                   </div>
                 </div>
                 <div class="floorplan-body">
@@ -650,7 +650,7 @@
                     <div class="lock-icon-circle">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     </div>
-                    <span style="font-size:0.75rem;font-weight:700;">Confidential Launch Floor Plan</span>
+                    <span style="font-size:0.75rem;font-weight:700;">Floor Plan – Register to View</span>
                   </div>
                 </div>
                 <div class="floorplan-body">
@@ -824,12 +824,12 @@
             <div class="faq-list">
               <div class="faq-item">
                 <button type="button" class="faq-trigger" aria-expanded="false">
-                  <span class="faq-q">When does HAYAT 8 launch?</span>
+                  <span class="faq-q">Is HAYAT 8 still available?</span>
                   <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
                 </button>
                 <div class="faq-answer">
                   <div class="faq-answer-inner">
-                    Saturday 21 November 2026. EOIs are being accepted now for priority allocation.
+                    Yes. HAYAT 8 launched on 21 November 2026 and all 4, 5 and 6-bedroom villa types are available.
                   </div>
                 </div>
               </div>
@@ -954,7 +954,7 @@
             <div class="booking-left-col">
               <span class="eyebrow">Priority EOI Allocation</span>
               <h2 class="booking-main-title">Book Your Standalone Villa Now</h2>
-              <p class="booking-sub-title">Reserve your priority allocation before the official 21 November launch</p>
+              <p class="booking-sub-title">Choose your villa and plot while every type is still available </p>
               
               <p class="booking-lede">
                 Earlier phases of HAYAT sold out within hours. By submitting your Expression of Interest (EOI) prior to launch day, you gain first-tier allocation to select your preferred standalone layout, premium plot position, and investor-friendly payment terms before public release.
@@ -977,7 +977,7 @@
                   </div>
                   <div class="booking-feature-text">
                     <strong>Exclusive 2% DLD Fee Waiver</strong>
-                    <span>Available specifically for early EOI registrants ahead of launch.</span>
+                    <span>Choose your villa and plot while every type is still available</span>
                   </div>
                 </div>
 
@@ -1092,11 +1092,11 @@
         </button>
 
         <span class="floating-badge">
-            Launch Event: 21 November
+            Launched 21 November
         </span>
 
         <h3 class="modal-title" id="timed-popup-title">
-            HAYAT 8 launches 21 November
+            HAYAT 8 Launched 21 November
         </h3>
 
         <p class="modal-text">

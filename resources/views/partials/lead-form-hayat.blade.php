@@ -147,8 +147,8 @@
                     name="message"
                     class="form-select"
                 >
-                    <option value="Ready to submit EOI">
-                        Ready to submit EOI
+                    <option value="Ready to Book">
+                        Ready to Book
                     </option>
                     <option value="Within 3 months">
                         Within 3 months
@@ -168,7 +168,7 @@
     </div>
 
     <p class="form-privacy-note">
-        We'll only contact you about this launch.
+        We'll only contact you about HAYAT 8.
         Your details are never shared.
     </p>
 </form>
