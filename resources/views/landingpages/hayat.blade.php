@@ -1094,7 +1094,7 @@
         </span>
 
         <h3 class="modal-title" id="timed-popup-title">
-            HAYAT 8 Launched 21 November
+            HAYAT 8 Launched on 21 November
         </h3>
 
         <p class="modal-text">
