@@ -90,7 +90,7 @@
         </header>
 
 
-        <aside class="floating-sidebar-container" aria-label="Priority Registration">
+        <aside class="floating-sidebar-container" aria-label="Now Selling">
 
             <div class="floating-card" id="desktop-floating-card">
 
@@ -144,8 +144,8 @@
                                 <div class="fact-val">5% Down Payment</div>
                             </div>
                             <div class="fact-box">
-                                <div class="fact-label">Launch Event</div>
-                                <div class="fact-val">21 Nov Launch</div>
+                                <div class="fact-label">Status</div>
+                                <div class="fact-val">Now Selling</div>
                             </div>
                         </div>
 
@@ -155,7 +155,7 @@
                                 <svg class="tick-icon" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                                 </svg>
-                                <span>Priority EOI allocation before launch day</span>
+                                <span>All 4, 5 and 6-bedroom types available</span>
                             </div>
                             <div class="tick-item">
                                 <svg class="tick-icon" viewBox="0 0 20 20" fill="currentColor">
@@ -202,7 +202,7 @@
 
                                 <div class="floating-card-header">
                                     <span class="floating-badge">
-                                        Get the Price List & EOI Details
+                                        Get the Price List & Availability
                                     </span>
 
                                     <h2 class="floating-title">
@@ -312,7 +312,7 @@
             <div class="villas-footer-banner">
               <div>
                 <div class="vfb-text">Villas from AED 6.5M. Get the price for each layout on WhatsApp.</div>
-                <div class="vfb-sub">Receive full brochure, unit allocations, and launch prices directly on your phone.</div>
+                <div class="vfb-sub">Receive the brochure, live availability and prices directly on your phone.</div>
               </div>
               <button type="button" class="btn-primary" data-open-form>
                 <span>Get Floor Plans (Opens Form)</span>
@@ -470,10 +470,10 @@
           <div class="desktop-content-col">
             <div class="eoi-banner">
               <div class="eoi-content">
-                <span class="eyebrow eoi-eyebrow">Priority Allocation</span>
+                <span class="eyebrow eoi-eyebrow">Now Selling</span>
                 <h2 class="eoi-title">Choose your villa and plot while every type is still available </h2>
                 <p class="eoi-text">
-                  HAYAT Launched 21 November. Buyers who submit an EOI before launch day get priority allocation. Register and an Avanor Capital advisor will send you the EOI amount, the process and the best available villas for your budget.
+                  HAYAT 8 launched on 21 November and all villa types are available. Register and an Avanor Capital advisor will send you live availability, prices and the best villas and plots for your budget.
                 </p>
                 <button type="button" class="btn-primary" style="background:#ffffff;color:var(--navy);border-color:#ffffff;" data-open-form>
                   <span>Get the Price List</span>
@@ -616,9 +616,9 @@
         <div class="section-wrap">
           <div class="desktop-content-col">
             <span class="eyebrow">Architectural Blueprints</span>
-            <h2 class="section-title">Official Floor Plans</h2>
+            <h2 class="section-title">Floor Plans</h2>
             <p class="section-intro">
-              Detailed architectural blueprints with room dimensions, master suites, and garden layouts are kept confidential prior to launch. Register to unlock full high-resolution floor plans on WhatsApp.
+              Detailed architectural blueprints with room dimensions, master suites, and garden layouts .Register to get the full high-resolution floor plans on WhatsApp, with room dimensions and garden layouts.
             </p>
 
             <div class="floorplans-grid">
@@ -670,7 +670,7 @@
                     <div class="lock-icon-circle">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     </div>
-                    <span style="font-size:0.75rem;font-weight:700;">Confidential Launch Floor Plan</span>
+                    <span style="font-size:0.75rem;font-weight:700;">Floor Plan – Register to View</span>
                   </div>
                 </div>
                 <div class="floorplan-body">
@@ -802,7 +802,7 @@
                 <div class="why-num">04</div>
                 <div>
                   <h3 class="why-title">Expert guidance</h3>
-                  <p class="why-desc">A licensed Avanor Capital advisor handles your EOI and helps you choose the right villa and plot with direct developer coordination.</p>
+                  <p class="why-desc">A licensed Avanor Capital advisor handles your booking and helps you choose the right villa and plot with direct developer coordination.</p>
                 </div>
               </div>
             </div>
@@ -818,7 +818,7 @@
             <span class="eyebrow">Questions &amp; Answers</span>
             <h2 class="section-title">Frequently Asked Questions</h2>
             <p class="section-intro">
-              Everything you need to know about the HAYAT 8 launch, payment schedule, villa specifications, and EOI allocation.
+              Everything you need to know about HAYAT 8: availability, payment plan, villa sizes and booking.
             </p>
 
             <div class="faq-list">
@@ -872,12 +872,12 @@
 
               <div class="faq-item">
                 <button type="button" class="faq-trigger" aria-expanded="false">
-                  <span class="faq-q">How does the EOI work?</span>
+                  <span class="faq-q">How do I book?</span>
                   <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
                 </button>
                 <div class="faq-answer">
                   <div class="faq-answer-inner">
-                    You submit an EOI cheque before launch to get priority when villas are allocated. Register and we’ll send you the amount for your villa type and walk you through it.
+                    Register or message us on WhatsApp. An advisor sends you live availability and the price for each villa, helps you choose your villa and plot, and walks you through the booking.
                   </div>
                 </div>
               </div>
@@ -889,7 +889,7 @@
                 </button>
                 <div class="faq-answer">
                   <div class="faq-answer-inner">
-                    No. Registering only gets you the details. The EOI is a separate step, and you decide.
+                    No. Registering only gets you the details. Booking is a separate step, and you decide.
                   </div>
                 </div>
               </div>
@@ -938,7 +938,7 @@
               </div>
               <div class="dev-stat-card">
                 <div class="dev-stat-badge">Track Record</div>
-                <div class="dev-stat-val">100% Sold Out</div>
+                <div class="dev-stat-val">Earlier Phases Sold Out</div>
                 <div class="dev-stat-desc">Strong demand: earlier HAYAT phases sold out within hours of launch.</div>
               </div>
             </div>
@@ -952,12 +952,12 @@
             
             <!-- Left Side: Main Heading, Subheading & Assurances -->
             <div class="booking-left-col">
-              <span class="eyebrow">Priority EOI Allocation</span>
+              <span class="eyebrow">Now Selling</span>
               <h2 class="booking-main-title">Book Your Standalone Villa Now</h2>
               <p class="booking-sub-title">Choose your villa and plot while every type is still available </p>
               
               <p class="booking-lede">
-                Earlier phases of HAYAT sold out within hours. By submitting your Expression of Interest (EOI) prior to launch day, you gain first-tier allocation to select your preferred standalone layout, premium plot position, and investor-friendly payment terms before public release.
+                All 4, 5 and 6-bedroom villa types are available now. Register to get live availability and choose your preferred layout and plot.
               </p>
 
               <div class="booking-features-list">
@@ -975,10 +975,8 @@
                   <div class="booking-feature-check">
                     <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                   </div>
-                  <div class="booking-feature-text">
-                    <strong>Exclusive 2% DLD Fee Waiver</strong>
-                    <span>Choose your villa and plot while every type is still available</span>
-                  </div>
+                 <strong>Exclusive 2% DLD Fee Waiver</strong>
+<span>Enjoy exclusive savings when securing your dream villa.</span>
                 </div>
 
                 <div class="booking-feature-item">
@@ -986,7 +984,7 @@
                     <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                   </div>
                   <div class="booking-feature-text">
-                    <strong>Official Price List &amp; Unblurred Floor Plans</strong>
+                    <strong>Full Price List &amp; Floor Plans</strong>
                     <span>Delivered confidentially via WhatsApp with zero obligation.</span>
                   </div>
                 </div>
@@ -1000,10 +998,10 @@
     <div class="booking-form-card">
 
         <div class="booking-form-header">
-            <span class="floating-badge">Priority Booking</span>
+            <span class="floating-badge">Check Availability</span>
 
             <h3 class="booking-form-title">
-                Get the Price List &amp; EOI Details
+                Get the Price List & Availability
             </h3>
 
             <p class="booking-form-sub">
@@ -1023,7 +1021,7 @@
         </div>
 
         <div class="form-trust-points">
-            <span class="trust-item">✓ Priority EOI Allocation</span>
+            <span class="trust-item">✓ All Villa Types Available</span>
             <span class="trust-item">✓ 0% Commission</span>
         </div>
 
@@ -1092,7 +1090,7 @@
         </button>
 
         <span class="floating-badge">
-            Launched 21 November
+            Launched on 21 November
         </span>
 
         <h3 class="modal-title" id="timed-popup-title">
@@ -1101,7 +1099,7 @@
 
         <p class="modal-text">
             Standalone villas from AED 6.5M with 5% down.
-            Get the price list and EOI details on WhatsApp.
+            Get the price list and live availability on WhatsApp.
         </p>
 
         @include('partials.lead-form-hayat', [
@@ -1136,16 +1134,15 @@
         </button>
 
         <span class="floating-badge">
-            Priority EOI Allocation
+            Now Selling
         </span>
 
         <h3 class="modal-title" id="enquiry-modal-title">
-            Get the Price List &amp; EOI Details
+            Get the Price List & Availability
         </h3>
 
         <p class="modal-text">
-            Enter your details below to receive official brochures,
-            floor plans, and priority launch allocation.
+            Enter your details to receive the brochure, floor plans and live availability.
         </p>
 
         @include('partials.lead-form-hayat', [
