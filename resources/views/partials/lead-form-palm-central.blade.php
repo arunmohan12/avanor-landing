@@ -62,6 +62,32 @@ your WhatsApp.</p>
                 </select>
             </div>
 
+            <div class="field">
+                <label for="sticky-budget">Budget</label>
+                <select id="sticky-budget" name="budget" required>
+                     <option value="" disabled {{ old('budget') ? '' : 'selected' }}>
+            Select your budget
+        </option>
+
+        <option value="Up to AED 3M" {{ old('budget') === 'Up to AED 3M' ? 'selected' : '' }}>
+            Up to AED 3M
+        </option>
+
+        <option value="AED 3–5M" {{ old('budget') === 'AED 3–5M' ? 'selected' : '' }}>
+            AED 3–5M
+        </option>
+
+        <option value="AED 5–10M" {{ old('budget') === 'AED 5–10M' ? 'selected' : '' }}>
+            AED 5–10M
+        </option>
+
+        <option value="AED 10M+" {{ old('budget') === 'AED 10M+' ? 'selected' : '' }}>
+            AED 10M+
+        </option>
+             <option value="4 Bedroom Apartment">4-Bedroom  Apartment</option>
+                </select>
+            </div>
+
 
 <div class="field">
     <label for="sticky-Timeline">Purchase Timeline*</label>
@@ -75,8 +101,8 @@ your WhatsApp.</p>
             Select Your Timeline
         </option>
 
-        <option value="Ready to Book">
-            Ready to Book
+        <option value="Ready to submit EOI">
+            Ready to submit EOI
         </option>
 
         <option value="Within 3 months">

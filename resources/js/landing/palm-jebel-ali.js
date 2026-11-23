@@ -1477,6 +1477,6 @@ setTimeout(() => {
 
     setTimeout(() => {
         popupTrigger.click();
-    }, 25000);
+    }, 30000);
 
 }, 10000);

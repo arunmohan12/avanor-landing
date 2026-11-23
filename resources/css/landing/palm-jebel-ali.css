@@ -2885,7 +2885,7 @@ margin-top: var(--mt-40);
 @media (min-width: 1025px) {
     .sticky-sidebar {
         position: fixed;
-        top: calc(100px + 20px);
+        top: calc(90px);
         right: max(2rem, calc((100vw - 1600px) / 2 + 2rem));
         width: 380px;
         z-index: 920;
@@ -2961,7 +2961,7 @@ margin-top: var(--mt-40);
 .sticky-fields {
     display: flex;
     flex-direction: column;
-    gap: 0.85rem;
+    gap: 0.35rem;
 }
 
 .sticky-fields .field label {
@@ -2971,7 +2971,7 @@ margin-top: var(--mt-40);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: #000;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.1rem;
 }
 
 .sticky-fields .field input,

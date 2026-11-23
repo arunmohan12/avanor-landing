@@ -168,13 +168,12 @@ strip_tags($property->description ?? ''),
                     NEW LAUNCH BY NAKHEEL · PALM JEBEL ALI
                 </div>
 
-                <h1 class="pja-hero-title" id="dynamic-ad-h1">
-                    Palm Central Private Residences by Nakheel
+                <h1 class="pja-hero-title" >
+                      {{ $heroEyebrow }}
                 </h1>
 
                 <p class="pja-hero-description">
-                    Resort-style apartments at the heart of Palm Jebel Ali, from AED 2.7M. Secure
-yours with just 20%.
+                    Resort-style apartments at the heart of Palm Jebel Ali. Indicative prices from AED 2.7M, based on the previous release.
                 </p>
 
                 <div class="pja-hero-stats">
@@ -564,7 +563,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                             <div>
                                 <span>PRICE</span>
-                                <strong>AED 4.3M</strong>
+                                <strong>FROM AED 4.3M</strong>
                             </div>
 
                         </div>
@@ -743,6 +742,10 @@ by beach, pool and wellness amenities, with the island's parks and community cen
                 </a>
 
             </div> -->
+<p class="section-description">
+                   * Indicative, based on the previous Palm Central release. Final prices, payment plan and completion date are confirmed at launch
+                </p>
+                
     </div>
 
 </section>
@@ -860,7 +863,9 @@ by beach, pool and wellness amenities, with the island's parks and community cen
                 estimated for <strong>September 2030</strong>.
                 Request the schedule to see every date.
             </p>
-
+<p>
+                   Indicative, based on the previous Palm Central release. Final prices, payment plan and completion date are confirmed at launch
+                </p>
         </div>
 
 
@@ -1357,8 +1362,8 @@ by beach, pool and wellness amenities, with the island's parks and community cen
             <p class="section-description">
                 Palm Central sits on the island's central strip, close to parks,
                 community centres, mosques, wellness hubs and leisure venues.
-                About 23 minutes to Bluewaters, 25 to Al Maktoum International
-                Airport (DWC), 27 to Mall of the Emirates and 28 to Palm Jumeirah.
+                About 23 minutes to Bluewaters, 24 to Al Maktoum International
+                Airport (DWC) and 27 to Palm Jumeirah.
             </p>
 
         </div>
@@ -1458,8 +1463,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
             <div class="golden-visa-copy">
                 <p>
-                    Every home at Palm Central, from the 1-bedroom up, is priced
-                    above the value that qualifies for the UAE's 10-year Golden Visa.
+                    Homes priced at AED 2M or more can qualify for the UAE’s 10-year Golden Visa, subject to the visa rules. Our advisors can explain the requirements.
                 </p>
             </div>
 
@@ -1472,7 +1476,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
      FAQ
 ========================================================= --}}
 
-    <section class="pja-faq pja-section">
+    <section class="pja-faq pja-section" id="faqs">
 
     <div class="main-container pja-faq-container">
 
@@ -1516,12 +1520,12 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                 <div class="pja-faq-answer">
                     <p>
-                        1-bedroom apartments start from AED 2.7M.
-                        Prices for larger apartments are shared on request.
+                        Based on the previous release, 1-bedroom apartments started from AED 2.7M and 2-bedroom from AED 4.3M. Final prices for the new release are confirmed at launch.
                     </p>
                 </div>
 
             </div>
+
 
 
             <div class="pja-faq-item">
@@ -1542,8 +1546,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                 <div class="pja-faq-answer">
                     <p>
-                        20% on booking. 1–2 bedroom homes are on a 70/30 plan,
-                        while 3–4 bedroom apartments are on a 60/40 plan.
+                        Based on the previous release, 20% on booking, with a 70/30 plan for 1–2 bedroom homes and 60/40 for 3–4 bedroom homes. The new release’s plan is confirmed at launch.
                     </p>
                 </div>
 
@@ -1568,7 +1571,7 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                 <div class="pja-faq-answer">
                     <p>
-                        Construction completion is estimated for September 2030.
+                        The previous release is estimated for completion in September 2030. The new release’s date is confirmed at launch.
                     </p>
                 </div>
 
@@ -1644,12 +1647,107 @@ by beach, pool and wellness amenities, with the island's parks and community cen
 
                 <div class="pja-faq-answer">
                     <p>
-                        Palm Central offers 1–2 bedroom apartments.
-                        For villas on Palm Jebel Ali, speak to our advisors.
+                        Palm Central is apartments only, from 1 to 4 bedrooms. For villas on Palm Jebel Ali, speak to our advisors.
                     </p>
                 </div>
 
             </div>
+
+            <div class="pja-faq-item">
+
+    <button type="button"
+            class="pja-faq-question"
+            aria-expanded="false">
+
+        <span class="pja-faq-number">07</span>
+
+        <span class="pja-faq-title">
+            Is this a new Palm Central release?
+        </span>
+
+        <span class="pja-faq-icon">+</span>
+
+    </button>
+
+    <div class="pja-faq-answer">
+        <p>
+            Yes. Nakheel is preparing a new release of Palm Central Private Residences. Register and we’ll send the confirmed prices, payment plan and floor plans as soon as Nakheel releases them.
+        </p>
+    </div>
+
+</div>
+
+<div class="pja-faq-item">
+
+    <button type="button"
+            class="pja-faq-question"
+            aria-expanded="false">
+
+        <span class="pja-faq-number">08</span>
+
+        <span class="pja-faq-title">
+            When does it launch?
+        </span>
+
+        <span class="pja-faq-icon">+</span>
+
+    </button>
+
+    <div class="pja-faq-answer">
+        <p>
+            Nakheel hasn’t announced the date yet. Registered buyers hear first, with the EOI details.
+        </p>
+    </div>
+
+</div>
+
+<div class="pja-faq-item">
+
+    <button type="button"
+            class="pja-faq-question"
+            aria-expanded="false">
+
+        <span class="pja-faq-number">09</span>
+
+        <span class="pja-faq-title">
+            What apartment types are there?
+        </span>
+
+        <span class="pja-faq-icon">+</span>
+
+    </button>
+
+    <div class="pja-faq-answer">
+        <p>
+            1, 2, 2 + maid’s room, 3 and 4-bedroom apartments.
+        </p>
+    </div>
+
+</div>
+
+<div class="pja-faq-item">
+
+    <button type="button"
+            class="pja-faq-question"
+            aria-expanded="false">
+
+        <span class="pja-faq-number">10</span>
+
+        <span class="pja-faq-title">
+            Where is Palm Central?
+        </span>
+
+        <span class="pja-faq-icon">+</span>
+
+    </button>
+
+    <div class="pja-faq-answer">
+        <p>
+            On the central strip of Palm Jebel Ali, close to the island’s parks, community centre and beach.
+        </p>
+    </div>
+
+</div>
 
         </div>
 
@@ -1792,10 +1890,9 @@ by beach, pool and wellness amenities, with the island's parks and community cen
             </div>
 
             <p>
-                This page is operated by Avanor Capital L.L.C, a licensed Dubai
+                This page is operated by Avanor Capital L.L.C (RERA: 63012, ORN: 63296), a licensed Dubai
                 real estate brokerage, and is not the official website of the
-                developer. Project names and trademarks belong to their
-                respective owners.
+                developer. Prices, payment plan and completion date are indicative, based on the previous release, and may change. Images are artist’s impressions.
             </p>
 
         </div>

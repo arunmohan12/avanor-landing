@@ -233,7 +233,7 @@ $ag = request()->query('ag');
 $heroEyebrow = match ($ag) {
     'name' => 'Palm Central Private Residences – New Release',
     'frondd' => 'Palm Central Frond D – Upcoming Release',
-    default => 'Palm Central by Nakheel',
+    default => 'Palm Central Private Residences by Nakheel',
 };
 
         return view('landingpages.palm-jebel-ali', compact(

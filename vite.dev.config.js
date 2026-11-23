@@ -7,8 +7,8 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/landing/hayat.css',
-                'resources/js/landing/hayat.js',
+                'resources/css/landing/palm-jebel-ali.css',
+            'resources/js/landing/palm-jebel-ali.js',
             ],
             refresh: true,
          
