@@ -7,8 +7,8 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/landing/palm-jebel-ali.css',
-            'resources/js/landing/palm-jebel-ali.js',
+                'resources/css/landing/ora.css',
+            'resources/js/landing/ora.js',
             ],
             refresh: true,
          

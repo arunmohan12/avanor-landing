@@ -1,0 +1,1 @@
+/Users/scilens/Documents/Scilens web/avanor-landing/resources/views/landingpages/ora.blade.php

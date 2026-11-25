@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use App\Jobs\SyncLeadToGoogleSheets;
 use Illuminate\Validation\Rule;
+use App\Services\ThankYouPageService;
 
 class LeadController extends Controller
 {
@@ -177,14 +178,16 @@ class LeadController extends Controller
     
 public function storeLandingV2(Request $request)
 {
-    Log::info('Landing page lead form submitted', [
-        'name' => $request->input('name'),
-        'phone' => $request->input('phone'),
-        'email' => $request->input('email'),
-        'bedroom_type' => $request->input('bedroom_type'),
-        'url' => $request->input('page_url') ?? $request->fullUrl(),
-        'time' => now()->toDateTimeString(),
-    ]);
+Log::info('Landing page lead form submitted', [
+    'name' => $request->input('name'),
+    'phone' => $request->input('phone'),
+    'email' => $request->input('email'),
+    'bedroom_type' => $request->input('bedroom_type'),
+    'source' => $request->input('source'),
+    'ag' => $request->input('ag'),
+    'url' => $request->input('page_url') ?? $request->fullUrl(),
+    'time' => now()->toDateTimeString(),
+]);
 
     $validated = $request->validate([
         'property_id' => [
@@ -321,12 +324,43 @@ public function storeLandingV2(Request $request)
     }
 
     // Select the correct thank-you page based on the lead source.
-    $thankYouView = str_starts_with(
-        $validated['source'] ?? '',
-        'hayat_'
-    )
-        ? 'thankyoupages.hayat-thank-you'
-        : 'thank-you';
+$thankYouView = app(\App\Services\ThankYouPageService::class)
+    ->selectView(
+        isset($validated['property_id'])
+            ? (int) $validated['property_id']
+            : null
+    );
+
+// Reusable thank-you response for AJAX and normal form submissions.
+$thankYouResponse = function () use (
+    $request,
+    $thankYouView,
+    $validated
+) {
+    $redirectUrl = route('landing.thank-you');
+
+    // AJAX requests receive JSON instead of an HTTP redirect.
+    if ($request->expectsJson()) {
+
+        $request->session()->flash('thank_you_view', $thankYouView);
+        $request->session()->flash('lead_email', $validated['email'] ?? null);
+        $request->session()->flash('lead_phone', $validated['phone'] ?? null);
+
+        return response()->json([
+            'redirect' => $redirectUrl,
+        ]);
+    }
+
+    // Preserve existing behaviour for normal form submissions.
+    return redirect()
+        ->route('landing.thank-you')
+        ->with([
+            'thank_you_view' => $thankYouView,
+            'lead_email' => $validated['email'] ?? null,
+            'lead_phone' => $validated['phone'] ?? null,
+        ]);
+};
+    
 
     $interestedIn = $validated['interested_in'] ?? null;
 $purchaseTimeline = $validated['message'] ?? null;
@@ -353,6 +387,8 @@ $purchaseTimeline = $validated['message'] ?? null;
     // Attempt 1: Save the lead to the database.
     try {
         $lead = Lead::create($validated);
+
+        
     } catch (\Throwable $exception) {
         Log::error('Lead database insert failed.', [
             'error' => $exception->getMessage(),
@@ -376,13 +412,7 @@ $purchaseTimeline = $validated['message'] ?? null;
             ]
         );
 
-        return redirect()
-            ->route('landing.thank-you')
-            ->with([
-                'thank_you_view' => $thankYouView,
-                'lead_email' => $validated['email'] ?? null,
-                'lead_phone' => $validated['phone'] ?? null,
-            ]);
+return $thankYouResponse();
     }
 
     // Attempt 2: Queue the Google Sheets synchronization.
@@ -417,13 +447,7 @@ $purchaseTimeline = $validated['message'] ?? null;
             ]
         );
 
-        return redirect()
-            ->route('landing.thank-you')
-            ->with([
-                'thank_you_view' => $thankYouView,
-                'lead_email' => $validated['email'] ?? null,
-                'lead_phone' => $validated['phone'] ?? null,
-            ]);
+        return $thankYouResponse();
     }
 
     // Trigger the internal lead notification.
@@ -442,14 +466,9 @@ $purchaseTimeline = $validated['message'] ?? null;
         ]);
     }
 
-    // Final successful redirect.
-    return redirect()
-        ->route('landing.thank-you')
-        ->with([
-            'thank_you_view' => $thankYouView,
-            'lead_email' => $validated['email'] ?? null,
-            'lead_phone' => $validated['phone'] ?? null,
-        ]);
+
+
+return $thankYouResponse();
 }
 
 

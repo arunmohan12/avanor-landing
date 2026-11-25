@@ -535,5 +535,20 @@
         "name": "hayat",
         "src": "resources/js/landing/hayat.js",
         "isEntry": true
+    },
+    "resources/css/landing/ora.css": {
+        "file": "assets/ora-7Fbho-aS.css",
+        "name": "ora",
+        "names": [
+            "ora.css"
+        ],
+        "src": "resources/css/landing/ora.css",
+        "isEntry": true
+    },
+    "resources/js/landing/ora.js": {
+        "file": "assets/ora-BrjgIn1B.js",
+        "name": "ora",
+        "src": "resources/js/landing/ora.js",
+        "isEntry": true
     }
 }

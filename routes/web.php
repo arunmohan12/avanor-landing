@@ -5,9 +5,6 @@ use App\Http\Controllers\LeadController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 Route::post(
@@ -32,13 +29,17 @@ Route::get('/thank-you', function () {
     $allowedViews = [
         'thank-you',
         'thankyoupages.hayat-thank-you',
+        'thankyoupages.ora-thank-you',
     ];
 
     if (!in_array($view, $allowedViews, true)) {
         $view = 'thank-you';
     }
 
-    return view($view);
+    return view($view, [
+        'lead_email' => session('lead_email'),
+        'lead_phone' => session('lead_phone'),
+    ]);
 
 })->name('landing.thank-you');
 
@@ -66,6 +67,7 @@ Route::get('/terms-and-condition', function () {
 // Route::get('/aldar', [LandingPageController::class, 'showAldarNew']);
 // Route::get('/palm-springs', [LandingPageController::class, 'showPalmSprings']);
 // Route::get('/hayat', [LandingPageController::class, 'showHayat']);
+// Route::get('/ora', [LandingPageController::class, 'showOra']);
 //live
 Route::domain('the-heights.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showTheheights']);
@@ -102,4 +104,7 @@ Route::domain('palm-springs.sales-centre.net')->group(function () {
 });
 Route::domain('hayat-dubai-south.sales-centre.net')->group(function () {
     Route::get('/', [LandingPageController::class, 'showHayat']);
+});
+Route::domain('y-views-bayn.sales-centre.net')->group(function () {
+    Route::get('/', [LandingPageController::class, 'showOra']);
 });
