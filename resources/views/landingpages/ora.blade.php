@@ -467,7 +467,7 @@
         <!-- Card 4: Ever Views Mansion -->
         <article class="collection-card">
           <div class="card-img-wrapper">
-            <img src="{{asset('assets/img/landing/ora/ever-views-mansion.webp')}}" alt="Ever Views Mansion Canal Front" class="card-img" loading="lazy">
+            <img src="{{asset('assets/img/landing/ora/Ever-views-mansion.webp')}}" alt="Ever Views Mansion Canal Front" class="card-img" loading="lazy">
             <span class="card-tag">6 Bedrooms · Canal</span>
           </div>
           <div class="card-body">
