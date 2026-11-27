@@ -527,6 +527,15 @@ return $thankYouResponse();
                 ]),
             ],
 
+'purchase_timeline' => [
+    'required',
+    Rule::in([
+        'Ready to book at launch',
+        'Within 3 months',
+        'Just exploring',
+    ]),
+],
+
             'source' => ['nullable', 'string', 'max:100'],
             'page_url' => ['nullable', 'string', 'max:1000'],
             'message' => ['nullable', 'string', 'max:2000'],
@@ -572,6 +581,10 @@ return $thankYouResponse();
                 ]);
         }
 
+$purchaseTimeline = $validated['purchase_timeline'];
+
+unset($validated['purchase_timeline']);
+
         try {
             $lead = Lead::create($validated);
         } catch (\Throwable $exception) {
@@ -604,7 +617,8 @@ return $thankYouResponse();
             SyncLeadToGoogleSheets::dispatch(
                 $lead->id,
                 $request->ip(),
-                $validated['interested_in']
+                $validated['interested_in'],
+                    $purchaseTimeline
             )->onQueue('default');
         } catch (\Throwable $exception) {
             Log::error('Property enquiry Sheets sync could not be queued', [

@@ -1079,8 +1079,8 @@ $heroEyebrow = match ($ag) {
 */
 
         $heroContent = [
-            'eyebrow' => 'UPCOMING LAUNCH · NEAR DUBAI SILICON OASIS',
-            'headline' => 'Aldar’s New Dubai Community',
+            'eyebrow' => 'NOW NAMED · THE GROUNDS BY ALDAR · LAUNCHING DECEMBER',
+            'headline' => 'The Grounds by Aldar – Townhouses & Villas near Dubai Silicon Oasis',
             'description' => 'Villas and townhouses by Aldar and Dubai Holding, expected to launch before the end of 2026. Register now and get prices, floor plans and the payment plan first.',
         ];
 
@@ -1105,25 +1105,25 @@ $heroEyebrow = match ($ag) {
         $adGroupContent = [
             'greenwood' => [
                 'hero' => [
-                    'eyebrow' => 'REPORTED IN THE MARKET AS “GREENWOOD”',
-                    'headline' => 'Aldar’s Upcoming Dubai Community',
-                    'description' => 'Market reports call it Greenwood. Aldar hasn’t confirmed the name yet, but it has confirmed a villa and townhouse community near Dubai Silicon Oasis, with Dubai Holding, launching before the end of 2026. Register to get prices and floor plans first.',
+                    'eyebrow' => 'NOW NAMED · THE GROUNDS BY ALDAR · LAUNCHING DECEMBER”',
+                    'headline' => 'Greenwoods Is Now The Grounds by Aldar',
+                    'description' => 'Aldar and Dubai Holding’s townhouse and villa community near Dubai Silicon Oasis. Launching in December. Register to get prices, floor plans and the payment plan first.',
                 ],
                 'overview' => [
-                    'eyebrow' => 'GREENWOOD',
+                    'eyebrow' => 'NOW NAMED · THE GROUNDS BY ALDAR · LAUNCHING DECEMBER',
                     'title' => 'What is Greenwood?',
-                    'description' => 'Market reports refer to the upcoming community as Greenwood. Aldar hasn’t confirmed the name yet, but it has confirmed a villa and townhouse community near Dubai Silicon Oasis, developed with Dubai Holding and expected to launch before the end of 2026.',
+                    'description' => 'Aldar and Dubai Holding’s townhouse and villa community near Dubai Silicon Oasis. Launching in December. Register to get prices, floor plans and the payment plan first.',
                 ],
             ],
 
             'aldar' => [
                 'hero' => [
-                    'eyebrow' => 'ALDAR’S NEXT DUBAI LAUNCH · NEAR DUBAI SILICON OASIS',
-                    'headline' => 'Aldar’s New Dubai Launch',
-                    'description' => 'After Haven, Athlon and The Wilds, Aldar’s fourth Dubai community brings villas and townhouses near Dubai Silicon Oasis. Register now for prices, floor plans and the payment plan first.',
+                    'eyebrow' => 'NOW NAMED · THE GROUNDS BY ALDAR · LAUNCHING DECEMBER',
+                    'headline' => 'Aldar’s New Dubai Community: The Grounds',
+                    'description' => 'Aldar and Dubai Holding’s townhouse and villa community near Dubai Silicon Oasis. Launching in December. Register to get prices, floor plans and the payment plan first.',
                 ],
                 'overview' => [
-                    'eyebrow' => 'ALDAR’S NEXT DUBAI COMMUNITY',
+                    'eyebrow' => 'NOW NAMED · THE GROUNDS BY ALDAR · LAUNCHING DECEMBER',
                     'title' => 'What makes this launch significant?',
                     'description' => 'Following Haven, Athlon and The Wilds, Aldar is preparing another Dubai community featuring villas and townhouses near Dubai Silicon Oasis, in partnership with Dubai Holding. The launch is expected before the end of 2026.',
                 ],

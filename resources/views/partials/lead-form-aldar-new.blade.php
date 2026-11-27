@@ -319,6 +319,41 @@
         </div>
 
 
+        {{-- Purchase Timeline --}}
+
+<div class="avanor-lead-field">
+    <label for="{{ $formId }}-purchase-timeline">
+        Purchase Timeline
+    </label>
+
+    <select
+        id="{{ $formId }}-purchase-timeline"
+        name="purchase_timeline"
+        required
+    >
+        <option value="" disabled {{ old('purchase_timeline') ? '' : 'selected' }}>
+            Select your purchase timeline
+        </option>
+
+        <option value="Ready to book at launch" {{ old('purchase_timeline') === 'Ready to book at launch' ? 'selected' : '' }}>
+            Ready to book at launch
+        </option>
+
+        <option value="Within 3 months" {{ old('purchase_timeline') === 'Within 3 months' ? 'selected' : '' }}>
+            Within 3 months
+        </option>
+
+        <option value="Just exploring" {{ old('purchase_timeline') === 'Just exploring' ? 'selected' : '' }}>
+            Just exploring
+        </option>
+    </select>
+
+    @error('purchase_timeline')
+        <span class="avanor-lead-error">{{ $message }}</span>
+    @enderror
+</div>
+
+
         {{-- Submit --}}
 
         <button

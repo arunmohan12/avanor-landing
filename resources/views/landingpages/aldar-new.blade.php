@@ -346,8 +346,8 @@ $propertySchema['offers'] = [
                         </h2>
 
                         <p class="landing-about-v2-description">
-                            Aldar has confirmed plans for a large villa and townhouse community near Dubai Silicon Oasis.
-It’s being developed with Dubai Holding and is expected to launch before the end of 2026.
+                           Name, The Grounds (confirmed). Launch, December 2026. Developer, Aldar with Dubai Holding. Location, near Dubai Silicon Oasis. Home types, townhouses and villas. Prices and payment plan, released at launch.
+                           Previously reported in the market as Greenwoods
                         </p>
                     </div>
 
