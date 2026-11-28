@@ -346,7 +346,7 @@ $propertySchema['offers'] = [
                         </h2>
 
                         <p class="landing-about-v2-description">
-                           Name, The Grounds (confirmed). Launch, December 2026. Developer, Aldar with Dubai Holding. Location, near Dubai Silicon Oasis. Home types, townhouses and villas. Prices and payment plan, released at launch.
+                            Launch, December 2026. Developer, Aldar with Dubai Holding. Location, near Dubai Silicon Oasis. Home types, townhouses and villas. Prices and payment plan, released at launch.
                            Previously reported in the market as Greenwoods
                         </p>
                     </div>
@@ -425,12 +425,12 @@ $propertySchema['offers'] = [
                                     </svg>
                                 </span>
                                 <span class="launch-info-badge expected">
-                                    EXPECTED
+                                    CONFIRMED
                                 </span>
                             </div>
 
                             <h3>Launch timing</h3>
-                            <p>Expected before the end of 2026.</p>
+                            <p>Confirmed December 2026.</p>
                         </article>
 
                         <!-- Prices and payment plan -->
@@ -767,7 +767,7 @@ $propertySchema['offers'] = [
                             <div class="faq-answer">
                                 <p>
                                     Aldar has said it plans to launch the community
-                                    before the end of 2026. We’ll message registered
+                                    in December 2026. We’ll message registered
                                     clients as soon as a launch date is confirmed.
                                 </p>
                             </div>
@@ -796,10 +796,7 @@ $propertySchema['offers'] = [
 
                             <div class="faq-answer">
                                 <p>
-                                    Aldar hasn’t announced the official name yet.
-                                    Some market reports refer to the project as
-                                    <strong>“Greenwood”</strong>. We’ll confirm the
-                                    name once Aldar makes an official announcement.
+                                    Aldar has confirmed the name: <strong>The Grounds</strong>. It was previously reported in the market as Greenwoods.
                                 </p>
                             </div>
                         </details>

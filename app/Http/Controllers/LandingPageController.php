@@ -1105,7 +1105,7 @@ $heroEyebrow = match ($ag) {
         $adGroupContent = [
             'greenwood' => [
                 'hero' => [
-                    'eyebrow' => 'NOW NAMED · THE GROUNDS BY ALDAR · LAUNCHING DECEMBER”',
+                    'eyebrow' => 'NOW NAMED · THE GROUNDS BY ALDAR · LAUNCHING DECEMBER',
                     'headline' => 'Greenwoods Is Now The Grounds by Aldar',
                     'description' => 'Aldar and Dubai Holding’s townhouse and villa community near Dubai Silicon Oasis. Launching in December. Register to get prices, floor plans and the payment plan first.',
                 ],
